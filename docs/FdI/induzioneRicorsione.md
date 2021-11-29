@@ -184,4 +184,32 @@ Molto povera questa sezione, da capire bene
 Le funzioni definite induttivamente sono un caso particolare di funzioni ricorsive.  
 
 !!! abstract "Definizione ricorsiva"
-    Una funzione è detta **ricorsiva** se il valore della funzione per un certo argomento è espresso in termini del valore della stessa funzione applcata a uno o più argomenti, non necessariamente più piccoli.
+    Una funzione è detta **ricorsiva** se il valore della funzione per un certo argomento è espresso in termini del valore della stessa funzione applcata a uno o più argomenti, non necessariamente più piccoli
+
+Il numero di passi per la risoluzione di una funzione non sempre segue una regola precisa.  
+Inoltre non sempre una funzione ricorsiva risulta calcolabile:  
+Il **Teorema di Rice** (facente parte del _Teorema della Calcolabilità_) afferma che ~non esiste un procedimento universale~ che permtta di determinare con esattezza se una funzione recursiva è totale (e quindi è una funzione; in caso contrario sarebbe una _funzione parziale_)  
+  
+È possibile però individuare delle condizioni sufficienti che ci permettano di garantire che una definizione ricorsiva sia **ben data** (o ben definita).  
+
+
+
+
+
+
+
+
+Ci interessa che la funzione ricorsiva sia totale perché se così non fosse, implicherebbe che valutando tale funzione incorreremmo in una computazione infinita.  
+
+
+### Tipologie di ricorsione
+Esistono vari tipi di ricorsione, oltre alla tipologia vista fin'ora, chiamata **Ricorsione diretta**
+
+#### Ricorsione annidata
+Questo tipo di ricorsione si ha quando una funzione ricorsiva richiama, nel proprio corpo, sé stessa E sé stessa come parametro, chiamando la funzione 2 volte
+
+!!! example "Esempio di ricosione annidata"
+
+
+#### Ricorsione mutua
+#### Ricorsione procedurale
