@@ -92,9 +92,11 @@ plugins:
 
 # Page tree
 nav:
-  - Home: index.md
+  #- Home: index.md
+  - Programmazione e Algoritmica:
+    - Relazioni di ricorrenza: ProAlgo/relazioniRicorrenza.md
   - Fondamenti di Informatica:
-    - Introduzione: FdI/index.md
+    #- Introduzione: FdI/index.md
     - Insiemi: FdI/insiemi.md
     - Relazioni: FdI/relazioni.md
     - Induzione Matematica: FdI/induzione.md
@@ -105,4 +107,6 @@ nav:
     - Linguaggi Formali: FdI/linguaggi.md
     - Logica Matematica: FdI/logica.md
     - Cheatsheet: FdI/cheatsheet.md
+  - Laboratorio I: LabI/index.md
+  - Analisi I: AnalisiI/index.md
 
