@@ -27,12 +27,14 @@ In base al numero di argomenti, le funzioni possono assumere diversi nomi:
 
 !!! example "Esempio di segnatura"
     Prendiamo in considerazione la segnatura $\mathcal{F}$:  
+
     $$
     \mathcal{F}_0 = \\{ a, b \\} \qquad
     \mathcal{F}_1 = \\{ f \\} \qquad
     \mathcal{F}_2 = \\{ g \\} \qquad
     \mathcal{F}_n = \varnothing ~ per ~ ogni ~ n ~ \geq 3
     $$
+    
     Quindi $a$ e $b$ sono termini costanti, $f$ è un termine unario e $g$ è un termine binario.
 
 
@@ -48,15 +50,17 @@ In base al numero di argomenti, le funzioni possono assumere diversi nomi:
 
 !!! example "Esempio di termini"
     Continuando con l'esempio riportato sopra, $\mathcal{F}$:  
+
     $$
     \mathcal{F}_0 = \\{ a, b \\} \qquad
     \mathcal{F}_1 = \\{ f \\} \qquad
     \mathcal{F}_2 = \\{ g \\} \qquad
     \mathcal{F}_n = \varnothing ~ per ~ ogni ~ n ~ \geq 3
     $$
-    Essendo $a$ e $b$ termini costanti, sono termini di F.  
 
+    Essendo $a$ e $b$ termini costanti, sono termini di F.  
     Essendo $f$ un termine unario, scritture come 
+
     $$
     f(a)\qquad
     f(b)\qquad
@@ -64,17 +68,20 @@ In base al numero di argomenti, le funzioni possono assumere diversi nomi:
     f(f(b))\qquad
     f(f(f(f(b))))\qquad
     $$
-    sono termini di F.  
 
+    sono termini di F.  
     Essendo $g$ un termine binario, scritture come 
+
     $$
     g(a,b)\qquad
     g(b,a)\qquad
     g(f(a), b)\qquad
     g(f(f(b)),a)\qquad
-    $$ sono termini di F.  
-
+    $$
+    
+    sono termini di F.  
     **Non** sono invece termini scritture come le seguenti:
+
     $$
     f(a,b)\qquad
     g(a) \qquad
@@ -83,6 +90,7 @@ In base al numero di argomenti, le funzioni possono assumere diversi nomi:
     f \qquad
     f(b,b,b,b,b)
     $$
+
 
 ### Rappresentazione grafica dei termini
 È inoltre possibile rappresentare i termini in maniera grafica sottoforma di alberi radicati.  
@@ -94,6 +102,7 @@ Ogni nodo dell'albero avrà un'etichetta con un simbolo in $\mathcal{F}$.
 TODO
 #### Rappresentazione di alberi binari come termini
 Gli alberi binari possono essere rappresentati la seguente segnatura $\mathcal{BT}$:
+
 $$
 \mathcal{BT}_0 = \\{\lambda\\} \qquad
 \mathcal{BT}_1 = \varnothing \qquad
@@ -105,15 +114,18 @@ $$
 TODO
 #### Rappresentazione di liste come termini
 Le liste possono essere rappresentate utilizzando la seguente segnatura $\mathcal{L}^A$:
+
 $$
 \mathcal{L}^A_0 = \\{[ ~ ]\\} \qquad
 \mathcal{L}^A_1 = \\{a: ~ | ~ a \in A\\} \qquad
 \mathcal{L}^A_n = \varnothing ~ per ~ ogni ~ n ~ \geq 2
 $$
+
 Che avrà quindi come unica costante la segnatura $[ ~ ]$ ed un operatore unario $a :$ per ogni $a \in A$
 
 ### Naturali
 Anche i Naturali possono essere rappresentati come termini, con la seguente segnatura:
+
 $$
 \mathcal{N}_0 = \\{Z\\} \qquad
 \mathcal{N}_1 = \\{S\\} \qquad
