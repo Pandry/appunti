@@ -2,6 +2,9 @@ window.MathJax = {
   tex: {
     macros: {
       anglebr: [ "{ ~ \\langle #1 \\rangle ~ }", 1 ],
+      llbracket: "[\\![",
+      rrbracket: "]\\!]",
+      doublebr: [ "{ \\llbracket #1 \\rrbracket }", 1 ],
     },
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
