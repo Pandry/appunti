@@ -1,9 +1,12 @@
 window.MathJax = {
   tex: {
+    macros: {
+      anglebr: [ "{ ~ \\langle #1 \\rangle ~ }", 1 ],
+    },
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
     processEscapes: true,
-    processEnvironments: true
+    processEnvironments: true,
   },
   options: {
     ignoreHtmlClass: ".*|",
