@@ -38,17 +38,17 @@ Il calcolo proposizionale fa uso di una grammatica ben specifica, formata dai si
 Si tende ad indicare con i simboli A, B, C, ... i simboli proposizionali, mentre invece le lettere P, Q, R sono più utilizzate per indicare le formule proposizionali.  
 
 !!! definition "Grammatica del calcolo proposizionale"
-    $\: \langle Prop \rangle \leadsto \langle Atom \rangle | \neg \langle Atom \rangle | \langle Prop \rangle \langle OpB \rangle \langle Prop \rangle$  
-    $\langle Atom \rangle \leadsto \textbf T | \textbf F | \langle X \rangle | (\langle Prop \rangle)$ - Questa regola ci permette di genere le formule atomiche  
-    $\ \langle OpB \rangle \leadsto \land | \lor | \Rightarrow | \Leftarrow | \Leftrightarrow$ - Questa regola ci permette di generare i connettivi logici  
-    $\quad \: \langle X \rangle \leadsto A | B | C | \dots$ - Questa regola indica i simboli proposizionali  
+    $\: \anglebr {Prop} \leadsto  \anglebr {Atom} | \neg  \anglebr {Atom} |  \anglebr {Prop}  \anglebr {OpB}  \anglebr {Prop}$  
+    $\anglebr {Atom} \leadsto \textbf T | \textbf F | \anglebr X | ( \anglebr {Prop})$ - Questa regola ci permette di genere le formule atomiche  
+    $\anglebr {OpB} \leadsto \land | \lor | \Rightarrow | \Leftarrow | \Leftrightarrow$ - Questa regola ci permette di generare i connettivi logici  
+    $\quad \:  \anglebr X \leadsto A | B | C | \dots$ - Questa regola indica i simboli proposizionali  
 
 #### I connettivi logici
 
 Per quanto riguarda i connettivi logici sopra descritti, rappresentano i più comuni e possiamo osservare il loro significato :  
 
 | Simbolo             | Nome                | Utilizzo | Lettura |
-|---------------------|---------------------|----------|----------|
+|:-------------------:|---------------------|----------|----------|
 | $\neg$              | Negazione           | $\neg P$ | "Non P"<br/> "Not P"<br/> "Non è vero che P vale" |
 | $\land$             | Congiunzione        | $P \land Q$ | "P e Q"<br/> "P and Q"<br/> "P e anche Q"|
 | $\lor$              | Discongiunzione     | $P \lor Q$ | "P o Q"<br/> "P or Q"<br/> "P oppure Q" |
@@ -61,17 +61,122 @@ Nel caso dell'implicazione, $P$ assume il nome di _premessa_, mentre $Q$ quello 
 Vale inoltre la pena notare che $P \Leftarrow Q$ è logicamente equivalente a $Q \Rightarrow P$.
 
 #### La formalizzazione di proposizioni
-Per _formalizzare_ si intende il processo di estrarre da una proposizione in linguaggio naturale una una formula di calcolo proposizionale che ha la stessa struttura logica
+Per _formalizzare_ si intende il processo di estrarre da una proposizione in linguaggio naturale (come italiano o inglese) una una formula di calcolo proposizionale che ha la stessa struttura logica
 
 !!! example "Esempio di formalizzazione"
     Avendo la frase "_Piove e fa freddo_", possiamo da questa proposizione estrarre due proposizioni elementari: $P=$ "_Piove_" e $Fr=$ "_fa freddo_".  
     La proposizione risultante sarà quindi $P \land Fr$
 
 ### La semantica 
+La semantica di una proposizione (il suo valore) si può calcolare per induzione sul suo albero di derivazione.  
+Il risultato in genere però non è assoluto ma dipende da un'_interpretazione_.  
+
+!!! abstract "Definizione di interpretazione"
+    Con interpretazione si intende una funzione $\mathcal I : X \rightarrow \{t,f\}$ che ci permetta de di assegnare un valore di verità ad ogni simbolo proposizionale.
+
+Per comporre le proposizioni semplici, come abbiamo detto prima, abbiamo bisogno dei connettivi logici, che abbiamo visto prima, ma senza vedere la loro semantica.  
+I connettivi logici possono essere visti come funzioni $Bool \times Bool \rightarrow Bool$.  
+
+!!! abstract "Definizione dei connettivi logici"
+    Possiamo definire i connettivi logici attraverso le loro tabelle di verità.  
+    Possiamo iniziare vedendo la tabella di verità della negazione ($\neg$):  
+
+    | $x$ | $\neg x$ |
+    |:---:|:--------:|
+    |  f  |    t     |
+    |  t  |    f     |
+    
+    E poi continuare con gli altri operatori:
+
+    | $x$  $y$ | $x \land y$ | $x \lor y$ | $x \Rightarrow y$ | $x \Leftarrow y$ | $x \Leftrightarrow y$ |
+    |:--------:|:-----------:|:----------:|:-----------------:|:----------------:|:---------------------:|
+    | $\mathbf f$  $\mathbf f$ | $\mathbf f$ | $\mathbf f$ | $\mathbf t$ | $\mathbf t$ | $\mathbf t$ | 
+    | $\mathbf f$  $\mathbf t$ | $\mathbf f$ | $\mathbf t$ | $\mathbf f$ | $\mathbf f$ | $\mathbf f$ | 
+    | $\mathbf t$  $\mathbf f$ | $\mathbf f$ | $\mathbf t$ | $\mathbf t$ | $\mathbf t$ | $\mathbf t$ | 
+    | $\mathbf t$  $\mathbf t$ | $\mathbf t$ | $\mathbf t$ | $\mathbf f$ | $\mathbf t$ | $\mathbf f$ | 
+
+    Vale la pena notare che nel caso dell'implicazione, se la premessa è falsa, la proposizione composta sarà vera in quanto la regola non si applicherà.  
+    Per quanto invece riguarda la doppia implicazione, questa richiede che entrambe le proposizioni (da entrambe le parti del segno) siano vere per poter essere vera.
+
+Ora che abbiano definito formalmente gli operatori, possiamo introdurre come calcolare formalmente la semantica di una proposizione complessa.  
+Questo perché dobbiamo associare una proposizione con un'interpretazione, che ci possa permettere di stabilire se la più piccola proposizione ha come valore (nel nostro caso) vero o falso.  
+
+!!! abstract "Semantica del calcolo proposizionale"
+    Data un'interpretazione $\mathcal I : X \rightarrow \{t,f\}$, il valore **rispetto ad $\mathcal I$** di una formula proposizionale è dato dalla funzione $\llbracket \_ \rrbracket _\mathcal I : \mathbf{Prop} \rightarrow \{t,f\}$.  
+    Questa funzione è definita induttivamente in questo modo:
+
+    1. $\doublebr T_\mathcal I = \mathbf t$  e  $\doublebr F_\mathcal I = \mathbf f$  
+    2. $\doublebr A_\mathcal I = \mathcal I (A)$ per ogni $A \in X$
+    3. $\doublebr{(P)}_\mathcal I = (\doublebr P_\mathcal I)$ per ogni $P \in \bf Prop$
+    4. $\doublebr {\neg Q}_\mathcal I = \neg \doublebr Q _\mathcal I$ per ogni **formula atomica** Q
+    5. $\doublebr {P ~ op ~ Q}_\mathcal I = \doublebr P _\mathcal I ~ ~ op ~ ~ \doublebr Q_\mathcal I$ per ogni connettivo $op \in \{ \land,\lor,\Rightarrow,\Leftarrow,\Leftrightarrow\}$ e per ogni $P,Q \in \mathbf {Prop}$
+
+È possibile notare come le clausule appena descritte, corrispondano alle produzioni grammaticali (nella sezione dedicata alla [Sintassi](#sintassi-del-calcolo-proposizionale)).  
+
+Definito il concetto di interpretazione e semantica, abbiamo abbastanza elementi per costruire il concetto di _modello logico_.
+
+!!! abstract "Modello logico"
+    Data una formula proposizionale $P$ ed un'interpretazione $\cal I$, diciamo che $\cal I$ è un modello di $P$, se $P$ è vera in $\cal I$ (ovvero, se $\doublebr P _\mathcal I = t$)  
+    Per questo concetto, esiste una notazione apposita:
+
+    $$
+    \mathcal I \vDash P \qquad \qquad (\mathcal I \text { è modello di P})
+    $$
+
+    Se invece l'interpretazione in $\cal I$ di $P$ risulta falsa, scriveremo $\mathcal I \nvDash P$.  
+
+Notare che **è l'interpretazione** ad **essere modello** di una proposizione.  
 
 ---
 
-## Concetto di Tautologia
+È poi possibile estendere ulteriormente questa definizione ad un insieme (di formule $\Gamma$ (Gamma)).  
+
+!!! abstract "Insieme di formule Gamma $\Gamma$"
+    Scriviamo $\mathcal I \vDash \Gamma$ ($\mathcal I$ è modello di Gamma), se $\mathcal I \vDash P$ per ogni $P$ in $\Gamma$.  
+    Se invece esiste **almeno una** forula in $\Gamma$ che non è modello di $I$ ($\mathcal I \nvDash \cal I$), I non è un modello dell'insieme $\Gamma$:  
+    $\mathcal I \nvDash \Gamma$  
+
+Possiamo sottolineare come ogni interpretazione $\cal I$ valga se consideriamo il modello $\mathcal I \vDash \varnothing$, dove $\varnothing$ è l'insieme vuoto di formule.  
+Possiamo verificarlo semplicemente seguendo qualche passaggio:  
+
+1. Possiamo partire dalla definizione $\mathcal I \vDash \Gamma$, dove $\Gamma$ vale $\varnothing$
+2. Procediamo quindi prendendo ogni elemento di $\Gamma$ $P$ e verificando se $\cal I$ vale in $P$
+3. Essendo tuttavia $\Gamma$ vuoto, non c'è nulla da verificare, quindi $\mathcal I \vDash \varnothing$ vale _vacuamente_
+  
+---
+
+Una volta definiti i modelli, potremmo voler considerare quindi la possibilità di compararli. Definiamo quindi il concetto di equivalenza
+
+!!! abstract "Equivalenza logica"
+    Quando due modelli hanno gli stessi modelli (ovvero assumo lo stesso valore di verità per ogni interpretazione), vengono detti **logicamente equivalenti****:  
+
+    $$
+    P \equiv Q \qquad \qquad (\text { P e Q sono logicamente equivalenti})
+    $$
+
+!!! abstract "Conseguenza logica"
+    Data una formula proposizionale $P$ ed un insieme di formule $\Gamma$, $P$ è una **conseguenza logica** di $\Gamma$ se:  
+    
+    - $P$ è vera in ogni interpretazione che rende vere tutte le formule di $\Gamma$
+
+    oppure (in modo equivalente)
+    
+    - Se ogni modello di $\Gamma$ è anche un modello di $P$
+
+    Possiamo quindi formalizzare in questo modo:  
+
+    $$
+    \Gamma \equiv P \qquad \qquad (\text {P è conseguenza logica di } \Gamma)
+    $$
+
+Abbiamo quindi determinato come, date due formule proposizionali $P$ e $Q$, vale che:
+
+$$
+P \equiv Q \qquad \text {se e solo se} \qquad \{P\} \vDash Q \;\; e \;\; \{Q\} \vDash P
+$$
+
+
+## Il concetto di Tautologia
 
 !!! abstract "Definizione di Tautologia"
     Una tautologia è una formula proposizionale che risulta sempre vera per ogni interpretazione
