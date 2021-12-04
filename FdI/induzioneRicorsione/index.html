@@ -925,14 +925,14 @@ I simboli di arietà 0 sono detti <strong>simboli di costante</strong>.</p>
 </table>
 <div class="admonition example">
 <p class="admonition-title">Esempio di segnatura</p>
-<p>Prendiamo in considerazione la segnatura <span class="arithmatex">\(\mathcal{F}\)</span>:<br />
-$$
-\mathcal{F}_0 = \{ a, b \} \qquad
-\mathcal{F}_1 = \{ f \} \qquad
-\mathcal{F}_2 = \{ g \} \qquad
+<p>Prendiamo in considerazione la segnatura <span class="arithmatex">\(\mathcal{F}\)</span>:  </p>
+<div class="arithmatex">\[
+\mathcal{F}_0 = \\{ a, b \\} \qquad
+\mathcal{F}_1 = \\{ f \\} \qquad
+\mathcal{F}_2 = \\{ g \\} \qquad
 \mathcal{F}_n = \varnothing ~ per ~ ogni ~ n ~ \geq 3
-$$
-Quindi <span class="arithmatex">\(a\)</span> e <span class="arithmatex">\(b\)</span> sono termini costanti, <span class="arithmatex">\(f\)</span> è un termine unario e <span class="arithmatex">\(g\)</span> è un termine binario.</p>
+\]</div>
+<p>Quindi <span class="arithmatex">\(a\)</span> e <span class="arithmatex">\(b\)</span> sono termini costanti, <span class="arithmatex">\(f\)</span> è un termine unario e <span class="arithmatex">\(g\)</span> è un termine binario.</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Definizione di Termine</p>
@@ -947,39 +947,40 @@ Quindi <span class="arithmatex">\(a\)</span> e <span class="arithmatex">\(b\)</s
 </div>
 <div class="admonition example">
 <p class="admonition-title">Esempio di termini</p>
-<p>Continuando con l'esempio riportato sopra, <span class="arithmatex">\(\mathcal{F}\)</span>:<br />
-$$
-\mathcal{F}_0 = \{ a, b \} \qquad
-\mathcal{F}_1 = \{ f \} \qquad
-\mathcal{F}_2 = \{ g \} \qquad
+<p>Continuando con l'esempio riportato sopra, <span class="arithmatex">\(\mathcal{F}\)</span>:  </p>
+<div class="arithmatex">\[
+\mathcal{F}_0 = \\{ a, b \\} \qquad
+\mathcal{F}_1 = \\{ f \\} \qquad
+\mathcal{F}_2 = \\{ g \\} \qquad
 \mathcal{F}_n = \varnothing ~ per ~ ogni ~ n ~ \geq 3
-$$
-Essendo <span class="arithmatex">\(a\)</span> e <span class="arithmatex">\(b\)</span> termini costanti, sono termini di F.  </p>
-<p>Essendo <span class="arithmatex">\(f\)</span> un termine unario, scritture come 
-$$
+\]</div>
+<p>Essendo <span class="arithmatex">\(a\)</span> e <span class="arithmatex">\(b\)</span> termini costanti, sono termini di F.<br />
+Essendo <span class="arithmatex">\(f\)</span> un termine unario, scritture come </p>
+<div class="arithmatex">\[
 f(a)\qquad
 f(b)\qquad
 f(f(a))\qquad
 f(f(b))\qquad
 f(f(f(f(b))))\qquad
-$$
-sono termini di F.  </p>
-<p>Essendo <span class="arithmatex">\(g\)</span> un termine binario, scritture come 
-$$
+\]</div>
+<p>sono termini di F.<br />
+Essendo <span class="arithmatex">\(g\)</span> un termine binario, scritture come </p>
+<div class="arithmatex">\[
 g(a,b)\qquad
 g(b,a)\qquad
 g(f(a), b)\qquad
 g(f(f(b)),a)\qquad
-$$ sono termini di F.  </p>
-<p><strong>Non</strong> sono invece termini scritture come le seguenti:
-$$
+\]</div>
+<p>sono termini di F.<br />
+<strong>Non</strong> sono invece termini scritture come le seguenti:</p>
+<div class="arithmatex">\[
 f(a,b)\qquad
 g(a) \qquad
 g(a,a,b) \qquad
 g \qquad
 f \qquad
 f(b,b,b,b,b)
-$$</p>
+\]</div>
 </div>
 <h3 id="rappresentazione-grafica-dei-termini">Rappresentazione grafica dei termini<a class="headerlink" href="#rappresentazione-grafica-dei-termini" title="Permanent link">&para;</a></h3>
 <p>È inoltre possibile rappresentare i termini in maniera grafica sottoforma di alberi radicati.<br />
@@ -988,30 +989,30 @@ Ogni nodo dell'albero avrà un'etichetta con un simbolo in <span class="arithmat
 <h3 id="alberi">Alberi<a class="headerlink" href="#alberi" title="Permanent link">&para;</a></h3>
 <p>TODO</p>
 <h4 id="rappresentazione-di-alberi-binari-come-termini">Rappresentazione di alberi binari come termini<a class="headerlink" href="#rappresentazione-di-alberi-binari-come-termini" title="Permanent link">&para;</a></h4>
-<p>Gli alberi binari possono essere rappresentati la seguente segnatura <span class="arithmatex">\(\mathcal{BT}\)</span>:
-$$
-\mathcal{BT}_0 = \{\lambda\} \qquad
+<p>Gli alberi binari possono essere rappresentati la seguente segnatura <span class="arithmatex">\(\mathcal{BT}\)</span>:</p>
+<div class="arithmatex">\[
+\mathcal{BT}_0 = \\{\lambda\\} \qquad
 \mathcal{BT}_1 = \varnothing \qquad
-\mathcal{BT}_2 = \{N\} \qquad
+\mathcal{BT}_2 = \\{N\\} \qquad
 \mathcal{BT}_n = \varnothing ~ per ~ ogni ~ n ~ \geq 3
-$$</p>
+\]</div>
 <h3 id="liste">Liste<a class="headerlink" href="#liste" title="Permanent link">&para;</a></h3>
 <p>TODO</p>
 <h4 id="rappresentazione-di-liste-come-termini">Rappresentazione di liste come termini<a class="headerlink" href="#rappresentazione-di-liste-come-termini" title="Permanent link">&para;</a></h4>
-<p>Le liste possono essere rappresentate utilizzando la seguente segnatura <span class="arithmatex">\(\mathcal{L}^A\)</span>:
-$$
-\mathcal{L}^A_0 = \{[ ~ ]\} \qquad
-\mathcal{L}^A_1 = \{a: ~ | ~ a \in A\} \qquad
+<p>Le liste possono essere rappresentate utilizzando la seguente segnatura <span class="arithmatex">\(\mathcal{L}^A\)</span>:</p>
+<div class="arithmatex">\[
+\mathcal{L}^A_0 = \\{[ ~ ]\\} \qquad
+\mathcal{L}^A_1 = \\{a: ~ | ~ a \in A\\} \qquad
 \mathcal{L}^A_n = \varnothing ~ per ~ ogni ~ n ~ \geq 2
-$$
-Che avrà quindi come unica costante la segnatura <span class="arithmatex">\([ ~ ]\)</span> ed un operatore unario <span class="arithmatex">\(a :\)</span> per ogni <span class="arithmatex">\(a \in A\)</span></p>
+\]</div>
+<p>Che avrà quindi come unica costante la segnatura <span class="arithmatex">\([ ~ ]\)</span> ed un operatore unario <span class="arithmatex">\(a :\)</span> per ogni <span class="arithmatex">\(a \in A\)</span></p>
 <h3 id="naturali">Naturali<a class="headerlink" href="#naturali" title="Permanent link">&para;</a></h3>
-<p>Anche i Naturali possono essere rappresentati come termini, con la seguente segnatura:
-$$
-\mathcal{N}_0 = \{Z\} \qquad
-\mathcal{N}_1 = \{S\} \qquad
+<p>Anche i Naturali possono essere rappresentati come termini, con la seguente segnatura:</p>
+<div class="arithmatex">\[
+\mathcal{N}_0 = \\{Z\\} \qquad
+\mathcal{N}_1 = \\{S\\} \qquad
 \mathcal{N}_n = \varnothing ~ per ~ ogni ~ n ~ \geq 2
-$$</p>
+\]</div>
 <h3 id="funzioni-su-termini">Funzioni su termini<a class="headerlink" href="#funzioni-su-termini" title="Permanent link">&para;</a></h3>
 <p>È possibile definire delle funzioni (fin'ora definite induttivamente) in maniera più generale facendo uso dei termini.<br />
 Definire una funzione su <span class="arithmatex">\(\mathcal FTerm\)</span> (insieme dei termini per una segnatura <span class="arithmatex">\(\mathcal F\)</span>) è possibile in 2 passi:</p>

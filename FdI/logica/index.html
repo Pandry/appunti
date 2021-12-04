@@ -577,6 +577,19 @@
     La semantica
   </a>
   
+    <nav class="md-nav" aria-label="La semantica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-tavole-di-verita" class="md-nav__link">
+    Le tavole di verità
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -585,11 +598,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#concetto-di-tautologia" class="md-nav__link">
-    Concetto di Tautologia
+  <a href="#il-concetto-di-tautologia" class="md-nav__link">
+    Il concetto di Tautologia
   </a>
   
-    <nav class="md-nav" aria-label="Concetto di Tautologia">
+    <nav class="md-nav" aria-label="Il concetto di Tautologia">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -778,6 +791,19 @@
     La semantica
   </a>
   
+    <nav class="md-nav" aria-label="La semantica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-tavole-di-verita" class="md-nav__link">
+    Le tavole di verità
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -786,11 +812,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#concetto-di-tautologia" class="md-nav__link">
-    Concetto di Tautologia
+  <a href="#il-concetto-di-tautologia" class="md-nav__link">
+    Il concetto di Tautologia
   </a>
   
-    <nav class="md-nav" aria-label="Concetto di Tautologia">
+    <nav class="md-nav" aria-label="Il concetto di Tautologia">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -890,17 +916,17 @@ il linguaggio (generato dalla categoria sintattica <span class="arithmatex">\(\l
 <p>Si tende ad indicare con i simboli A, B, C, ... i simboli proposizionali, mentre invece le lettere P, Q, R sono più utilizzate per indicare le formule proposizionali.  </p>
 <div class="admonition definition">
 <p class="admonition-title">Grammatica del calcolo proposizionale</p>
-<p><span class="arithmatex">\(\: \langle Prop \rangle \leadsto \langle Atom \rangle | \neg \langle Atom \rangle | \langle Prop \rangle \langle OpB \rangle \langle Prop \rangle\)</span><br />
-<span class="arithmatex">\(\langle Atom \rangle \leadsto \textbf T | \textbf F | \langle X \rangle | (\langle Prop \rangle)\)</span> - Questa regola ci permette di genere le formule atomiche<br />
-<span class="arithmatex">\(\ \langle OpB \rangle \leadsto \land | \lor | \Rightarrow | \Leftarrow | \Leftrightarrow\)</span> - Questa regola ci permette di generare i connettivi logici<br />
-<span class="arithmatex">\(\quad \: \langle X \rangle \leadsto A | B | C | \dots\)</span> - Questa regola indica i simboli proposizionali  </p>
+<p><span class="arithmatex">\(\: \anglebr {Prop} \leadsto  \anglebr {Atom} | \neg  \anglebr {Atom} |  \anglebr {Prop}  \anglebr {OpB}  \anglebr {Prop}\)</span><br />
+<span class="arithmatex">\(\anglebr {Atom} \leadsto \textbf T | \textbf F | \anglebr X | ( \anglebr {Prop})\)</span> - Questa regola ci permette di genere le formule atomiche<br />
+<span class="arithmatex">\(\anglebr {OpB} \leadsto \land | \lor | \Rightarrow | \Leftarrow | \Leftrightarrow\)</span> - Questa regola ci permette di generare i connettivi logici<br />
+<span class="arithmatex">\(\quad \:  \anglebr X \leadsto A | B | C | \dots\)</span> - Questa regola indica i simboli proposizionali  </p>
 </div>
 <h4 id="i-connettivi-logici">I connettivi logici<a class="headerlink" href="#i-connettivi-logici" title="Permanent link">&para;</a></h4>
 <p>Per quanto riguarda i connettivi logici sopra descritti, rappresentano i più comuni e possiamo osservare il loro significato :  </p>
 <table>
 <thead>
 <tr>
-<th>Simbolo</th>
+<th align="center">Simbolo</th>
 <th>Nome</th>
 <th>Utilizzo</th>
 <th>Lettura</th>
@@ -908,37 +934,37 @@ il linguaggio (generato dalla categoria sintattica <span class="arithmatex">\(\l
 </thead>
 <tbody>
 <tr>
-<td><span class="arithmatex">\(\neg\)</span></td>
+<td align="center"><span class="arithmatex">\(\neg\)</span></td>
 <td>Negazione</td>
 <td><span class="arithmatex">\(\neg P\)</span></td>
 <td>"Non P"<br/> "Not P"<br/> "Non è vero che P vale"</td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(\land\)</span></td>
+<td align="center"><span class="arithmatex">\(\land\)</span></td>
 <td>Congiunzione</td>
 <td><span class="arithmatex">\(P \land Q\)</span></td>
 <td>"P e Q"<br/> "P and Q"<br/> "P e anche Q"</td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(\lor\)</span></td>
+<td align="center"><span class="arithmatex">\(\lor\)</span></td>
 <td>Discongiunzione</td>
 <td><span class="arithmatex">\(P \lor Q\)</span></td>
 <td>"P o Q"<br/> "P or Q"<br/> "P oppure Q"</td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(\Rightarrow\)</span></td>
+<td align="center"><span class="arithmatex">\(\Rightarrow\)</span></td>
 <td>Implicazione</td>
 <td><span class="arithmatex">\(P \Rightarrow Q\)</span></td>
 <td>"se P allora Q"<br/> "P implica Q"<br/> "P solo se Q"<br/> "P è condizione sufficiente per Q"</td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(\Leftarrow\)</span></td>
+<td align="center"><span class="arithmatex">\(\Leftarrow\)</span></td>
 <td>Conseguenza</td>
 <td><span class="arithmatex">\(P \Leftarrow Q\)</span></td>
 <td>"P è conseguenza di Q"<br/> "P se Q"<br/> "P if Q"<br/> "P è condizione necessaria per Q"</td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(\Leftrightarrow\)</span></td>
+<td align="center"><span class="arithmatex">\(\Leftrightarrow\)</span></td>
 <td>Doppia implicazione</td>
 <td><span class="arithmatex">\(P \Leftrightarrow Q\)</span></td>
 <td>"P sse Q"<br/> "P se e solo se Q"<br/> "P iff Q"<br/> "P è condizione necessaria e sufficiente per Q"</td>
@@ -948,15 +974,235 @@ il linguaggio (generato dalla categoria sintattica <span class="arithmatex">\(\l
 <p>Nel caso dell'implicazione, <span class="arithmatex">\(P\)</span> assume il nome di <em>premessa</em>, mentre <span class="arithmatex">\(Q\)</span> quello di <em>conseguenza</em> o <em>conclusione</em>.  </p>
 <p>Vale inoltre la pena notare che <span class="arithmatex">\(P \Leftarrow Q\)</span> è logicamente equivalente a <span class="arithmatex">\(Q \Rightarrow P\)</span>.</p>
 <h4 id="la-formalizzazione-di-proposizioni">La formalizzazione di proposizioni<a class="headerlink" href="#la-formalizzazione-di-proposizioni" title="Permanent link">&para;</a></h4>
-<p>Per <em>formalizzare</em> si intende il processo di estrarre da una proposizione in linguaggio naturale una una formula di calcolo proposizionale che ha la stessa struttura logica</p>
+<p>Per <em>formalizzare</em> si intende il processo di estrarre da una proposizione in linguaggio naturale (come italiano o inglese) una una formula di calcolo proposizionale che ha la stessa struttura logica</p>
 <div class="admonition example">
 <p class="admonition-title">Esempio di formalizzazione</p>
 <p>Avendo la frase "<em>Piove e fa freddo</em>", possiamo da questa proposizione estrarre due proposizioni elementari: <span class="arithmatex">\(P=\)</span> "<em>Piove</em>" e <span class="arithmatex">\(Fr=\)</span> "<em>fa freddo</em>".<br />
 La proposizione risultante sarà quindi <span class="arithmatex">\(P \land Fr\)</span></p>
 </div>
 <h3 id="la-semantica">La semantica<a class="headerlink" href="#la-semantica" title="Permanent link">&para;</a></h3>
+<p>La semantica di una proposizione (il suo valore) si può calcolare per induzione sul suo albero di derivazione.<br />
+Il risultato in genere però non è assoluto ma dipende da un'<em>interpretazione</em>.  </p>
+<div class="admonition abstract">
+<p class="admonition-title">Definizione di interpretazione</p>
+<p>Con interpretazione si intende una funzione <span class="arithmatex">\(\mathcal I : X \rightarrow \{t,f\}\)</span> che ci permetta di assegnare un valore di verità ad ogni simbolo proposizionale.</p>
+</div>
+<p>Possiamo pensare ad un'interpretazione in una proposizione composta (che definiremo a breve) come ad funzione che mappa ogni simbolo proposizionale ad un valore.<br />
+Ad esempio, avendo i simboli <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(B\)</span> e <span class="arithmatex">\(C\)</span>, l'interpretazione ci permette di definire i corrispettivi valori: <span class="arithmatex">\(A=t\)</span>, <span class="arithmatex">\(B=f\)</span> e <span class="arithmatex">\(C=t\)</span>.  </p>
 <hr />
-<h2 id="concetto-di-tautologia">Concetto di Tautologia<a class="headerlink" href="#concetto-di-tautologia" title="Permanent link">&para;</a></h2>
+<p>Per comporre le proposizioni semplici, come abbiamo detto prima, abbiamo bisogno dei connettivi logici, che abbiamo visto prima, ma senza vedere la loro semantica.<br />
+I connettivi logici possono essere visti come funzioni <span class="arithmatex">\(Bool \times Bool \rightarrow Bool\)</span>.  </p>
+<div class="admonition abstract">
+<p class="admonition-title">Definizione dei connettivi logici</p>
+<p>Possiamo definire i connettivi logici attraverso le loro tabelle di verità.<br />
+Possiamo iniziare vedendo la tabella di verità della negazione (<span class="arithmatex">\(\neg\)</span>):  </p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(x\)</span></th>
+<th align="center"><span class="arithmatex">\(\neg x\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">f</td>
+<td align="center">t</td>
+</tr>
+<tr>
+<td align="center">t</td>
+<td align="center">f</td>
+</tr>
+</tbody>
+</table>
+<p>E poi continuare con gli altri operatori:</p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(x\)</span>  <span class="arithmatex">\(y\)</span></th>
+<th align="center"><span class="arithmatex">\(x \land y\)</span></th>
+<th align="center"><span class="arithmatex">\(x \lor y\)</span></th>
+<th align="center"><span class="arithmatex">\(x \Rightarrow y\)</span></th>
+<th align="center"><span class="arithmatex">\(x \Leftarrow y\)</span></th>
+<th align="center"><span class="arithmatex">\(x \Leftrightarrow y\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(\mathbf f\)</span>  <span class="arithmatex">\(\mathbf f\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf f\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf f\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf t\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf t\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf t\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\mathbf f\)</span>  <span class="arithmatex">\(\mathbf t\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf f\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf t\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf f\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf f\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf f\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\mathbf t\)</span>  <span class="arithmatex">\(\mathbf f\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf f\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf t\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf t\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf t\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf t\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\mathbf t\)</span>  <span class="arithmatex">\(\mathbf t\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf t\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf t\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf f\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf t\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathbf f\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Vale la pena notare che nel caso dell'implicazione, se la premessa è falsa, la proposizione composta sarà vera in quanto la regola non si applicherà.<br />
+Per quanto invece riguarda la doppia implicazione, questa richiede che entrambe le proposizioni (da entrambe le parti del segno) siano vere per poter essere vera.</p>
+</div>
+<p>Ora che abbiano definito formalmente gli operatori, possiamo introdurre come calcolare formalmente la semantica di una proposizione complessa.<br />
+Questo perché dobbiamo associare una proposizione con un'interpretazione, che ci possa permettere di stabilire se la più piccola proposizione ha come valore (nel nostro caso) vero o falso.  </p>
+<div class="admonition abstract">
+<p class="admonition-title">Semantica del calcolo proposizionale</p>
+<p>Data un'interpretazione <span class="arithmatex">\(\mathcal I : X \rightarrow \{t,f\}\)</span>, il valore <strong>rispetto ad <span class="arithmatex">\(\mathcal I\)</span></strong> di una formula proposizionale è dato dalla funzione <span class="arithmatex">\(\llbracket \_ \rrbracket _\mathcal I : \mathbf{Prop} \rightarrow \{t,f\}\)</span>.<br />
+Questa funzione è definita induttivamente in questo modo:</p>
+<ol>
+<li><span class="arithmatex">\(\doublebr T_\mathcal I = \mathbf t\)</span>  e  <span class="arithmatex">\(\doublebr F_\mathcal I = \mathbf f\)</span>  </li>
+<li><span class="arithmatex">\(\doublebr A_\mathcal I = \mathcal I (A)\)</span> per ogni <span class="arithmatex">\(A \in X\)</span></li>
+<li><span class="arithmatex">\(\doublebr{(P)}_\mathcal I = (\doublebr P_\mathcal I)\)</span> per ogni <span class="arithmatex">\(P \in \bf Prop\)</span></li>
+<li><span class="arithmatex">\(\doublebr {\neg Q}_\mathcal I = \neg \doublebr Q _\mathcal I\)</span> per ogni <strong>formula atomica</strong> Q</li>
+<li><span class="arithmatex">\(\doublebr {P ~ op ~ Q}_\mathcal I = \doublebr P _\mathcal I ~ ~ op ~ ~ \doublebr Q_\mathcal I\)</span> per ogni connettivo <span class="arithmatex">\(op \in \{ \land,\lor,\Rightarrow,\Leftarrow,\Leftrightarrow\}\)</span> e per ogni <span class="arithmatex">\(P,Q \in \mathbf {Prop}\)</span></li>
+</ol>
+</div>
+<p>È possibile notare come le clausule appena descritte, corrispondano alle produzioni grammaticali (nella sezione dedicata alla <a href="#sintassi-del-calcolo-proposizionale">Sintassi</a>).  </p>
+<p>Definito il concetto di interpretazione e semantica, abbiamo abbastanza elementi per costruire il concetto di <em>modello logico</em>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Modello logico</p>
+<p>Data una formula proposizionale <span class="arithmatex">\(P\)</span> ed un'interpretazione <span class="arithmatex">\(\cal I\)</span>, diciamo che <span class="arithmatex">\(\cal I\)</span> è un modello di <span class="arithmatex">\(P\)</span>, se <span class="arithmatex">\(P\)</span> è vera in <span class="arithmatex">\(\cal I\)</span> (ovvero, se <span class="arithmatex">\(\doublebr P _\mathcal I = t\)</span>)<br />
+Per questo concetto, esiste una notazione apposita:</p>
+<div class="arithmatex">\[
+\mathcal I \vDash P \qquad \qquad (\mathcal I \text { è modello di P})
+\]</div>
+<p>Se invece l'interpretazione in <span class="arithmatex">\(\cal I\)</span> di <span class="arithmatex">\(P\)</span> risulta falsa, scriveremo <span class="arithmatex">\(\mathcal I \nvDash P\)</span>.  </p>
+</div>
+<p>Notare che <strong>è l'interpretazione</strong> ad <strong>essere modello</strong> di una proposizione.  </p>
+<hr />
+<p>È poi possibile estendere ulteriormente questa definizione ad un insieme (di formule <span class="arithmatex">\(\Gamma\)</span> (Gamma)).  </p>
+<div class="admonition abstract">
+<p class="admonition-title">Insieme di formule Gamma <span class="arithmatex">\(\Gamma\)</span></p>
+<p>Scriviamo <span class="arithmatex">\(\mathcal I \vDash \Gamma\)</span> (<span class="arithmatex">\(\mathcal I\)</span> è modello di Gamma), se <span class="arithmatex">\(\mathcal I \vDash P\)</span> per ogni <span class="arithmatex">\(P\)</span> in <span class="arithmatex">\(\Gamma\)</span>.<br />
+Se invece esiste <strong>almeno una</strong> forula in <span class="arithmatex">\(\Gamma\)</span> che non è modello di <span class="arithmatex">\(I\)</span> (<span class="arithmatex">\(\mathcal I \nvDash \cal I\)</span>), I non è un modello dell'insieme <span class="arithmatex">\(\Gamma\)</span>:<br />
+<span class="arithmatex">\(\mathcal I \nvDash \Gamma\)</span>  </p>
+</div>
+<p>Possiamo sottolineare come ogni interpretazione <span class="arithmatex">\(\cal I\)</span> valga se consideriamo il modello <span class="arithmatex">\(\mathcal I \vDash \varnothing\)</span>, dove <span class="arithmatex">\(\varnothing\)</span> è l'insieme vuoto di formule.<br />
+Possiamo verificarlo semplicemente seguendo qualche passaggio:  </p>
+<ol>
+<li>Possiamo partire dalla definizione <span class="arithmatex">\(\mathcal I \vDash \Gamma\)</span>, dove <span class="arithmatex">\(\Gamma\)</span> vale <span class="arithmatex">\(\varnothing\)</span></li>
+<li>Procediamo quindi prendendo ogni elemento di <span class="arithmatex">\(\Gamma\)</span> <span class="arithmatex">\(P\)</span> e verificando se <span class="arithmatex">\(\cal I\)</span> vale in <span class="arithmatex">\(P\)</span></li>
+<li>Essendo tuttavia <span class="arithmatex">\(\Gamma\)</span> vuoto, non c'è nulla da verificare, quindi <span class="arithmatex">\(\mathcal I \vDash \varnothing\)</span> vale <em>vacuamente</em></li>
+</ol>
+<hr />
+<p>Una volta definiti i modelli, potremmo voler considerare quindi la possibilità di compararli. Definiamo quindi il concetto di equivalenza</p>
+<div class="admonition abstract">
+<p class="admonition-title">Equivalenza logica</p>
+<p>Quando due modelli hanno gli stessi modelli (ovvero assumo lo stesso valore di verità per ogni interpretazione), vengono detti <strong>logicamente equivalenti**</strong>:  </p>
+<div class="arithmatex">\[
+P \equiv Q \qquad \qquad (\text { P e Q sono logicamente equivalenti})
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Conseguenza logica</p>
+<p>Data una formula proposizionale <span class="arithmatex">\(P\)</span> ed un insieme di formule <span class="arithmatex">\(\Gamma\)</span>, <span class="arithmatex">\(P\)</span> è una <strong>conseguenza logica</strong> di <span class="arithmatex">\(\Gamma\)</span> se:  </p>
+<ul>
+<li><span class="arithmatex">\(P\)</span> è vera in ogni interpretazione che rende vere tutte le formule di <span class="arithmatex">\(\Gamma\)</span></li>
+</ul>
+<p>oppure (in modo equivalente)</p>
+<ul>
+<li>Se ogni modello di <span class="arithmatex">\(\Gamma\)</span> è anche un modello di <span class="arithmatex">\(P\)</span></li>
+</ul>
+<p>Possiamo quindi formalizzare in questo modo:  </p>
+<div class="arithmatex">\[
+\Gamma \equiv P \qquad \qquad (\text {P è conseguenza logica di } \Gamma)
+\]</div>
+</div>
+<p>Abbiamo quindi determinato come, date due formule proposizionali <span class="arithmatex">\(P\)</span> e <span class="arithmatex">\(Q\)</span>, vale che:</p>
+<div class="arithmatex">\[
+P \equiv Q \qquad \text {se e solo se} \qquad \{P\} \vDash Q \;\; e \;\; \{Q\} \vDash P
+\]</div>
+<hr />
+<h4 id="le-tavole-di-verita">Le tavole di verità<a class="headerlink" href="#le-tavole-di-verita" title="Permanent link">&para;</a></h4>
+<p>È possibile valutare una formula proposizionale anche facendo uso delle <em>tavole di verità</em>, che ci permettono di raggiungere lo stesso scopo in maniera più semplice.  </p>
+<p>Possiamo assegnare una priorità agli operatori che vediamo (in questo caso la priorità è in ordine decrescente):</p>
+<table>
+<thead>
+<tr>
+<th align="center">Connettivo</th>
+<th align="center">Priorità</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(\neg\)</span></td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\land\)</span>, <span class="arithmatex">\(\lor\)</span></td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\Rightarrow\)</span>, <span class="arithmatex">\(\Leftarrow\)</span></td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\Leftrightarrow\)</span></td>
+<td align="center">4</td>
+</tr>
+</tbody>
+</table>
+<p>Possiamo quindi dire che, data questa priorità, la formula <span class="arithmatex">\(A \land \neg B \Leftrightarrow C \Leftarrow D\)</span> è equivalente a <span class="arithmatex">\((A \land (\neg (B))) \Leftrightarrow (C \Leftarrow D)\)</span>.  </p>
+<p>Onde non essere (o non rischiare di essere) ambigui, è comunque consigliato fare uso abbondante di parentesi.  </p>
+<p>Facendo uso di una tavola di verità, possiamo avere sul lato "sinistro" della tabella tutte le possibili interpretazioni di ogni proposizione semplice, o un sottoinsieme di queste.<br />
+Sul lato destro, abbiamo invece il valore che la forumla proposizionale in questione avrà con l'interpretazione <span class="arithmatex">\(\cal I\)</span> fornita dal "lato sinistro".  </p>
+<p>Possiamo osservare un esempio di una tavola di verità con una sola interpretazione:</p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(A\)</span></th>
+<th align="center"><span class="arithmatex">\(B\)</span></th>
+<th align="center"><span class="arithmatex">\(C\)</span></th>
+<th></th>
+<th align="center"><span class="arithmatex">\(((\ A \ \land \ B) \ \lor \ \neg \ C)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(t\)</span></td>
+<td align="center"><span class="arithmatex">\(f\)</span></td>
+<td align="center"><span class="arithmatex">\(f\)</span></td>
+<td>Valutiamo <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(B\)</span> e <span class="arithmatex">\(C\)</span></td>
+<td align="center"><span class="arithmatex">\(t \qquad ~ f \qquad \quad f ~\)</span></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>Valutiamo <span class="arithmatex">\(A \land B\)</span> e <span class="arithmatex">\(\neg \ C\)</span></td>
+<td align="center"><span class="arithmatex">\(\ f \qquad \quad ~ ~ t ~\)</span></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>Valutiamo l'<span class="arithmatex">\(\lor\)</span></td>
+<td align="center"><span class="arithmatex">\(\qquad ~ t\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="il-concetto-di-tautologia">Il concetto di Tautologia<a class="headerlink" href="#il-concetto-di-tautologia" title="Permanent link">&para;</a></h2>
 <div class="admonition abstract">
 <p class="admonition-title">Definizione di Tautologia</p>
 <p>Una tautologia è una formula proposizionale che risulta sempre vera per ogni interpretazione</p>
