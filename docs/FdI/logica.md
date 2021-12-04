@@ -72,7 +72,12 @@ La semantica di una proposizione (il suo valore) si può calcolare per induzione
 Il risultato in genere però non è assoluto ma dipende da un'_interpretazione_.  
 
 !!! abstract "Definizione di interpretazione"
-    Con interpretazione si intende una funzione $\mathcal I : X \rightarrow \{t,f\}$ che ci permetta de di assegnare un valore di verità ad ogni simbolo proposizionale.
+    Con interpretazione si intende una funzione $\mathcal I : X \rightarrow \{t,f\}$ che ci permetta di assegnare un valore di verità ad ogni simbolo proposizionale.
+
+Possiamo pensare ad un'interpretazione in una proposizione composta (che definiremo a breve) come ad funzione che mappa ogni simbolo proposizionale ad un valore.  
+Ad esempio, avendo i simboli $A$, $B$ e $C$, l'interpretazione ci permette di definire i corrispettivi valori: $A=t$, $B=f$ e $C=t$.  
+
+---
 
 Per comporre le proposizioni semplici, come abbiamo detto prima, abbiamo bisogno dei connettivi logici, che abbiamo visto prima, ma senza vedere la loro semantica.  
 I connettivi logici possono essere visti come funzioni $Bool \times Bool \rightarrow Bool$.  
@@ -175,8 +180,39 @@ $$
 P \equiv Q \qquad \text {se e solo se} \qquad \{P\} \vDash Q \;\; e \;\; \{Q\} \vDash P
 $$
 
+---
+
+#### Le tavole di verità
+
+È possibile valutare una formula proposizionale anche facendo uso delle _tavole di verità_, che ci permettono di raggiungere lo stesso scopo in maniera più semplice.  
+
+Possiamo assegnare una priorità agli operatori che vediamo (in questo caso la priorità è in ordine decrescente):
+
+|           Connettivo            | Priorità |
+|:-------------------------------:|:--------:|
+| $\neg$                          |    1     |
+| $\land$, $\lor$                 |    2     |
+| $\Rightarrow$, $\Leftarrow$     |    3     |
+| $\Leftrightarrow$               |    4     |
+
+Possiamo quindi dire che, data questa priorità, la formula $A \land \neg B \Leftrightarrow C \Leftarrow D$ è equivalente a $(A \land (\neg (B))) \Leftrightarrow (C \Leftarrow D)$.  
+
+Onde non essere (o non rischiare di essere) ambigui, è comunque consigliato fare uso abbondante di parentesi.  
+
+Facendo uso di una tavola di verità, possiamo avere sul lato "sinistro" della tabella tutte le possibili interpretazioni di ogni proposizione semplice, o un sottoinsieme di queste.  
+Sul lato destro, abbiamo invece il valore che la forumla proposizionale in questione avrà con l'interpretazione $\cal I$ fornita dal "lato sinistro".  
+
+Possiamo osservare un esempio di una tavola di verità con una sola interpretazione:
+
+| $A$ | $B$ | $C$ | | $((\ A \ \land \ B) \ \lor \ \neg \ C)$ |
+|:---:|:---:|:---:|-|:---------------------------------------:|
+| $t$ | $f$ | $f$ | Valutiamo $A$, $B$ e $C$ | $t \qquad ~ f \qquad \quad f ~$         |
+|     |     |     | Valutiamo $A \land B$ e $\neg \ C$| $\ f \qquad \quad ~ ~ t ~$              |
+|     |     |     | Valutiamo l'$\lor$| $\qquad ~ t$                            |
 
 ## Il concetto di Tautologia
+
+
 
 !!! abstract "Definizione di Tautologia"
     Una tautologia è una formula proposizionale che risulta sempre vera per ogni interpretazione
