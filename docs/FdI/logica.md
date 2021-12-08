@@ -47,14 +47,14 @@ Si tende ad indicare con i simboli A, B, C, ... i simboli proposizionali, mentre
 
 Per quanto riguarda i connettivi logici sopra descritti, rappresentano i più comuni e possiamo osservare il loro significato :  
 
-| Simbolo             | Nome                | Utilizzo | Lettura |
-|:-------------------:|---------------------|----------|----------|
-| $\neg$              | Negazione           | $\neg P$ | "Non P"<br/> "Not P"<br/> "Non è vero che P vale" |
-| $\land$             | Congiunzione        | $P \land Q$ | "P e Q"<br/> "P and Q"<br/> "P e anche Q"|
-| $\lor$              | Discongiunzione     | $P \lor Q$ | "P o Q"<br/> "P or Q"<br/> "P oppure Q" |
-| $\Rightarrow$       | Implicazione        | $P \Rightarrow Q$ | "se P allora Q"<br/> "P implica Q"<br/> "P solo se Q"<br/> "P è condizione sufficiente per Q"|
-| $\Leftarrow$        | Conseguenza         | $P \Leftarrow Q$ | "P è conseguenza di Q"<br/> "P se Q"<br/> "P if Q"<br/> "P è condizione necessaria per Q" |
-| $\Leftrightarrow$   | Doppia implicazione | $P \Leftrightarrow Q$ | "P sse Q"<br/> "P se e solo se Q"<br/> "P iff Q"<br/> "P è condizione necessaria e sufficiente per Q" | 
+| Simbolo  (Connettivo logico) | Nome                | Utilizzo | Lettura |
+|:----------------------------:|---------------------|----------|----------|
+| $\neg$                       | Negazione           | $\neg P$ | "Non P"<br/> "Not P"<br/> "Non è vero che P vale" |
+| $\land$                      | Congiunzione        | $P \land Q$ | "P e Q"<br/> "P and Q"<br/> "P e anche Q"|
+| $\lor$                       | Discongiunzione     | $P \lor Q$ | "P o Q"<br/> "P or Q"<br/> "P oppure Q" |
+| $\Rightarrow$                | Implicazione        | $P \Rightarrow Q$ | "se P allora Q"<br/> "P implica Q"<br/> "P solo se Q"<br/> "P è condizione sufficiente per Q"|
+| $\Leftarrow$                 | Conseguenza         | $P \Leftarrow Q$ | "P è conseguenza di Q"<br/> "P se Q"<br/> "P if Q"<br/> "P è condizione necessaria per Q" |
+| $\Leftrightarrow$            | Doppia implicazione | $P \Leftrightarrow Q$ | "P sse Q"<br/> "P se e solo se Q"<br/> "P iff Q"<br/> "P è condizione necessaria e sufficiente per Q" | 
 
 Nel caso dell'implicazione, $P$ assume il nome di _premessa_, mentre $Q$ quello di _conseguenza_ o _conclusione_.  
 
@@ -212,28 +212,91 @@ Possiamo osservare un esempio di una tavola di verità con una sola interpretazi
 
 ## Il concetto di Tautologia
 
-
-
 !!! abstract "Definizione di Tautologia"
-    Una tautologia è una formula proposizionale che risulta sempre vera per ogni interpretazione
+    Una tautologia è una formula proposizionale che risulta sempre vera **per ogni interpretazione**.  
+    Possiamo definirla sintatticamente come un **modello senza interpretazione**, che quindi varrà a priori:  
+    
+    $$
+    \varnothing \vDash P  \qquad \text {oppure} \qquad \vDash P 
+    $$ 
 
-    |= P
+Oltre alle tautologie (che come detto sono vere indifferentemente dall'interpretazione), possiamo definire altre 2 categorie di forule proposizionali:
 
-!!! abstract "Definizione di Contraddizione"
-    Formula proposizionale che è sempre falsa in tutte le interpretazioni
-    |= not P
+- Formule proposizionali **Soddisfacibili**: Hanno almeno un'interpretazione che le rende vere.  
+    Possiamo considerare una tautologia come appartenente anche a questa categoria
+- **Contraddizioni**: Sono formule proposizionali che sono false in ogni interpretazione.  
+    Possiamo indicarle con $\varnothing \nvDash P$  oppure  $\nvDash P$.
+- **Non tautologie** ($\nvDash$): L'insieme delle formule proposizionali, tranne le tautologie (che quindi compende anche le contraddizioni)
 
-!!! abstract "Definizione di Soddisfacibile"
-    Ha almeno un'interpretazione che la rende vera
-    È vera in almeno un'interpretazione  
-    Comprendono anche le tautologie
-    per ogni rovesciato P
+```
+┌─ Formule proposizionali soddisfacibili ─┐
+│                                         │
+│                                         │
+│     ┌───────── Tautologie ─────────┐    │
+│     │                              │    │
+│     │                              │    │
+│     │                              │    │
+│     └──────────────────────────────┘    │
+│        ┌───── Non-tautologie ────┐      │
+│        │                         │      │
+└────────│─────────────────────────│──────┘
+         │                         │
+         │   ┌ Contraddizioni ─┐   │
+         │   │                 │   │
+         │   │                 │   │
+         │   └─────────────────┘   │
+         └─────────────────────────┘
 
-!!! abstract "Definizione di interpretazione"
-    ...
+TODO (tanto non lo farò mai 🙃): Sostituire con un grafico vero ed esempi
+```
+
+Possiamo dimostrare che una formula non è una tautologia trovando un'interpretazione per la quale la formula non risulta vera.  
+Stesso discorso vale per le formule proposizionali soddisfacibili: è sufficiente trovare una singola interpretazione che renda la formula vera per farla rientrare nella categoria.  
 
 
-Non tautologie compendono anche le contraddizioni
+!!! example "Esempio di Tautologia"
+    Prendiamo in considerazione il seguente esempio.  
+    Notare che le varie righe per ogni cella rappresentano il valore della sottoproposizione ad ogni step (quindi nella prima riga valutiamo le proposizioni semplici facendo uso dell'interpretazione a sinistra, nella seconda valutiamo l'and e nella terza l'implicazione)  
+
+    | $A$ | $B$ | $A \land B \Rightarrow B$ |
+    |:---:|:---:|:--------------------------|
+    | $f$ | $f$ | $f \quad f \qquad f$<br/>$\;\; f$ <br/>$\qquad \quad t$|
+    | $f$ | $t$ | $f \quad t \qquad t$<br/>$\;\; f$ <br/>$\qquad \quad t$|
+    | $t$ | $f$ | $t \quad f \qquad f$<br/>$\;\; f$ <br/>$\qquad \quad t$|
+    | $t$ | $t$ | $t \quad t \qquad t$<br/>$\;\; t$ <br/>$\qquad \quad t$|
+
+!!! example "Esempio di Contraddizione"
+    | $A$ | $B$ | $A \land (B \land \neg A)$                                                                              |
+    |:---:|:---:|:--------------------------------------------------------------------------------------------------------|
+    | $f$ | $f$ | $f \hspace{1.5em} f \hspace{2.2em} f$<br/>$\hspace{4em} t$ <br/>$\hspace{2.9em} f$<br/>$\hspace{1em} f$ |
+    | $f$ | $t$ | $f \hspace{1.5em} t \hspace{2.2em} t$<br/>$\hspace{4em} t$ <br/>$\hspace{2.9em} t$<br/>$\hspace{1em} f$ |
+    | $t$ | $f$ | $t \hspace{1.5em} f \hspace{2.2em} f$<br/>$\hspace{4em} f$ <br/>$\hspace{2.9em} f$<br/>$\hspace{1em} f$ |
+    | $t$ | $t$ | $t \hspace{1.5em} t \hspace{2.2em} t$<br/>$\hspace{4em} f$ <br/>$\hspace{2.9em} f$<br/>$\hspace{1em} f$ |
+
+!!! example "Esempio di formula soddisfacibile"
+    | $A$ | $B$ | $A \Rightarrow B$                                                                             |
+    |:---:|:---:|:-------------------------------------------------------------------------------------------------------|
+    | $f$ | $f$ | $f \hspace{1.8em} f$<br/>$\hspace{1.2em} t$ |
+    | $f$ | $t$ | $f \hspace{1.8em} t$<br/>$\hspace{1.2em} t$ |
+    | $t$ | $f$ | $t \hspace{1.8em} f$<br/>$\hspace{1.2em} f$ |
+    | $t$ | $t$ | $t \hspace{1.8em} t$<br/>$\hspace{1.2em} t$ |
+
+Come abbiamo appena visto, non è del tutto scontato identificare una tautologia quando ne vediamo una.  
+Questo rappresenta un problema fondamentale del calcolo proposizionale: costruire una tabella di verità per una formula con 10 simboli, significherebbe avere $2^{10}$ righe.  
+Possiamo tuttavia dimostrare quando una formula è una tatutologia ricorrendo a delle dimostrazioni per sostituzione.  
+In alternativa, è possibile trovare una soluzione partendo dall'ultimo connettivo logico (in termimi di valutazione) ed "assegnandogli" un valore falso, andando quindi a ritroso.  
+
+## Dimostrazioni nel calcolo proposizionale
+
+Come abbiamo visto, la proposizione $P$ è conseguenza logica di un insieme di formule $\Gamma$ se $P$ è vera in tutti i modelli di $\Gamma$.  
+
+
+
+### Formalizzazione di inferenze e tautologie
+
+È possibile fare uso della formalizzazione per mostrare la correttezza di una certa inferenza o ragionamenti logici semplici espressi in linguaggio naturale.  
+
+Magari scrivere dopo
 
 ### Dimostrazioni per sostituzione di tautologie
 #### Rimpiazzamento
