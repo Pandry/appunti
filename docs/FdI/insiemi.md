@@ -348,6 +348,15 @@ Notiamo che l'insieme vuoto $\varnothing = \{\}$ ha cardinalità 0: $|\varnothin
 
 Esistono poi anche insiemi _infiniti_, come $\mathbb R$ o $\mathbb N$.
 
+Terminiamo quindi con la cardinalità di alcuni insiemi notevoli:  
+
+- $|\varnothing| = 0$
+- $|n| = n$
+- $|A \text { \ } B| = |A| - |A \cap B|$
+- $|A \cup B| = |A| + |B| - |A \cap B|$
+- $|A \times B| = |A| \cdot |B|$
+- $|\mathcal P(A)| = 2^{|A|}$
+- $|\mathcal P_k(A)| = ({|A| \atop k})$
 
 ---
 
