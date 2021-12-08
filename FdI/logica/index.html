@@ -602,8 +602,22 @@
     Il concetto di Tautologia
   </a>
   
-    <nav class="md-nav" aria-label="Il concetto di Tautologia">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dimostrazioni-nel-calcolo-proposizionale" class="md-nav__link">
+    Dimostrazioni nel calcolo proposizionale
+  </a>
+  
+    <nav class="md-nav" aria-label="Dimostrazioni nel calcolo proposizionale">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formalizzazione-di-inferenze-e-tautologie" class="md-nav__link">
+    Formalizzazione di inferenze e tautologie
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#dimostrazioni-per-sostituzione-di-tautologie" class="md-nav__link">
@@ -816,8 +830,22 @@
     Il concetto di Tautologia
   </a>
   
-    <nav class="md-nav" aria-label="Il concetto di Tautologia">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dimostrazioni-nel-calcolo-proposizionale" class="md-nav__link">
+    Dimostrazioni nel calcolo proposizionale
+  </a>
+  
+    <nav class="md-nav" aria-label="Dimostrazioni nel calcolo proposizionale">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formalizzazione-di-inferenze-e-tautologie" class="md-nav__link">
+    Formalizzazione di inferenze e tautologie
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#dimostrazioni-per-sostituzione-di-tautologie" class="md-nav__link">
@@ -926,7 +954,7 @@ il linguaggio (generato dalla categoria sintattica <span class="arithmatex">\(\l
 <table>
 <thead>
 <tr>
-<th align="center">Simbolo</th>
+<th align="center">Simbolo  (Connettivo logico)</th>
 <th>Nome</th>
 <th>Utilizzo</th>
 <th>Lettura</th>
@@ -1205,26 +1233,155 @@ Sul lato destro, abbiamo invece il valore che la forumla proposizionale in quest
 <h2 id="il-concetto-di-tautologia">Il concetto di Tautologia<a class="headerlink" href="#il-concetto-di-tautologia" title="Permanent link">&para;</a></h2>
 <div class="admonition abstract">
 <p class="admonition-title">Definizione di Tautologia</p>
-<p>Una tautologia è una formula proposizionale che risulta sempre vera per ogni interpretazione</p>
-<p>|= P</p>
+<p>Una tautologia è una formula proposizionale che risulta sempre vera <strong>per ogni interpretazione</strong>.<br />
+Possiamo definirla sintatticamente come un <strong>modello senza interpretazione</strong>, che quindi varrà a priori:  </p>
+<div class="arithmatex">\[
+\varnothing \vDash P  \qquad \text {oppure} \qquad \vDash P 
+\]</div>
 </div>
-<div class="admonition abstract">
-<p class="admonition-title">Definizione di Contraddizione</p>
-<p>Formula proposizionale che è sempre falsa in tutte le interpretazioni
-|= not P</p>
+<p>Oltre alle tautologie (che come detto sono vere indifferentemente dall'interpretazione), possiamo definire altre 2 categorie di forule proposizionali:</p>
+<ul>
+<li>Formule proposizionali <strong>Soddisfacibili</strong>: Hanno almeno un'interpretazione che le rende vere.<br />
+    Possiamo considerare una tautologia come appartenente anche a questa categoria</li>
+<li><strong>Contraddizioni</strong>: Sono formule proposizionali che sono false in ogni interpretazione.<br />
+    Possiamo indicarle con <span class="arithmatex">\(\varnothing \nvDash P\)</span>  oppure  <span class="arithmatex">\(\nvDash P\)</span>.</li>
+<li><strong>Non tautologie</strong> (<span class="arithmatex">\(\nvDash\)</span>): L'insieme delle formule proposizionali, tranne le tautologie (che quindi compende anche le contraddizioni)</li>
+</ul>
+<div class="highlight"><pre><span></span><code>┌─ Formule proposizionali soddisfacibili ─┐
+│                                         │
+│                                         │
+│     ┌───────── Tautologie ─────────┐    │
+│     │                              │    │
+│     │                              │    │
+│     │                              │    │
+│     └──────────────────────────────┘    │
+│        ┌───── Non-tautologie ────┐      │
+│        │                         │      │
+└────────│─────────────────────────│──────┘
+         │                         │
+         │   ┌ Contraddizioni ─┐   │
+         │   │                 │   │
+         │   │                 │   │
+         │   └─────────────────┘   │
+         └─────────────────────────┘
+
+TODO (tanto non lo farò mai 🙃): Sostituire con un grafico vero ed esempi
+</code></pre></div>
+<p>Possiamo dimostrare che una formula non è una tautologia trovando un'interpretazione per la quale la formula non risulta vera.<br />
+Stesso discorso vale per le formule proposizionali soddisfacibili: è sufficiente trovare una singola interpretazione che renda la formula vera per farla rientrare nella categoria.  </p>
+<div class="admonition example">
+<p class="admonition-title">Esempio di Tautologia</p>
+<p>Prendiamo in considerazione il seguente esempio.<br />
+Notare che le varie righe per ogni cella rappresentano il valore della sottoproposizione ad ogni step (quindi nella prima riga valutiamo le proposizioni semplici facendo uso dell'interpretazione a sinistra, nella seconda valutiamo l'and e nella terza l'implicazione)  </p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(A\)</span></th>
+<th align="center"><span class="arithmatex">\(B\)</span></th>
+<th align="left"><span class="arithmatex">\(A \land B \Rightarrow B\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(f\)</span></td>
+<td align="center"><span class="arithmatex">\(f\)</span></td>
+<td align="left"><span class="arithmatex">\(f \quad f \qquad f\)</span><br/><span class="arithmatex">\(\;\; f\)</span> <br/><span class="arithmatex">\(\qquad \quad t\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(f\)</span></td>
+<td align="center"><span class="arithmatex">\(t\)</span></td>
+<td align="left"><span class="arithmatex">\(f \quad t \qquad t\)</span><br/><span class="arithmatex">\(\;\; f\)</span> <br/><span class="arithmatex">\(\qquad \quad t\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(t\)</span></td>
+<td align="center"><span class="arithmatex">\(f\)</span></td>
+<td align="left"><span class="arithmatex">\(t \quad f \qquad f\)</span><br/><span class="arithmatex">\(\;\; f\)</span> <br/><span class="arithmatex">\(\qquad \quad t\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(t\)</span></td>
+<td align="center"><span class="arithmatex">\(t\)</span></td>
+<td align="left"><span class="arithmatex">\(t \quad t \qquad t\)</span><br/><span class="arithmatex">\(\;\; t\)</span> <br/><span class="arithmatex">\(\qquad \quad t\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="admonition abstract">
-<p class="admonition-title">Definizione di Soddisfacibile</p>
-<p>Ha almeno un'interpretazione che la rende vera
-È vera in almeno un'interpretazione<br />
-Comprendono anche le tautologie
-per ogni rovesciato P</p>
+<div class="admonition example">
+<p class="admonition-title">Esempio di Contraddizione</p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(A\)</span></th>
+<th align="center"><span class="arithmatex">\(B\)</span></th>
+<th align="left"><span class="arithmatex">\(A \land (B \land \neg A)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(f\)</span></td>
+<td align="center"><span class="arithmatex">\(f\)</span></td>
+<td align="left"><span class="arithmatex">\(f \hspace{1.5em} f \hspace{2.2em} f\)</span><br/><span class="arithmatex">\(\hspace{4em} t\)</span> <br/><span class="arithmatex">\(\hspace{2.9em} f\)</span><br/><span class="arithmatex">\(\hspace{1em} f\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(f\)</span></td>
+<td align="center"><span class="arithmatex">\(t\)</span></td>
+<td align="left"><span class="arithmatex">\(f \hspace{1.5em} t \hspace{2.2em} t\)</span><br/><span class="arithmatex">\(\hspace{4em} t\)</span> <br/><span class="arithmatex">\(\hspace{2.9em} t\)</span><br/><span class="arithmatex">\(\hspace{1em} f\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(t\)</span></td>
+<td align="center"><span class="arithmatex">\(f\)</span></td>
+<td align="left"><span class="arithmatex">\(t \hspace{1.5em} f \hspace{2.2em} f\)</span><br/><span class="arithmatex">\(\hspace{4em} f\)</span> <br/><span class="arithmatex">\(\hspace{2.9em} f\)</span><br/><span class="arithmatex">\(\hspace{1em} f\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(t\)</span></td>
+<td align="center"><span class="arithmatex">\(t\)</span></td>
+<td align="left"><span class="arithmatex">\(t \hspace{1.5em} t \hspace{2.2em} t\)</span><br/><span class="arithmatex">\(\hspace{4em} f\)</span> <br/><span class="arithmatex">\(\hspace{2.9em} f\)</span><br/><span class="arithmatex">\(\hspace{1em} f\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="admonition abstract">
-<p class="admonition-title">Definizione di interpretazione</p>
-<p>...</p>
+<div class="admonition example">
+<p class="admonition-title">Esempio di formula soddisfacibile</p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(A\)</span></th>
+<th align="center"><span class="arithmatex">\(B\)</span></th>
+<th align="left"><span class="arithmatex">\(A \Rightarrow B\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(f\)</span></td>
+<td align="center"><span class="arithmatex">\(f\)</span></td>
+<td align="left"><span class="arithmatex">\(f \hspace{1.8em} f\)</span><br/><span class="arithmatex">\(\hspace{1.2em} t\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(f\)</span></td>
+<td align="center"><span class="arithmatex">\(t\)</span></td>
+<td align="left"><span class="arithmatex">\(f \hspace{1.8em} t\)</span><br/><span class="arithmatex">\(\hspace{1.2em} t\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(t\)</span></td>
+<td align="center"><span class="arithmatex">\(f\)</span></td>
+<td align="left"><span class="arithmatex">\(t \hspace{1.8em} f\)</span><br/><span class="arithmatex">\(\hspace{1.2em} f\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(t\)</span></td>
+<td align="center"><span class="arithmatex">\(t\)</span></td>
+<td align="left"><span class="arithmatex">\(t \hspace{1.8em} t\)</span><br/><span class="arithmatex">\(\hspace{1.2em} t\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>Non tautologie compendono anche le contraddizioni</p>
+<p>Come abbiamo appena visto, non è del tutto scontato identificare una tautologia quando ne vediamo una.<br />
+Questo rappresenta un problema fondamentale del calcolo proposizionale: costruire una tabella di verità per una formula con 10 simboli, significherebbe avere <span class="arithmatex">\(2^{10}\)</span> righe.<br />
+Possiamo tuttavia dimostrare quando una formula è una tatutologia ricorrendo a delle dimostrazioni per sostituzione.<br />
+In alternativa, è possibile trovare una soluzione partendo dall'ultimo connettivo logico (in termimi di valutazione) ed "assegnandogli" un valore falso, andando quindi a ritroso.  </p>
+<h2 id="dimostrazioni-nel-calcolo-proposizionale">Dimostrazioni nel calcolo proposizionale<a class="headerlink" href="#dimostrazioni-nel-calcolo-proposizionale" title="Permanent link">&para;</a></h2>
+<p>Come abbiamo visto, la proposizione <span class="arithmatex">\(P\)</span> è conseguenza logica di un insieme di formule <span class="arithmatex">\(\Gamma\)</span> se <span class="arithmatex">\(P\)</span> è vera in tutti i modelli di <span class="arithmatex">\(\Gamma\)</span>.  </p>
+<h3 id="formalizzazione-di-inferenze-e-tautologie">Formalizzazione di inferenze e tautologie<a class="headerlink" href="#formalizzazione-di-inferenze-e-tautologie" title="Permanent link">&para;</a></h3>
+<p>È possibile fare uso della formalizzazione per mostrare la correttezza di una certa inferenza o ragionamenti logici semplici espressi in linguaggio naturale.  </p>
+<p>Magari scrivere dopo</p>
 <h3 id="dimostrazioni-per-sostituzione-di-tautologie">Dimostrazioni per sostituzione di tautologie<a class="headerlink" href="#dimostrazioni-per-sostituzione-di-tautologie" title="Permanent link">&para;</a></h3>
 <h4 id="rimpiazzamento">Rimpiazzamento<a class="headerlink" href="#rimpiazzamento" title="Permanent link">&para;</a></h4>
 <h4 id="principio-di-sostituzione">Principio di sostituzione<a class="headerlink" href="#principio-di-sostituzione" title="Permanent link">&para;</a></h4>
