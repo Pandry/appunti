@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="70.758408mm"
+   height="19.008625mm"
+   viewBox="0 0 267.43336 71.843623"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lend"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:0.625;stroke-linejoin:round"
+         id="path15214" />
+    </marker>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-139.99638,-58.74184)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="262.64304"
+       y="129.66547"
+       id="text11279"><tspan
+         id="tspan11277"
+         x="262.64304"
+         y="129.66547">b</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:Quicksand;-inkscape-font-specification:Quicksand;fill:#000000;fill-opacity:1;stroke:none"
+       x="138.31638"
+       y="129.66547"
+       id="text4961"><tspan
+         id="tspan4959"
+         x="138.31638"
+         y="129.66547">a</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="388.34973"
+       y="129.66547"
+       id="text12317"><tspan
+         id="tspan12315"
+         x="388.34973"
+         y="129.66547">c</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 173.42598,119.16004 h 75.57106"
+       id="path14310" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.37953;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 297.75265,119.16004 h 75.57106"
+       id="path15821" />
+    <path
+       style="fill:none;stroke:#2c89a0;stroke-width:1.03435px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 158.22358,105.86441 c 80.28411,-61.740825 157.26747,-62.538949 230.8204,0"
+       id="path15856" />
+  </g>
+</svg>
