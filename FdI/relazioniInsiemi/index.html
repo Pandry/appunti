@@ -8,9 +8,8 @@
       
       
       
-      
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.1">
     
     
       
@@ -18,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.23b6d78a.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -31,16 +30,15 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
-    
     
     
       <link rel="stylesheet" href="../../stylesheets/biggerAdmonitions.css">
     
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-
 
     
     
@@ -57,19 +55,24 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="green">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
-      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#relazioni-su-insiemi" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
     </div>
+    
     
       
 
@@ -128,8 +131,7 @@
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -422,10 +424,166 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Relazioni su insiemi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Relazioni su insiemi
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proprieta-di-relazioni-su-un-insieme" class="md-nav__link">
+    Proprietà di relazioni su un insieme
+  </a>
+  
+    <nav class="md-nav" aria-label="Proprietà di relazioni su un insieme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teorema-di-caratterizzazione" class="md-nav__link">
+    Teorema di caratterizzazione
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-chiusure" class="md-nav__link">
+    Le chiusure
+  </a>
+  
+    <nav class="md-nav" aria-label="Le chiusure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chiusura-riflessiva" class="md-nav__link">
+    Chiusura riflessiva
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chiusura-simmetrica" class="md-nav__link">
+    Chiusura simmetrica
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chiusura-transitiva" class="md-nav__link">
+    Chiusura transitiva
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-stella-di-kleene" class="md-nav__link">
+    La stella di Kleene
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relazioni-di-equivalenza" class="md-nav__link">
+    Relazioni di equivalenza
+  </a>
+  
+    <nav class="md-nav" aria-label="Relazioni di equivalenza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kernel-di-una-funzione" class="md-nav__link">
+    Kernel di una funzione
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relazioni-di-equivalenza-e-partizioni" class="md-nav__link">
+    Relazioni di equivalenza e partizioni
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relazioni-di-ordinamento" class="md-nav__link">
+    Relazioni di ordinamento
+  </a>
+  
+    <nav class="md-nav" aria-label="Relazioni di ordinamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relazione-di-ordinamento-parziale" class="md-nav__link">
+    Relazione di ordinamento parziale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relazione-di-ordinamento" class="md-nav__link">
+    Relazione di ordinamento
+  </a>
+  
+    <nav class="md-nav" aria-label="Relazione di ordinamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordinamento-lessicografico" class="md-nav__link">
+    Ordinamento lessicografico
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -559,20 +717,450 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proprieta-di-relazioni-su-un-insieme" class="md-nav__link">
+    Proprietà di relazioni su un insieme
+  </a>
+  
+    <nav class="md-nav" aria-label="Proprietà di relazioni su un insieme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teorema-di-caratterizzazione" class="md-nav__link">
+    Teorema di caratterizzazione
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-chiusure" class="md-nav__link">
+    Le chiusure
+  </a>
+  
+    <nav class="md-nav" aria-label="Le chiusure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chiusura-riflessiva" class="md-nav__link">
+    Chiusura riflessiva
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chiusura-simmetrica" class="md-nav__link">
+    Chiusura simmetrica
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chiusura-transitiva" class="md-nav__link">
+    Chiusura transitiva
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-stella-di-kleene" class="md-nav__link">
+    La stella di Kleene
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relazioni-di-equivalenza" class="md-nav__link">
+    Relazioni di equivalenza
+  </a>
+  
+    <nav class="md-nav" aria-label="Relazioni di equivalenza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kernel-di-una-funzione" class="md-nav__link">
+    Kernel di una funzione
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relazioni-di-equivalenza-e-partizioni" class="md-nav__link">
+    Relazioni di equivalenza e partizioni
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relazioni-di-ordinamento" class="md-nav__link">
+    Relazioni di ordinamento
+  </a>
+  
+    <nav class="md-nav" aria-label="Relazioni di ordinamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relazione-di-ordinamento-parziale" class="md-nav__link">
+    Relazione di ordinamento parziale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relazione-di-ordinamento" class="md-nav__link">
+    Relazione di ordinamento
+  </a>
+  
+    <nav class="md-nav" aria-label="Relazione di ordinamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordinamento-lessicografico" class="md-nav__link">
+    Ordinamento lessicografico
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                
-                  <h1>Relazioni su insiemi</h1>
-                
-                
-                
-              
-              
-                
 
+<h1 id="relazioni-su-insiemi">Relazioni su insiemi<a class="headerlink" href="#relazioni-su-insiemi" title="Permanent link">&para;</a></h1>
+<p>Riprendiamo il concetto di relazione, e per agevolare la lettura, anche la sua definizione:  </p>
+<div class="admonition abstract">
+<p class="admonition-title">Definizione di Relazione</p>
+<p>Una relazione <span class="arithmatex">\(R\)</span> tra l'insieme <span class="arithmatex">\(A\)</span> e l'insieme <span class="arithmatex">\(B\)</span> è un sottoinsieme del prodotto cartesiano <span class="arithmatex">\(A \times B\)</span>, quindi <span class="arithmatex">\(R \subseteq A \times B\)</span>. <br />
+Indichiamo poi l'insieme di tutte le relazioni tra <span class="arithmatex">\(A\)</span> e <span class="arithmatex">\(B\)</span> con la notazione <span class="arithmatex">\(Rel(A,B)\)</span>.<br />
+Indichiamo quindi che <span class="arithmatex">\(R\)</span> è una relazione tra <span class="arithmatex">\(A\)</span> e <span class="arithmatex">\(B\)</span> scrivendo <span class="arithmatex">\(R \in Rel(A,B)\)</span>, o più comunemente:<br />
+<span class="arithmatex">\(R: A \leftrightarrow B\)</span><br />
+Dove <span class="arithmatex">\(A\)</span> è detto insieme di partenza e <span class="arithmatex">\(B\)</span> insieme di arrivo. </p>
+</div>
+<p>Ovviamente possiamo sostituire l'insieme <span class="arithmatex">\(B\)</span> con <span class="arithmatex">\(A\)</span> e mantenere la stessa definizione e tutte le proprietà che abbiamo visto nei capitoli precedenti.<br />
+Per quanto riguarda le relazioni su loro stessi, i classici diagrammi di Eulero-Venn possono essere rappresentati come <strong>grafi</strong>:  </p>
+<p><img alt="Insiemi come grafi" src="../assets/insiemiGrafi.svg" /></p>
+<p>Gli elementi dell'insieme vengono chiamati <strong>nodi</strong>, mntre gli elementi di <span class="arithmatex">\(R\)</span> sono rappresentati come frecce e vengono chiamati <strong>archi</strong>.  </p>
+<h2 id="proprieta-di-relazioni-su-un-insieme">Proprietà di relazioni su un insieme<a class="headerlink" href="#proprieta-di-relazioni-su-un-insieme" title="Permanent link">&para;</a></h2>
+<p>Vediamo ora la relazione riflessiva</p>
+<div class="admonition abstract">
+<p class="admonition-title">Relazione riflessiva</p>
+<p>Una relazione <span class="arithmatex">\(R: A \leftrightarrow A\)</span> si dice riflessiva se per ogni elemento <span class="arithmatex">\(a \in A\)</span>:  </p>
+<div class="arithmatex">\[
+(a,a) \in R
+\]</div>
+</div>
+<p>Un esempio di relazione rilessiva è la relazione identità <span class="arithmatex">\(Id_A: A \leftrightarrow A\)</span> e la relazione completa <span class="arithmatex">\(A \times A: A \leftrightarrow A\)</span><br />
+La relazione <span class="arithmatex">\(\varnothing: A \leftrightarrow A\)</span> è riflessiva solo quando <span class="arithmatex">\(A = \varnothing\)</span>  </p>
+<p>Fondamentalmente, una relazione <span class="arithmatex">\(R: A \leftrightarrow A\)</span> per essere riflessiva deve contenere la relazione identità <span class="arithmatex">\(Id_A \subseteq A\)</span>  </p>
+<div class="admonition abstract">
+<p class="admonition-title">Relazione transitiva</p>
+<p>Una relazione <span class="arithmatex">\(R: A \leftrightarrow A\)</span> si dice transitiva quando per tutti gli elementi <span class="arithmatex">\(a,b,c \in A\)</span>, se <span class="arithmatex">\((a,b) \in R\)</span> e <span class="arithmatex">\((b,c) \in R\)</span>, allora <span class="arithmatex">\((a,c) \in R\)</span></p>
+</div>
+<p>Per ogni insieme, la relazioni di identità <span class="arithmatex">\(Id_A: A \leftrightarrow A\)</span>, il prodotto cartesiano <span class="arithmatex">\(A \times A: A \leftrightarrow A\)</span> e la relazione vuota <span class="arithmatex">\(\varnothing: A \leftrightarrow A\)</span> sono relazioni transitive.  </p>
+<p>Un altro esempio di relazioni transitive sono <span class="arithmatex">\(&lt; : A \leftrightarrow A\)</span> e <span class="arithmatex">\(\leq : A \leftrightarrow A\)</span>.  </p>
+<p>Visalmente si può fare riferimento alle relazioni che percorrono 2 nodi in successione. Per ogniuno di questi casi, ci dovrà essere un arco ad unire gli "estremi":  </p>
+<p><img alt="Relazione transitiva" src="../assets/relazioneTransitiva.svg" /></p>
+<div class="admonition abstract">
+<p class="admonition-title">Relazione simmetrica</p>
+<p>Una relazione <span class="arithmatex">\(R: A \leftrightarrow A\)</span> si dice simmetrica quando per tutti gli elementi <span class="arithmatex">\(a,b \in A\)</span>, se <span class="arithmatex">\((a,b) \in R\)</span> allora <span class="arithmatex">\((b,a) \in R\)</span></p>
+</div>
+<p>Per ogni insieme, la relazioni di identità <span class="arithmatex">\(Id_A: A \leftrightarrow A\)</span>, il prodotto cartesiano <span class="arithmatex">\(A \times A: A \leftrightarrow A\)</span> e la relazione vuota <span class="arithmatex">\(\varnothing: A \leftrightarrow A\)</span> sono relazioni simmetriche.  </p>
+<p>Praticamente ogni arco deve avere un corrispettivo arco con l'orientazione opposta.  </p>
+<div class="admonition abstract">
+<p class="admonition-title">Relazione antisimmetrica</p>
+<p>Una relazione <span class="arithmatex">\(R: A \leftrightarrow A\)</span> si dice antisimmetrica quando per tutti gli elementi <span class="arithmatex">\(a,b \in A\)</span>, se <span class="arithmatex">\((a,b) \in R\)</span> e <span class="arithmatex">\((b,a) \in R\)</span> allora <span class="arithmatex">\(a=b\)</span></p>
+</div>
+<p>Per ogni insieme, la relazioni di identità <span class="arithmatex">\(Id_A: A \leftrightarrow A\)</span> e la relazione vuota <span class="arithmatex">\(\varnothing: A \leftrightarrow A\)</span> sono relazioni anti-simmetriche.<br />
+Non sempre il prodotto cartesiano <span class="arithmatex">\(A \times A: A \leftrightarrow A\)</span> è antisimmetrico solo se vuoto o con cardinalità uno (<strong>da verificare</strong>)</p>
+<p>Si può identificare facilmente una relazione antisimmetrica, verificando che non ci sono coppie di archi con orientamento opposto (quindi ad esempio <span class="arithmatex">\((a,b)\)</span> e <span class="arithmatex">\((b,a)\)</span>).  </p>
+<h3 id="teorema-di-caratterizzazione">Teorema di caratterizzazione<a class="headerlink" href="#teorema-di-caratterizzazione" title="Permanent link">&para;</a></h3>
+<p>Possiamo caratterizzare le proprietà come abbiamo fatto per le proprietà TUSI:<br />
+Prendendo in considerazione una relazione <span class="arithmatex">\(R: A \leftrightarrow A\)</span>:</p>
+<ul>
+<li><span class="arithmatex">\(R\)</span> è rifelssiva se e solo se <span class="arithmatex">\(Id_A \subseteq R\)</span></li>
+<li><span class="arithmatex">\(R\)</span> è transitiva se e solo se <span class="arithmatex">\(R; R \subseteq R\)</span></li>
+<li><span class="arithmatex">\(R\)</span> è simmetrica se e solo se <span class="arithmatex">\(R^{op} \subseteq R\)</span></li>
+<li><span class="arithmatex">\(R\)</span> è antisimmetrica se e solo se <span class="arithmatex">\(R \cap R^{op} \subseteq A\)</span></li>
+</ul>
+<h2 id="le-chiusure">Le chiusure<a class="headerlink" href="#le-chiusure" title="Permanent link">&para;</a></h2>
+<p>Possiamo vedere le chiusure come delle relazioni "complementari" che fanno sì che una certa proprietà sia soddisfatta</p>
+<h3 id="chiusura-riflessiva">Chiusura riflessiva<a class="headerlink" href="#chiusura-riflessiva" title="Permanent link">&para;</a></h3>
+<p>Data una relazione <span class="arithmatex">\(R: A \leftrightarrow A\)</span>, possiamo sempre renderla una chiusura riflessiva:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Chiusura riflessiva</p>
+<p>La chiusura riflessiva di una relazione <span class="arithmatex">\(R: A \leftrightarrow A\)</span> è la relazione <span class="arithmatex">\(R \cup Id_A\)</span></p>
+</div>
+<p>Per avere una chiusura riflessiva, è sufficiente inserire un arco in ogni elemento dell'insieme.  </p>
+<h3 id="chiusura-simmetrica">Chiusura simmetrica<a class="headerlink" href="#chiusura-simmetrica" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Chiusura simmetrica</p>
+<p>La chiusura simmetrica della relazione <span class="arithmatex">\(R: A \leftrightarrow A\)</span> è la relazione <span class="arithmatex">\(R \cup R^{op}\)</span></p>
+</div>
+<p>Questa definizione fa sì che per ogni relazione, esista anche la relazione opposta  </p>
+<h3 id="chiusura-transitiva">Chiusura transitiva<a class="headerlink" href="#chiusura-transitiva" title="Permanent link">&para;</a></h3>
+<p>La chiusura transitiva è un attimo più complicata: un approccio naive potrebbe essere pensare di unire la relazione con la combinazione di sé stessa (<span class="arithmatex">\(R \cup R;R\)</span>), tuttavia la relazione risultante non sarebbe necessariamente transitiva.<br />
+Prendiamo come esempio l'insieme <span class="arithmatex">\(A=\{1,2,3,4\}\)</span> e la relazione <span class="arithmatex">\(R=\{(1,2), (2,3), (3,4)\}\)</span>. L'unione di <span class="arithmatex">\(R\)</span> con <span class="arithmatex">\(R;R\)</span> porterebbe ad avere <span class="arithmatex">\(R \cup \{(1,3), (2,4)\}\)</span>, ma non <span class="arithmatex">\((1,4)\)</span> ad esempio. Per averla relativa dobbiamo concatenare ancora una volta la relazione: <span class="arithmatex">\(R \cup R;R \cup R;R;R = R \cup R;R \cup \{(1,4)\}\)</span>  </p>
+<p>La chiusura transitiva è una <em>composizione n-aria di relazione</em> che può essere definita induttivamente:<br />
+Per ogni <span class="arithmatex">\(n \in \mathbb N\)</span>, definiamo <span class="arithmatex">\(R^n\)</span>:  </p>
+<ol>
+<li><span class="arithmatex">\(R^0 = id_A\)</span> (clausola base)</li>
+<li><span class="arithmatex">\(R^{n+1} = R;R^n\)</span></li>
+</ol>
+<p>Per avere la chiusura transitiva, è ora sufficiente fare l'unione infinita di <span class="arithmatex">\(R^n\)</span> con <span class="arithmatex">\(n = 1,2,...\)</span>  :  </p>
+<div class="arithmatex">\[
+\bigcup_{n \in N+} R^n
+\]</div>
+<div class="admonition abstract">
+<p class="admonition-title">Chiusura transitiva</p>
+<p>La chiusura transitiva di <span class="arithmatex">\(R: A \leftrightarrow A\)</span>, denotata <span class="arithmatex">\(R^+\)</span> è rappresentata dalla relazione</p>
+<div class="arithmatex">\[
+R^+ = \bigcup_{n \in \mathbb N+} R^n
+\]</div>
+</div>
+<p>Per ogni relazione <span class="arithmatex">\(R: A \leftrightarrow A\)</span>, vale che:</p>
+<ul>
+<li><span class="arithmatex">\(R^+\)</span> è transitiva</li>
+<li><span class="arithmatex">\(R \subseteq R^+\)</span></li>
+<li>Per ogni relazione <span class="arithmatex">\(S: A \leftrightarrow A\)</span>, se <span class="arithmatex">\(R \subseteq S\)</span> ed <span class="arithmatex">\(S\)</span> è transitiva, allora <span class="arithmatex">\(R^+ \subseteq S\)</span></li>
+</ul>
+<h3 id="la-stella-di-kleene">La stella di Kleene<a class="headerlink" href="#la-stella-di-kleene" title="Permanent link">&para;</a></h3>
+<p>Modificando la definizione appena data per la chiusura transitiva per avere <span class="arithmatex">\(\mathbb N\)</span> invece di <span class="arithmatex">\(\mathbb N+\)</span>, otteniamo la relazione <span class="arithmatex">\(R^0 \cup R^+ = id_A \cup R^+\)</span>, definita chiusura riflessiva e transitiva</p>
+<div class="admonition abstract">
+<p class="admonition-title">Chiusura riflessiva e transitiva</p>
+<p>La chiusura e transitiva di <span class="arithmatex">\(R\)</span>, denotata come <span class="arithmatex">\(R^*\)</span>, è definita come</p>
+<div class="arithmatex">\[
+R = \bigcup_{n \in \mathbb N} R^n
+\]</div>
+</div>
+<p>Valgono le stesse proprietà definite poco sopra per la chiusura transitiva  </p>
+<p>Questa è la più piccola relazione riflessiva e transitiva che contiere <span class="arithmatex">\(R\)</span>.  </p>
+<p>La stella di Krleene <span class="arithmatex">\(R^*\)</span> è pensata come una sorta di unione illimitata di R.  </p>
+<p>Possiamo inoltre definire delle leggi:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Legge</th>
+<th align="center">Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">riflessività</td>
+<td align="center"><span class="arithmatex">\(id_A \subseteq R^*\)</span></td>
+</tr>
+<tr>
+<td align="center">transitività</td>
+<td align="center"><span class="arithmatex">\(R^*;R^* \subseteq R^*\)</span></td>
+</tr>
+<tr>
+<td align="center">chiusura</td>
+<td align="center"><span class="arithmatex">\(R \subseteq R^*\)</span></td>
+</tr>
+<tr>
+<td align="center">idempotenza</td>
+<td align="center"><span class="arithmatex">\((R^*)^* = R^*\)</span></td>
+</tr>
+<tr>
+<td align="center">*-id</td>
+<td align="center"><span class="arithmatex">\(id^*_A = id_A\)</span></td>
+</tr>
+<tr>
+<td align="center">*-compl</td>
+<td align="center"><span class="arithmatex">\((A \times A)^* = A \times A\)</span></td>
+</tr>
+<tr>
+<td align="center">*-vuoto</td>
+<td align="center"><span class="arithmatex">\(\varnothing^*_{A,A} = id_A\)</span></td>
+</tr>
+<tr>
+<td align="center">distributività di *</td>
+<td align="center"><span class="arithmatex">\(R^* \cup S^* \subseteq (R \cup S)^*\)</span> <br/> <span class="arithmatex">\((R \cap S)^* \subseteq R^* \cap S^*\)</span> <br/> <span class="arithmatex">\((R^*)^{op} = (R^{op})^*\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="relazioni-di-equivalenza">Relazioni di equivalenza<a class="headerlink" href="#relazioni-di-equivalenza" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Relazione di equivalenza</p>
+<p>Una relazione <span class="arithmatex">\(R: A \leftrightarrow A\)</span> si dice di equivalenza se riflessiva, transitiva e simmetrica.  </p>
+</div>
+<p>Per ogni insieme la relazione <span class="arithmatex">\(id_A: A \leftrightarrow A\)</span> e <span class="arithmatex">\(A \times A: A \leftrightarrow A\)</span> sono relazioni di equivalenza  </p>
+<p>Quindi, riprendendo parte del teorema di caratterizzazione:  </p>
+<ul>
+<li><span class="arithmatex">\(R\)</span> è rifelssiva se e solo se <span class="arithmatex">\(Id_A \subseteq R\)</span></li>
+<li><span class="arithmatex">\(R\)</span> è transitiva se e solo se <span class="arithmatex">\(R; R \subseteq R\)</span></li>
+<li><span class="arithmatex">\(R\)</span> è simmetrica se e solo se <span class="arithmatex">\(R^{op} \subseteq R\)</span></li>
+</ul>
+<p>Tutte e tre queste proprietà devono essere soddisfatte per definire la relazione come di equivalenza.  </p>
+<h3 id="kernel-di-una-funzione">Kernel di una funzione<a class="headerlink" href="#kernel-di-una-funzione" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Kernel di una funzione</p>
+<p>Il kernel della funzione <span class="arithmatex">\(f: A \rightarrow B\)</span> è definita come:  </p>
+<div class="arithmatex">\[
+Ker(f) = \{ (x,y) \in A \times A | f(x) = f(y) \}
+\]</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Esempio di kernel</p>
+<p><img alt="Kernel - Immagine più confusionaria che altro, valutare di togliere" src="../assets/kernel.svg" />  </p>
+<p>Dato un insieme <span class="arithmatex">\(A = \{a,b,c\}\)</span>,<br />
+un insieme <span class="arithmatex">\(B = \{ \alpha, \beta \}\)</span><br />
+ed una funzione <span class="arithmatex">\(f = \{ (a,\alpha), (b,\alpha), (c, \beta) \}\)</span>,<br />
+Il kernel della funzione sarà <span class="arithmatex">\(Ker(f) = \{(a,a),(b,b),(c,c),(a,b),(b,a) \}\)</span></p>
+</div>
+<p>Per ogni funzione <span class="arithmatex">\(f: A \rightarrow B\)</span> vale che </p>
+<ul>
+<li><span class="arithmatex">\(Ker(f) = f;f^{op}\)</span></li>
+<li><span class="arithmatex">\(Ker(f)\)</span> è una relazione di equivalenza</li>
+</ul>
+<p>Queste due proposizioni possono essere trasformate in un teorema di caratterizzazione: tutte le relazioni di equivalenza possono rappresentare il kernel di qualche funzione.  </p>
+<p>Questo viene dimostrato anche facendo uso della nozione di classe di equivalenza:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Classe di equivalenza</p>
+<p>Data la <span class="arithmatex">\(R: A \leftrightarrow A\)</span> e <span class="arithmatex">\(a \in A\)</span>, la classe i R-equivalenza è  </p>
+<div class="arithmatex">\[
+[a]_R = \{ b \in A | (a,b) \in R \}
+\]</div>
+</div>
+<p>Questo può essere visto come ogni elemento in <span class="arithmatex">\(A\)</span> che sia presente nella prima posizione di una coppia della relazione <span class="arithmatex">\(R\)</span>. Questa relazione ha come risultato tutti gli elementi al secondo posto nelle coppie.  </p>
+<div class="admonition example">
+<p class="admonition-title">Esempio di classe di equivalenza</p>
+<p>Dato l'insieme <span class="arithmatex">\(A = \{a,b,c,d\}\)</span> e la relazione <span class="arithmatex">\(R = id_A \cup {(a,b), (b, a)}\)</span>:<br />
+<span class="arithmatex">\(R = id_A \cup \{(a,b), (b,a)\}\)</span><br />
+<span class="arithmatex">\(R = \{(a,a), (b,b), (c,c), (d,d)\} \cup \{(a,b), (b,a)\}\)</span><br />
+<span class="arithmatex">\(R = \{(a,a), (b,b), (c,c), (d,d), (a,b), (b,a)\}\)</span>:  </p>
+<ul>
+<li><span class="arithmatex">\([a]_R = {a, b}\)</span></li>
+<li><span class="arithmatex">\([b]_R = {b, a}\)</span></li>
+<li><span class="arithmatex">\([c]_R = {c}\)</span></li>
+<li><span class="arithmatex">\([d]_R = {d}\)</span></li>
+</ul>
+</div>
+<p>Per tutti gli insiemi A e per tutte le relazioni <span class="arithmatex">\(R: A \leftrightarrow A\)</span>, <span class="arithmatex">\(R\)</span> è una relazione di equivalenza se e solo se esiste un insieme B ed una funzione <span class="arithmatex">\(f: A \rightarrow B\)</span> tale che <span class="arithmatex">\(R = Ker(f)\)</span>.  </p>
+<blockquote>
+<p>Da rivedere - pagina 4-15 della dispensa.  </p>
+</blockquote>
+<h3 id="relazioni-di-equivalenza-e-partizioni">Relazioni di equivalenza e partizioni<a class="headerlink" href="#relazioni-di-equivalenza-e-partizioni" title="Permanent link">&para;</a></h3>
+<p>Una relazione di equivalenza è ciò che ci consente di raggruppare tutti quegli che condividono una certa proprietà (ad esempio i numeri pari, o che iniziano con un numero).  </p>
+<p>Data una relazione di equivalenza <span class="arithmatex">\(R: A \leftrightarrow A\)</span>, è possibile considerare l'insieme delle classi di R-equivalenza come  </p>
+<div class="arithmatex">\[
+EC_R = \{ [a]_R | a \in A \}
+\]</div>
+<p>Possiamo notare come <span class="arithmatex">\(EC_R\)</span> formi una partizione per ogni relazione di equivalenza <span class="arithmatex">\(R: A \leftrightarrow A\)</span>.  </p>
+<div class="admonition example">
+<p class="admonition-title">Insieme delle classi di equivalenza</p>
+<p>Riprendendo l'esempio precedente, con <span class="arithmatex">\(A = \{a,b,c,d\}\)</span> e <span class="arithmatex">\(R = id_A \cup \{(a,b), (b,a)\}\)</span>, <span class="arithmatex">\(EC_R\)</span> sarà uguale a <span class="arithmatex">\(\{ \{a,b\}, \{c\}, \{d\} \}\)</span>.<br />
+Essendo insiemi infatti gli elementi non ripetuti non aggiungono nessun tipo di informazione.  </p>
+</div>
+<p>Per tutti gli insiemi <span class="arithmatex">\(A\)</span> e tutte le relazioni di equivalenza <span class="arithmatex">\(R: A \leftrightarrow A\)</span>, <span class="arithmatex">\(EC_R\)</span> è una partizione.  </p>
+<p>Allo stesso modo, data una partizione di un insieme, è possibile stabilire una relazione di equivalenza:<br />
+Data una partizione <span class="arithmatex">\(\mathcal F = \{ X_i\}_{i \in I}\)</span> dell'insieme <span class="arithmatex">\(A\)</span>, definiamo la relazione <span class="arithmatex">\(f_{\mathcal F}: A \leftrightarrow I\)</span> come </p>
+<div class="arithmatex">\[
+f_{\mathcal F} = \{ (a,i) \in A \times I | a \in X_i \}
+\]</div>
+<p>Quello che abbiamo appena descritto ci permette di assegnare ad ogni elemento <span class="arithmatex">\(a\)</span> di una sottopartizione <span class="arithmatex">\(X_i\)</span> un valore in <span class="arithmatex">\(f_{\mathcal F}\)</span>. Quindi tutto gli elementi <span class="arithmatex">\(a\)</span> in ogni sottopartizione (<span class="arithmatex">\(a \in X_i\)</span>) avranno come immagine lo stesso valore in f, che è uguale all'indice che usiamo per riferirci alla sottopartizione.  </p>
+<p><img alt="Relazione di equivalenza da una partizione" src="../assets/fPerEC.svg" /></p>
+<p>Per tutti gli insiemi di A e tutte le partizioni <span class="arithmatex">\(\mathcal F = \{ X_i \}_{i \in I}\)</span> di A, la relazione <span class="arithmatex">\(f_{\mathcal F}\)</span> è una funzione.<br />
+Per essere una funzione,  <span class="arithmatex">\(f_{\mathcal F}\)</span> deve essere:  </p>
+<ul>
+<li><strong>Totale</strong>: dato che <span class="arithmatex">\(f_{\mathcal F} = \{ X_i \}_{i \in I}\)</span> è una partizione di A, vale che <span class="arithmatex">\(A \subseteq \bigcup _ {X \in EC_R} X\)</span>, e quini per ogni <span class="arithmatex">\(a \in A\)</span> esiste un <span class="arithmatex">\(X_i\)</span> tale che <span class="arithmatex">\(a \in X_i\)</span>. Quindi per definizione di <span class="arithmatex">\(f_{\mathcal F}\)</span> abbiamo che <span class="arithmatex">\((a,i) \in f_{\mathcal F}\)</span>  </li>
+<li><strong>Univalente</strong>: visto che <span class="arithmatex">\(f_{\mathcal F} = \{ X_i \}_{i \in I}\)</span> è una partizione di A, se <span class="arithmatex">\(i \neq j\)</span>, allora <span class="arithmatex">\(X_i \cap X_j = \varnothing\)</span>. Quindi per ogni <span class="arithmatex">\(a \in A\)</span>, esiste al più un <span class="arithmatex">\(i \in I\)</span>, tale che <span class="arithmatex">\(a \in X_i\)</span>, cioè esiste al più in <span class="arithmatex">\(i \in I\)</span> tale che <span class="arithmatex">\((x,i) \in f_{\mathcal F}\)</span></li>
+</ul>
+<p>Quindi la relazione corrispontende ad <span class="arithmatex">\(\mathcal F\)</span> è il kernel di <span class="arithmatex">\(f_{\mathcal F}\)</span>.  </p>
+<p>Abbiammo quindi una biezione tra l'insieme delle relazioni di equivalenza su A (denotato da <span class="arithmatex">\(ERel(A)\)</span>) e l'insieme delle partizioni su A (denotato da <span class="arithmatex">\(Part(A)\)</span>)<br />
+Questo principio è esattamente quello rappresentato dal grafico sopra, che quindi va a valere per ogni partizione esistente in A.  </p>
+<p>Per ogni insieme, vale quindi che </p>
+<div class="arithmatex">\[
+ERel (A) \cong Part(A)
+\]</div>
+<h2 id="relazioni-di-ordinamento">Relazioni di ordinamento<a class="headerlink" href="#relazioni-di-ordinamento" title="Permanent link">&para;</a></h2>
+<h3 id="relazione-di-ordinamento-parziale">Relazione di ordinamento parziale<a class="headerlink" href="#relazione-di-ordinamento-parziale" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Relazione di ordinamento parziale</p>
+<p><span class="arithmatex">\(R: A \leftrightarrow A\)</span> è una relazione di ordinamento parziale quando è riflessiva, transitiva e antisimmetrica</p>
+</div>
+<p>Un esempio di relazione parziale è la relazione <span class="arithmatex">\(\{(X,Y) \in \mathcal P(A) \times \mathcal P(A) | X \subseteq Y \}\)</span>  </p>
+<p>Per le relazioni di ordinamento parziale, usiamo la notazione infissa: <span class="arithmatex">\(A \ R \ B \cong (a,b) \in R\)</span>  </p>
+<p>Le reazioni di ordinamento sono in genere denotate dal simbolo <span class="arithmatex">\(\sqsubseteq\)</span>.<br />
+Si usa il simbolo <span class="arithmatex">\(\sqsubset\)</span> per la relazione <span class="arithmatex">\(\sqsubset = \{ (x,y) | x \sqsubseteq y ~ e ~ x \neq y \}\)</span>.<br />
+Questa notazione è analoga alle notazioni <span class="arithmatex">\(&lt;\)</span> e <span class="arithmatex">\(\leq\)</span> sui naturali.  </p>
+<p>C'è una grande differenza tra i simboli <span class="arithmatex">\(&gt;\)</span> e <span class="arithmatex">\(\leq\)</span>: per ogni coppia di numeri <span class="arithmatex">\((n,m) \in \mathbb N \times \mathbb N\)</span>, vale <span class="arithmatex">\(n \leq m\)</span> e <span class="arithmatex">\(m \leq n\)</span>.  </p>
+<h3 id="relazione-di-ordinamento">Relazione di ordinamento<a class="headerlink" href="#relazione-di-ordinamento" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Relazione di ordinamento</p>
+<p><span class="arithmatex">\(R: A \leftrightarrow A\)</span> è una relazione di ordinamento quando:<br />
+<span class="arithmatex">\(\text{per tutti gli } (a,b)\in A \times A \text{ vale che } (a,b) \in R \text{ oppure } (b,a) \in R\)</span></p>
+</div>
+<p><span class="arithmatex">\(R\)</span> è un ordinamento se e solo se <span class="arithmatex">\(id_A \subseteq R\)</span>  </p>
+<h4 id="ordinamento-lessicografico">Ordinamento lessicografico<a class="headerlink" href="#ordinamento-lessicografico" title="Permanent link">&para;</a></h4>
+<p>Un ordinamento lessicografico è un esempio particolare di ordinamento, utilizzato per ordinare le parole nei dizionari o negli elenchi.  </p>
+<p><span class="arithmatex">\(s \sqsubseteq _{A^n} t\)</span> se e solo se esiste un <span class="arithmatex">\(i \in \{ 0, ..., n \}\)</span> tale che per tutti gli indici <span class="arithmatex">\(j &lt; i\)</span> vale che <span class="arithmatex">\(a_j = a^{'}_i\)</span> e <span class="arithmatex">\(a_i \sqsubset a^{'}_i\)</span>  </p>
+<div class="admonition abstract">
+<p class="admonition-title">Ordinamento lessicografico</p>
+<p>Dato l'ordinamento <span class="arithmatex">\(\sqsubseteq _A : A \leftrightarrow A\)</span>, l'ordinamento lessicografico è definito come:<br />
+Per tutte le stringhe <span class="arithmatex">\(s=a_0 a_1 ... a_n\)</span> e <span class="arithmatex">\(t=a_0 a_1 ... a_m\)</span> in <span class="arithmatex">\(A^*\)</span> si ha che <span class="arithmatex">\(s \sqsubseteq _{A^*} t\)</span> se e solo se esiste un <span class="arithmatex">\(i \in \mathbb N\)</span> tale che per tutti i <span class="arithmatex">\(j &lt;i\)</span>, vale che <span class="arithmatex">\(a_j = a^{'}_j\)</span> ed almeno una delle due condizioni è vera:  </p>
+<ul>
+<li><span class="arithmatex">\(a_i \sqsubset _A a^{'} _i\)</span></li>
+<li><span class="arithmatex">\(i = n+1\)</span> e <span class="arithmatex">\(n &lt; m\)</span></li>
+</ul>
+</div>
+<div class="arithmatex">\[
+s \sqsubseteq _A t \text{ se e solo se } \exists i \in \mathbb N . \forall  j&lt;i. a_j = a^{'}_j \land (a_i \sqsubset a^{'}_i \lor (i = n+1 \land n &lt; m))
+\]</div>
+<hr />
+<p>Rivedere sezione sull'ordinamento</p>
 
               
             </article>
@@ -586,8 +1174,7 @@
         
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
@@ -626,16 +1213,15 @@
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
-          </a>
-        
-        
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
@@ -645,10 +1231,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navitation.sections", "navigation.indexes", "search.highlight", "content.tabs.link", "content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navitation.sections", "navigation.indexes", "search.highlight", "content.tabs.link", "content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.c7dec7e7.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      <script src="../../assets/javascripts/bundle.da79ceb7.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       
