@@ -36,7 +36,6 @@ Notare che $\mathcal F$ non è una partizione, in quanto possono esistere insiem
     \bigg| \bigcup^r_{j=1}S_j \bigg | = \sum_{I \subseteq \{1,2,...,r\}, I \ne \varnothing} (-1)^{|I| +1} \bigg | \bigcap_{i \in I} S_i \bigg |
     $$
 
-~~Che significa che possiamo ottenere la cardinalità dell'unione di r insiemi $S_1,...,S_r$ calcolando la cardinalità di ogniuno $S_i$ e sommando tutti i valori $S_i$ per cui i è un numero dispari, e sottrando tutti i valori $S_i$ per cui i è un numero pari.~~  
 Ciò significa che per trovare la cardinalità dell'unione di R insiemi, calcoliamo la cardinalità di ogni insieme e le sommiamo tutte.  
 Procediamo poi con il sottrarre la cardinalità delle intersezioni con tra insiemi quando il numero di insiemi nell'operazione di intersezione è pari, mentre aggiungiamo i valori se il numero di insiemi coinvolti è dispari.  
 Quindi, se ad esempio abbiamo $|S_1 \cap S_2|$, abbiamo due insiemi, che significa che andremo a **sottrarre**, essendo 2 pari.  
