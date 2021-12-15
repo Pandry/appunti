@@ -5,6 +5,7 @@ window.MathJax = {
       llbracket: "[\\![",
       rrbracket: "]\\!]",
       doublebr: [ "{ \\llbracket #1 \\rrbracket }", 1 ],
+      cb: [ "\\biggl({#1 \\atop {#2}}\\biggr)", 2],
     },
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
