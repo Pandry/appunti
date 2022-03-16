@@ -1,4 +1,4 @@
-## La logica
+# La logica
 La logica serve per, date certe premesse, verificare la validità di un certo enunciato.  
 Facciamo uso della logica per stabilire precisamente il significato degli enunciati matematici, e quindi determinare le argomentazioni valide.  
 Questo tipo di distinzione ci permette di **capire se una dimostrazione è corretta** oppure no.  
@@ -296,7 +296,36 @@ Come abbiamo visto, la proposizione $P$ è conseguenza logica di un insieme di f
 
 È possibile fare uso della formalizzazione per mostrare la correttezza di una certa inferenza o ragionamenti logici semplici espressi in linguaggio naturale.  
 
-Magari scrivere dopo
+!!! abstract "Sistema di dimostrazioni"
+    Dato un insieme di formule $\Delta$, un sistema di dimostrazioni (o proof system) per $\Delta$ è un insieme di regole di interenza $\cal R$.  
+    Una reola di inferenza $r \in \cal R$ ha la struttura:  
+
+    $$
+    \frac{P_1 \ \cdots  P_n}{P} [r]
+    $$
+    
+    Dove P è la conseguenza e $P_1 \ \cdots  P_n$ sono le premesse.  
+    Se $n=0$ la regola si chiama assioma.  
+
+!!! abstract "Dimostrazione"
+    Una dimostrazione in un proof system $\cal R$ di una formula $Q \in \Delta$ in un insieme di premesse $\Gamma \in \Delta$ è una sequenza di formule $Q_1,...,Q_n$, dove:  
+
+    - Ogni formula $Q$ è un elemento di $\Gamma$ oppure è ottenuta applicando una regola di inferenza di $\cal R$ a partire dalle formule in $\Gamma$ o in $Q_i,...,Q_{i-1}$
+    - $Q_n$ è proprio $Q$
+    
+    Se esiste una dimostrazione scriveremo:  
+
+    $$
+    \Gamma \vdash _{\cal R} Q \quad \text{Q è dimostrabile da }\Gamma
+    $$
+
+
+!!! abstract "Correttezza e completezza"
+
+    $$
+    \Gamma \vdash _{\cal R} P \ \text{ implica } \ \Gamma \vDash P \text{ (correttezza)}
+    $$
+
 
 ### Dimostrazioni per sostituzione di tautologie
 #### Rimpiazzamento
