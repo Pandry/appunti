@@ -73,7 +73,12 @@ Possiamo quindi dire che una funzione è surgettiva solo se la sua immagine coin
 
 Per capire velocemente da un grafico se una funzione è surgettiva, possiamo pensare di tracciare una linea orizzontale, se non intercetta almeno una volta la funzione, questa non è surgettiva:  
 
-![](assets/funcNonSurgettiva.png)
+<figure markdown>
+  ![Funzione iniettiva](assets/funcNonSurgettiva.png){ loading=lazy }
+  <figcaption markdown>
+  La funzione **NON** è surgettiva poiché la retta orizzontale blu ($y=2$) non intercetta mai la funzione ($y=|x|$)
+  </figcaption>
+</figure>
 
 ---
 
@@ -90,7 +95,12 @@ Se una funzione non è iniettiva, ci possono comunque essere dei "trucchi" che c
 
 Per capire velocemente da un grafico se una funzione è iniettiva, possiamo pensare di tracciare una linea orizzontale, se questa intercetta più di una volta la funzione, questa non è iniettiva:  
 
-![](assets/funcNonIniettiva.png)
+<figure markdown>
+  ![Funzione non iniettiva](assets/funcNonIniettiva.png){ loading=lazy }
+  <figcaption markdown>
+  La funzione **NON** è iniettiva poiché la retta orizzontale blu ($y=5$) intercetta più volte la funzione ($y=x\cdot |sin(x)|$ )
+  </figcaption>
+</figure>
 
 ---
 
@@ -107,7 +117,60 @@ La radice quadrata è la funzione inversa di f(x) = x^2 qunado dominio e codomin
 Che è come mai \sqrt 2 = 2 (che è diverso da dire che x^2 =4, che ha due soluzioni)
 Per questo motivo \sqrt {x^2} = |x|
 
---- 
+### Proprietà dai grafici
 
-Proprietà dai grafici
+#### Tralaslazione
+Possiamo traslare le funzioni sul grafico in ogni modo vogliamo:  
+Prendendo una funzione come $(\frac{1}{2}x)^2$ :  
+![Funzione da traslare](assets/funcDaTraslare.png){ loading=lazy }
 
+Possiamo effettuare ogni traslazione desiderata:  
+
+- **Traslazione verso l'alto**:  
+    Abbiamo una traslazione verso l'alto quando al valore della funzione aggiungiamo un valore $n$.  
+    Abbiamo quindi $f(x) + n \text{ con } n > 0$ (in questo caso $(\frac{1}{2}x)^2+5$)  
+    ![La funzione (0.5*x)^2 + 5](assets/funcTraslataAlto.png){ loading=lazy, width=400 }
+- **Traslazione verso il basso**:  
+    Abbiamo una traslazione verso il basso quando al valore della funzione sottraiamo un valore $n$.  
+    Abbiamo quindi $f(x) - n \text{ con } n < 0$ (in questo caso $(\frac{1}{2}x)^2-5$)  
+    ![La funzione (0.5*x)^2 - 5](assets/funcTraslataBasso.png){ loading=lazy, width=400 }
+- **Traslazione verso sinistra**:  
+    Abbiamo una traslazione verso sinistra quando all'argomento/valore della funzione aggiungiamo un valore $n$.  
+    Abbiamo quindi $f(x+n)   \text{ con } n > 0$ (in questo caso $(\frac{1}{2}x+5)^2$)  
+    ![La funzione (0.5*x+5)^2](assets/funcTraslataSinistra.png){ loading=lazy, width=400 }
+- **Traslazione verso destra**:  
+    Abbiamo una traslazione verso destra quando all'argomento/valore della funzione sottraiamo un valore $n$.  
+    Abbiamo quindi $f(x-n)   \text{ con } n < 0$ (in questo caso $(\frac{1}{2}x-5)^2$)  
+    ![La funzione (0.5*x-5)^2](assets/funcTraslataDestra.png){ loading=lazy, width=400 }
+
+#### Valore assoluto
+Il valore assoluto coincide con la funzione $f$ dove $f$ è positiva ed è l'opposto dove $f$ è negativa:  
+
+<figure markdown>
+  ![Funzione assoluta](assets/absFunction.png){ loading=lazy }
+  <figcaption markdown>
+
+$$
+|f(x)| =
+\begin{equation}
+    \begin{cases}
+      f(x) \text{ quando } x \ge 0 \\
+      -f(x) \text{ altrimenti}
+    \end{cases}\,.
+\end{equation}
+$$
+
+  </figcaption>
+</figure>
+
+#### Specchiamento
+
+È possibile specchiare una funzione sia rispetto all'ascisse (sempre) che rispetto all'ordinata (quando il dominio è simmetrico rispetto all'origine).  
+
+| Specchiamento        | Rispetto all'ascisse | Rispetto all'ordinata|
+|:--------------------:|:--------------------:|:--------------------:|
+| Grafico              | ![Funzione specchiata rispetto all'origine](assets/funcSpecchiataAscisse.png){ loading=lazy } | ![Funzione assoluta](assets/funcSpecchiataOrdinate.png){ loading=lazy } |
+| Funzione             | $-f(x)$ | $f(-x)$ | 
+| Esempio nel grafico  | $y=-((0.5 \cdot x+2)^2+2)$ | $y=(0.5 \cdot -x+2)^2+2$ | 
+
+Notare che nello specchiamento rispetto all'ordinata, il dominio deve essere simmetrico rispetto all'origine, e quindi permettere lo specchiamento.
