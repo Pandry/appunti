@@ -58,15 +58,20 @@ F mette in corrispondenza ogni elemento di A con uno ed un solo elemento di B.
     Quando si parla invece di immagine (di f), si intende immagine di tutto il dominio, quindi:  
     $Imm(f) = f(A)$  
 
+### Funzioni surgettive ed iniettive
+
 Vediamo quindi i concetti di surgettività ed iniettività:
+
+#### Surgettività 
+
 !!! definition "Surgettività"
     Una funzione $f: A \rightarrow B$ si dice surgettiva se
     $\forall y \in \exists \text{ almeno un elemento } x \in A$ tale che (t.c.) $f(x) = y$.  
 
 Che significa che ogni elemento nel codominio "proviene" da un elemento del dominio (nel codominio non ci sono elementi "scoperti")
 
-!!! example "Cambiamento del dominio per rendere una funzione surfgettiva"
-    La funzione $g: \mathbb R \rightarrow \mathbb R$, $g(x) = x^2$ non è surfgettiva.  
+!!! example "Cambiamento del dominio per rendere una funzione surfettiva"
+    La funzione $g: \mathbb R \rightarrow \mathbb R$, $g(x) = x^2$ non è surgettiva.  
     Questo perché nessun numero razionale elevato al quadrato restituirà un valore negativo. La funzione non è quindi surgettiva  
     La stessa funzione ma definita come $g: \mathbb R \rightarrow [0, + \infty )$ è surgettiva.
 
@@ -75,13 +80,13 @@ Possiamo quindi dire che una funzione è surgettiva solo se la sua immagine coin
 Per capire velocemente da un grafico se una funzione è surgettiva, possiamo pensare di tracciare una linea orizzontale, se non intercetta almeno una volta la funzione, questa non è surgettiva:  
 
 <figure markdown>
-  ![Funzione iniettiva](assets/funcNonSurgettiva.png){ loading=lazy }
+  ![Funzione non surgettiva](assets/funcNonSurgettiva.png){ loading=lazy }
   <figcaption markdown>
   La funzione **NON** è surgettiva poiché la retta orizzontale blu ($y=2$) non intercetta mai la funzione ($y=|x|$)
   </figcaption>
 </figure>
 
----
+#### Iniettività
 
 !!! definition "Iniettività"
     Una funzione $f: A \rightarrow B$ si dice iniettiva se
@@ -103,7 +108,7 @@ Per capire velocemente da un grafico se una funzione è iniettiva, possiamo pens
   </figcaption>
 </figure>
 
----
+#### Funzione bigettiva
 
 !!! definition "Funzione bigettiva"
     una funzione $f$ si dice bigettiva/biunivoca/invertibile se è sia iniettiva che surgettiva
@@ -203,8 +208,8 @@ La monotonia è una proprietà che riguarda strettamente la crescenza o la decre
     Se si verificano il caso 1 o 3, f si dice strettamente mònótòna
     Se si verificano il caso 2 o 4, f si dice debolmente mònótòna
 
-Una funzione (debolmente) crescente quindi, aumenterà sempre di valore (o comunque non diminuirà) man mano che x cresce. Per essere strettamente crescente, la funzione non deve avere mai due soluzioni uguali in due punti diversi.  
-Per una funzione decrescente diminuirà sempre di valore.  
+Una funzione (debolmente) crescente quindi, aumenterà sempre di valore (o comunque non diminuirà) man mano che $x$ cresce. Per essere strettamente crescente, la funzione non deve avere mai due soluzioni uguali in due punti diversi.  
+Per una funzione decrescente, vale lo stesso discorso, ma $x$ diminuirà sempre di valore invece di crescere.  
 
 ![Funzioni monotonoe](assets/funcMonotone.webp){ loading=lazy }
 
@@ -217,7 +222,7 @@ Se una funzione è strettamente crescente/decrescente, lo sarà anche debolmente
 
 
 <figure markdown>
-  ![Funzione invertibile](assets/func1SuX.png){ loading=lazy }
+  ![Funzione 1/x](assets/func1SuX.png){ loading=lazy }
   <figcaption markdown>
  Quando abbiamo una funzione come $\frac 1 x$, come definiamo la funzione?
   </figcaption>
@@ -267,20 +272,21 @@ Questa definizione implica che il dominio di f sia tale che se x appartiene al d
 
 Un esempio di una funzione periodica sono le funzioni trigonometriche (seno, coseno, tangente, etc...)  
 
-### Funzioni elementari
+## Funzioni elementari
 
-#### Retta
+### Retta
 La retta è scritta nella forma $f(x) = a \cdot x + b \text { con } a,b \in \mathbb R$  
 a è chiamato coefficiente angolare, b è chiamato termine noto.  
 
----
-#### Da rivedere tutti questi e categorizzare
+
+### Funzione potenza
+#### In N
 $f(x) = x^k, k \in \mathbb N$
 k pari, grafici sono una parabola (con la sola velocità di crescita che cambia).  
 k dispari, grafici sono una 
 $f$ è una funzine pari se $k$ è pari ed è dispari se $k$ è dispari. (questo perché $-1^2 = 1$ e $-1^3 = -1$).  
 
----
+#### In Z con k negativo
 
 $f(x) = x^k \  k\in \mathbb Z; k < 0$  
 k dispari  iperbole equilatera (primo e terzo quadrante)
@@ -288,7 +294,7 @@ k pari iperbole (primo e secondo quadrante)
 
 anche qui la funzione è pari per k pari e dispari per k dispari
 
---- 
+#### In R
 
 $f(x) = x^\frac p q ; p,q \in \mathbb N \ q \ne 0$  
 La funzione f ha come dominio naturale
@@ -297,9 +303,18 @@ Quando abbiamo $p = 1$ (quindi $x^\frac 1 q = sqrt[q]{x}$, inversa della funzion
 Se q è pari, il dominio è $x \ge 0$ (possiamo fare la radice quadrata solo di un positivi), quindi è invertibile solo come funzione da [0,+inf] -> [0, +inf]  
 Se q è dispari, il dominio è $\mathbb R$ (possiamo fare la radice cubica di un negativo). x^3 è una funzione invertibile su tutto R  
 
----
+#### In R e non in Q (irrazionale)
 
-#### Esponenziale
+$f(x) = x^\alpha, \alpha \in \mathbb R \ e \  \alpha \notin \mathbb Q$  (quindi ad esempio $x^{\sqrt 2}$ oppure $x^\pi$)  
+
+$x^\alpha = e^{\alpha \cdot log(x)} \ \text{ definita per } x>0$  
+Questo perché:  
+$e^{\alpha log (x)} = (e^{log(x)})^\alpha = x^\alpha$  
+
+Per definizione dobbiamo passare attraverso il logaritmo.  
+Il dominio naturale è $(0, +\infty)$
+
+### Esponenziale
 con $a \in \mathbb R, a >0, a \ne 1$ la funzione esponenziale è $f(x) = a^x$  
 
 |                              a > 1                           |                           0 < a < 1                           |
@@ -315,7 +330,7 @@ $$
 
 Entrambi le funzioni sono invertibili, poiché stettamente crescenti o decrescenti, quindi monotone, quindi iniettive e surgettive.  
 
-#### Logaritmo in base a
+### Logaritmo in base a
 
 con $a \in \mathbb R, a >0, a \ne 1$ la funzione logaritmica è $f(x) = log_a(x)$
 
@@ -324,38 +339,30 @@ con $a \in \mathbb R, a >0, a \ne 1$ la funzione logaritmica è $f(x) = log_a(x)
 |![Funzioni monotonoe](assets/funcLogAgt1.png){ loading=lazy } | ![Funzioni monotonoe](assets/funcLogAlt1.png){ loading=lazy } |
 | Strettamente crescente                                       | Strettamente decrescente                                      |
 
-Intercetta l'ascisse sempre ad 1
-
-simmetria rispetto alla bisettrice del grafico dell'esponenziale
+Intercetta l'ascissa sempre ad 1 e presenta una simmetria (è specchiata) rispetto alla bisettrice (y=x) del grafico dell'esponenziale
 
 
-#### Funzione esponenziale (in base e)
+### Funzione esponenziale (in base e)
 Funzione esponenziale con $a = e \cong 2,71$  
 è invertibile e la sua inversa si chiama logaritmo naturale.  
 (Se la base non è specificata, in matematica si intende in base e).  
 
-##### Cambio di base nel logaritmo - riscrivere
+#### Cambio di base del logaritmo
+Possiamo facilmente effettuare un cambio della base del logaritmo facendo uso di alcune regole matematiche:  
+
 Il logaritmo è la potenza che dobbiamo assegnare ad a per ottenere x:  
 $log_a (x) = y \Leftrightarrow a^y = x$  
-Il logaritmo naturale dell'equazione dell'identità (???) è: 
-$log(a^y) = log(x) \Leftrightarrow y \cdot log(a) = log(x)$, ma  
-$y = log_a (x)$,  
-quindi:  
-$log_a (x) \cdot log (a) = log(x) \Rightarrow \frac{log(x)}{log(a)}$
 
----
+Il logaritmo naturale dell'equazione dell'identità è:  
+$log(a^y) = log(x) \Leftrightarrow y \cdot log(a) = log(x)$, ed abbiamo già visto y:  
+  
+$y = log_a (x)$  
+  
+Quindi possiamo sostituire y, per poi semplificarla:  
+$log_a (x) \cdot log (a) = log(x) \Rightarrow log_a (x) = \frac{log(x)}{log(a)}$
 
-$f(x) = x^\alpha, \alpha \in \mathbb R \ e \  \alpha \notin \mathbb Q$  (quindi ad esempio $x^{\sqrt 2}$ oppure $x^\pi$)  
-
-$x^\alpha = e^{\alpha \cdot log(x)} \ \text{ definita per } x>0$  
-Questo perché:  
-$e^{\alpha log (x)} = (e^{log(x)})^\alpha = x^\alpha$  
-
-Per definizione dobbiamo passare attraverso il logaritmo.  
-Il dominio naturale è $(0, +\infty)$
-
-#### Funzioni trigonometriche
-##### Seno
+## Funzioni trigonometriche
+### Seno
 Il seno è una funzione trigonometrica periodica di periodo $2 \pi$  
 $f(x)=sin \ x \qquad f: \mathbb R \rightarrow [-1, 1]$  perché  $-1 \le sin(x) \le 1$.  
 La funzione è surgettiba se per codominio prendiamo $[-1, 1]$  
@@ -363,29 +370,28 @@ Essendo periodica, $sin(x+2 \pi) = sin(x) \quad \forall x \in \mathbb R$.
 Essendo il seno sull'asse delle orinate, il cerchio con angolo 0 ha valore 0 sulle ordinate, quindi $sin(0) = 0$.  
 La funzione è invertibile modificando dominio e codominio (quando la funzione è definita come $f: [ -\frac \pi 2 , \frac \pi 2 ] \rightarrow [-1, 1]$. f risulta quindi strettamente crescente (quindi monotona, quindi essendo continua, iniettiva) e surgettiva.)  
 Dispari  
-##### Arcoseno
+### Arcoseno
 Funzione inversa del seno, definita come $f: [-1, 1] \rightarrow [ -\frac \pi 2 , \frac \pi 2 ]$  
 La funzione arcsin è quindi l'inversa del seno quando il dominio è $[ -\frac \pi 2 , \frac \pi 2 ]$ ed il codominio è $[-1, 1]$  
 Se così non fosse la funzione seno non è né iniettiva né surgettiva, e quindi non è invertibile.  
 
-##### Coseno
+### Coseno
 Il coseno è una funzione trigonometrica periodica di periodo $2 \pi$  
 La funzione è il seno, ma traslata di $\frac \pi 2$ (quindi $cos(0) = 1$ )  
 Pari  
-##### Arcocoseno
+### Arcocoseno
 Se vogliamo invertire dobbiamo scegliere un intervallo dove la funzione è monotona.  
 Possiamo quindi definire il dominio naturle come $cos(x): [0, \pi] \rightarrow [-1, 1]$.  
 
-##### Tangente
-$tg (x) = \frac sin(x) cos(x)$, che quindi non è definita se $cos(x) = 0$.  
-Il dominio è quindi $\{ x \in \mathbb R: x \ne \frac \pi 2 + k \cdot \pi, k \in \mathbb Z \}$  
-ed è fatto da infiniti intervalli disgiunti.  
+### Tangente
+$tg (x) = \frac {sin(x)} {cos(x)}$, che quindi non è definita se $cos(x) = 0$.  
+Il dominio è quindi $\{ x \in \mathbb R: x \ne \frac \pi 2 + k \cdot \pi, k \in \mathbb Z \}$, composto da infiniti intervalli disgiunti.  
 È periodica di periodo $\pi$  
 È invertibile quando $f: (-\frac \pi 2 , \frac \pi 2 ) \rightarrow \mathbb R$
-Dispari  
+È inoltre dispari  
 
-##### Arcotangente
-È l'inversa della tangente 
+### Arcotangente
+È l'inversa della tangente  
 $arctan: \mathbb \rightarrow (-\frac \pi 2 , \frac \pi 2 )$  
 Strettamente crescente nel suo dominio.  
-
+(Da non invertire con la cotangente)
