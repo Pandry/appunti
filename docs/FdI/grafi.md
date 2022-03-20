@@ -18,7 +18,7 @@ Il numero dei nodi in un grafo è definito dalla cardinalità dell'insieme dei n
 Il numero degli archi, dalla cardinalità dall'insieme degli archi $|E|$.  
 La **dimensione** di $G$ è data dalla somma $|V|+|E|$.  
 
-![](../assets/grafoMatriceLista.png)
+![](assets/grafoMatriceLista.png)
 
 
 !!! abstract "Vicinato"
@@ -77,7 +77,7 @@ Possiamo arricchire la struttura base di un grafo $G = (V,E)$ aggiungendo delle 
 
 È possibile quindi adattare anche le rappresentazioni grafiche:  
 
-![](../assets/grafoMatriceListaPesato.png)
+![](assets/grafoMatriceListaPesato.png)
 
 ## Cammini, cicli e connettività
 
@@ -358,7 +358,7 @@ Questa relazione può essere stabilita solo se possiamo trovare una corrisponden
     Dati due qualunque grafi $G_1$ e $G_2$, con stessa cardinalità di nodi $|V_1| = |V_2|$ ed archi $|E_1| = |E_2|$, un isomorfismo tra i due grafi è una biiezione $f: G_1 \mapsto G_2$ tale che per ogni coppia di nodi $u,v \in V_1$, vale che $uv \in E_1$ se e solo se $f(v)f(v) \in E_2$ (esiste il corrispondente arco in entrambi i grafi, oppure non esiste in entrambi).  
     In tal caso $G_1$ e $G_2$ sono detti isomorfi.  
 
-![](../assets/isomorfismo.png)
+![](assets/isomorfismo.png)
 
 ## Altri grafi noti
 

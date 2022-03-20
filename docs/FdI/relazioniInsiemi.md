@@ -12,7 +12,7 @@ Riprendiamo il concetto di relazione, e per agevolare la lettura, anche la sua d
 Ovviamente possiamo sostituire l'insieme $B$ con $A$ e mantenere la stessa definizione e tutte le proprietà che abbiamo visto nei capitoli precedenti.  
 Per quanto riguarda le relazioni su loro stessi, i classici diagrammi di Eulero-Venn possono essere rappresentati come **grafi**:  
 
-![Insiemi come grafi](../assets/insiemiGrafi.svg)
+![Insiemi come grafi](assets/insiemiGrafi.svg)
 
 Gli elementi dell'insieme vengono chiamati **nodi**, mntre gli elementi di $R$ sono rappresentati come frecce e vengono chiamati **archi**.  
 
@@ -42,7 +42,7 @@ Un altro esempio di relazioni transitive sono $< : A \leftrightarrow A$ e $\leq 
 
 Visalmente si può fare riferimento alle relazioni che percorrono 2 nodi in successione. Per ogniuno di questi casi, ci dovrà essere un arco ad unire gli "estremi":  
 
-![Relazione transitiva](../assets/relazioneTransitiva.svg)
+![Relazione transitiva](assets/relazioneTransitiva.svg)
 
 
 !!! abstract "Relazione simmetrica"
@@ -179,7 +179,7 @@ Tutte e tre queste proprietà devono essere soddisfatte per definire la relazion
 
 
 !!! example "Esempio di kernel"
-    ![Kernel - Immagine più confusionaria che altro, valutare di togliere](../assets/kernel.svg)  
+    ![Kernel - Immagine più confusionaria che altro, valutare di togliere](assets/kernel.svg)  
     
     Dato un insieme $A = \{a,b,c\}$,  
     un insieme $B = \{ \alpha, \beta \}$  
@@ -246,7 +246,7 @@ $$
 
 Quello che abbiamo appena descritto ci permette di assegnare ad ogni elemento $a$ di una sottopartizione $X_i$ un valore in $f_{\mathcal F}$. Quindi tutto gli elementi $a$ in ogni sottopartizione ($a \in X_i$) avranno come immagine lo stesso valore in f, che è uguale all'indice che usiamo per riferirci alla sottopartizione.  
 
-![Relazione di equivalenza da una partizione](../assets/fPerEC.svg)
+![Relazione di equivalenza da una partizione](assets/fPerEC.svg)
 
 Per tutti gli insiemi di A e tutte le partizioni $\mathcal F = \{ X_i \}_{i \in I}$ di A, la relazione $f_{\mathcal F}$ è una funzione.  
 Per essere una funzione,  $f_{\mathcal F}$ deve essere:  
