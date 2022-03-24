@@ -1,0 +1,1346 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.1">
+    
+    
+      
+        <title>Calcolo differenziale - Appunti universitari</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.23b6d78a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/biggerAdmonitions.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/mathAdmonitions.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="green">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#massimo-maggiorante-ed-insieme-limitato" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Appunti universitari" class="md-header__button md-logo" aria-label="Appunti universitari" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Appunti universitari
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Calcolo differenziale
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ProAlgo/relazioniRicorrenza/" class="md-tabs__link">
+        Programmazione e Algoritmica
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../FdI/insiemi/" class="md-tabs__link">
+        Fondamenti di Informatica
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../LabI/" class="md-tabs__link">
+      Laboratorio I
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../prerequisiti/" class="md-tabs__link md-tabs__link--active">
+        Analisi I
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../AlgebraLineare/" class="md-tabs__link">
+      Algebra Lineare
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Appunti universitari" class="md-nav__button md-logo" aria-label="Appunti universitari" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Appunti universitari
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Programmazione e Algoritmica
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programmazione e Algoritmica" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Programmazione e Algoritmica
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProAlgo/relazioniRicorrenza/" class="md-nav__link">
+        Relazioni di ricorrenza
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProAlgo/programmazioneDinamica/" class="md-nav__link">
+        Programmazione dinamica
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Fondamenti di Informatica
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fondamenti di Informatica" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Fondamenti di Informatica
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/insiemi/" class="md-nav__link">
+        Insiemi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/relazioni/" class="md-nav__link">
+        Relazioni
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/induzione/" class="md-nav__link">
+        Induzione Matematica
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/relazioniInsiemi/" class="md-nav__link">
+        Relazioni su insiemi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/grafi/" class="md-nav__link">
+        Grafi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/calcoloCombinatorio/" class="md-nav__link">
+        Calcolo Combinatorio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/induzioneRicorsione/" class="md-nav__link">
+        Induzione Strutturale e Ricorsione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/linguaggi/" class="md-nav__link">
+        Linguaggi Formali
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/logica/" class="md-nav__link">
+        Logica Matematica
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/cheatsheet/" class="md-nav__link">
+        Cheatsheet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LabI/" class="md-nav__link">
+        Laboratorio I
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Analisi I
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Analisi I" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Analisi I
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisiti/" class="md-nav__link">
+        Funzioni ed introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Calcolo differenziale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Calcolo differenziale
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#massimo-maggiorante-ed-insieme-limitato" class="md-nav__link">
+    Massimo, maggiorante ed insieme limitato
+  </a>
+  
+    <nav class="md-nav" aria-label="Massimo, maggiorante ed insieme limitato">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massimo-di-un-insieme" class="md-nav__link">
+    Massimo di un insieme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maggiorante" class="md-nav__link">
+    Maggiorante
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insieme-superiormente-limitato" class="md-nav__link">
+    Insieme superiormente limitato
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimo-minorante-ed-insieme-limitato-inferiormente" class="md-nav__link">
+    Minimo, minorante ed insieme limitato inferiormente
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insieme-limitato" class="md-nav__link">
+    Insieme limitato
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lestremo-di-una-funzione" class="md-nav__link">
+    L'estremo di una funzione
+  </a>
+  
+    <nav class="md-nav" aria-label="L'estremo di una funzione">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-retta-reale-estesa" class="md-nav__link">
+    La retta reale estesa
+  </a>
+  
+    <nav class="md-nav" aria-label="La retta reale estesa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operazionu-sulla-retta-reale-estesa" class="md-nav__link">
+    Operazionu sulla retta reale estesa
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimi-e-massimi-di-insiemi-limitati" class="md-nav__link">
+    Minimi e massimi di insiemi limitati
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-limitate" class="md-nav__link">
+    Funzioni limitate
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzioni limitate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massimo-e-minimo-di-una-funzione" class="md-nav__link">
+    Massimo e minimo di una funzione
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limiti-di-una-funzione" class="md-nav__link">
+    Limiti di una funzione
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#punti-di-massimo-di-una-funzione" class="md-nav__link">
+    Punti di massimo di una funzione
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valore-assoluto" class="md-nav__link">
+    Valore assoluto
+  </a>
+  
+    <nav class="md-nav" aria-label="Valore assoluto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disuguaglianza-triangolare" class="md-nav__link">
+    Disuguaglianza triangolare
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-continuita" class="md-nav__link">
+    La continuità
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AlgebraLineare/" class="md-nav__link">
+        Algebra Lineare
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#massimo-maggiorante-ed-insieme-limitato" class="md-nav__link">
+    Massimo, maggiorante ed insieme limitato
+  </a>
+  
+    <nav class="md-nav" aria-label="Massimo, maggiorante ed insieme limitato">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massimo-di-un-insieme" class="md-nav__link">
+    Massimo di un insieme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maggiorante" class="md-nav__link">
+    Maggiorante
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insieme-superiormente-limitato" class="md-nav__link">
+    Insieme superiormente limitato
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimo-minorante-ed-insieme-limitato-inferiormente" class="md-nav__link">
+    Minimo, minorante ed insieme limitato inferiormente
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insieme-limitato" class="md-nav__link">
+    Insieme limitato
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lestremo-di-una-funzione" class="md-nav__link">
+    L'estremo di una funzione
+  </a>
+  
+    <nav class="md-nav" aria-label="L'estremo di una funzione">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-retta-reale-estesa" class="md-nav__link">
+    La retta reale estesa
+  </a>
+  
+    <nav class="md-nav" aria-label="La retta reale estesa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operazionu-sulla-retta-reale-estesa" class="md-nav__link">
+    Operazionu sulla retta reale estesa
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimi-e-massimi-di-insiemi-limitati" class="md-nav__link">
+    Minimi e massimi di insiemi limitati
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-limitate" class="md-nav__link">
+    Funzioni limitate
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzioni limitate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massimo-e-minimo-di-una-funzione" class="md-nav__link">
+    Massimo e minimo di una funzione
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limiti-di-una-funzione" class="md-nav__link">
+    Limiti di una funzione
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#punti-di-massimo-di-una-funzione" class="md-nav__link">
+    Punti di massimo di una funzione
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valore-assoluto" class="md-nav__link">
+    Valore assoluto
+  </a>
+  
+    <nav class="md-nav" aria-label="Valore assoluto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disuguaglianza-triangolare" class="md-nav__link">
+    Disuguaglianza triangolare
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-continuita" class="md-nav__link">
+    La continuità
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  <h1>Calcolo differenziale</h1>
+
+<h2 id="massimo-maggiorante-ed-insieme-limitato">Massimo, maggiorante ed insieme limitato<a class="headerlink" href="#massimo-maggiorante-ed-insieme-limitato" title="Permanent link">&para;</a></h2>
+<h3 id="massimo-di-un-insieme">Massimo di un insieme<a class="headerlink" href="#massimo-di-un-insieme" title="Permanent link">&para;</a></h3>
+<div class="admonition definition">
+<p class="admonition-title">Massimo dell'insieme</p>
+<p><span class="arithmatex">\(A \in \mathbb R, A \ne 0, m \in \mathbb R \text{ si dice massimo di A se } m \ge a \quad \forall a \in A \text{ e } m \in A\)</span><br />
+Dato un subset A di R non vuoto, un numero m reale si dice massimo dell'insieme A se m &gt;= di a e m è in A</p>
+</div>
+<p>Quindi ad esempio se A è l'intervallo <span class="arithmatex">\(A = [0,1] \Rightarrow max(A) =1\)</span><br />
+Tuttavia non tutti gli insiemi hanno un massimo: 
+<span class="arithmatex">\(B = [0,1)\)</span> allora B non ha massimo<br />
+La dimostrazione è abbastanza semplice quando fatta per assurdo:</p>
+<details class="abstract">
+<summary>Dimostrazione</summary>
+<p>Preso come esempio l'intervallo B appena citato, possiamo prendere un numero nell'insieme B e chiamarlo m (ad esempio 0.9). Troviamo quindi un <span class="arithmatex">\(\epsilon=1-m &gt; 0\)</span> (in questo caso <span class="arithmatex">\(\epsilon = 0.1\)</span>)<br />
+A questo punto possiamo definire <span class="arithmatex">\(m_1 = m + \frac \epsilon 2\)</span>.<br />
+Avremo quindi che <span class="arithmatex">\(m &lt; m_1\)</span>, con <span class="arithmatex">\(m_1 \in B\)</span> e quindi <span class="arithmatex">\(m_1\)</span> dovrebbe essere il massimo.<br />
+Quindi B non ha massimo.</p>
+</details>
+<h3 id="maggiorante">Maggiorante<a class="headerlink" href="#maggiorante" title="Permanent link">&para;</a></h3>
+<div class="admonition definition">
+<p class="admonition-title">Maggiorante</p>
+<p>Dato <span class="arithmatex">\(A \subset \mathbb R, A \ne \varnothing\)</span> un numero <span class="arithmatex">\(k \in \mathbb R\)</span> si dice maggiorante di A se <span class="arithmatex">\(k \ge a \forall a \in A\)</span>.<br />
+L'insieme di tutti i maggioranti si indica con <span class="arithmatex">\(\mathcal M_A\)</span></p>
+</div>
+<p>Un maggiorante deve essere quindi più grande di tutti gli elementi di A e non è detto che appartenga ad A.<br />
+Quindi, riprendendo l'esempio precedente <span class="arithmatex">\(A=[0,1]\)</span>, <span class="arithmatex">\(3 \in \mathcal M_A\)</span>, mentre <span class="arithmatex">\(\frac 1 4\)</span> non è un maggiorante<br />
+Possiamo quindi fare un paio di osservazioni:</p>
+<ul>
+<li>Se esiste un maggiorante di A allora ne esistono infiniti: se k è un maggiorante di A allora m è un maggiorante di A <span class="arithmatex">\(\forall m \ge k\)</span></li>
+<li>Alcuni insiemi non hanno maggioranti: <span class="arithmatex">\(A = \mathbb R\)</span> non ha maggioranti, così come la semiretta <span class="arithmatex">\([4, +\infty)\)</span></li>
+</ul>
+<h3 id="insieme-superiormente-limitato">Insieme superiormente limitato<a class="headerlink" href="#insieme-superiormente-limitato" title="Permanent link">&para;</a></h3>
+<div class="admonition definition">
+<p class="admonition-title">Insieme limitato superiormente</p>
+<p>Se l'insieme dei maggioranti è non vuoto <span class="arithmatex">\(\mathcal M_A \ne \varnothing\)</span>, l'insieme A si dice limitato superiormente</p>
+</div>
+<h3 id="minimo-minorante-ed-insieme-limitato-inferiormente">Minimo, minorante ed insieme limitato inferiormente<a class="headerlink" href="#minimo-minorante-ed-insieme-limitato-inferiormente" title="Permanent link">&para;</a></h3>
+<div class="admonition attention">
+<p class="admonition-title">Minimo, minorante ed insieme inferiormente limitato</p>
+<p><strong>Le stesse definizioni ma opposte si applicano per minimo, minorante e insieme inferiormente limitato</strong></p>
+</div>
+<details class="definition">
+<summary>Minimo dell'insieme</summary>
+<p><span class="arithmatex">\(A \in \mathbb R, A \ne 0, m \in \mathbb R \text{ si dice minimo di A se } m \le a \quad \forall a \in A \text{ e } m \in A\)</span>  </p>
+</details>
+<details class="definition">
+<summary>Minorante</summary>
+<p>Dato <span class="arithmatex">\(A \subset \mathbb R, A \ne \varnothing\)</span> un numero <span class="arithmatex">\(k \in \mathbb R\)</span> si dice minorante di A se <span class="arithmatex">\(k \le a \forall a \in A\)</span>.  </p>
+</details>
+<details class="definition">
+<summary>Insieme limitato inferiormente</summary>
+<p>Se l'insieme dei minoranti è non vuoto <span class="arithmatex">\(m_A \ne \varnothing\)</span>, l'insieme A si dice limitato inferiormente</p>
+</details>
+<h3 id="insieme-limitato">Insieme limitato<a class="headerlink" href="#insieme-limitato" title="Permanent link">&para;</a></h3>
+<div class="admonition definition">
+<p class="admonition-title">Insieme limitato</p>
+<p>Dato un insieme <span class="arithmatex">\(A \subset \mathbb R, a \ne \varnothing\)</span> se A è sia superiormente che inferiormente limitato, allora A si dice limitato</p>
+</div>
+<p>Un insieme A è quindi limitato se e solo se <span class="arithmatex">\(\exists h,k \in \mathbb R\)</span> tale che <span class="arithmatex">\(k \le a \le h \quad \forall a \in A\)</span><br />
+Quindi i due valori sono estermi all'insieme, limitandolo.  </p>
+<h2 id="lestremo-di-una-funzione">L'estremo di una funzione<a class="headerlink" href="#lestremo-di-una-funzione" title="Permanent link">&para;</a></h2>
+<div class="admonition definition">
+<p class="admonition-title">Teorema dell'estremo superiore</p>
+<p>Dato un sotto insieme di R <span class="arithmatex">\(A \subset \mathbb R, A \ne \varnothing\)</span>, superiormente limitato, allora esiste il minimo dell'insieme dei maggioranti. Tale minimo si dice estremo superiore di A e si indica con <span class="arithmatex">\(sup(A)\)</span></p>
+</div>
+<p>L'estremo superiore è quindi il minimo dei maggioranti, ed ogni insieme limitato superioremente ha un estremo superiroe.<br />
+Possiamo quindi vedere che l'insieme dei maggioranti ha sempre minimo  </p>
+<p>Quindi, ad esempio:  </p>
+<ul>
+<li><span class="arithmatex">\(A = [0,1) \Rightarrow \mathcal M_A = [1,+\infty)\)</span>. Il minimo dell'insieme dei maggioranti è 1, quindi l'estremo superiore di A è 1.  </li>
+<li><span class="arithmatex">\(B = [0,1] \Rightarrow \mathcal M_B = [1,+\infty)\)</span>. Il minimo dell'insieme dei maggioranti è 1, quindi l'estremo superiore di B è 1.  </li>
+</ul>
+<div class="admonition observation">
+<p class="admonition-title">Il massimo di un insieme è il suo limite superiore</p>
+<p>Se esiste il massimo di un insime A, allora il massimo di A coincide con l'estremo superiore.<br />
+un insieme limitato superiormente ha sempre un estremo superiore. Se questo elemento appartiene anche all'insieme è anche un massimo:<br />
+<span class="arithmatex">\(\exists \; max(A) \rightarrow max(A) = sup(A)\)</span> (Se esiste <span class="arithmatex">\(max(A)\)</span> allora <span class="arithmatex">\(max(A)=sup(A)\)</span>)</p>
+</div>
+<div class="admonition notation">
+<p class="admonition-title">Insieme non limitato superiormente</p>
+<p>Se l'insieme A non è superiormente limitato, scriviamo <span class="arithmatex">\(sup(A) = + \infty\)</span></p>
+</div>
+<div class="admonition observation">
+<p class="admonition-title">Verificare che un oggetto è un estremo superiore</p>
+<p><span class="arithmatex">\(A \ne \varnothing\)</span> superioremente limitato.<br />
+Allora <span class="arithmatex">\(m = sup(A)\)</span> se e solo se valgono:</p>
+<ul>
+<li><span class="arithmatex">\(a \le m \; \forall a \in A\)</span> (che significa che m è un maggiorante)</li>
+<li><span class="arithmatex">\(\forall \epsilon &gt; 0 \;  \exists \; \bar a \in A\)</span> tale che <span class="arithmatex">\(\bar a &gt; m - \epsilon\)</span> (spostarsi a sinistra di m c'è un elemento a destra di m  \epsilon, non ci sono maggioranti più piccoli di m; m è il più piccolo dei maggioranti)</li>
+</ul>
+<p><img alt="Estremo superiore" src="../assets/limiteSuperiore.svg" /></p>
+</div>
+<div class="admonition observation">
+<p class="admonition-title">Un insieme superiormente limitato è minore di infinito</p>
+<p>La scrittura <span class="arithmatex">\(sup(A) &lt; + \infty\)</span> singifica che l'estremo superore di A è un numero reale, quindi A è superiormente limitato.  </p>
+</div>
+<h3 id="la-retta-reale-estesa">La retta reale estesa<a class="headerlink" href="#la-retta-reale-estesa" title="Permanent link">&para;</a></h3>
+<div class="admonition definition">
+<p class="admonition-title">Retta reale estesa</p>
+<p><span class="arithmatex">\(\bar{ \; \mathbb{R} \; } = \mathbb{R} \cup \{-\infty\} \cup \{+\infty\}\)</span><br />
+in modo che valga <span class="arithmatex">\(-\infty \le m \le + \infty \quad \forall x \in \bar{\;\mathbb R\;}\)</span>
+Ergo, se <span class="arithmatex">\(x \in \mathbb R\)</span> (quindi <span class="arithmatex">\(x \ne +\infty, x \ne -\infty\)</span>), allora <span class="arithmatex">\(-\infty &lt; x &lt; + \infty\)</span></p>
+</div>
+<h4 id="operazionu-sulla-retta-reale-estesa">Operazionu sulla retta reale estesa<a class="headerlink" href="#operazionu-sulla-retta-reale-estesa" title="Permanent link">&para;</a></h4>
+<p>Operazioni in <span class="arithmatex">\(\bar {\mathbb R}\)</span>  </p>
+<ul>
+<li>Se <span class="arithmatex">\(x \ne +\infty\)</span>, allora <span class="arithmatex">\(x + (- \infty) = - \infty\)</span></li>
+<li>Se <span class="arithmatex">\(x \ne -\infty\)</span>, allora <span class="arithmatex">\(x + (+ \infty) = + \infty\)</span></li>
+<li>Se <span class="arithmatex">\(x \gt 0\)</span> allora <span class="arithmatex">\(x \cdot (+ \infty) = + \infty\)</span> e <span class="arithmatex">\(x \cdot (- \infty) = - \infty\)</span></li>
+<li>Se <span class="arithmatex">\(x \lt 0\)</span> allora <span class="arithmatex">\(x \cdot (+ \infty) = - \infty\)</span> e <span class="arithmatex">\(x \cdot (- \infty) = + \infty\)</span></li>
+</ul>
+<p>Operazioni vietate (forme indeterminate)  </p>
+<ul>
+<li><span class="arithmatex">\((+ \infty) + (- \infty)\)</span></li>
+<li><span class="arithmatex">\(0 \cdot (+ \infty)\)</span></li>
+<li><span class="arithmatex">\(0 \cdot (- \infty)\)</span></li>
+</ul>
+<p>Operazioni valide  </p>
+<ul>
+<li><span class="arithmatex">\(+ \infty \cdot + \infty = + \infty\)</span></li>
+<li><span class="arithmatex">\(+ \infty \cdot - \infty = - \infty\)</span></li>
+<li><span class="arithmatex">\(- \infty \cdot - \infty = + \infty\)</span></li>
+</ul>
+<h3 id="minimi-e-massimi-di-insiemi-limitati">Minimi e massimi di insiemi limitati<a class="headerlink" href="#minimi-e-massimi-di-insiemi-limitati" title="Permanent link">&para;</a></h3>
+<div class="admonition observation">
+<p class="admonition-title">Insiemi limitati hanno minimi o massimi</p>
+<p>Dato <span class="arithmatex">\(A \subset \mathbb Z\)</span> (interi) se A è superiormente limitato, A ha massimo.<br />
+Se A è inferiormente limitato, allora A ha minimo  </p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Parte intera</p>
+<p>Dato <span class="arithmatex">\(x \in \mathbb R\)</span> si dice parte intera di x e si indica con <span class="arithmatex">\([x]\)</span> il numero <span class="arithmatex">\([x] = max \{ m \in \mathbb Z : m \le x \}\)</span>.<br />
+<img alt="Parte intera" loading="lazy," src="../assets/parteIntera.svg" width="200" /></p>
+</div>
+<p>Ovvero: se abbiamo x (reale) tra due interi, la parte intera di x è il primo intero che si ottiene spostandosi a sinistra. Ad esempio:  </p>
+<ul>
+<li><span class="arithmatex">\([\frac {25}{10}] = 2\)</span></li>
+<li><span class="arithmatex">\([-\frac {25}{10}] = -3\)</span></li>
+</ul>
+<h2 id="funzioni-limitate">Funzioni limitate<a class="headerlink" href="#funzioni-limitate" title="Permanent link">&para;</a></h2>
+<div class="admonition definition">
+<p class="admonition-title">Funzione limitata</p>
+<p>f si dice limitata:  </p>
+<ul>
+<li><strong>superiormente</strong> se f(a) (la sua immagine) è limitato superiormente</li>
+<li><strong>inferiormente</strong> se f(a) (la sua immagine) è limitato inferiormente</li>
+<li>se <span class="arithmatex">\(f(a)\)</span> (la sua immagine) è limitato</li>
+</ul>
+</div>
+<h3 id="massimo-e-minimo-di-una-funzione">Massimo e minimo di una funzione<a class="headerlink" href="#massimo-e-minimo-di-una-funzione" title="Permanent link">&para;</a></h3>
+<div class="admonition definition">
+<p class="admonition-title">Funzione con massimo</p>
+<p><span class="arithmatex">\(f\)</span> ha massimo se <span class="arithmatex">\(f(A)\)</span> (la sua immagine) ha massimo.<br />
+Si dice che <span class="arithmatex">\(M\)</span> è il massimo di <span class="arithmatex">\(f\)</span> e si scrive<br />
+<span class="arithmatex">\(M = max(f)\)</span> se <span class="arithmatex">\(M = max(A)\)</span></p>
+</div>
+<details class="definition">
+<summary>Funzione con minimo</summary>
+<p><span class="arithmatex">\(f\)</span> ha minimo se <span class="arithmatex">\(f(A)\)</span> (la sua immagine) ha minimo.<br />
+Si dice che m è il minimo di <span class="arithmatex">\(f\)</span> e si scrive<br />
+<span class="arithmatex">\(m = min(f)\)</span> se <span class="arithmatex">\(m = min(A)\)</span></p>
+</details>
+<h3 id="limiti-di-una-funzione">Limiti di una funzione<a class="headerlink" href="#limiti-di-una-funzione" title="Permanent link">&para;</a></h3>
+<div class="admonition definition">
+<p class="admonition-title">Limiti di una funzione</p>
+<p><span class="arithmatex">\(sup(f) = sup(f(A))\)</span><br />
+Se <span class="arithmatex">\(f\)</span> non è limitata superiormente si scrive <span class="arithmatex">\(sup(f) = + \infty\)</span>.<br />
+Lo stesso vale per inf (limite inferiore).  </p>
+</div>
+<h3 id="punti-di-massimo-di-una-funzione">Punti di massimo di una funzione<a class="headerlink" href="#punti-di-massimo-di-una-funzione" title="Permanent link">&para;</a></h3>
+<div class="admonition definition">
+<p class="admonition-title">Punti di massimo</p>
+<p>Se <span class="arithmatex">\(f\)</span> ha massimo allora i punti <span class="arithmatex">\(\forall x_0 \in A | f(x_0) = max(f)\)</span> si dicono punti di massimo.<br />
+Se <span class="arithmatex">\(f\)</span> ha minimo allora i punti <span class="arithmatex">\(\forall x_0 \in A | f(x_0) = min(f)\)</span> si dicono punti di minimo.  </p>
+</div>
+<div class="admonition observation">
+<p class="admonition-title">Massimo e punti di massimo</p>
+<p>Il massimo di <span class="arithmatex">\(f\)</span> è unico; i punti di massimo potrebbero essere molti.<br />
+Lo stesso vale per il minimo.<br />
+<img alt="Punti di massimo e minimo nel seno" loading="lazy" src="../assets/massimoMinimoSin.png" /><br />
+Nella funzione seno, il massimo è <span class="arithmatex">\(max(f) = 1\)</span> e 0 i punti di massimo sono <span class="arithmatex">\(x_0 = \frac \pi 2 + k\cdot 2 \pi, k \in \mathbb Z\)</span></p>
+</div>
+<p>Una funzione come <span class="arithmatex">\(f:(0, +\infty) \rightarrow \mathbb R \quad f(x) = \frac 1 x\)</span> non ha né massimo né minimo. La funzione ad infinito tende a 0:<br />
+Se avesse massimo <span class="arithmatex">\(\Rightarrow \exists M\)</span> tale che <span class="arithmatex">\(f(x) \le M \forall x \in (0, + \infty)\)</span>:<br />
+<span class="arithmatex">\(f(x) &gt; 0 \forall x \Rightarrow 0\)</span> è un minorante <span class="arithmatex">\(0=inf(f)\)</span> (inf = estremo inferiore)<br />
+0 è quindi l'estremo inferiore di f, ma 0 <strong>NON</strong> è un minimo.<br />
+Se la funzione avesse minimo, allora dovrebbe essere <span class="arithmatex">\(min(f)=inf(f)=0\)</span>, quindi dovrebbe esistere un <span class="arithmatex">\(x_0\)</span> tale che <span class="arithmatex">\(f(x_0)=0\)</span> cioè <span class="arithmatex">\(\frac 1 {x_0}\)</span>, che è impossibile.  </p>
+<div class="admonition observation">
+<p><span class="arithmatex">\(f: A \rightarrow \mathbb R\)</span> allora <span class="arithmatex">\(m = sup(f)\)</span> se e solo se:  </p>
+<ol>
+<li><span class="arithmatex">\(f(x) \le m \forall x \in A\)</span></li>
+<li><span class="arithmatex">\(\forall \epsilon &gt; 0 \exists \bar x \in S\)</span> tale che <span class="arithmatex">\(f(\bar x) &gt; m - \epsilon\)</span><br />
+    Se si abbassa la quota di m si "taglia" la funzione</li>
+</ol>
+</div>
+<h2 id="valore-assoluto">Valore assoluto<a class="headerlink" href="#valore-assoluto" title="Permanent link">&para;</a></h2>
+<div class="admonition definition">
+<p class="admonition-title">Valore assoluto</p>
+<p>Dato <span class="arithmatex">\(x \in \mathbb R\)</span> si dice valore assoluto di x e si indica con |x| il numero <span class="arithmatex">\(|x| = max(x,-x)\)</span></p>
+</div>
+<p>Quindi:  </p>
+<ol>
+<li><span class="arithmatex">\(x \le |x|\)</span></li>
+<li><span class="arithmatex">\(|x| = x\)</span> se <span class="arithmatex">\(x \ge 0\)</span>, <span class="arithmatex">\(|x| = -x\)</span> se <span class="arithmatex">\(x \le 0\)</span></li>
+<li><span class="arithmatex">\(|x| \ge 0 \forall x \in \mathbb R\)</span></li>
+<li><span class="arithmatex">\(|x| = 0 \Leftrightarrow x = 0\)</span></li>
+<li><span class="arithmatex">\(|x| = |-x|\)</span></li>
+<li><span class="arithmatex">\(-|x| \le x \le |x|\)</span></li>
+<li><span class="arithmatex">\(|x| \le M \Leftrightarrow -M \le x \le M\)</span> (<span class="arithmatex">\(M \gt 0\)</span>)</li>
+<li><span class="arithmatex">\(|x| \gt M \Leftrightarrow x \gt M\)</span> oppure <span class="arithmatex">\(x \lt -M\)</span></li>
+</ol>
+<p>Come altre proprietà possiamo poi aggiungere:  </p>
+<ul>
+<li><span class="arithmatex">\(|x| \le x_0 \Leftrightarrow -x_0 \le m \le x_0\)</span></li>
+<li><span class="arithmatex">\(|x| \ge x_0 \Leftrightarrow x \le -x_0\)</span> oppure <span class="arithmatex">\(x \ge x_0\)</span></li>
+</ul>
+<h3 id="disuguaglianza-triangolare">Disuguaglianza triangolare<a class="headerlink" href="#disuguaglianza-triangolare" title="Permanent link">&para;</a></h3>
+<div class="admonition definition">
+<p class="admonition-title">Disuguaglianza triangolare</p>
+<p>Dati <span class="arithmatex">\(a, b \in \mathbb R\)</span> , risulta che:  </p>
+<ol>
+<li><span class="arithmatex">\(|a + b| \le |a| + |b|\)</span></li>
+<li><span class="arithmatex">\(||a| - |b| | \le |a-b|\)</span></li>
+</ol>
+<p>Questo discorso vale anche per più valori:  </p>
+<p><span class="arithmatex">\(|a + b + c| \le |a + b + c|\)</span><br />
+<span class="arithmatex">\(|a + b + c| = |(a + b) + c| \le |a + b| + |c| \le |a| + |b| + |c|\)</span></p>
+</div>
+<h2 id="la-continuita">La continuità<a class="headerlink" href="#la-continuita" title="Permanent link">&para;</a></h2>
+<div class="admonition definition">
+<p class="admonition-title">Funzione continua</p>
+<p><span class="arithmatex">\(A \subset \mathbb R, f: A \rightarrow \mathbb R, x_0 \in A\)</span>.<br />
+La funzione si dice continua in x_0 se <span class="arithmatex">\(\forall \epsilon &gt; 0 \; \exists \; \delta &gt; 0\)</span> 
+tale che
+ <span class="arithmatex">\(x \in A, |x-x_0| &lt; \delta \Rightarrow |f(x) - f(x_0)| &lt; \epsilon\)</span>  </p>
+<p>Spiegandola un po':  </p>
+<ul>
+<li><span class="arithmatex">\(|x - x_0| &lt; \delta \Leftrightarrow x_0 - \delta &lt; x &lt; x_0 + \delta\)</span> (x è compreso tra x_0 \pm delta)</li>
+<li><span class="arithmatex">\(|f(x) - f(x_0)| &lt; \epsilon \Leftrightarrow f(x_0) - \epsilon &lt; f(x) &lt; f(x_0) + epsilon\)</span> (la funzione oscilla intorno ad <span class="arithmatex">\(f(x_0)\)</span> ad un ampiezza massima di epsilon)</li>
+</ul>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../prerequisiti/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Funzioni ed introduzione" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Funzioni ed introduzione
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../AlgebraLineare/" class="md-footer__link md-footer__link--next" aria-label="Next: Algebra Lineare" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Algebra Lineare
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navitation.sections", "navigation.indexes", "search.highlight", "content.tabs.link", "content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.c7dec7e7.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.da79ceb7.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

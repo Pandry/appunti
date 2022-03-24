@@ -1,0 +1,1830 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.1">
+    
+    
+      
+        <title>Funzioni ed introduzione - Appunti universitari</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.23b6d78a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/biggerAdmonitions.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/mathAdmonitions.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="green">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#insiemi-numerici" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Appunti universitari" class="md-header__button md-logo" aria-label="Appunti universitari" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Appunti universitari
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Funzioni ed introduzione
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ProAlgo/relazioniRicorrenza/" class="md-tabs__link">
+        Programmazione e Algoritmica
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../FdI/insiemi/" class="md-tabs__link">
+        Fondamenti di Informatica
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../LabI/" class="md-tabs__link">
+      Laboratorio I
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Analisi I
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../AlgebraLineare/" class="md-tabs__link">
+      Algebra Lineare
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Appunti universitari" class="md-nav__button md-logo" aria-label="Appunti universitari" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Appunti universitari
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Programmazione e Algoritmica
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programmazione e Algoritmica" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Programmazione e Algoritmica
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProAlgo/relazioniRicorrenza/" class="md-nav__link">
+        Relazioni di ricorrenza
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProAlgo/programmazioneDinamica/" class="md-nav__link">
+        Programmazione dinamica
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Fondamenti di Informatica
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fondamenti di Informatica" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Fondamenti di Informatica
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/insiemi/" class="md-nav__link">
+        Insiemi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/relazioni/" class="md-nav__link">
+        Relazioni
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/induzione/" class="md-nav__link">
+        Induzione Matematica
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/relazioniInsiemi/" class="md-nav__link">
+        Relazioni su insiemi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/grafi/" class="md-nav__link">
+        Grafi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/calcoloCombinatorio/" class="md-nav__link">
+        Calcolo Combinatorio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/induzioneRicorsione/" class="md-nav__link">
+        Induzione Strutturale e Ricorsione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/linguaggi/" class="md-nav__link">
+        Linguaggi Formali
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/logica/" class="md-nav__link">
+        Logica Matematica
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/cheatsheet/" class="md-nav__link">
+        Cheatsheet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LabI/" class="md-nav__link">
+        Laboratorio I
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Analisi I
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Analisi I" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Analisi I
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Funzioni ed introduzione
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Funzioni ed introduzione
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#insiemi-numerici" class="md-nav__link">
+    Insiemi numerici
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intervalli" class="md-nav__link">
+    Intervalli
+  </a>
+  
+    <nav class="md-nav" aria-label="Intervalli">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipi-di-intervallo" class="md-nav__link">
+    Tipi di intervallo
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipi di intervallo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aperto" class="md-nav__link">
+    Aperto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chiuso" class="md-nav__link">
+    Chiuso
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semiapertosemichiuso" class="md-nav__link">
+    Semiaperto/semichiuso
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semiretta" class="md-nav__link">
+    Semiretta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni" class="md-nav__link">
+    Funzioni
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzioni">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funzioni-surgettive-ed-iniettive" class="md-nav__link">
+    Funzioni surgettive ed iniettive
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzioni surgettive ed iniettive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#surgettivita" class="md-nav__link">
+    Surgettività
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iniettivita" class="md-nav__link">
+    Iniettività
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funzione-bigettiva" class="md-nav__link">
+    Funzione bigettiva
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proprieta-dai-grafici" class="md-nav__link">
+    Proprietà dai grafici
+  </a>
+  
+    <nav class="md-nav" aria-label="Proprietà dai grafici">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tralaslazione" class="md-nav__link">
+    Tralaslazione
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valore-assoluto" class="md-nav__link">
+    Valore assoluto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specchiamento" class="md-nav__link">
+    Specchiamento
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funzioni-invertibili" class="md-nav__link">
+    Funzioni invertibili
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funzioni-monotone" class="md-nav__link">
+    Funzioni mònótòne
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzioni mònótòne">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#composizione-di-funzioni-monotone" class="md-nav__link">
+    Composizione di funzioni monotone
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-elementari" class="md-nav__link">
+    Funzioni elementari
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzioni elementari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retta" class="md-nav__link">
+    Retta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funzione-potenza" class="md-nav__link">
+    Funzione potenza
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzione potenza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-n" class="md-nav__link">
+    In N
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-z-con-k-negativo" class="md-nav__link">
+    In Z con k negativo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-r" class="md-nav__link">
+    In R
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-r-e-non-in-q-irrazionale" class="md-nav__link">
+    In R e non in Q (irrazionale)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esponenziale" class="md-nav__link">
+    Esponenziale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logaritmo-in-base-a" class="md-nav__link">
+    Logaritmo in base a
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funzione-esponenziale-in-base-e" class="md-nav__link">
+    Funzione esponenziale (in base e)
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzione esponenziale (in base e)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cambio-di-base-del-logaritmo" class="md-nav__link">
+    Cambio di base del logaritmo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-trigonometriche" class="md-nav__link">
+    Funzioni trigonometriche
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzioni trigonometriche">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seno" class="md-nav__link">
+    Seno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcoseno" class="md-nav__link">
+    Arcoseno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coseno" class="md-nav__link">
+    Coseno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcocoseno" class="md-nav__link">
+    Arcocoseno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tangente" class="md-nav__link">
+    Tangente
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcotangente" class="md-nav__link">
+    Arcotangente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calcoloDifferenziale/" class="md-nav__link">
+        Calcolo differenziale
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AlgebraLineare/" class="md-nav__link">
+        Algebra Lineare
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#insiemi-numerici" class="md-nav__link">
+    Insiemi numerici
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intervalli" class="md-nav__link">
+    Intervalli
+  </a>
+  
+    <nav class="md-nav" aria-label="Intervalli">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipi-di-intervallo" class="md-nav__link">
+    Tipi di intervallo
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipi di intervallo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aperto" class="md-nav__link">
+    Aperto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chiuso" class="md-nav__link">
+    Chiuso
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semiapertosemichiuso" class="md-nav__link">
+    Semiaperto/semichiuso
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semiretta" class="md-nav__link">
+    Semiretta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni" class="md-nav__link">
+    Funzioni
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzioni">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funzioni-surgettive-ed-iniettive" class="md-nav__link">
+    Funzioni surgettive ed iniettive
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzioni surgettive ed iniettive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#surgettivita" class="md-nav__link">
+    Surgettività
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iniettivita" class="md-nav__link">
+    Iniettività
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funzione-bigettiva" class="md-nav__link">
+    Funzione bigettiva
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proprieta-dai-grafici" class="md-nav__link">
+    Proprietà dai grafici
+  </a>
+  
+    <nav class="md-nav" aria-label="Proprietà dai grafici">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tralaslazione" class="md-nav__link">
+    Tralaslazione
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valore-assoluto" class="md-nav__link">
+    Valore assoluto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specchiamento" class="md-nav__link">
+    Specchiamento
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funzioni-invertibili" class="md-nav__link">
+    Funzioni invertibili
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funzioni-monotone" class="md-nav__link">
+    Funzioni mònótòne
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzioni mònótòne">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#composizione-di-funzioni-monotone" class="md-nav__link">
+    Composizione di funzioni monotone
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-elementari" class="md-nav__link">
+    Funzioni elementari
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzioni elementari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retta" class="md-nav__link">
+    Retta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funzione-potenza" class="md-nav__link">
+    Funzione potenza
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzione potenza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-n" class="md-nav__link">
+    In N
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-z-con-k-negativo" class="md-nav__link">
+    In Z con k negativo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-r" class="md-nav__link">
+    In R
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-r-e-non-in-q-irrazionale" class="md-nav__link">
+    In R e non in Q (irrazionale)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esponenziale" class="md-nav__link">
+    Esponenziale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logaritmo-in-base-a" class="md-nav__link">
+    Logaritmo in base a
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funzione-esponenziale-in-base-e" class="md-nav__link">
+    Funzione esponenziale (in base e)
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzione esponenziale (in base e)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cambio-di-base-del-logaritmo" class="md-nav__link">
+    Cambio di base del logaritmo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-trigonometriche" class="md-nav__link">
+    Funzioni trigonometriche
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzioni trigonometriche">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seno" class="md-nav__link">
+    Seno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcoseno" class="md-nav__link">
+    Arcoseno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coseno" class="md-nav__link">
+    Coseno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcocoseno" class="md-nav__link">
+    Arcocoseno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tangente" class="md-nav__link">
+    Tangente
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcotangente" class="md-nav__link">
+    Arcotangente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  <h1>Funzioni ed introduzione</h1>
+
+<p>Calcolo differenziale - funzioni </p>
+<h2 id="insiemi-numerici">Insiemi numerici<a class="headerlink" href="#insiemi-numerici" title="Permanent link">&para;</a></h2>
+<p>Introduciamo il concectto di insiemi numerici; In questo caso ci limitiamo a trattarne 4:<br />
+<span class="arithmatex">\(\mathbb N\)</span>: Numeri interi non negativi (0, 1, 2, 3, ...)<br />
+<span class="arithmatex">\(\mathbb Z\)</span>: Numeri interi positivi e negativi (-2, -1, 0, 1, 2, ...)<br />
+<span class="arithmatex">\(\mathbb Q\)</span>: Numeri razionali (classi di equivalenza di frazioni <span class="arithmatex">\(\frac{p}{q}\)</span> con <span class="arithmatex">\(p,q \in \mathbb Z, q \ne 0\)</span> )<br />
+<span class="arithmatex">\(\mathbb R\)</span>: Numeri reali. Razionali e "non" (e.g. <span class="arithmatex">\(\sqrt 2, \pi, e\)</span>)</p>
+<h2 id="intervalli">Intervalli<a class="headerlink" href="#intervalli" title="Permanent link">&para;</a></h2>
+<div class="admonition definition">
+<p class="admonition-title">Intervalli di <span class="arithmatex">\(\mathbb R\)</span></p>
+<p><span class="arithmatex">\(I \in \mathbb R\)</span> si dice intervallo se <span class="arithmatex">\(\forall x,y \in I\)</span> con <span class="arithmatex">\(x &lt; y\)</span>, dato <span class="arithmatex">\(z\)</span> tale che <span class="arithmatex">\(x &lt; z &lt; y\)</span> risulta che <span class="arithmatex">\(z \in I\)</span></p>
+</div>
+<p>Ovvero dati due elementi, è possibile trovare un elemento "in mezzo" ai due, che a sua volta farà parte dell'intervallo.  </p>
+<h3 id="tipi-di-intervallo">Tipi di intervallo<a class="headerlink" href="#tipi-di-intervallo" title="Permanent link">&para;</a></h3>
+<p>Ci possono essere diversi tipi di intervallo</p>
+<h4 id="aperto">Aperto<a class="headerlink" href="#aperto" title="Permanent link">&para;</a></h4>
+<p>In un intervallo aperto, scritto come <code>(a,b)</code>, gli estremi sono esclusi, quindi:<br />
+<span class="arithmatex">\(I = \{ x \in \mathbb R | a &lt; x &lt; b  \}\)</span></p>
+<h4 id="chiuso">Chiuso<a class="headerlink" href="#chiuso" title="Permanent link">&para;</a></h4>
+<p>In un intervallo chiuso, scritto come <code>(a,b)</code>, gli estremi sono inclusi, quindi:<br />
+<span class="arithmatex">\(I = \{ x \in \mathbb R | a \le x \le b  \}\)</span></p>
+<h4 id="semiapertosemichiuso">Semiaperto/semichiuso<a class="headerlink" href="#semiapertosemichiuso" title="Permanent link">&para;</a></h4>
+<p>Un intervallo semiaperto o semichiuso è un mix dei due tipi appena descritti, in cui i due estremi sono discordi:  </p>
+<ul>
+<li><span class="arithmatex">\([a,b) = \{ x \in \mathbb R | a \le x &lt; b \}\)</span></li>
+<li><span class="arithmatex">\((a,b] = \{ x \in \mathbb R | a &lt; x \le b \}\)</span></li>
+</ul>
+<h4 id="semiretta">Semiretta<a class="headerlink" href="#semiretta" title="Permanent link">&para;</a></h4>
+<p>Esiste poi un ulteriore tipo di intervallo, chiamato semiretta, che include l'infinito come uno dei due estremi.<br />
+Anche questo può essere sia chiuso, che aperto, e possono essere sia a destra che a sinistra.<br />
+Una semiretta è aperta o chiusa si riferisce al termine razionale:<br />
+Una <strong>semiretta chiusa a destra</strong>:<br />
+<span class="arithmatex">\([a, + \infty ) = \{ x \in \mathbb R | a \le x \}\)</span>  </p>
+<p>Una <strong>semiretta aperta a sinistra</strong>:<br />
+<span class="arithmatex">\((- \infty, a) = \{ x \in \mathbb R | a &gt; x \}\)</span>  </p>
+<p>Con il simbolo <span class="arithmatex">\((- \infty, + \infty)\)</span> si intende tutta la retta reale.</p>
+<h2 id="funzioni">Funzioni<a class="headerlink" href="#funzioni" title="Permanent link">&para;</a></h2>
+<p>Una funzione è una terna di oggetti <span class="arithmatex">\((A,B,f)\)</span>, dove:<br />
+A e B sono insiemi e, A si dice dominio, B si dice codominio ed f è una legge che lega gli elementi di A a quelli di B.<br />
+Il simbolo matematico è <span class="arithmatex">\(f: A \rightarrow B\)</span><br />
+F mette in corrispondenza ogni elemento di A con uno ed un solo elemento di B.  </p>
+<div class="admonition definition">
+<p class="admonition-title">Immagine attraverso f</p>
+<p>Data una funzione <span class="arithmatex">\(f: A \rightarrow B\)</span> e <span class="arithmatex">\(D \subset A\)</span> e <span class="arithmatex">\(f(D) = \{ f(x) : x \in D \}\)</span><br />
+<span class="arithmatex">\(f(D)\)</span> si dice immagine di D attraverso f.<br />
+<span class="arithmatex">\(f(D) \subset B\)</span>  </p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Immagine</p>
+<p>Quando si parla invece di immagine (di f), si intende immagine di tutto il dominio, quindi:<br />
+<span class="arithmatex">\(Imm(f) = f(A)\)</span>  </p>
+</div>
+<h3 id="funzioni-surgettive-ed-iniettive">Funzioni surgettive ed iniettive<a class="headerlink" href="#funzioni-surgettive-ed-iniettive" title="Permanent link">&para;</a></h3>
+<p>Vediamo quindi i concetti di surgettività ed iniettività:</p>
+<h4 id="surgettivita">Surgettività<a class="headerlink" href="#surgettivita" title="Permanent link">&para;</a></h4>
+<div class="admonition definition">
+<p class="admonition-title">Surgettività</p>
+<p>Una funzione <span class="arithmatex">\(f: A \rightarrow B\)</span> si dice surgettiva se
+<span class="arithmatex">\(\forall y \in \exists \text{ almeno un elemento } x \in A\)</span> tale che (t.c.) <span class="arithmatex">\(f(x) = y\)</span>.  </p>
+</div>
+<p>Che significa che ogni elemento nel codominio "proviene" da un elemento del dominio (nel codominio non ci sono elementi "scoperti")</p>
+<div class="admonition observation">
+<p class="admonition-title">Cambiamento del dominio per rendere una funzione surgettiva</p>
+<p>La funzione <span class="arithmatex">\(g: \mathbb R \rightarrow \mathbb R\)</span>, <span class="arithmatex">\(g(x) = x^2\)</span> non è surgettiva.<br />
+Questo perché nessun numero razionale elevato al quadrato restituirà un valore negativo. La funzione non è quindi surgettiva<br />
+La stessa funzione ma definita come <span class="arithmatex">\(g: \mathbb R \rightarrow [0, + \infty )\)</span> è surgettiva.</p>
+</div>
+<p>Possiamo quindi dire che una funzione è surgettiva solo se la sua immagine coincide con il codominio.  </p>
+<p>Per capire velocemente da un grafico se una funzione è surgettiva, possiamo pensare di tracciare una linea orizzontale, se non intercetta almeno una volta la funzione, questa non è surgettiva:  </p>
+<figure>
+<p><img alt="Funzione non surgettiva" loading="lazy" src="../assets/funcNonSurgettiva.png" />
+  </p>
+<figcaption>
+<p>La funzione <strong>NON</strong> è surgettiva poiché la retta orizzontale blu (<span class="arithmatex">\(y=2\)</span>) non intercetta mai la funzione (<span class="arithmatex">\(y=|x|\)</span>)
+  </p>
+</figcaption>
+</figure>
+<h4 id="iniettivita">Iniettività<a class="headerlink" href="#iniettivita" title="Permanent link">&para;</a></h4>
+<div class="admonition definition">
+<p class="admonition-title">Iniettività</p>
+<p>Una funzione <span class="arithmatex">\(f: A \rightarrow B\)</span> si dice iniettiva se
+<span class="arithmatex">\(\forall x_1,x_2 \in A \text{ con } x_1 \ne x_2 \text{ risulta che } f(x_1) \ne f(x_2)\)</span><br />
+La funzione è monotona (cresce o decresce e basta; Non si "appiattisce)</p>
+</div>
+<p>Se una funzione non è iniettiva, ci possono comunque essere dei "trucchi" che ci consentono di farla diventare iniettiva, ad esempio scartando parte del dominio.  </p>
+<div class="admonition observation">
+<p class="admonition-title">Cambiamento del dominio per rendere una funzione iniettiva</p>
+<p>La funzione <span class="arithmatex">\(g: \mathbb R \rightarrow \mathbb R\)</span>, <span class="arithmatex">\(g(x) = x^2\)</span> non è iniettiva.<br />
+La stessa funzione ma definita come <span class="arithmatex">\(g: [0, + \infty ) \rightarrow \mathbb R\)</span> è iniettiva.</p>
+</div>
+<p>Per capire velocemente da un grafico se una funzione è iniettiva, possiamo pensare di tracciare una linea orizzontale, se questa intercetta più di una volta la funzione, questa non è iniettiva:  </p>
+<figure>
+<p><img alt="Funzione non iniettiva" loading="lazy" src="../assets/funcNonIniettiva.png" />
+  </p>
+<figcaption>
+<p>La funzione <strong>NON</strong> è iniettiva poiché la retta orizzontale blu (<span class="arithmatex">\(y=5\)</span>) intercetta più volte la funzione (<span class="arithmatex">\(y=x\cdot |sin(x)|\)</span> )
+  </p>
+</figcaption>
+</figure>
+<h4 id="funzione-bigettiva">Funzione bigettiva<a class="headerlink" href="#funzione-bigettiva" title="Permanent link">&para;</a></h4>
+<div class="admonition definition">
+<p class="admonition-title">Funzione bigettiva</p>
+<p>una funzione <span class="arithmatex">\(f\)</span> si dice bigettiva/biunivoca/invertibile se è sia iniettiva che surgettiva</p>
+</div>
+<p>Se una funzione è bigettiva posso costruire la funzione inversa <span class="arithmatex">\(f^{-1}: B \rightarrow A\)</span>.<br />
+Datp un elemento <span class="arithmatex">\(b \in B\)</span> esiste un elemento <span class="arithmatex">\(a \in A\)</span> tale che <span class="arithmatex">\(f(a) = b\)</span> (perché f è surgettiva).
+L'elemento a è unico perché f è iniettiva</p>
+<p>quindi <span class="arithmatex">\(f^{-1}(b)=a \Leftrightarrow f(a) = b\)</span></p>
+<p>La radice quadrata è la funzione inversa di f(x) = x^2 qunado dominio e codominio sono entrambi [0,+ \infty)
+Che è come mai \sqrt 2 = 2 (che è diverso da dire che x^2 =4, che ha due soluzioni)
+Per questo motivo \sqrt {x^2} = |x|</p>
+<h3 id="proprieta-dai-grafici">Proprietà dai grafici<a class="headerlink" href="#proprieta-dai-grafici" title="Permanent link">&para;</a></h3>
+<h4 id="tralaslazione">Tralaslazione<a class="headerlink" href="#tralaslazione" title="Permanent link">&para;</a></h4>
+<p>Possiamo traslare le funzioni sul grafico in ogni modo vogliamo:<br />
+Prendendo una funzione come <span class="arithmatex">\((\frac{1}{2}x)^2\)</span> :<br />
+<img alt="Funzione da traslare" loading="lazy" src="../assets/funcDaTraslare.png" /></p>
+<p>Possiamo effettuare ogni traslazione desiderata:  </p>
+<ul>
+<li><strong>Traslazione verso l'alto</strong>:<br />
+    Abbiamo una traslazione verso l'alto quando al valore della funzione aggiungiamo un valore <span class="arithmatex">\(n\)</span>.<br />
+    Abbiamo quindi <span class="arithmatex">\(f(x) + n \text{ con } n &gt; 0\)</span> (in questo caso <span class="arithmatex">\((\frac{1}{2}x)^2+5\)</span>)<br />
+<img alt="La funzione (0.5*x)^2 + 5" loading="lazy," src="../assets/funcTraslataAlto.png" width="400" /></li>
+<li><strong>Traslazione verso il basso</strong>:<br />
+    Abbiamo una traslazione verso il basso quando al valore della funzione sottraiamo un valore <span class="arithmatex">\(n\)</span>.<br />
+    Abbiamo quindi <span class="arithmatex">\(f(x) - n \text{ con } n &lt; 0\)</span> (in questo caso <span class="arithmatex">\((\frac{1}{2}x)^2-5\)</span>)<br />
+<img alt="La funzione (0.5*x)^2 - 5" loading="lazy," src="../assets/funcTraslataBasso.png" width="400" /></li>
+<li><strong>Traslazione verso sinistra</strong>:<br />
+    Abbiamo una traslazione verso sinistra quando all'argomento/valore della funzione aggiungiamo un valore <span class="arithmatex">\(n\)</span>.<br />
+    Abbiamo quindi <span class="arithmatex">\(f(x+n)   \text{ con } n &gt; 0\)</span> (in questo caso <span class="arithmatex">\((\frac{1}{2}x+5)^2\)</span>)<br />
+<img alt="La funzione (0.5*x+5)^2" loading="lazy," src="../assets/funcTraslataSinistra.png" width="400" /></li>
+<li><strong>Traslazione verso destra</strong>:<br />
+    Abbiamo una traslazione verso destra quando all'argomento/valore della funzione sottraiamo un valore <span class="arithmatex">\(n\)</span>.<br />
+    Abbiamo quindi <span class="arithmatex">\(f(x-n)   \text{ con } n &lt; 0\)</span> (in questo caso <span class="arithmatex">\((\frac{1}{2}x-5)^2\)</span>)<br />
+<img alt="La funzione (0.5*x-5)^2" loading="lazy," src="../assets/funcTraslataDestra.png" width="400" /></li>
+</ul>
+<h4 id="valore-assoluto">Valore assoluto<a class="headerlink" href="#valore-assoluto" title="Permanent link">&para;</a></h4>
+<p>Il valore assoluto coincide con la funzione <span class="arithmatex">\(f\)</span> dove <span class="arithmatex">\(f\)</span> è positiva ed è l'opposto dove <span class="arithmatex">\(f\)</span> è negativa:  </p>
+<figure>
+<p><img alt="Funzione assoluta" loading="lazy" src="../assets/absFunction.png" />
+  </p>
+<figcaption>
+<div class="arithmatex">\[
+|f(x)| =
+\begin{equation}
+    \begin{cases}
+      f(x) \text{ quando } x \ge 0 \\
+      -f(x) \text{ altrimenti}
+    \end{cases}\,.
+\end{equation}
+\]</div>
+</figcaption>
+</figure>
+<h4 id="specchiamento">Specchiamento<a class="headerlink" href="#specchiamento" title="Permanent link">&para;</a></h4>
+<p>È possibile specchiare una funzione sia rispetto all'ascisse (sempre) che rispetto all'ordinata (quando il dominio è simmetrico rispetto all'origine).  </p>
+<table>
+<thead>
+<tr>
+<th align="center">Specchiamento</th>
+<th align="center">Rispetto all'ascisse</th>
+<th align="center">Rispetto all'ordinata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Grafico</td>
+<td align="center"><img alt="Funzione specchiata rispetto all'origine" loading="lazy" src="../assets/funcSpecchiataAscisse.png" /></td>
+<td align="center"><img alt="Funzione assoluta" loading="lazy" src="../assets/funcSpecchiataOrdinate.png" /></td>
+</tr>
+<tr>
+<td align="center">Funzione</td>
+<td align="center"><span class="arithmatex">\(-f(x)\)</span></td>
+<td align="center"><span class="arithmatex">\(f(-x)\)</span></td>
+</tr>
+<tr>
+<td align="center">Esempio nel grafico</td>
+<td align="center"><span class="arithmatex">\(y=-((0.5 \cdot x+2)^2+2)\)</span></td>
+<td align="center"><span class="arithmatex">\(y=(0.5 \cdot -x+2)^2+2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Notare che nello specchiamento rispetto all'ordinata, il dominio deve essere simmetrico rispetto all'origine, e quindi permettere lo specchiamento.</p>
+<h3 id="funzioni-invertibili">Funzioni invertibili<a class="headerlink" href="#funzioni-invertibili" title="Permanent link">&para;</a></h3>
+<p>Se f è una funzione invertibile, i grafici di <span class="arithmatex">\(f\)</span> e <span class="arithmatex">\(f^{-1}\)</span> sono simmetrici rispetto alla retta <span class="arithmatex">\(y=x\)</span>  </p>
+<figure>
+<p><img alt="Funzione invertibile" loading="lazy" src="../assets/funcInverse.png" />
+  </p>
+<figcaption>
+<p>In questo esempio, possiamo vedere come la funzione blu (<span class="arithmatex">\(x^2\)</span> ) e la funzione verde (<span class="arithmatex">\(\sqrt{2}\)</span>) sono simmetriche rispetto alla retta gialla (<span class="arithmatex">\(y=x\)</span>) 
+  </p>
+</figcaption>
+</figure>
+<p>Se il punto (2,4) appartiene al grafico di f, allora il punto (4,2) appartiene al grafico di g</p>
+<h3 id="funzioni-monotone">Funzioni mònótòne<a class="headerlink" href="#funzioni-monotone" title="Permanent link">&para;</a></h3>
+<p>La monotonia è una proprietà che riguarda strettamente la crescenza o la decrescenza delle funzioni</p>
+<div class="admonition definition">
+<p class="admonition-title">Funzione monotona</p>
+<p>Dati <span class="arithmatex">\(A, B \subset \mathbb R \text{ e } x_1,x_2 \in A \text{ con } x_1 &lt; x_2\)</span><br />
+Se <span class="arithmatex">\(\forall x_1,x_2\)</span> risulta che:  </p>
+<ol>
+<li><span class="arithmatex">\(f(x_1) &lt; f(f_2)\)</span> : f si dice strettamente crescente</li>
+<li><span class="arithmatex">\(f(x_1) \le f(f_2)\)</span> : f si dice debolmente crescente</li>
+<li><span class="arithmatex">\(f(x_1) &gt; f(f_2)\)</span> : f si dice strettamente decrescente</li>
+<li><span class="arithmatex">\(f(x_1) \ge f(f_2)\)</span> : f si dice debolmente decrescente</li>
+</ol>
+<p>Se si verificano il caso 1 o 3, f si dice strettamente mònótòna
+Se si verificano il caso 2 o 4, f si dice debolmente mònótòna</p>
+</div>
+<p>Una funzione (debolmente) crescente quindi, aumenterà sempre di valore (o comunque non diminuirà) man mano che <span class="arithmatex">\(x\)</span> cresce. Per essere strettamente crescente, la funzione non deve avere mai due soluzioni uguali in due punti diversi.<br />
+Per una funzione decrescente, vale lo stesso discorso, ma <span class="arithmatex">\(x\)</span> diminuirà sempre di valore invece di crescere.  </p>
+<p><img alt="Funzioni monotonoe" loading="lazy" src="../assets/funcMonotone.webp" /></p>
+<p>Se una funzione ha un tratto "orizzontale", quella funzione non sarà strettamente monotona.<br />
+Se una funzione è strettamente crescente/decrescente, lo sarà anche debolmente.  </p>
+<div class="admonition observation">
+<p class="admonition-title">Rapporto incrementale</p>
+<p><span class="arithmatex">\(f\)</span> è strettamente crescente se e solo se <span class="arithmatex">\(\frac{f(x_1) - f(x_2)}{x_1 - x_2} &gt; 0\)</span> (questo è il rapporto incrementale, <span class="arithmatex">\(\frac{\Delta X}{\Delta Y}\)</span>, che misura quanto <span class="arithmatex">\(f\)</span> si è spostata in rapporto a quanto è stata spostata l'ascissa in orizzontale). Ovviamente con <span class="arithmatex">\(x_1 \neq x_2\)</span>.<br />
+Dire che una funzione è crescente significa dire che i rapporti incrementali sono positivi, e quindi che sia numeratore che denominatore sono concordi in segno. (Per lo "strettamente", occorre che il <span class="arithmatex">\(\Delta Y\)</span> sia diverso da 0). L'opposto vale per essere decrescente.  </p>
+</div>
+<figure>
+<p><img alt="Funzione 1/x" loading="lazy" src="../assets/func1SuX.png" />
+  </p>
+<figcaption>
+<p>Quando abbiamo una funzione come <span class="arithmatex">\(\frac 1 x\)</span>, come definiamo la funzione?
+  </p>
+</figcaption>
+</figure>
+<p>Nel caso della funzione <span class="arithmatex">\(\frac 1 x\)</span> (un ramo di iperbole), in alcuni punti della funzione le coppie <span class="arithmatex">\(x_1\)</span>, <span class="arithmatex">\(x_2\)</span> mantengono l'ordinamento (ad esempio con <span class="arithmatex">\(x_2 = 10\)</span> e <span class="arithmatex">\(x_1 = 5\)</span>, <span class="arithmatex">\(f(x_1)&gt;f(x_2)\)</span>), facendo risultare la funzione decrescente; in altre lo invertono (ad esempio per <span class="arithmatex">\(x_2 = 20\)</span> e <span class="arithmatex">\(x_1 = -20\)</span>, avendo quindi <span class="arithmatex">\(f(x_1) &lt; f(x_2)\)</span>).<br />
+Questo significa che questa funzione non è globalmente monotona, ma è decrescente su due intervalli:<br />
+<span class="arithmatex">\(f\)</span> è decrescente <span class="arithmatex">\((- \infty, 0)\)</span> e in <span class="arithmatex">\((0, \infty)\)</span>, ma non in tutto il suo dominio (<span class="arithmatex">\(\mathbb R \backslash \{0\}\)</span>).  </p>
+<h4 id="composizione-di-funzioni-monotone">Composizione di funzioni monotone<a class="headerlink" href="#composizione-di-funzioni-monotone" title="Permanent link">&para;</a></h4>
+<div class="admonition proposition">
+<p class="admonition-title">Proposizione</p>
+<p>Avendo:  </p>
+<ul>
+<li><span class="arithmatex">\(A,B,C \subset \mathbb R\)</span></li>
+<li><span class="arithmatex">\(f: A \rightarrow B\)</span></li>
+<li><span class="arithmatex">\(g: B \rightarrow C\)</span></li>
+</ul>
+<p>Allora:</p>
+<ul>
+<li>Se <span class="arithmatex">\(f\)</span> è crescente <span class="arithmatex">\(\nearrow\)</span> e <span class="arithmatex">\(g\)</span> è crescente <span class="arithmatex">\(\nearrow\)</span>, allora <span class="arithmatex">\(g \circ f\)</span> (g composto f) è crescente <span class="arithmatex">\(\nearrow\)</span></li>
+<li>Se <span class="arithmatex">\(f\)</span> è crescente <span class="arithmatex">\(\nearrow\)</span> e g è decrescente <span class="arithmatex">\(\searrow\)</span>, allora <span class="arithmatex">\(g \circ f\)</span> è decrescente <span class="arithmatex">\(\searrow\)</span> (e viceversa)</li>
+<li>Se <span class="arithmatex">\(f\)</span> è decrescente <span class="arithmatex">\(\searrow\)</span> e <span class="arithmatex">\(g\)</span> è decrescente <span class="arithmatex">\(\searrow\)</span>, allora <span class="arithmatex">\(g \circ f\)</span> è crescente <span class="arithmatex">\(\nearrow\)</span></li>
+</ul>
+<p>Quindi:  </p>
+<ul>
+<li><span class="arithmatex">\(\nearrow \circ \nearrow \ \Rightarrow \nearrow\)</span></li>
+<li><span class="arithmatex">\(\searrow \circ \searrow \ \Rightarrow \nearrow\)</span></li>
+<li><span class="arithmatex">\(\nearrow \circ \searrow \ \Rightarrow \nearrow\)</span></li>
+<li><span class="arithmatex">\(\searrow \circ \nearrow \ \Rightarrow \nearrow\)</span></li>
+</ul>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Insieme di definizione</p>
+<p>L'insieme di definizione (o dominio naturale) di una funzione è il più grande sottoinsieme di <span class="arithmatex">\(\mathbb R\)</span> dove ha senso scrivere la funzione</p>
+</div>
+<p>Ad esempio nel caso di <span class="arithmatex">\(\frac 1 x\)</span> il dominio di definizione è <span class="arithmatex">\(\mathbb \backslash \{0\}\)</span></p>
+<div class="admonition definition">
+<p class="admonition-title">Funzione pari e dispari</p>
+<p>Se <span class="arithmatex">\(f(x) = f(-x) \forall x\)</span> nel dominio di <span class="arithmatex">\(f\)</span>, allora f si dice pari.<br />
+Se <span class="arithmatex">\(f(x) = -f(-x) \forall x\)</span> nel dominio di <span class="arithmatex">\(f\)</span>, allora f si dice dispari.  </p>
+</div>
+<p>Questa definizione implica che il dominio di f sia tale che se x appartiene al dominio, allora anche -x appartiene al dominio (è simmetrico rispetto allo 0).  </p>
+<div class="admonition definition">
+<p class="admonition-title">Funzione periodica</p>
+<p><span class="arithmatex">\(f\)</span> si dice periodica di periodo <span class="arithmatex">\(p\)</span> con <span class="arithmatex">\(p \in \mathbb R\)</span> se <span class="arithmatex">\(\forall x, f(x+p) = f(x)\)</span></p>
+</div>
+<p>Un esempio di una funzione periodica sono le funzioni trigonometriche (seno, coseno, tangente, etc...)  </p>
+<h2 id="funzioni-elementari">Funzioni elementari<a class="headerlink" href="#funzioni-elementari" title="Permanent link">&para;</a></h2>
+<h3 id="retta">Retta<a class="headerlink" href="#retta" title="Permanent link">&para;</a></h3>
+<p>La retta è scritta nella forma <span class="arithmatex">\(f(x) = a \cdot x + b \text { con } a,b \in \mathbb R\)</span><br />
+a è chiamato coefficiente angolare, b è chiamato termine noto.  </p>
+<h3 id="funzione-potenza">Funzione potenza<a class="headerlink" href="#funzione-potenza" title="Permanent link">&para;</a></h3>
+<h4 id="in-n">In N<a class="headerlink" href="#in-n" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex">\(f(x) = x^k, k \in \mathbb N\)</span>
+k pari, grafici sono una parabola (con la sola velocità di crescita che cambia).<br />
+k dispari, grafici sono una 
+<span class="arithmatex">\(f\)</span> è una funzine pari se <span class="arithmatex">\(k\)</span> è pari ed è dispari se <span class="arithmatex">\(k\)</span> è dispari. (questo perché <span class="arithmatex">\(-1^2 = 1\)</span> e <span class="arithmatex">\(-1^3 = -1\)</span>).  </p>
+<h4 id="in-z-con-k-negativo">In Z con k negativo<a class="headerlink" href="#in-z-con-k-negativo" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex">\(f(x) = x^k \  k\in \mathbb Z; k &lt; 0\)</span><br />
+k dispari  iperbole equilatera (primo e terzo quadrante)
+k pari iperbole (primo e secondo quadrante)</p>
+<p>anche qui la funzione è pari per k pari e dispari per k dispari</p>
+<h4 id="in-r">In R<a class="headerlink" href="#in-r" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex">\(f(x) = x^\frac p q ; p,q \in \mathbb N \ q \ne 0\)</span><br />
+La funzione f ha come dominio naturale</p>
+<p>Quando abbiamo <span class="arithmatex">\(p = 1\)</span> (quindi <span class="arithmatex">\(x^\frac 1 q = sqrt[q]{x}\)</span>, inversa della funzione <span class="arithmatex">\(x^q\)</span>)<br />
+Se q è pari, il dominio è <span class="arithmatex">\(x \ge 0\)</span> (possiamo fare la radice quadrata solo di un positivi), quindi è invertibile solo come funzione da [0,+inf] -&gt; [0, +inf]<br />
+Se q è dispari, il dominio è <span class="arithmatex">\(\mathbb R\)</span> (possiamo fare la radice cubica di un negativo). x^3 è una funzione invertibile su tutto R  </p>
+<h4 id="in-r-e-non-in-q-irrazionale">In R e non in Q (irrazionale)<a class="headerlink" href="#in-r-e-non-in-q-irrazionale" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex">\(f(x) = x^\alpha, \alpha \in \mathbb R \ e \  \alpha \notin \mathbb Q\)</span>  (quindi ad esempio <span class="arithmatex">\(x^{\sqrt 2}\)</span> oppure <span class="arithmatex">\(x^\pi\)</span>)  </p>
+<p><span class="arithmatex">\(x^\alpha = e^{\alpha \cdot log(x)} \ \text{ definita per } x&gt;0\)</span><br />
+Questo perché:<br />
+<span class="arithmatex">\(e^{\alpha log (x)} = (e^{log(x)})^\alpha = x^\alpha\)</span>  </p>
+<p>Per definizione dobbiamo passare attraverso il logaritmo.<br />
+Il dominio naturale è <span class="arithmatex">\((0, +\infty)\)</span></p>
+<h3 id="esponenziale">Esponenziale<a class="headerlink" href="#esponenziale" title="Permanent link">&para;</a></h3>
+<p>con <span class="arithmatex">\(a \in \mathbb R, a &gt;0, a \ne 1\)</span> la funzione esponenziale è <span class="arithmatex">\(f(x) = a^x\)</span>  </p>
+<table>
+<thead>
+<tr>
+<th align="center">a &gt; 1</th>
+<th align="center">0 &lt; a &lt; 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="Funzioni monotonoe" loading="lazy" src="../assets/funcExpAgt1.png" /></td>
+<td align="center"><img alt="Funzioni monotonoe" loading="lazy" src="../assets/funcExpAlt1.png" /></td>
+</tr>
+<tr>
+<td align="center">Strettamente crescente</td>
+<td align="center">Strettamente decrescente</td>
+</tr>
+</tbody>
+</table>
+<p>In entrambi i casi la funzione intercetta il punto 1 delle ordinate e sono <strong>sempre</strong> positive:  </p>
+<div class="arithmatex">\[
+a^x &gt; 0 \forall x \in \mathbb R
+\]</div>
+<p>Entrambi le funzioni sono invertibili, poiché stettamente crescenti o decrescenti, quindi monotone, quindi iniettive e surgettive.  </p>
+<h3 id="logaritmo-in-base-a">Logaritmo in base a<a class="headerlink" href="#logaritmo-in-base-a" title="Permanent link">&para;</a></h3>
+<p>con <span class="arithmatex">\(a \in \mathbb R, a &gt;0, a \ne 1\)</span> la funzione logaritmica è <span class="arithmatex">\(f(x) = log_a(x)\)</span></p>
+<table>
+<thead>
+<tr>
+<th align="center">a &gt; 1</th>
+<th align="center">0 &lt; a &lt; 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="Funzioni monotonoe" loading="lazy" src="../assets/funcLogAgt1.png" /></td>
+<td align="center"><img alt="Funzioni monotonoe" loading="lazy" src="../assets/funcLogAlt1.png" /></td>
+</tr>
+<tr>
+<td align="center">Strettamente crescente</td>
+<td align="center">Strettamente decrescente</td>
+</tr>
+</tbody>
+</table>
+<p>Intercetta l'ascissa sempre ad 1 e presenta una simmetria (è specchiata) rispetto alla bisettrice (y=x) del grafico dell'esponenziale</p>
+<h3 id="funzione-esponenziale-in-base-e">Funzione esponenziale (in base e)<a class="headerlink" href="#funzione-esponenziale-in-base-e" title="Permanent link">&para;</a></h3>
+<p>Funzione esponenziale con <span class="arithmatex">\(a = e \cong 2,71\)</span><br />
+è invertibile e la sua inversa si chiama logaritmo naturale.<br />
+(Se la base non è specificata, in matematica si intende in base e).  </p>
+<h4 id="cambio-di-base-del-logaritmo">Cambio di base del logaritmo<a class="headerlink" href="#cambio-di-base-del-logaritmo" title="Permanent link">&para;</a></h4>
+<p>Possiamo facilmente effettuare un cambio della base del logaritmo facendo uso di alcune regole matematiche:  </p>
+<p>Il logaritmo è la potenza che dobbiamo assegnare ad a per ottenere x:<br />
+<span class="arithmatex">\(log_a (x) = y \Leftrightarrow a^y = x\)</span>  </p>
+<p>Il logaritmo naturale dell'equazione dell'identità è:<br />
+<span class="arithmatex">\(log(a^y) = log(x) \Leftrightarrow y \cdot log(a) = log(x)\)</span>, ed abbiamo già visto y:  </p>
+<p><span class="arithmatex">\(y = log_a (x)\)</span>  </p>
+<p>Quindi possiamo sostituire y, per poi semplificarla:<br />
+<span class="arithmatex">\(log_a (x) \cdot log (a) = log(x) \Rightarrow log_a (x) = \frac{log(x)}{log(a)}\)</span></p>
+<h2 id="funzioni-trigonometriche">Funzioni trigonometriche<a class="headerlink" href="#funzioni-trigonometriche" title="Permanent link">&para;</a></h2>
+<h3 id="seno">Seno<a class="headerlink" href="#seno" title="Permanent link">&para;</a></h3>
+<p>Il seno è una funzione trigonometrica periodica di periodo <span class="arithmatex">\(2 \pi\)</span><br />
+<span class="arithmatex">\(f(x)=sin \ x \qquad f: \mathbb R \rightarrow [-1, 1]\)</span>  perché  <span class="arithmatex">\(-1 \le sin(x) \le 1\)</span>.<br />
+La funzione è surgettiba se per codominio prendiamo <span class="arithmatex">\([-1, 1]\)</span><br />
+Essendo periodica, <span class="arithmatex">\(sin(x+2 \pi) = sin(x) \quad \forall x \in \mathbb R\)</span>.<br />
+Essendo il seno sull'asse delle orinate, il cerchio con angolo 0 ha valore 0 sulle ordinate, quindi <span class="arithmatex">\(sin(0) = 0\)</span>.<br />
+La funzione è invertibile modificando dominio e codominio (quando la funzione è definita come <span class="arithmatex">\(f: [ -\frac \pi 2 , \frac \pi 2 ] \rightarrow [-1, 1]\)</span>. f risulta quindi strettamente crescente (quindi monotona, quindi essendo continua, iniettiva) e surgettiva.)<br />
+Dispari  </p>
+<h3 id="arcoseno">Arcoseno<a class="headerlink" href="#arcoseno" title="Permanent link">&para;</a></h3>
+<p>Funzione inversa del seno, definita come <span class="arithmatex">\(f: [-1, 1] \rightarrow [ -\frac \pi 2 , \frac \pi 2 ]\)</span><br />
+La funzione arcsin è quindi l'inversa del seno quando il dominio è <span class="arithmatex">\([ -\frac \pi 2 , \frac \pi 2 ]\)</span> ed il codominio è <span class="arithmatex">\([-1, 1]\)</span><br />
+Se così non fosse la funzione seno non è né iniettiva né surgettiva, e quindi non è invertibile.  </p>
+<h3 id="coseno">Coseno<a class="headerlink" href="#coseno" title="Permanent link">&para;</a></h3>
+<p>Il coseno è una funzione trigonometrica periodica di periodo <span class="arithmatex">\(2 \pi\)</span><br />
+La funzione è il seno, ma traslata di <span class="arithmatex">\(\frac \pi 2\)</span> (quindi <span class="arithmatex">\(cos(0) = 1\)</span> )<br />
+Pari  </p>
+<h3 id="arcocoseno">Arcocoseno<a class="headerlink" href="#arcocoseno" title="Permanent link">&para;</a></h3>
+<p>Se vogliamo invertire dobbiamo scegliere un intervallo dove la funzione è monotona.<br />
+Possiamo quindi definire il dominio naturle come <span class="arithmatex">\(cos(x): [0, \pi] \rightarrow [-1, 1]\)</span>.  </p>
+<h3 id="tangente">Tangente<a class="headerlink" href="#tangente" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(tg (x) = \frac {sin(x)} {cos(x)}\)</span>, che quindi non è definita se <span class="arithmatex">\(cos(x) = 0\)</span>.<br />
+Il dominio è quindi <span class="arithmatex">\(\{ x \in \mathbb R: x \ne \frac \pi 2 + k \cdot \pi, k \in \mathbb Z \}\)</span>, composto da infiniti intervalli disgiunti.<br />
+È periodica di periodo <span class="arithmatex">\(\pi\)</span><br />
+È invertibile quando <span class="arithmatex">\(f: (-\frac \pi 2 , \frac \pi 2 ) \rightarrow \mathbb R\)</span>
+È inoltre dispari  </p>
+<h3 id="arcotangente">Arcotangente<a class="headerlink" href="#arcotangente" title="Permanent link">&para;</a></h3>
+<p>È l'inversa della tangente<br />
+<span class="arithmatex">\(arctan: \mathbb \rightarrow (-\frac \pi 2 , \frac \pi 2 )\)</span><br />
+Strettamente crescente nel suo dominio.<br />
+(Da non invertire con la cotangente)</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../LabI/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Laboratorio I" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Laboratorio I
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../calcoloDifferenziale/" class="md-footer__link md-footer__link--next" aria-label="Next: Calcolo differenziale" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Calcolo differenziale
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navitation.sections", "navigation.indexes", "search.highlight", "content.tabs.link", "content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.c7dec7e7.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.da79ceb7.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

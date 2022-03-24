@@ -36,6 +36,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/biggerAdmonitions.css">
     
+      <link rel="stylesheet" href="../../stylesheets/mathAdmonitions.css">
+    
     <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -64,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linduzione-strutturale" class="md-skip">
+        <a href="#induzione-strutturale-e-ricorsione" class="md-skip">
           Skip to content
         </a>
       
@@ -227,9 +229,25 @@
   
 
 
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../AnalisiI/prerequisiti/" class="md-tabs__link">
+        Analisi I
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
   <li class="md-tabs__item">
-    <a href="../../AnalisiI/" class="md-tabs__link">
-      Analisi I
+    <a href="../../AlgebraLineare/" class="md-tabs__link">
+      Algebra Lineare
     </a>
   </li>
 
@@ -284,6 +302,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_1">
@@ -306,6 +326,20 @@
     <li class="md-nav__item">
       <a href="../../ProAlgo/relazioniRicorrenza/" class="md-nav__link">
         Relazioni di ricorrenza
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProAlgo/programmazioneDinamica/" class="md-nav__link">
+        Programmazione dinamica
       </a>
     </li>
   
@@ -466,6 +500,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Induzione Strutturale e Ricorsione
@@ -484,12 +520,95 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Indice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#liste" class="md-nav__link">
+    Liste
+  </a>
+  
+    <nav class="md-nav" aria-label="Liste">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funzioni-su-liste" class="md-nav__link">
+    Funzioni su liste
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-principio-di-induzione-sulle-liste" class="md-nav__link">
+    Il principio di induzione sulle liste
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alberi-binari" class="md-nav__link">
+    Alberi binari
+  </a>
+  
+    <nav class="md-nav" aria-label="Alberi binari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funzioni-su-alberi-binari" class="md-nav__link">
+    Funzioni su alberi binari
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principio-di-induzione-sugli-alberi-binari" class="md-nav__link">
+    Principio di induzione sugli alberi binari
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alberi-binari-etichettati" class="md-nav__link">
+    Alberi binari etichettati
+  </a>
+  
+    <nav class="md-nav" aria-label="Alberi binari etichettati">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funzioni-su-alberi-binari-etichettati" class="md-nav__link">
+    Funzioni su alberi binari etichettati
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principio-di-induzione-sugli-alberi-binari-etichettati" class="md-nav__link">
+    Principio di induzione sugli alberi binari etichettati
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#linduzione-strutturale" class="md-nav__link">
@@ -527,7 +646,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#liste" class="md-nav__link">
+  <a href="#liste_1" class="md-nav__link">
     Liste
   </a>
   
@@ -581,6 +700,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#la-congettura-di-collatz" class="md-nav__link">
+    La congettura di Collatz
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tipologie-di-ricorsione" class="md-nav__link">
     Tipologie di ricorsione
   </a>
@@ -606,11 +737,6 @@
   <a href="#ricorsione-procedurale" class="md-nav__link">
     Ricorsione procedurale
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -698,9 +824,77 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Analisi I
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Analisi I" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Analisi I
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../AnalisiI/" class="md-nav__link">
-        Analisi I
+      <a href="../../AnalisiI/prerequisiti/" class="md-nav__link">
+        Funzioni ed introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AnalisiI/calcoloDifferenziale/" class="md-nav__link">
+        Calcolo differenziale
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AlgebraLineare/" class="md-nav__link">
+        Algebra Lineare
       </a>
     </li>
   
@@ -725,12 +919,95 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Indice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#liste" class="md-nav__link">
+    Liste
+  </a>
+  
+    <nav class="md-nav" aria-label="Liste">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funzioni-su-liste" class="md-nav__link">
+    Funzioni su liste
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-principio-di-induzione-sulle-liste" class="md-nav__link">
+    Il principio di induzione sulle liste
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alberi-binari" class="md-nav__link">
+    Alberi binari
+  </a>
+  
+    <nav class="md-nav" aria-label="Alberi binari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funzioni-su-alberi-binari" class="md-nav__link">
+    Funzioni su alberi binari
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principio-di-induzione-sugli-alberi-binari" class="md-nav__link">
+    Principio di induzione sugli alberi binari
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alberi-binari-etichettati" class="md-nav__link">
+    Alberi binari etichettati
+  </a>
+  
+    <nav class="md-nav" aria-label="Alberi binari etichettati">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funzioni-su-alberi-binari-etichettati" class="md-nav__link">
+    Funzioni su alberi binari etichettati
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principio-di-induzione-sugli-alberi-binari-etichettati" class="md-nav__link">
+    Principio di induzione sugli alberi binari etichettati
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#linduzione-strutturale" class="md-nav__link">
@@ -768,7 +1045,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#liste" class="md-nav__link">
+  <a href="#liste_1" class="md-nav__link">
     Liste
   </a>
   
@@ -822,6 +1099,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#la-congettura-di-collatz" class="md-nav__link">
+    La congettura di Collatz
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tipologie-di-ricorsione" class="md-nav__link">
     Tipologie di ricorsione
   </a>
@@ -854,11 +1143,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -873,8 +1157,201 @@
               
                 
 
-  <h1>Induzione Strutturale e Ricorsione</h1>
-
+<h1 id="induzione-strutturale-e-ricorsione">Induzione strutturale e ricorsione<a class="headerlink" href="#induzione-strutturale-e-ricorsione" title="Permanent link">&para;</a></h1>
+<p>La maggior pparte degli oggetti nell'informatica sono definiti induttivamente, ovvero su istanze più piccole di loro stessi.<br />
+Le definizione induttive garantiscono la correttezza di una tecnica di dimostrazione chiamata principio di induzione strutturale.<br />
+Le definizione induttive sono un caso specifico di definizioni ricorsive, che permettono di di definire una funzione in termini del suo valore su oggetti arbitrari (non necessariamente più piccoli).  </p>
+<h2 id="liste">Liste<a class="headerlink" href="#liste" title="Permanent link">&para;</a></h2>
+<p>Le liste sono sequenze di dati di lunghezza variabile, tipicamente di valore omogeneo.<br />
+Gli oggetti sono in genere denotati tra parentesi quadre <code>[</code> e <code>]</code>.<br />
+La lista buona è denotata dal simbolo <code>[]</code> e rappresenta una sequenza senza elementi.<br />
+Una cosa importante è che le liste sono sempre <strong>sequenze finite</strong>.  </p>
+<p>Così come tutti i numeri naturali possono essere formati partendo da 0 e facendo uso dell'operazione <code>_ + 1</code>, possiamo fare lo stesso partendo dalla lista vuota <code>[]</code> usando l'operazione <code>a:_</code>, che aggiunge un elemento <span class="arithmatex">\(a \in A\)</span> in testa alla lista.  </p>
+<div class="admonition example">
+<p class="admonition-title">Lista [1,1,2,3]</p>
+<p>La lista <code>[1,1,2,3]</code> è ottenibile come <span class="arithmatex">\(1:(1:(2:(3:[])))\)</span>.  </p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Definizione di lista (induttiva)</p>
+<p>L'insieme <span class="arithmatex">\(L_A\)</span> delle liste degli elementi di A è il più piccolo insieme che soddisfa:  </p>
+<ul>
+<li>Clausola base: <span class="arithmatex">\([] \in L_A\)</span> (la lista vuota)</li>
+<li>Passo induttivo: Per ogni <span class="arithmatex">\(a \in A\)</span> se <span class="arithmatex">\(lst \in L_A\)</span>, allora <span class="arithmatex">\(a:lst \in L_A\)</span> (se la lista appartiene a <span class="arithmatex">\(L_A\)</span>, continuerà ad appartenere aggiungendo un nuovo elemento in A)</li>
+</ul>
+</div>
+<h3 id="funzioni-su-liste">Funzioni su liste<a class="headerlink" href="#funzioni-su-liste" title="Permanent link">&para;</a></h3>
+<p>È possibile sfruttare la definizione induttiva di lista per definire induttivamente funzioni su <span class="arithmatex">\(L_A\)</span>.  </p>
+<div class="admonition info">
+<p class="admonition-title">Definizione di lunghezza</p>
+<p>La funzione <span class="arithmatex">\(les: |L_A \rightarrow \mathbb N\)</span>è definita per induzione come:  </p>
+<ol>
+<li>Clausola base: <span class="arithmatex">\(len([]) =0\)</span></li>
+<li>Clausola induttiva: <span class="arithmatex">\(len(a:lst) = len(lst) + 1\)</span> per ogni <span class="arithmatex">\(a \in A\)</span></li>
+</ol>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definizione di somma su lista</p>
+<p>La funzione <span class="arithmatex">\(sunList(lst): L_{\mathbb N} \rightarrow \mathbb N\)</span> è definita induttivamente come:</p>
+<ol>
+<li>Clausola base: <span class="arithmatex">\(sumList([]) = 0\)</span></li>
+<li>Clausola induttiva: <span class="arithmatex">\(sumList(n:lst) = sumList(lst) + n\)</span> per ogni <span class="arithmatex">\(n \in \mathbb N\)</span></li>
+</ol>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definizione di appartenenza ad una lista</p>
+<p>Le funzione <span class="arithmatex">\(belList: L_A \times A \rightarrow Bool\)</span> è definita (induttivamente) come:</p>
+<ol>
+<li>Caso base: <span class="arithmatex">\(belList([],b) = f\)</span> per ogni <span class="arithmatex">\(b \in A\)</span></li>
+<li><span class="arithmatex">\(belList(a:lst, b) = t\)</span> per ogni <span class="arithmatex">\(a,b \in A\)</span> tali che <span class="arithmatex">\(a=b\)</span></li>
+<li><span class="arithmatex">\(belList(a:lst, b) = belList(lst,b)\)</span> per ogni <span class="arithmatex">\(a,b \in A\)</span> tali che <span class="arithmatex">\(a \ne b\)</span></li>
+</ol>
+</div>
+<p>Questo algoritmo appena descritto si può pensare come ad un algoritmo che controlla la lista da sinistra a destra e restituisce <strong>t</strong> appena trova l'elemento, altrimenti continua fino ad esaurire gli elementi della lista.  </p>
+<div class="admonition abstract">
+<p class="admonition-title">Concatenazione</p>
+<p>La funzione <span class="arithmatex">\(app: L_A \times L_A \rightarrow L_A\)</span> si può definire come:</p>
+<ol>
+<li><span class="arithmatex">\(app([], lst_2) = lst_2\)</span></li>
+<li><span class="arithmatex">\(app(a:lst_1, lst_2) = a:app(lst_1, lst_2)\)</span></li>
+</ol>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Inversione di liste</p>
+<p>La funzione <span class="arithmatex">\(rev: L_A \rightarrow L_A\)</span> si definisce come:</p>
+<ol>
+<li><span class="arithmatex">\(rev([]) = []\)</span></li>
+<li>$rev(a:lst) = app(rev(lst), a:[])</li>
+</ol>
+</div>
+<h3 id="il-principio-di-induzione-sulle-liste">Il principio di induzione sulle liste<a class="headerlink" href="#il-principio-di-induzione-sulle-liste" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Il principio di induzione sulle liste</p>
+<p>Il principio di induzione sulle liste stabilisce che:</p>
+<ol>
+<li>Caso base: se <span class="arithmatex">\(P([])\)</span> è vera, e</li>
+<li>Passo induttivo: per ogni <span class="arithmatex">\(a \in A\)</span>, per ogni lista <span class="arithmatex">\(lst^{'} \in L_A\)</span> se <span class="arithmatex">\(P(lst^{'})\)</span> è vera, allora anche <span class="arithmatex">\(P(a:lst^{'})\)</span> è vera.  </li>
+</ol>
+<p>Allora <span class="arithmatex">\(P(lst)\)</span> è vera per ogni lista in A.<br />
+Possiamo scrivere questo principio anche come formula di inferenza:  </p>
+<div class="arithmatex">\[
+\frac{P([]) \quad \forall a \in A.\forall lst^{'} \in L_A.P(lst^{'}) \Rightarrow P(a:lst^{'})}{\forall lst \in L_A.P(lst)} \quad \text{ P.I. su }L_A
+\]</div>
+</div>
+<h2 id="alberi-binari">Alberi binari<a class="headerlink" href="#alberi-binari" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Alberi binari</p>
+<p>L'insieme BT degli alberi binari è il più piccolo insieme che soddisfa:  </p>
+<ol>
+<li><span class="arithmatex">\(\lambda in BT\)</span> l'albero vuoto</li>
+<li>se <span class="arithmatex">\(t_1,t_2 \in BT\)</span> allora <span class="arithmatex">\(N(t_1,t_2) \in BT\)</span>, un nodo con due sottoalberi</li>
+</ol>
+</div>
+<p>I due sottoalberi <span class="arithmatex">\(t_1\)</span> e <span class="arithmatex">\(t_2\)</span> sono chiami sottoalbero sinistro e sottoalbero destro.<br />
+Un nodo è una foglia se entrambi i suoi sottoalberi sono vuoti, altrimeni è un nodo interno.  </p>
+<p>Un esempio di albero binario è il seguente:  </p>
+<div class="arithmatex">\[
+t = \underbrace{N}_\text{radice}(N(\lambda,N(\lambda,\lambda)),N(N(\lambda,N(\lambda,\lambda)), N(\lambda,\lambda)))
+\]</div>
+<h3 id="funzioni-su-alberi-binari">Funzioni su alberi binari<a class="headerlink" href="#funzioni-su-alberi-binari" title="Permanent link">&para;</a></h3>
+<p>Come per le liste, possiamo sfruttare la definizione induttiva degli alberi binari per generare le funzioni.  </p>
+<div class="admonition note">
+<p class="admonition-title">Dimensione</p>
+<p>La funzione <span class="arithmatex">\(size: BT \rightarrow \mathbb N\)</span> è definita come:  </p>
+<ol>
+<li><span class="arithmatex">\(size(0) = 0\)</span></li>
+<li>$size(N(t_1, t_2)) = size(t_1) + size(t_2) + 1</li>
+</ol>
+<p>La funzione size associa ad ogni albero la sua dimensione (ovvero il numero di nodi)</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Altezza</p>
+<p>La funzione <span class="arithmatex">\(height: BT \rightarrow \mathbb N \cup \{-1\}\)</span> è definita come:  </p>
+<ol>
+<li><span class="arithmatex">\(height(\lambda) = -1\)</span></li>
+<li>$height(N(t_1, t_2)) = max(height(t_1), height(t_2)) + 1</li>
+</ol>
+<p>La funzione height associa ad ogni albero la sua altezza, ovvero la lunghezza massima di un tral che vada dall radice al nodo più distante</p>
+</div>
+<h3 id="principio-di-induzione-sugli-alberi-binari">Principio di induzione sugli alberi binari<a class="headerlink" href="#principio-di-induzione-sugli-alberi-binari" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Principio di induzione sugli alberi binari</p>
+<p>Il principio di induzione sugli alberi binari stabilisce che: </p>
+<ol>
+<li>Caso base: <span class="arithmatex">\(P(\lambda)\)</span> è vera</li>
+<li>Passo induttivo: Per ogni <span class="arithmatex">\(t_1, t_2 \in BT\)</span>, vale che se <span class="arithmatex">\(P(t_1)\)</span> è vera e <span class="arithmatex">\(P(t_2)\)</span> è vera, allora anchr <span class="arithmatex">\(P(N(t_1,t_2))\)</span> è vera.   </li>
+</ol>
+<p>Allora <span class="arithmatex">\(P(t)\)</span> è vera per ogni <span class="arithmatex">\(t \in BT\)</span>.<br />
+Possiamo esprimere questo concetto anche attraverso una regola di inferenza:  </p>
+<div class="arithmatex">\[
+\frac{P(\lambda) \quad \forall t_1,t_2 \in BT.(P(t_1) \land P(t_2) \Rightarrow P(N(t_1,t_2)))}{\forall t \in BT. P(t)} \text{ P.I. su BT}
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Per tutti gli alberi, height(t) &lt;= size(t)</p>
+<ol>
+<li>Caso base: t = <span class="arithmatex">\(\lambda\)</span><br />
+<span class="arithmatex">\(height(\lambda) = -1\)</span> (clausola base height) 
+    <span class="arithmatex">\(-1 \leq 0\)</span><br />
+<span class="arithmatex">\(= size(\lambda)\)</span></li>
+<li>Passo induttivo:<br />
+<span class="arithmatex">\(height(N(t_1, t_2)) = max(height(t_1), height(t_2)) +1\)</span> (Clausola induttiva height)<br />
+<span class="arithmatex">\(\leq max(size(t_1), size(t_2)) +1\)</span> (Ipotesi induttiva)<br />
+<span class="arithmatex">\(\leq size(t_1) + size(t_2) + 1\)</span><br />
+<span class="arithmatex">\(= size(N(t_1, t_2))\)</span> (Clausola induttiva size)</li>
+</ol>
+</div>
+<h2 id="alberi-binari-etichettati">Alberi binari etichettati<a class="headerlink" href="#alberi-binari-etichettati" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Definizione strutturale di alberi binari etichettati</p>
+<p>L'insieme <span class="arithmatex">\(BT_A\)</span> degli alberi binari etichettati con elementi di un dato insieme A, è il più piccolo insieme che soddisfa:  </p>
+<ol>
+<li><span class="arithmatex">\(\lambda \in BT_A\)</span> (L'albero vuoto)</li>
+<li>se <span class="arithmatex">\(t_1,t_2 \in BT_A\)</span> allora<span class="arithmatex">\(N(t_1, a, t_2) \in BT_A\)</span> per ogni <span class="arithmatex">\(a \in A\)</span></li>
+</ol>
+</div>
+<h3 id="funzioni-su-alberi-binari-etichettati">Funzioni su alberi binari etichettati<a class="headerlink" href="#funzioni-su-alberi-binari-etichettati" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Appartenenza ad un albero</p>
+<p>La funzione <span class="arithmatex">\(belBT: BT_A \times A \rightarrow Bool\)</span> è definita come:  </p>
+<ol>
+<li>$belBT(\lambda,b) =f $</li>
+<li><span class="arithmatex">\(belBT(N(t_1,a, t_2),b) = t\)</span> per ogni <span class="arithmatex">\(a,b \in A\)</span> tale che <span class="arithmatex">\(a \neq b\)</span></li>
+<li><span class="arithmatex">\(belBT(N(t_1,a,t_2),b) = belBT(t_1,b) \lor belBT(t_2,b)\)</span> per ogni <span class="arithmatex">\(a,b \in A\)</span> tale che <span class="arithmatex">\(a \neq b\)</span></li>
+</ol>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Somma su albero</p>
+<p>La funzione <span class="arithmatex">\(sumBT: BT_N \rightarrow \mathcal N\)</span> è definita come induzione come</p>
+<ol>
+<li><span class="arithmatex">\(sumBT(\lambda) = 0\)</span></li>
+<li><span class="arithmatex">\(sumBT(N(t_1,n,T_2)) = sumBT(t_1) + sumBT(t_2) + n\)</span></li>
+</ol>
+<p>Questa funzione prende l'etichetta <span class="arithmatex">\(n\)</span> in ogni nodo e la somma con tutti gli altri nodi</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Visita di un albero in ordine simmetrico</p>
+<p>La funzione <span class="arithmatex">\(visit: BT_A \rightarrow L_A\)</span> è definita come:</p>
+<ol>
+<li><span class="arithmatex">\(visit(\lambda)=[\ ]\)</span></li>
+<li>visit(N(t_1,n,t_2)) = app(visit(t_1),a,visit(t_2))</li>
+</ol>
+<p>Questa funzione visita l'albero in ordine simmetrico da sinistra a destra, dato ch eper ogni nodo viene prima visitato il figlio sinistro, poi il nodo stesso e poi il nodo destro.<br />
+L'ordine della visione può essere modificato attraverso l'ordine dei parametri della seconda funzione.  </p>
+</div>
+<h3 id="principio-di-induzione-sugli-alberi-binari-etichettati">Principio di induzione sugli alberi binari etichettati<a class="headerlink" href="#principio-di-induzione-sugli-alberi-binari-etichettati" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Principio di induzione sugli alberi binari etichettati</p>
+<p>Il principio di induzione sugli alberi binari stabilisce un concetto simile a quello che vale per gli alberi binari, con l'unica accortezza di ferificare P su che: </p>
+<ol>
+<li>Caso base: <span class="arithmatex">\(P(\lambda)\)</span> è vera</li>
+<li>Passo induttivo: Per ogni <span class="arithmatex">\(a \in A\)</span>, per ogni <span class="arithmatex">\(t_1, t_2 \in BT_A\)</span>, vale che se <span class="arithmatex">\(P(t_1)\)</span> è vera e <span class="arithmatex">\(P(t_2)\)</span> è vera, allora anchr <span class="arithmatex">\(P(N(t_1,a,t_2))\)</span> è vera.   </li>
+</ol>
+<p>Allora <span class="arithmatex">\(P(t)\)</span> è vera per ogni <span class="arithmatex">\(t \in BT_A\)</span>.<br />
+Possiamo esprimere questo concetto anche attraverso una regola di inferenza:  </p>
+<div class="arithmatex">\[
+\frac{P(\lambda) \quad \forall a \in A, \forall t_1,t_2 \in BT_A.(P(t_1) \land P(t_2) \Rightarrow P(N(t_1,a,t_2)))}{\forall t \in BT_A. P(t)} \text{ P.I. su } BT_A
+\]</div>
+</div>
 <h2 id="linduzione-strutturale">L'induzione strutturale<a class="headerlink" href="#linduzione-strutturale" title="Permanent link">&para;</a></h2>
 <p>L'induzione strutturale ci permette di:</p>
 <ul>
@@ -991,7 +1468,7 @@ Ogni nodo dell'albero avrà un'etichetta con un simbolo in <span class="arithmat
 \mathcal{BT}_2 = \\{N\\} \qquad
 \mathcal{BT}_n = \varnothing ~ per ~ ogni ~ n ~ \geq 3
 \]</div>
-<h3 id="liste">Liste<a class="headerlink" href="#liste" title="Permanent link">&para;</a></h3>
+<h3 id="liste_1">Liste<a class="headerlink" href="#liste_1" title="Permanent link">&para;</a></h3>
 <p>TODO</p>
 <h4 id="rappresentazione-di-liste-come-termini">Rappresentazione di liste come termini<a class="headerlink" href="#rappresentazione-di-liste-come-termini" title="Permanent link">&para;</a></h4>
 <p>Le liste possono essere rappresentate utilizzando la seguente segnatura <span class="arithmatex">\(\mathcal{L}^A\)</span>:</p>
@@ -1033,7 +1510,7 @@ Definire una funzione su <span class="arithmatex">\(\mathcal FTerm\)</span> (ins
 </div>
 <div class="admonition example">
 <p class="admonition-title">Somma di <span class="arithmatex">\(\mathcal N\)</span>-Termini</p>
-<p>La funzione <span class="arithmatex">\(add: \mathcal NTerm X \mathcal NTerm \rightarrow \mathbb N\)</span> può essere definita induttivamente seguendo le proprietà appena descritte:</p>
+<p>La funzione <span class="arithmatex">\(add: \mathcal NTerm \times \mathcal NTerm \rightarrow \mathbb N\)</span> può essere definita induttivamente seguendo le proprietà appena descritte:</p>
 <ol>
 <li><span class="arithmatex">\(add(x, Z) = x\)</span></li>
 <li><span class="arithmatex">\(add(x, S(y)) = S(add(x,y))\)</span></li>
@@ -1082,15 +1559,98 @@ Inoltre non sempre una funzione ricorsiva risulta calcolabile:<br />
 Il <strong>Teorema di Rice</strong> (facente parte del <em>Teorema della Calcolabilità</em>) afferma che ~non esiste un procedimento universale~ che permtta di determinare con esattezza se una funzione recursiva è totale (e quindi è una funzione; in caso contrario sarebbe una <em>funzione parziale</em>)  </p>
 <p>È possibile però individuare delle condizioni sufficienti che ci permettano di garantire che una definizione ricorsiva sia <strong>ben data</strong> (o ben definita).  </p>
 <p>Ci interessa che la funzione ricorsiva sia totale perché se così non fosse, implicherebbe che valutando tale funzione incorreremmo in una computazione infinita.  </p>
-<h3 id="tipologie-di-ricorsione">Tipologie di ricorsione<a class="headerlink" href="#tipologie-di-ricorsione" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Relazione di precedenza indotta da una funzione ricorsiva</p>
+<p>Data una definizione ricordiva di <span class="arithmatex">\(rec: A \rightarrow B\)</span>, la lreazione di precedenza indotta è la relazione <span class="arithmatex">\(\prec_{rec} \in Rel(A,A)\)</span> definita come:</p>
+<p>Per ogni <span class="arithmatex">\(x,y \in A, x \prec_{rec} y\)</span> se e solo se <span class="arithmatex">\(rec(y)\)</span> è definita direttamente in termini di <span class="arithmatex">\(rec(x)\)</span>  </p>
+<p>Questa definizione non è necessariamente aciclica</p>
+</div>
+<p>Quindi, data la definizione di precedenza, possiamo presentare alcune relazioni di precedenza:  </p>
+<ul>
+<li><span class="arithmatex">\(\prec_{due} \in Rel(\mathbb N,\mathbb N)\)</span>, definita come <span class="arithmatex">\(n+1 \prec_{due}n\)</span> se <span class="arithmatex">\(n \leq 100\)</span></li>
+<li><span class="arithmatex">\(\prec_g \in Rel(\mathbb N,\mathbb N)\)</span> definita come <span class="arithmatex">\(n+1\prec_g n\)</span> se <span class="arithmatex">\(n &gt; 0\)</span></li>
+<li><span class="arithmatex">\(\prec_f \in Rel(\mathbb Z,\mathbb Z)\)</span> definita come <span class="arithmatex">\(n-1 \prec_f n\)</span> se <span class="arithmatex">\(n \in \mathbb Z\)</span></li>
+<li><span class="arithmatex">\(\prec_h \in Rel(\mathbb N,\mathbb N)\)</span> definita come <span class="arithmatex">\(\prec_h = \{ (n-2,n) | n \geq 2 \} \cup \{(3,1)\}\)</span></li>
+</ul>
+<p>Quindi, se <span class="arithmatex">\(b \prec_{rec} a\)</span>, devo valutare <span class="arithmatex">\(rec(b)\)</span> per poter valutare <span class="arithmatex">\(rec(a)\)</span>.<br />
+Ma se una funzione è definita solamente in termin di sé stessa, la valutazione non termina mai.  </p>
+<div class="admonition abstract">
+<p class="admonition-title">Relazione ben fondata</p>
+<p>Una relazione <span class="arithmatex">\(\sqsubset\)</span> su un insieme A, definita come <span class="arithmatex">\(\sqsubset \in Rel(A,A)\)</span>, si dice ben fondata se non esiste una catena infinita decrescente  </p>
+<div class="arithmatex">\[ 
+a_1 \sqsupset a_2 \sqsupset a_3 \sqsupset ...
+\]</div>
+<p>di elementi <span class="arithmatex">\(a_i\)</span> su A</p>
+</div>
+<p>Possiamo quindi dire che una funzione non è ben fondata quando è definita infinite volte su se stessa.  </p>
+<p>Al contrario, una definizione ricorsiva di <span class="arithmatex">\(rec: A \rightarrow B\)</span> è ben data (ovvero è totale ed univalente) quando:  </p>
+<ol>
+<li>Per ogni elemento <span class="arithmatex">\(a \in A\)</span> c'è esattamente una clausola della definizione applicabile per valutare <span class="arithmatex">\(rec(a)\)</span></li>
+<li>La relazione <span class="arithmatex">\(\prec_{rec}\)</span> è ben fondata</li>
+</ol>
+<p>Le definizioni induttive sono sempre ben date:  </p>
+<div class="admonition abstract">
+<p class="admonition-title">relazioni di precedenza indotta da definizione induttiva</p>
+<p>Data una definizione induttiva di un insieme A, la relazione di precedenza indotta è <span class="arithmatex">\(\prec_A \in Rel(A,A)\)</span>.<br />
+Questo è dato dal fatto che, se per la clausola induttiva l'elemento a appartiene all'insieme ci appartengono <span class="arithmatex">\(a_1,...,a_n\)</span>:<br />
+<span class="arithmatex">\(a_1 \prec_A a,a_2 \prec_A a,...,a_k \prec_A a\)</span></p>
+</div>
+<p>Questa definizione può essere applicata a qualunque definizione induttiva, mantenuta così generale grazie al concetto di <a href="#linduzione-strutturale">f-termine</a>:<br />
+Per ogni <span class="arithmatex">\(n \geq 1\)</span>, per ogni <span class="arithmatex">\(f \in \mathbb F\)</span>, <span class="arithmatex">\(t_1 \prec f(t_1, ...,t_2), \quad t_2 \prec f(t_1,...,t_2),..., t_n \prec f(t_1,...,t_n)\)</span>  </p>
+<p>Quindi una relazione definita tramite induttiva è ben data poihcé l'insieme caratterizzato è il più piccolo che soddisfa clausola base e passo induttivo: ogni elemento dell'insieme appartiene ad una sequenza finita di di applicazioni della clausola induttiva, che garantisce che la relazione <span class="arithmatex">\(\prec\)</span> è ben fondata.  </p>
+<p>Possiamo quindi determinare delle proprietà:  </p>
+<ul>
+<li>Se <span class="arithmatex">\(\sqsubset\)</span> è ben fondata, e <span class="arithmatex">\(\sqsubset_1 \subseteq \sqsubset\)</span>, allora anche <span class="arithmatex">\(\sqsubset_1\)</span> è ben fondata.  </li>
+<li>Una relazione <span class="arithmatex">\(\sqsubset\)</span> è ben fondata solo se lo è la sua chiusura transitiva <span class="arithmatex">\(\sqsubset^+\)</span> </li>
+</ul>
+<h3 id="la-congettura-di-collatz">La congettura di Collatz<a class="headerlink" href="#la-congettura-di-collatz" title="Permanent link">&para;</a></h3>
+<p>La congettura di Collatz afferma che una funzione come questa:  </p>
+<div class="arithmatex">\[
+f(n) = \begin{cases}
+1 &amp; \text{ se } n \leq 1 \\
+f(n/2) &amp; \text{ se } n &gt;1 \text { ed è pari} \\
+f(3 \cdot n+1) &amp; \text{ se } n&gt;1 \text { ed è dispari}
+\end{cases}
+\]</div>
+<p>è totale, tuttavia non è stato determinato se è così per ogni valore <span class="arithmatex">\(k \in \mathbb N\)</span></p>
+<h2 id="tipologie-di-ricorsione">Tipologie di ricorsione<a class="headerlink" href="#tipologie-di-ricorsione" title="Permanent link">&para;</a></h2>
 <p>Esistono vari tipi di ricorsione, oltre alla tipologia vista fin'ora, chiamata <strong>Ricorsione diretta</strong></p>
-<h4 id="ricorsione-annidata">Ricorsione annidata<a class="headerlink" href="#ricorsione-annidata" title="Permanent link">&para;</a></h4>
+<h3 id="ricorsione-annidata">Ricorsione annidata<a class="headerlink" href="#ricorsione-annidata" title="Permanent link">&para;</a></h3>
 <p>Questo tipo di ricorsione si ha quando una funzione ricorsiva richiama, nel proprio corpo, sé stessa E sé stessa come parametro, chiamando la funzione 2 volte</p>
 <div class="admonition example">
 <p class="admonition-title">Esempio di ricosione annidata</p>
+<p>Un esempio di ricorsione annidata è data dall'equazione di McCarthy:  </p>
+<div class="arithmatex">\[
+f(n) = \begin{cases}
+n-10 &amp; \text{ se } n&gt;100 \\
+f(f(n+11)) &amp; \text{ se } n \leq 100
+\end{cases}
+\]</div>
 </div>
-<h4 id="ricorsione-mutua">Ricorsione mutua<a class="headerlink" href="#ricorsione-mutua" title="Permanent link">&para;</a></h4>
-<h4 id="ricorsione-procedurale">Ricorsione procedurale<a class="headerlink" href="#ricorsione-procedurale" title="Permanent link">&para;</a></h4>
+<h3 id="ricorsione-mutua">Ricorsione mutua<a class="headerlink" href="#ricorsione-mutua" title="Permanent link">&para;</a></h3>
+<p>La recusione si dice mutua quando la chiamata avviene indirettamente, ovvero da parte di una seconda funzione chiamata a suoa volta direttamente o indirettamente dalla prima.  </p>
+<div class="admonition example">
+<p class="admonition-title">Esempio di ricosione mutua</p>
+<p>$$
+ping(n) = \begin{cases}
+0 &amp; \text{ se } n=0 \
+pong(n-1) &amp; \text{ altrimenti }
+\end{cases}</p>
+<p>pong(n) = \begin{cases}
+0 &amp; \text{ se } n=100 \
+ping(n-1) &amp; \text{ altrimenti }
+\end{cases}
+$$</p>
+</div>
+<h3 id="ricorsione-procedurale">Ricorsione procedurale<a class="headerlink" href="#ricorsione-procedurale" title="Permanent link">&para;</a></h3>
+<p>Le ricorsioni procedurali sono funzioni scritte attraverso linguaggi di programmazione, che possono avere collaterali come input, output, stampa a schermo ecc...  </p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">stampa_array</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">){</span><span class="w"> </span><span class="c1">// Clausola ricorsiva: c&#39;è andora qulcosa da stampare</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"></span>
+<span class="w">        </span><span class="n">stampa_array</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">//Clausola base: i == n; l&#39;array a[i..n-1] è vuoto, la procedura termina</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
 
               
             </article>

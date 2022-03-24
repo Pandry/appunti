@@ -36,6 +36,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/biggerAdmonitions.css">
     
+      <link rel="stylesheet" href="../../stylesheets/mathAdmonitions.css">
+    
     <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -227,9 +229,25 @@
   
 
 
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../AnalisiI/prerequisiti/" class="md-tabs__link">
+        Analisi I
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
   <li class="md-tabs__item">
-    <a href="../../AnalisiI/" class="md-tabs__link">
-      Analisi I
+    <a href="../../AlgebraLineare/" class="md-tabs__link">
+      Algebra Lineare
     </a>
   </li>
 
@@ -284,6 +302,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_1">
@@ -306,6 +326,20 @@
     <li class="md-nav__item">
       <a href="../../ProAlgo/relazioniRicorrenza/" class="md-nav__link">
         Relazioni di ricorrenza
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProAlgo/programmazioneDinamica/" class="md-nav__link">
+        Programmazione dinamica
       </a>
     </li>
   
@@ -494,6 +528,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Logica Matematica
@@ -512,19 +548,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Indice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#la-logica" class="md-nav__link">
-    La logica
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#il-calcolo-proposizionale" class="md-nav__link">
@@ -712,9 +743,77 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Analisi I
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Analisi I" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Analisi I
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../AnalisiI/" class="md-nav__link">
-        Analisi I
+      <a href="../../AnalisiI/prerequisiti/" class="md-nav__link">
+        Funzioni ed introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AnalisiI/calcoloDifferenziale/" class="md-nav__link">
+        Calcolo differenziale
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AlgebraLineare/" class="md-nav__link">
+        Algebra Lineare
       </a>
     </li>
   
@@ -739,19 +838,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Indice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#la-logica" class="md-nav__link">
-    La logica
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#il-calcolo-proposizionale" class="md-nav__link">
@@ -901,9 +995,7 @@
               
                 
 
-  <h1>Logica Matematica</h1>
-
-<h2 id="la-logica">La logica<a class="headerlink" href="#la-logica" title="Permanent link">&para;</a></h2>
+<h1 id="la-logica">La logica<a class="headerlink" href="#la-logica" title="Permanent link">&para;</a></h1>
 <p>La logica serve per, date certe premesse, verificare la validità di un certo enunciato.<br />
 Facciamo uso della logica per stabilire precisamente il significato degli enunciati matematici, e quindi determinare le argomentazioni valide.<br />
 Questo tipo di distinzione ci permette di <strong>capire se una dimostrazione è corretta</strong> oppure no.<br />
@@ -1376,7 +1468,34 @@ In alternativa, è possibile trovare una soluzione partendo dall'ultimo connetti
 <p>Come abbiamo visto, la proposizione <span class="arithmatex">\(P\)</span> è conseguenza logica di un insieme di formule <span class="arithmatex">\(\Gamma\)</span> se <span class="arithmatex">\(P\)</span> è vera in tutti i modelli di <span class="arithmatex">\(\Gamma\)</span>.  </p>
 <h3 id="formalizzazione-di-inferenze-e-tautologie">Formalizzazione di inferenze e tautologie<a class="headerlink" href="#formalizzazione-di-inferenze-e-tautologie" title="Permanent link">&para;</a></h3>
 <p>È possibile fare uso della formalizzazione per mostrare la correttezza di una certa inferenza o ragionamenti logici semplici espressi in linguaggio naturale.  </p>
-<p>Magari scrivere dopo</p>
+<div class="admonition abstract">
+<p class="admonition-title">Sistema di dimostrazioni</p>
+<p>Dato un insieme di formule <span class="arithmatex">\(\Delta\)</span>, un sistema di dimostrazioni (o proof system) per <span class="arithmatex">\(\Delta\)</span> è un insieme di regole di interenza <span class="arithmatex">\(\cal R\)</span>.<br />
+Una reola di inferenza <span class="arithmatex">\(r \in \cal R\)</span> ha la struttura:  </p>
+<div class="arithmatex">\[
+\frac{P_1 \ \cdots  P_n}{P} [r]
+\]</div>
+<p>Dove P è la conseguenza e <span class="arithmatex">\(P_1 \ \cdots  P_n\)</span> sono le premesse.<br />
+Se <span class="arithmatex">\(n=0\)</span> la regola si chiama assioma.  </p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Dimostrazione</p>
+<p>Una dimostrazione in un proof system <span class="arithmatex">\(\cal R\)</span> di una formula <span class="arithmatex">\(Q \in \Delta\)</span> in un insieme di premesse <span class="arithmatex">\(\Gamma \in \Delta\)</span> è una sequenza di formule <span class="arithmatex">\(Q_1,...,Q_n\)</span>, dove:  </p>
+<ul>
+<li>Ogni formula <span class="arithmatex">\(Q\)</span> è un elemento di <span class="arithmatex">\(\Gamma\)</span> oppure è ottenuta applicando una regola di inferenza di <span class="arithmatex">\(\cal R\)</span> a partire dalle formule in <span class="arithmatex">\(\Gamma\)</span> o in <span class="arithmatex">\(Q_i,...,Q_{i-1}\)</span></li>
+<li><span class="arithmatex">\(Q_n\)</span> è proprio <span class="arithmatex">\(Q\)</span></li>
+</ul>
+<p>Se esiste una dimostrazione scriveremo:  </p>
+<div class="arithmatex">\[
+\Gamma \vdash _{\cal R} Q \quad \text{Q è dimostrabile da }\Gamma
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Correttezza e completezza</p>
+<div class="arithmatex">\[
+\Gamma \vdash _{\cal R} P \ \text{ implica } \ \Gamma \vDash P \text{ (correttezza)}
+\]</div>
+</div>
 <h3 id="dimostrazioni-per-sostituzione-di-tautologie">Dimostrazioni per sostituzione di tautologie<a class="headerlink" href="#dimostrazioni-per-sostituzione-di-tautologie" title="Permanent link">&para;</a></h3>
 <h4 id="rimpiazzamento">Rimpiazzamento<a class="headerlink" href="#rimpiazzamento" title="Permanent link">&para;</a></h4>
 <h4 id="principio-di-sostituzione">Principio di sostituzione<a class="headerlink" href="#principio-di-sostituzione" title="Permanent link">&para;</a></h4>
