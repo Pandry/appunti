@@ -1,4 +1,4 @@
-Calcolo differenziale
+Calcolo differenziale - funzioni 
 
 ## Insiemi numerici
 Introduciamo il concectto di insiemi numerici; In questo caso ci limitiamo a trattarne 4:  
@@ -70,7 +70,7 @@ Vediamo quindi i concetti di surgettività ed iniettività:
 
 Che significa che ogni elemento nel codominio "proviene" da un elemento del dominio (nel codominio non ci sono elementi "scoperti")
 
-!!! example "Cambiamento del dominio per rendere una funzione surfettiva"
+!!! observation "Cambiamento del dominio per rendere una funzione surgettiva"
     La funzione $g: \mathbb R \rightarrow \mathbb R$, $g(x) = x^2$ non è surgettiva.  
     Questo perché nessun numero razionale elevato al quadrato restituirà un valore negativo. La funzione non è quindi surgettiva  
     La stessa funzione ma definita come $g: \mathbb R \rightarrow [0, + \infty )$ è surgettiva.
@@ -95,7 +95,7 @@ Per capire velocemente da un grafico se una funzione è surgettiva, possiamo pen
 
 Se una funzione non è iniettiva, ci possono comunque essere dei "trucchi" che ci consentono di farla diventare iniettiva, ad esempio scartando parte del dominio.  
 
-!!! example "Cambiamento del dominio per rendere una funzione iniettiva"
+!!! observation "Cambiamento del dominio per rendere una funzione iniettiva"
     La funzione $g: \mathbb R \rightarrow \mathbb R$, $g(x) = x^2$ non è iniettiva.  
     La stessa funzione ma definita come $g: [0, + \infty ) \rightarrow \mathbb R$ è iniettiva.
 
@@ -228,7 +228,7 @@ Se una funzione è strettamente crescente/decrescente, lo sarà anche debolmente
   </figcaption>
 </figure>
 
-Nel caso della funzione $\frac 1 x$, in alcuni punti della funzione le coppie $x_1$, $x_2$ mantengono l'ordinamento (ad esempio con $x_2 = 10$ e $x_1 = 5$, $f(x_1)>f(x_2)$), facendo risultare la funzione decrescente; in altre lo invertono (ad esempio per $x_2 = 20$ e $x_1 = -20$, avendo quindi $f(x_1) < f(x_2)$).  
+Nel caso della funzione $\frac 1 x$ (un ramo di iperbole), in alcuni punti della funzione le coppie $x_1$, $x_2$ mantengono l'ordinamento (ad esempio con $x_2 = 10$ e $x_1 = 5$, $f(x_1)>f(x_2)$), facendo risultare la funzione decrescente; in altre lo invertono (ad esempio per $x_2 = 20$ e $x_1 = -20$, avendo quindi $f(x_1) < f(x_2)$).  
 Questo significa che questa funzione non è globalmente monotona, ma è decrescente su due intervalli:  
 $f$ è decrescente $(- \infty, 0)$ e in $(0, \infty)$, ma non in tutto il suo dominio ($\mathbb R \backslash \{0\}$).  
 

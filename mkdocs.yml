@@ -84,6 +84,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 extra_css:
   - stylesheets/biggerAdmonitions.css
+  - stylesheets/mathAdmonitions.css
 
 plugins:
   - search:
@@ -95,6 +96,7 @@ nav:
   #- Home: index.md
   - Programmazione e Algoritmica:
     - Relazioni di ricorrenza: ProAlgo/relazioniRicorrenza.md
+    - Programmazione dinamica: ProAlgo/programmazioneDinamica.md
   - Fondamenti di Informatica:
     #- Introduzione: FdI/index.md
     - Insiemi: FdI/insiemi.md
@@ -108,5 +110,9 @@ nav:
     - Logica Matematica: FdI/logica.md
     - Cheatsheet: FdI/cheatsheet.md
   - Laboratorio I: LabI/index.md
-  - Analisi I: AnalisiI/index.md
+  - Analisi I: 
+    - Funzioni ed introduzione: AnalisiI/prerequisiti.md
+    - Calcolo differenziale: AnalisiI/calcoloDifferenziale.md
+    - Limiti: AnalisiI/limiti.md
+  - Algebra Lineare: AlgebraLineare/index.md
 
