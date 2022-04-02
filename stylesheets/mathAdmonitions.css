@@ -102,3 +102,31 @@ background-color: rgb(233, 229, 24);
 
 
 
+
+/*
+#####
+## Theorem
+#####
+*/
+:root {
+    --md-admonition-icon--theorem: var(--md-admonition-icon--abstract)
+}
+.md-typeset .admonition.theorem,
+.md-typeset details.theorem {
+border-color: rgb(24, 219, 233);
+}
+.md-typeset .theorem > .admonition-title,
+.md-typeset .theorem > summary {
+background-color: rgba(24, 219, 233, 0.1);
+border-color: rgb(24, 219, 233);
+}
+.md-typeset .theorem > .admonition-title::before,
+.md-typeset .theorem > summary::before {
+background-color: rgb(24, 219, 233);
+-webkit-mask-image: var(--md-admonition-icon--theorem);
+        mask-image: var(--md-admonition-icon--theorem);
+}
+
+
+
+

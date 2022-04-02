@@ -6,6 +6,10 @@ window.MathJax = {
       rrbracket: "]\\!]", // parentesi quadra aperta chiusa ]]
       doublebr: [ "{ \\llbracket #1 \\rrbracket }", 1 ], // doppia parentesi quadra [[ e ]] (con un unico tratto agli estremi)
       cb: [ "\\biggl({#1 \\atop {#2}}\\biggr)", 2], // Coefficiente binomiale
+      reals: "\\mathbb R",
+      naturals: "\\mathbb N",
+      // Graffa sotto con testo: $\underbrace{\hbox{Text}}_{\hbox{text below}}$
+      // testo stacked: $\stackrel{\hbox{Text above}}{\hbox{Text below}}$
     },
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
