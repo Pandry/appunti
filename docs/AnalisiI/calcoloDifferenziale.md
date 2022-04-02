@@ -234,6 +234,9 @@ Come altre proprietà possiamo poi aggiungere:
     - $|f(x) - f(x_0)| < \epsilon \Leftrightarrow f(x_0) - \epsilon < f(x) < f(x_0) + \epsilon$ (la funzione oscilla intorno ad $f(x_0)$ ad un ampiezza massima di $\epsilon$)
     - Se esiste un $\delta$ nell'$epsilon$ dato, la funzione è continua
 
+!!! observation "Una funzione è sempre continua nei punti isolati"
+    La continuità include un concetto di prossimità del punto (al punto dove si considera la continuità): se il punto è isolato non è possibile avvicinarsi al punto, ci si può solo "trovare" nel punto.  
+
 ??? example "Esempio di funzione non continua in un punto"
 	Data la funzione  
 	  
