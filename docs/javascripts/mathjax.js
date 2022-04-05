@@ -8,6 +8,9 @@ window.MathJax = {
       cb: [ "\\biggl({#1 \\atop {#2}}\\biggr)", 2], // Coefficiente binomiale
       reals: "\\mathbb R",
       naturals: "\\mathbb N",
+      limit:  [ "\\lim_{ x \\rightarrow #1 }", 1 ],
+      pin: "+ \\infty",
+      min: "- \\infty",
       // Graffa sotto con testo: $\underbrace{\hbox{Text}}_{\hbox{text below}}$
       // testo stacked: $\stackrel{\hbox{Text above}}{\hbox{Text below}}$
     },
