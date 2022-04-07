@@ -11,6 +11,7 @@ window.MathJax = {
       limit:  [ "\\lim_{ x \\rightarrow #1 }", 1 ],
       pin: "+ \\infty",
       min: "- \\infty",
+      So: "\\Rightarrow",
       // Graffa sotto con testo: $\underbrace{\hbox{Text}}_{\hbox{text below}}$
       // testo stacked: $\stackrel{\hbox{Text above}}{\hbox{Text below}}$
     },
