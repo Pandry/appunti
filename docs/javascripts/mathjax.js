@@ -12,6 +12,7 @@ window.MathJax = {
       pin: "+ \\infty",
       min: "- \\infty",
       So: "\\Rightarrow",
+      then: "\\Rightarrow",
       // Graffa sotto con testo: $\underbrace{\hbox{Text}}_{\hbox{text below}}$
       // testo stacked: $\stackrel{\hbox{Text above}}{\hbox{Text below}}$
     },

@@ -1,2 +1,0 @@
-
-# Relazioni di ricorrenza

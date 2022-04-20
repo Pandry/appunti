@@ -93,9 +93,13 @@ plugins:
 
 # Page tree
 nav:
-  #- Home: index.md
   - Programmazione e Algoritmica:
-    - Relazioni di ricorrenza: ProAlgo/relazioniRicorrenza.md
+    - Introduzione: ProAlgo/introduzione.md
+    - Grammatiche e Linguaggi: ProAlgo/grammatiche.md 
+    - Sintassi: ProAlgo/sintassi.md
+    - Semantica: ProAlgo/semantica.md
+    - Valutazione di un algoritmo: ProAlgo/valutazione.md
+    - Linguaggio L: ProAlgo/l.md
     - Programmazione dinamica: ProAlgo/programmazioneDinamica.md
   - Fondamenti di Informatica:
     #- Introduzione: FdI/index.md
