@@ -13,7 +13,7 @@
     
     
       
-        <title>Cheatsheet - Appunti universitari</title>
+        <title>Grammatiche e Linguaggi - Appunti universitari</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#linguaggi-e-grammatiche" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -94,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cheatsheet
+              Grammatiche e Linguaggi
             
           </span>
         </div>
@@ -176,13 +181,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../ProAlgo/introduzione/" class="md-tabs__link">
+      <a href="../introduzione/" class="md-tabs__link md-tabs__link--active">
         Programmazione e Algoritmica
       </a>
     </li>
@@ -192,15 +199,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../insiemi/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../FdI/insiemi/" class="md-tabs__link">
         Fondamenti di Informatica
       </a>
     </li>
@@ -285,12 +290,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
       
       
@@ -329,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/introduzione/" class="md-nav__link">
+      <a href="../introduzione/" class="md-nav__link">
         Introduzione
       </a>
     </li>
@@ -341,11 +348,122 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ProAlgo/grammatiche/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Grammatiche e Linguaggi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Grammatiche e Linguaggi
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#componenti-di-una-grammatica" class="md-nav__link">
+    Componenti di una grammatica
+  </a>
+  
+    <nav class="md-nav" aria-label="Componenti di una grammatica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simboli-non-terminali" class="md-nav__link">
+    Simboli non terminali
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simboli-terminali" class="md-nav__link">
+    Simboli terminali
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produzioni" class="md-nav__link">
+    Produzioni
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simbolo-iniziale" class="md-nav__link">
+    Simbolo iniziale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esempio-di-una-grammatica" class="md-nav__link">
+    Esempio di una grammatica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#espressibilita-di-un-linguaggio" class="md-nav__link">
+    Espressibilità di un linguaggio
+  </a>
+  
+    <nav class="md-nav" aria-label="Espressibilità di un linguaggio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipi-di-grammatiche" class="md-nav__link">
+    Tipi di grammatiche
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backus-naur-form" class="md-nav__link">
+    Backus-Naur Form
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -357,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/sintassi/" class="md-nav__link">
+      <a href="../sintassi/" class="md-nav__link">
         Sintassi
       </a>
     </li>
@@ -371,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/semantica/" class="md-nav__link">
+      <a href="../semantica/" class="md-nav__link">
         Semantica
       </a>
     </li>
@@ -385,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/valutazione/" class="md-nav__link">
+      <a href="../valutazione/" class="md-nav__link">
         Valutazione di un algoritmo
       </a>
     </li>
@@ -399,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/l/" class="md-nav__link">
+      <a href="../l/" class="md-nav__link">
         Linguaggio L
       </a>
     </li>
@@ -413,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/programmazioneDinamica/" class="md-nav__link">
+      <a href="../programmazioneDinamica/" class="md-nav__link">
         Programmazione dinamica
       </a>
     </li>
@@ -433,14 +551,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -485,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../insiemi/" class="md-nav__link">
+      <a href="../../FdI/insiemi/" class="md-nav__link">
         Insiemi
       </a>
     </li>
@@ -499,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../relazioni/" class="md-nav__link">
+      <a href="../../FdI/relazioni/" class="md-nav__link">
         Relazioni
       </a>
     </li>
@@ -513,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../induzione/" class="md-nav__link">
+      <a href="../../FdI/induzione/" class="md-nav__link">
         Induzione Matematica
       </a>
     </li>
@@ -527,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../relazioniInsiemi/" class="md-nav__link">
+      <a href="../../FdI/relazioniInsiemi/" class="md-nav__link">
         Relazioni su insiemi
       </a>
     </li>
@@ -541,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../grafi/" class="md-nav__link">
+      <a href="../../FdI/grafi/" class="md-nav__link">
         Grafi
       </a>
     </li>
@@ -555,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../calcoloCombinatorio/" class="md-nav__link">
+      <a href="../../FdI/calcoloCombinatorio/" class="md-nav__link">
         Calcolo Combinatorio
       </a>
     </li>
@@ -569,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../induzioneRicorsione/" class="md-nav__link">
+      <a href="../../FdI/induzioneRicorsione/" class="md-nav__link">
         Induzione Strutturale e Ricorsione
       </a>
     </li>
@@ -583,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linguaggi/" class="md-nav__link">
+      <a href="../../FdI/linguaggi/" class="md-nav__link">
         Linguaggi Formali
       </a>
     </li>
@@ -597,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logica/" class="md-nav__link">
+      <a href="../../FdI/logica/" class="md-nav__link">
         Logica Matematica
       </a>
     </li>
@@ -609,19 +725,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../FdI/cheatsheet/" class="md-nav__link">
         Cheatsheet
       </a>
-      
     </li>
   
 
@@ -754,152 +862,194 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#componenti-di-una-grammatica" class="md-nav__link">
+    Componenti di una grammatica
+  </a>
+  
+    <nav class="md-nav" aria-label="Componenti di una grammatica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simboli-non-terminali" class="md-nav__link">
+    Simboli non terminali
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simboli-terminali" class="md-nav__link">
+    Simboli terminali
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produzioni" class="md-nav__link">
+    Produzioni
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simbolo-iniziale" class="md-nav__link">
+    Simbolo iniziale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esempio-di-una-grammatica" class="md-nav__link">
+    Esempio di una grammatica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#espressibilita-di-un-linguaggio" class="md-nav__link">
+    Espressibilità di un linguaggio
+  </a>
+  
+    <nav class="md-nav" aria-label="Espressibilità di un linguaggio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipi-di-grammatiche" class="md-nav__link">
+    Tipi di grammatiche
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backus-naur-form" class="md-nav__link">
+    Backus-Naur Form
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
 
-  <h1>Cheatsheet</h1>
-
-<table>
-<thead>
-<tr>
-<th>Relazione</th>
-<th>Descrizione</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Totale</td>
-<td>Per ogni elemento in A, c'è una connessione con almeno un elemento in B</td>
-</tr>
-<tr>
-<td>Univalente</td>
-<td>Per ogni elemento in A, c'è al massimo una connessione (0 o 1) con un elemento in B</td>
-</tr>
-<tr>
-<td>Surgettiva</td>
-<td>Per ogni elemento in B, c'è una connessione con almeno un elemento in A</td>
-</tr>
-<tr>
-<td>Iniettiva</td>
-<td>Per ogni elemento in B, c'è al massimo una connessione (0 o 1) con un elemento in A</td>
-</tr>
-<tr>
-<td>Biietiva</td>
-<td>Tutte le precedenti</td>
-</tr>
-<tr>
-<td>Riflessiva</td>
-<td>Ogni elemento è in relazione con sé stesso (ha un cappio)<br/>(l'identità è contenuta nella relazione)</td>
-</tr>
-<tr>
-<td>Transitiva</td>
-<td>Se esiste una relazione (a,b), e (b,c), esiste anche una relazione (a,c)<br/>Include anche la relazione vuota</td>
-</tr>
-<tr>
-<td>Antisimmetrica</td>
-<td>Non c'è <strong>mai</strong> una relazione che va da <code>a</code> a <code>b</code> e <strong>contemporaneamente</strong> da <code>b</code> ad <code>a</code><br/>(Non ci sono mai frecce opposte)<br/>È tollerato lo stesso elemento (cappio)</td>
-</tr>
-<tr>
-<td>Simmetrica</td>
-<td><strong>Per ogni</strong> relazione <code>(a,b)</code>, esiste una relazione <code>(b,a)</code><br/>Per ogni elemento, ci sono 2 archi, uno da ed uno verso un altro elemento</td>
-</tr>
-<tr>
-<td>Composizione</td>
-<td>2 relazioni sono composte quando l'elemento di arrivo per la prima diventa l'elemento di partenza per la seconda<br/>Avendo (a,b) e (b,c) in R, R composto R (<code>R;R</code>) è <code>((a,b),c)</code>, ovvero <code>(a,c)</code></td>
-</tr>
-<tr>
-<td>R*, chiusura di Kleene</td>
-<td>La composizione di una relazione con sé stessa infinite volte (zero incluso)<br/>È riflessiva e transitiva<br/>Contiene l'identità (R0)</td>
-</tr>
-<tr>
-<td>R+, chiusura positiva</td>
-<td>R* ma senza 0 incluso</td>
-</tr>
-<tr>
-<td>Chiusura riflessiva</td>
-<td>Data una relazione R ed un insieme A, è l'unione dell'identità di A con la relazione R</td>
-</tr>
-<tr>
-<td>Chiusura simmetrica</td>
-<td>Data una relazione R, è l'unione di R ed R opposto</td>
-</tr>
-<tr>
-<td>Chiusura transitiva</td>
-<td>Data una relazione R, si unisce a questa la chiusura positiva fino a far diventare la funzione transitiva</td>
-</tr>
-<tr>
-<td>Ordinamento parziale</td>
-<td>Una relazione Riflessiva, Transitiva ed Antisimmetrica</td>
-</tr>
-<tr>
-<td>Ordinamento totale</td>
-<td>Ordinamento parziale + ogni (a, b) appartenente al prodotto cartesiano; (a,b) o (b,a) appartiene ad R<br/>Ogni coppia di elementi appartiene alla relazione R: ogni elemento è in relazione con ogni altro elemento; C'è una freccia per ogni elemento su ogni elemento<br/>Se è totale, non è parziale</td>
-</tr>
-</tbody>
-</table>
-<p>Grafo</p>
-<table>
-<thead>
-<tr>
-<th>Relazione</th>
-<th>Descrizione</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Walk/Cammino</td>
-<td>Un collegamento da un nodo di partenza ad uno di arrivo</td>
-</tr>
-<tr>
-<td>Trail</td>
-<td>Un collegamento da un nodo di partenza ad uno di arrivo MA senza passare 2 volte per lo stesso arco (o collegamento)</td>
-</tr>
-<tr>
-<td>Path</td>
-<td>Un collegamento da un nodo di partenza ad uno di arrivo MA senza passare 2 volte per lo stesso NODO (o pallino/elemento)<br/>Non si deve passare 2 volte per lo stesso elemento</td>
-</tr>
-<tr>
-<td>Walk chiuso</td>
-<td>Un walk che permette di partire da un nodo e ritornare allo stesso ed ha lunghezza maggiore di 0</td>
-</tr>
-<tr>
-<td>Circuito</td>
-<td>È un <strong>walk</strong> chiuso che è anche un <strong>trail</strong> (non si passa per lo stesso <strong>arco</strong> 2 volte)</td>
-</tr>
-<tr>
-<td>Ciclo</td>
-<td>È un <strong>circuito</strong> che è anche un <strong>path</strong> (non si passa per lo stesso <strong>nodo</strong> 2 volte)</td>
-</tr>
-<tr>
-<td>Aciclico</td>
-<td>Quando il grafo <strong>NON</strong> presenta un ciclo</td>
-</tr>
-<tr>
-<td>Connesso</td>
-<td>Quando ogni nodo è "raggiunto" da almeno un arco (se è orientato: sia in uscita che in entrata)</td>
-</tr>
-<tr>
-<td>Fortemente connesso</td>
-<td>Da ogni nodo, esiste un walk verso ogni altro nodo</td>
-</tr>
-<tr>
-<td>Componenti fortemente connesse</td>
-<td>Sottografi fortemente connessi (notare che ogni nodo può arrivare a sé stesso, quindi ogni nodo preso singolarmente è una componente fortemente connessa)</td>
-</tr>
-<tr>
-<td>Universale</td>
-<td>Quando un <strong>nodo</strong> è vicino a tutti gli altri</td>
-</tr>
-<tr>
-<td>DAG</td>
-<td>Grafo Aciclico Orientato</td>
-</tr>
-</tbody>
-</table>
-<p>Induzione (pecché non bastava prima)</p>
+<h1 id="linguaggi-e-grammatiche">Linguaggi e Grammatiche<a class="headerlink" href="#linguaggi-e-grammatiche" title="Permanent link">&para;</a></h1>
+<p>Una grammatica è una notazione concisa per descrivere la sintassi (una frase ben formata) di un linguaggio.<br />
+Sono costituite da produzioni  </p>
+<div class="admonition definition">
+<p class="admonition-title">Definizione di Grammatica</p>
+<p>Una grammatica è una quadrupla <span class="arithmatex">\(G = \langle N, \Sigma, P, S \rangle\)</span><br />
+Dove:  </p>
+<ul>
+<li><span class="arithmatex">\(N\)</span> sono i simboli non terminali</li>
+<li><span class="arithmatex">\(\Sigma\)</span> sono i simboli terminali</li>
+<li><span class="arithmatex">\(P\)</span> sono le produzioni</li>
+<li><span class="arithmatex">\(S\)</span> è il simbolo iniziale</li>
+</ul>
+</div>
+<p>Detto informalmente, una grammatica è quindi un insieme di regole che permette di costruire frasi corrette in un linguaggio.  </p>
+<h2 id="componenti-di-una-grammatica">Componenti di una grammatica<a class="headerlink" href="#componenti-di-una-grammatica" title="Permanent link">&para;</a></h2>
+<h3 id="simboli-non-terminali">Simboli non terminali<a class="headerlink" href="#simboli-non-terminali" title="Permanent link">&para;</a></h3>
+<p>Caratteri che NON compaiono nelle frasi <em>finali</em>.<br />
+(<span class="arithmatex">\(N \neq \varnothing\)</span>)</p>
+<h3 id="simboli-terminali">Simboli terminali<a class="headerlink" href="#simboli-terminali" title="Permanent link">&para;</a></h3>
+<p>Caratteri che compaiono nelle stringhe delle linguaggio (elementi dell'alfabeto)</p>
+<h3 id="produzioni">Produzioni<a class="headerlink" href="#produzioni" title="Permanent link">&para;</a></h3>
+<p>Le produzioni sono un sottoinsieme del prodotto tra la chiusura di Kleene e la chiusura positiva:<br />
+<span class="arithmatex">\(P \subseteq (N \cup \Sigma)^+ \times (N \cup \Sigma)^\star\)</span><br />
+Sono quindi funzioni o relazioni <span class="arithmatex">\(N \cup \Sigma \cup P \rightarrow N \cup P\)</span> <!--(ricontrollare lezione 4 03:31)-->  </p>
+<p>Una produzione è formalizzata attraverso una notazione a coppia, dove al primo elemento si trova la categoria sintattica (o simbolo non terminale) e al secondo si trova uno o più simboli terminali o non.<br />
+L'insieme delle produzioni permettono quindi di esprimere qualunque stringa nel linguaggio.  </p>
+<h3 id="simbolo-iniziale">Simbolo iniziale<a class="headerlink" href="#simbolo-iniziale" title="Permanent link">&para;</a></h3>
+<p>Simbolo che rappresenta l'inizio della grammatica, ovvero il simbolo da cui si parte per creare la frase.  </p>
+<h2 id="esempio-di-una-grammatica">Esempio di una grammatica<a class="headerlink" href="#esempio-di-una-grammatica" title="Permanent link">&para;</a></h2>
+<details class="example">
+<summary>Esempio di una grammatica</summary>
+<p><span class="arithmatex">\(\langle \underbrace{\{D\}}_{\text{ Non terminali }}, \underbrace{\{0,...,9\}}_{\text{Terminali}}, \underbrace{\{(D,0),(D,1),...,(D,9),(D,0D),...,(D,9D) \}}_{\text{Produzioni}}, \underbrace{D}_{\text{Simbolo iniziale}} \rangle\)</span>  </p>
+<p>In questo esempio, G è una grammatica che ci permette di esprimere ogni numero nei reali.  </p>
+</details>
+<p>Il linguaggio generato da un grammatica G è l'insieme delle stringhe di caratteri terminali che si possono ottenere applicando un numero qualsiasi di produzioni a partire dal simbolo iniziale:<br />
+<span class="arithmatex">\(L(G) = \{ \omega | \omega \in \Sigma^\star \land S \rightarrow^\star \omega \}\)</span></p>
+<p>Che si legge che il linguaggio L data la grammatica G è composto da stringhe (<span class="arithmatex">\(\omega\)</span>) fatte di terminali (<span class="arithmatex">\(\omega \in \Sigma^\star\)</span>) e derivabili in un numero arbitrario di passi, partendo dal simbolo iniziale (<span class="arithmatex">\(S \rightarrow^\star \omega\)</span>)</p>
+<h2 id="espressibilita-di-un-linguaggio">Espressibilità di un linguaggio<a class="headerlink" href="#espressibilita-di-un-linguaggio" title="Permanent link">&para;</a></h2>
+<p>È possibile classificare le grammatiche basandosi sul tipo di produzioni che permettono di fare.<br />
+Qui di seguito troviamo diverse grammatiche, scritte in ordine dalla meno alla più specifica:<br />
+Notare che con A si intende, nel contesto di una produzione, la categoria sintattica (o simbolo non terminale) e con B si intende il simbolo terminale o non terminale derivato dalla produzione.<br />
+In termini di notazione invece:  </p>
+<ul>
+<li>$\Sigma $ (sigma) è l'alfabeto e N è l'insieme dei non terminali.  </li>
+<li><span class="arithmatex">\(\delta \in (N \cup \Sigma)^+\)</span> (delta) è una stringa non vuota di caratteri terminali e non terminali</li>
+<li><span class="arithmatex">\(\gamma \in (N \cup \Sigma)^\star\)</span> è una stringa di caratteri terminali e non terminali</li>
+<li><span class="arithmatex">\(\delta\)</span> derivativo immediato di <span class="arithmatex">\(\gamma\)</span> (<span class="arithmatex">\(\gamma \to \delta\)</span>) <span class="arithmatex">\(\Leftrightarrow\)</span> <span class="arithmatex">\(\delta\)</span> si può ottenere da <span class="arithmatex">\(\gamma\)</span> applicando <strong>una</strong> produzione della grammatica</li>
+<li><span class="arithmatex">\(\delta\)</span> derivativo di <span class="arithmatex">\(\gamma\)</span> (<span class="arithmatex">\(\gamma \to^\star \delta\)</span>) significa applicare un numero qualsiasi di produzioni</li>
+<li>Derivazione canonica destra: Simbolo non terminale ad essere sostituito è quello più a destra nella stringa</li>
+<li>Derivazione canonica sinistra: simbolo non terminale ad essere sostituito è quello più a sinistra nella stringa</li>
+</ul>
+<h3 id="tipi-di-grammatiche">Tipi di grammatiche<a class="headerlink" href="#tipi-di-grammatiche" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Grammatica di tipo 0<br />
+    Una grammatica di tipo 0 è associabile ad una macchina di Turing (essere più specifici qui)<br />
+<span class="arithmatex">\((\alpha, \beta), \alpha \in (N \cup \Sigma)^+, \beta \in (N \cup \Sigma)^\star\)</span></li>
+<li>Grammatica dipendente dal contesto<br />
+<span class="arithmatex">\((\gamma A \delta, \gamma \ro \delta), \gamma, \gamma \in (N \cup \Sigma)^\star, \ro \in (N \cup \Sigma)^+\)</span>
+    In questa categoria possiamo trovare gli automi lineari</li>
+<li>Grammatica libera da contesto<br />
+    In questa categoria troviamo i linguaggi di programmazione comuni<br />
+    Hanno una forma del tipo <span class="arithmatex">\((A, \Beta), \Beta \in (N \cup \Sigma)^+\)</span><br />
+    Automi a pila
+    forma delle produzioni
+    Non ho un consto e a sinistra posso solo non avere terminali (L4 13:57)
+    Stringa len \ge 1 destra</li>
+<li>Grammatica regolare o lineare destra<br />
+<span class="arithmatex">\((A,b), (A, bA)\)</span><br />
+    Automa a stati finiti</li>
+</ul>
+<h2 id="backus-naur-form">Backus-Naur Form<a class="headerlink" href="#backus-naur-form" title="Permanent link">&para;</a></h2>
+<p>È facilmente riconoscibile il fatto che scrivere grammatiche come quadruple è molto oneroso in termini di spazio e non risultando comunque chiarissime.<br />
+Per questo è stata inventa la <strong>Backus-Naur Form</strong> (abbreviata a <strong>BNF</strong>)<br />
+Una produzione in questa forma ha questo aspetto:<br />
+<span class="arithmatex">\(E ::= E+E | E-E | E * E | ...| I | V\)</span></p>
+<p>Dove il primo carattere E rappresenta il simbolo iniziale (o categoria sintattica) e le produzioni sono separate dal trattino verticale<br />
+A destra troviamo infatti sia simboli terminali (come +, - e *) che non terminali (come E, I e V, che saranno poi scritte in altre produzioni)<br />
+Il "corpo" della produzione è quindi l'insieme dei simboli che compaiono a destra dell'uguaglianza</p>
 
               
             </article>
@@ -918,7 +1068,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../logica/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Logica Matematica" rel="prev">
+        <a href="../introduzione/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduzione" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -927,20 +1077,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Logica Matematica
+              Introduzione
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../LabI/" class="md-footer__link md-footer__link--next" aria-label="Next: Laboratorio I" rel="next">
+        <a href="../sintassi/" class="md-footer__link md-footer__link--next" aria-label="Next: Sintassi" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Laboratorio I
+              Sintassi
             </div>
           </div>
           <div class="md-footer__button md-icon">

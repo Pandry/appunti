@@ -13,7 +13,7 @@
     
     
       
-        <title>Cheatsheet - Appunti universitari</title>
+        <title>Linguaggio L - Appunti universitari</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#il-linguaggio-l" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -94,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cheatsheet
+              Linguaggio L
             
           </span>
         </div>
@@ -176,13 +181,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../ProAlgo/introduzione/" class="md-tabs__link">
+      <a href="../introduzione/" class="md-tabs__link md-tabs__link--active">
         Programmazione e Algoritmica
       </a>
     </li>
@@ -192,15 +199,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../insiemi/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../FdI/insiemi/" class="md-tabs__link">
         Fondamenti di Informatica
       </a>
     </li>
@@ -285,12 +290,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
       
       
@@ -329,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/introduzione/" class="md-nav__link">
+      <a href="../introduzione/" class="md-nav__link">
         Introduzione
       </a>
     </li>
@@ -343,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/grammatiche/" class="md-nav__link">
+      <a href="../grammatiche/" class="md-nav__link">
         Grammatiche e Linguaggi
       </a>
     </li>
@@ -357,7 +364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/sintassi/" class="md-nav__link">
+      <a href="../sintassi/" class="md-nav__link">
         Sintassi
       </a>
     </li>
@@ -371,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/semantica/" class="md-nav__link">
+      <a href="../semantica/" class="md-nav__link">
         Semantica
       </a>
     </li>
@@ -385,7 +392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/valutazione/" class="md-nav__link">
+      <a href="../valutazione/" class="md-nav__link">
         Valutazione di un algoritmo
       </a>
     </li>
@@ -397,11 +404,88 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ProAlgo/l/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Linguaggio L
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Linguaggio L
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bnf" class="md-nav__link">
+    BNF
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantica-statica" class="md-nav__link">
+    Semantica statica
+  </a>
+  
+    <nav class="md-nav" aria-label="Semantica statica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#espressioni" class="md-nav__link">
+    Espressioni
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandi" class="md-nav__link">
+    Comandi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dichiarazioni" class="md-nav__link">
+    Dichiarazioni
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -413,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/programmazioneDinamica/" class="md-nav__link">
+      <a href="../programmazioneDinamica/" class="md-nav__link">
         Programmazione dinamica
       </a>
     </li>
@@ -433,14 +517,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -485,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../insiemi/" class="md-nav__link">
+      <a href="../../FdI/insiemi/" class="md-nav__link">
         Insiemi
       </a>
     </li>
@@ -499,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../relazioni/" class="md-nav__link">
+      <a href="../../FdI/relazioni/" class="md-nav__link">
         Relazioni
       </a>
     </li>
@@ -513,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../induzione/" class="md-nav__link">
+      <a href="../../FdI/induzione/" class="md-nav__link">
         Induzione Matematica
       </a>
     </li>
@@ -527,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../relazioniInsiemi/" class="md-nav__link">
+      <a href="../../FdI/relazioniInsiemi/" class="md-nav__link">
         Relazioni su insiemi
       </a>
     </li>
@@ -541,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../grafi/" class="md-nav__link">
+      <a href="../../FdI/grafi/" class="md-nav__link">
         Grafi
       </a>
     </li>
@@ -555,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../calcoloCombinatorio/" class="md-nav__link">
+      <a href="../../FdI/calcoloCombinatorio/" class="md-nav__link">
         Calcolo Combinatorio
       </a>
     </li>
@@ -569,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../induzioneRicorsione/" class="md-nav__link">
+      <a href="../../FdI/induzioneRicorsione/" class="md-nav__link">
         Induzione Strutturale e Ricorsione
       </a>
     </li>
@@ -583,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linguaggi/" class="md-nav__link">
+      <a href="../../FdI/linguaggi/" class="md-nav__link">
         Linguaggi Formali
       </a>
     </li>
@@ -597,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logica/" class="md-nav__link">
+      <a href="../../FdI/logica/" class="md-nav__link">
         Logica Matematica
       </a>
     </li>
@@ -609,19 +691,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../FdI/cheatsheet/" class="md-nav__link">
         Cheatsheet
       </a>
-      
     </li>
   
 
@@ -754,152 +828,90 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bnf" class="md-nav__link">
+    BNF
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantica-statica" class="md-nav__link">
+    Semantica statica
+  </a>
+  
+    <nav class="md-nav" aria-label="Semantica statica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#espressioni" class="md-nav__link">
+    Espressioni
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandi" class="md-nav__link">
+    Comandi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dichiarazioni" class="md-nav__link">
+    Dichiarazioni
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
 
-  <h1>Cheatsheet</h1>
-
-<table>
-<thead>
-<tr>
-<th>Relazione</th>
-<th>Descrizione</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Totale</td>
-<td>Per ogni elemento in A, c'è una connessione con almeno un elemento in B</td>
-</tr>
-<tr>
-<td>Univalente</td>
-<td>Per ogni elemento in A, c'è al massimo una connessione (0 o 1) con un elemento in B</td>
-</tr>
-<tr>
-<td>Surgettiva</td>
-<td>Per ogni elemento in B, c'è una connessione con almeno un elemento in A</td>
-</tr>
-<tr>
-<td>Iniettiva</td>
-<td>Per ogni elemento in B, c'è al massimo una connessione (0 o 1) con un elemento in A</td>
-</tr>
-<tr>
-<td>Biietiva</td>
-<td>Tutte le precedenti</td>
-</tr>
-<tr>
-<td>Riflessiva</td>
-<td>Ogni elemento è in relazione con sé stesso (ha un cappio)<br/>(l'identità è contenuta nella relazione)</td>
-</tr>
-<tr>
-<td>Transitiva</td>
-<td>Se esiste una relazione (a,b), e (b,c), esiste anche una relazione (a,c)<br/>Include anche la relazione vuota</td>
-</tr>
-<tr>
-<td>Antisimmetrica</td>
-<td>Non c'è <strong>mai</strong> una relazione che va da <code>a</code> a <code>b</code> e <strong>contemporaneamente</strong> da <code>b</code> ad <code>a</code><br/>(Non ci sono mai frecce opposte)<br/>È tollerato lo stesso elemento (cappio)</td>
-</tr>
-<tr>
-<td>Simmetrica</td>
-<td><strong>Per ogni</strong> relazione <code>(a,b)</code>, esiste una relazione <code>(b,a)</code><br/>Per ogni elemento, ci sono 2 archi, uno da ed uno verso un altro elemento</td>
-</tr>
-<tr>
-<td>Composizione</td>
-<td>2 relazioni sono composte quando l'elemento di arrivo per la prima diventa l'elemento di partenza per la seconda<br/>Avendo (a,b) e (b,c) in R, R composto R (<code>R;R</code>) è <code>((a,b),c)</code>, ovvero <code>(a,c)</code></td>
-</tr>
-<tr>
-<td>R*, chiusura di Kleene</td>
-<td>La composizione di una relazione con sé stessa infinite volte (zero incluso)<br/>È riflessiva e transitiva<br/>Contiene l'identità (R0)</td>
-</tr>
-<tr>
-<td>R+, chiusura positiva</td>
-<td>R* ma senza 0 incluso</td>
-</tr>
-<tr>
-<td>Chiusura riflessiva</td>
-<td>Data una relazione R ed un insieme A, è l'unione dell'identità di A con la relazione R</td>
-</tr>
-<tr>
-<td>Chiusura simmetrica</td>
-<td>Data una relazione R, è l'unione di R ed R opposto</td>
-</tr>
-<tr>
-<td>Chiusura transitiva</td>
-<td>Data una relazione R, si unisce a questa la chiusura positiva fino a far diventare la funzione transitiva</td>
-</tr>
-<tr>
-<td>Ordinamento parziale</td>
-<td>Una relazione Riflessiva, Transitiva ed Antisimmetrica</td>
-</tr>
-<tr>
-<td>Ordinamento totale</td>
-<td>Ordinamento parziale + ogni (a, b) appartenente al prodotto cartesiano; (a,b) o (b,a) appartiene ad R<br/>Ogni coppia di elementi appartiene alla relazione R: ogni elemento è in relazione con ogni altro elemento; C'è una freccia per ogni elemento su ogni elemento<br/>Se è totale, non è parziale</td>
-</tr>
-</tbody>
-</table>
-<p>Grafo</p>
-<table>
-<thead>
-<tr>
-<th>Relazione</th>
-<th>Descrizione</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Walk/Cammino</td>
-<td>Un collegamento da un nodo di partenza ad uno di arrivo</td>
-</tr>
-<tr>
-<td>Trail</td>
-<td>Un collegamento da un nodo di partenza ad uno di arrivo MA senza passare 2 volte per lo stesso arco (o collegamento)</td>
-</tr>
-<tr>
-<td>Path</td>
-<td>Un collegamento da un nodo di partenza ad uno di arrivo MA senza passare 2 volte per lo stesso NODO (o pallino/elemento)<br/>Non si deve passare 2 volte per lo stesso elemento</td>
-</tr>
-<tr>
-<td>Walk chiuso</td>
-<td>Un walk che permette di partire da un nodo e ritornare allo stesso ed ha lunghezza maggiore di 0</td>
-</tr>
-<tr>
-<td>Circuito</td>
-<td>È un <strong>walk</strong> chiuso che è anche un <strong>trail</strong> (non si passa per lo stesso <strong>arco</strong> 2 volte)</td>
-</tr>
-<tr>
-<td>Ciclo</td>
-<td>È un <strong>circuito</strong> che è anche un <strong>path</strong> (non si passa per lo stesso <strong>nodo</strong> 2 volte)</td>
-</tr>
-<tr>
-<td>Aciclico</td>
-<td>Quando il grafo <strong>NON</strong> presenta un ciclo</td>
-</tr>
-<tr>
-<td>Connesso</td>
-<td>Quando ogni nodo è "raggiunto" da almeno un arco (se è orientato: sia in uscita che in entrata)</td>
-</tr>
-<tr>
-<td>Fortemente connesso</td>
-<td>Da ogni nodo, esiste un walk verso ogni altro nodo</td>
-</tr>
-<tr>
-<td>Componenti fortemente connesse</td>
-<td>Sottografi fortemente connessi (notare che ogni nodo può arrivare a sé stesso, quindi ogni nodo preso singolarmente è una componente fortemente connessa)</td>
-</tr>
-<tr>
-<td>Universale</td>
-<td>Quando un <strong>nodo</strong> è vicino a tutti gli altri</td>
-</tr>
-<tr>
-<td>DAG</td>
-<td>Grafo Aciclico Orientato</td>
-</tr>
-</tbody>
-</table>
-<p>Induzione (pecché non bastava prima)</p>
+<h1 id="il-linguaggio-l">Il linguaggio L<a class="headerlink" href="#il-linguaggio-l" title="Permanent link">&para;</a></h1>
+<p>Il linguaggio L è un linguaggio teorico e usato solo per scopi educativi.  </p>
+<p>Questo lo tratterò poi, nel frattempo allego la pagina di appunti:<br />
+<a href="../assets/l.pdf">Linguaggio L</a></p>
+<h2 id="bnf">BNF<a class="headerlink" href="#bnf" title="Permanent link">&para;</a></h2>
+<h2 id="semantica-statica">Semantica statica<a class="headerlink" href="#semantica-statica" title="Permanent link">&para;</a></h2>
+<h3 id="espressioni">Espressioni<a class="headerlink" href="#espressioni" title="Permanent link">&para;</a></h3>
+<h3 id="comandi">Comandi<a class="headerlink" href="#comandi" title="Permanent link">&para;</a></h3>
+<h3 id="dichiarazioni">Dichiarazioni<a class="headerlink" href="#dichiarazioni" title="Permanent link">&para;</a></h3>
 
               
             </article>
@@ -918,7 +930,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../logica/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Logica Matematica" rel="prev">
+        <a href="../valutazione/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Valutazione di un algoritmo" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -927,20 +939,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Logica Matematica
+              Valutazione di un algoritmo
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../LabI/" class="md-footer__link md-footer__link--next" aria-label="Next: Laboratorio I" rel="next">
+        <a href="../programmazioneDinamica/" class="md-footer__link md-footer__link--next" aria-label="Next: Programmazione dinamica" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Laboratorio I
+              Programmazione dinamica
             </div>
           </div>
           <div class="md-footer__button md-icon">

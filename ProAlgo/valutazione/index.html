@@ -13,7 +13,7 @@
     
     
       
-        <title>Linguaggi Formali - Appunti universitari</title>
+        <title>Valutazione di un algoritmo - Appunti universitari</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linguaggi-formali" class="md-skip">
+        <a href="#valutazione-di-un-algoritmo" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Linguaggi Formali
+              Valutazione di un algoritmo
             
           </span>
         </div>
@@ -181,13 +181,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../ProAlgo/introduzione/" class="md-tabs__link">
+      <a href="../introduzione/" class="md-tabs__link md-tabs__link--active">
         Programmazione e Algoritmica
       </a>
     </li>
@@ -197,15 +199,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../insiemi/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../FdI/insiemi/" class="md-tabs__link">
         Fondamenti di Informatica
       </a>
     </li>
@@ -290,12 +290,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
       
       
@@ -334,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/introduzione/" class="md-nav__link">
+      <a href="../introduzione/" class="md-nav__link">
         Introduzione
       </a>
     </li>
@@ -348,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/grammatiche/" class="md-nav__link">
+      <a href="../grammatiche/" class="md-nav__link">
         Grammatiche e Linguaggi
       </a>
     </li>
@@ -362,7 +364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/sintassi/" class="md-nav__link">
+      <a href="../sintassi/" class="md-nav__link">
         Sintassi
       </a>
     </li>
@@ -376,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/semantica/" class="md-nav__link">
+      <a href="../semantica/" class="md-nav__link">
         Semantica
       </a>
     </li>
@@ -388,11 +390,196 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ProAlgo/valutazione/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Valutazione di un algoritmo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Valutazione di un algoritmo
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#la-macchina-astratta" class="md-nav__link">
+    La macchina astratta
+  </a>
+  
+    <nav class="md-nav" aria-label="La macchina astratta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modello-ram-von-neumann" class="md-nav__link">
+    Modello RAM - Von-Neumann
+  </a>
+  
+    <nav class="md-nav" aria-label="Modello RAM - Von-Neumann">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memoria-astratta" class="md-nav__link">
+    Memoria astratta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processore-astratto" class="md-nav__link">
+    Processore astratto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identificatori-ed-ambiente" class="md-nav__link">
+    Identificatori ed ambiente
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variabili" class="md-nav__link">
+    Variabili
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costanti" class="md-nav__link">
+    Costanti
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categorie-sintattiche" class="md-nav__link">
+    Categorie sintattiche
+  </a>
+  
+    <nav class="md-nav" aria-label="Categorie sintattiche">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dichiarazioni" class="md-nav__link">
+    Dichiarazioni
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandi" class="md-nav__link">
+    Comandi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#espressioni" class="md-nav__link">
+    Espressioni
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classi-di-complessita" class="md-nav__link">
+    Classi di complessità
+  </a>
+  
+    <nav class="md-nav" aria-label="Classi di complessità">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#big-o" class="md-nav__link">
+    Big-O
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#big-omega" class="md-nav__link">
+    Big Omega
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theta" class="md-nav__link">
+    Theta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relazioni-di-ricorrenza" class="md-nav__link">
+    Relazioni di ricorrenza
+  </a>
+  
+    <nav class="md-nav" aria-label="Relazioni di ricorrenza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master-theorem" class="md-nav__link">
+    Master Theorem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -404,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/l/" class="md-nav__link">
+      <a href="../l/" class="md-nav__link">
         Linguaggio L
       </a>
     </li>
@@ -418,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/programmazioneDinamica/" class="md-nav__link">
+      <a href="../programmazioneDinamica/" class="md-nav__link">
         Programmazione dinamica
       </a>
     </li>
@@ -438,14 +625,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -490,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../insiemi/" class="md-nav__link">
+      <a href="../../FdI/insiemi/" class="md-nav__link">
         Insiemi
       </a>
     </li>
@@ -504,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../relazioni/" class="md-nav__link">
+      <a href="../../FdI/relazioni/" class="md-nav__link">
         Relazioni
       </a>
     </li>
@@ -518,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../induzione/" class="md-nav__link">
+      <a href="../../FdI/induzione/" class="md-nav__link">
         Induzione Matematica
       </a>
     </li>
@@ -532,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../relazioniInsiemi/" class="md-nav__link">
+      <a href="../../FdI/relazioniInsiemi/" class="md-nav__link">
         Relazioni su insiemi
       </a>
     </li>
@@ -546,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../grafi/" class="md-nav__link">
+      <a href="../../FdI/grafi/" class="md-nav__link">
         Grafi
       </a>
     </li>
@@ -560,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../calcoloCombinatorio/" class="md-nav__link">
+      <a href="../../FdI/calcoloCombinatorio/" class="md-nav__link">
         Calcolo Combinatorio
       </a>
     </li>
@@ -574,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../induzioneRicorsione/" class="md-nav__link">
+      <a href="../../FdI/induzioneRicorsione/" class="md-nav__link">
         Induzione Strutturale e Ricorsione
       </a>
     </li>
@@ -586,95 +771,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Linguaggi Formali
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../FdI/linguaggi/" class="md-nav__link">
         Linguaggi Formali
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Indice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Indice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#alfabeti-parole-e-linguaggi" class="md-nav__link">
-    Alfabeti, Parole e Linguaggi
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operazioni-su-lunguaggi" class="md-nav__link">
-    Operazioni su lunguaggi
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automi" class="md-nav__link">
-    Automi
-  </a>
-  
-    <nav class="md-nav" aria-label="Automi">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#automi-deterministici-e-non" class="md-nav__link">
-    Automi deterministici e non
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#costruzione-dei-sottoinsiemi" class="md-nav__link">
-    Costruzione dei sottoinsiemi
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#grammatiche-libere-da-contesto" class="md-nav__link">
-    Grammatiche libere da contesto
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -686,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logica/" class="md-nav__link">
+      <a href="../../FdI/logica/" class="md-nav__link">
         Logica Matematica
       </a>
     </li>
@@ -700,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cheatsheet/" class="md-nav__link">
+      <a href="../../FdI/cheatsheet/" class="md-nav__link">
         Cheatsheet
       </a>
     </li>
@@ -857,45 +958,146 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#alfabeti-parole-e-linguaggi" class="md-nav__link">
-    Alfabeti, Parole e Linguaggi
+  <a href="#la-macchina-astratta" class="md-nav__link">
+    La macchina astratta
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operazioni-su-lunguaggi" class="md-nav__link">
-    Operazioni su lunguaggi
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automi" class="md-nav__link">
-    Automi
-  </a>
-  
-    <nav class="md-nav" aria-label="Automi">
+    <nav class="md-nav" aria-label="La macchina astratta">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#automi-deterministici-e-non" class="md-nav__link">
-    Automi deterministici e non
+  <a href="#modello-ram-von-neumann" class="md-nav__link">
+    Modello RAM - Von-Neumann
+  </a>
+  
+    <nav class="md-nav" aria-label="Modello RAM - Von-Neumann">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memoria-astratta" class="md-nav__link">
+    Memoria astratta
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#costruzione-dei-sottoinsiemi" class="md-nav__link">
-    Costruzione dei sottoinsiemi
+  <a href="#processore-astratto" class="md-nav__link">
+    Processore astratto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identificatori-ed-ambiente" class="md-nav__link">
+    Identificatori ed ambiente
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#grammatiche-libere-da-contesto" class="md-nav__link">
-    Grammatiche libere da contesto
+  <a href="#variabili" class="md-nav__link">
+    Variabili
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costanti" class="md-nav__link">
+    Costanti
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categorie-sintattiche" class="md-nav__link">
+    Categorie sintattiche
+  </a>
+  
+    <nav class="md-nav" aria-label="Categorie sintattiche">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dichiarazioni" class="md-nav__link">
+    Dichiarazioni
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandi" class="md-nav__link">
+    Comandi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#espressioni" class="md-nav__link">
+    Espressioni
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classi-di-complessita" class="md-nav__link">
+    Classi di complessità
+  </a>
+  
+    <nav class="md-nav" aria-label="Classi di complessità">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#big-o" class="md-nav__link">
+    Big-O
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#big-omega" class="md-nav__link">
+    Big Omega
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theta" class="md-nav__link">
+    Theta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relazioni-di-ricorrenza" class="md-nav__link">
+    Relazioni di ricorrenza
+  </a>
+  
+    <nav class="md-nav" aria-label="Relazioni di ricorrenza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master-theorem" class="md-nav__link">
+    Master Theorem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -917,113 +1119,140 @@
               
                 
 
-<h1 id="linguaggi-formali">Linguaggi formali<a class="headerlink" href="#linguaggi-formali" title="Permanent link">&para;</a></h1>
-<p>Nei linugaggi dobbiamo distiguere due parti: </p>
+<h1 id="valutazione-di-un-algoritmo">Valutazione di un algoritmo<a class="headerlink" href="#valutazione-di-un-algoritmo" title="Permanent link">&para;</a></h1>
+<p>Un algoritmo può essere valutato sulla base di diversi fattori:  </p>
 <ul>
-<li>Sintassi, che ha a che fare con la struttura</li>
-<li>Semantica, che ha a che fare con il significato delle frasi esprimibili</li>
+<li>Correttezza<ul>
+<li>Dimostrazion eformale (matematica)</li>
+<li>Ispezione informale</li>
 </ul>
-<p>Partiamo con la definizione di linguaggio:<br />
-Definiamo linugaggio come sinonimo di insieme di frasi sintatticamente ammissibili.<br />
-Fissato un alfabeto di elementi base, detti simboli, il linguaggio è un sottoinsieme di tutte le stringhe, ovvero sequenze di lunghezza arbitraria di simboli.  </p>
-<p>Descriere un linguaggio, significa quindi (i due punti sono alternativi):<br />
-- decidere quali srienghe farann part e dell'insieme o quali no
-- costuire l'insieme di stringhe enumerando le stringhe che lo compongono</p>
-<p>Abbiamo due modi di risovere il come identificare l'insieme dellle stringhe ammissibili che caratterizano un linguaggio:  </p>
-<ol>
-<li>Usare usare un automa, uno strumento in grado di riconoscere tutte e sole le stringhe che fanno parte di un linguaggio</li>
-<li>Usare una grammatica, che è in grado di costruire o generare tutte le stringhe che fanno parte del linugaggio</li>
-</ol>
-<h2 id="alfabeti-parole-e-linguaggi">Alfabeti, Parole e Linguaggi<a class="headerlink" href="#alfabeti-parole-e-linguaggi" title="Permanent link">&para;</a></h2>
-<div class="admonition abstract">
-<p class="admonition-title">Definizione di Alfabeto</p>
-<p>Un alfabeto è un insieme finito.<br />
-I suoi elementi sono detti simboli</p>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title">Definizione di stringhe</p>
-<p>Dato un alfabeto <span class="arithmatex">\(A\)</span>, l'insieme <span class="arithmatex">\(A^*\)</span> delle stringhe su <span class="arithmatex">\(A\)</span> rappresenta il più piccolo insieme che soddisfa:  </p>
-<ol>
-<li>(Clausola base): <span class="arithmatex">\(\varepsilon \in A^*\)</span>, dove <span class="arithmatex">\(\varepsilon\)</span> è la stringa vuota</li>
-<li>(Clausola induttiva): Se <span class="arithmatex">\(\omega \in A^*\)</span> e <span class="arithmatex">\(a \in A\)</span>, allora <span class="arithmatex">\(a\omega \in A^*\)</span></li>
-</ol>
-</div>
-<p>Notare che l'insieme delle liste <span class="arithmatex">\(L_A\)</span> e l'insieme <span class="arithmatex">\(A*\)</span> sono in biiezione.  </p>
-<div class="admonition abstract">
-<p class="admonition-title">Concatenazione di stringhe</p>
-<p>La concatenazione di stringhe è una funzione <span class="arithmatex">\(\_ \cdot \_: A^* \times A^* \rightarrow A^*\)</span>, definita per tutte le stringhe <span class="arithmatex">\(u,v \in A^*\)</span> come <span class="arithmatex">\(u \times v = uv\)</span></p>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title">Linugaggio</p>
-<p>Un linguaggio su A è un insieme <span class="arithmatex">\(L \subseteq A^*\)</span>.<br />
-L'insieme di tutti i linguaggi è denotato come <span class="arithmatex">\(\mathcal P(A^*)\)</span></p>
-</div>
-<h2 id="operazioni-su-lunguaggi">Operazioni su lunguaggi<a class="headerlink" href="#operazioni-su-lunguaggi" title="Permanent link">&para;</a></h2>
-<p>Per ogni alfabeto A, esistono sempre:  </p>
-<ul>
-<li>Il linguaggio vuoto <span class="arithmatex">\(\varnothing = \{\}\)</span></li>
-<li>Il linguaggio che contiene solo la stringa vuota <span class="arithmatex">\({\varepsilon}\)</span></li>
-<li>Il linguaggio completo <span class="arithmatex">\(A^*\)</span></li>
+</li>
+<li>Utilizzo delle risorse<ul>
+<li>Tempo di esecuzione</li>
+<li>Utilizzo della memoria</li>
+<li>Altre risorse (e.g. banda)</li>
 </ul>
-<p>I linguaggi possono essere combinate come con le operazioni insiemistiche.  </p>
-<div class="admonition abstract">
-<p class="admonition-title">Concatenazione di linguaggi</p>
-<p>La funzione <span class="arithmatex">\(\_ \cdot \_: \mathcal P(A^*) \times \mathcal P(A^*) \rightarrow \mathcal P(A^*)\)</span> è definita per tutti i linguaggi <span class="arithmatex">\(L_1, L_2 \in \mathcal P(A^*)\)</span> come <span class="arithmatex">\(L_1 \cdot L_2 = \{ \omega \in A^* | \text{ esistono } \omega_1 \in L_1, \omega_2 \in L_2 \text { tali che } \omega = \omega_1 \cdot \omega_2 \}\)</span></p>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title">Concatenazione n-aria di linguaggi</p>
-<p>Dato un insieme A ed un linguaggio <span class="arithmatex">\(L \in \mathcal P(A)\)</span>, per ogni numero naturale <span class="arithmatex">\(n \in \mathbb N\)</span>, definiamo <span class="arithmatex">\(L^n\)</span> induttivamente:</p>
-<ol>
-<li><span class="arithmatex">\(L^0 = \{ \varepsilon \}\)</span></li>
-<li><span class="arithmatex">\(L^{n+1} = L \cdot L^{n}\)</span></li>
-</ol>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title">Stella di Kleene</p>
-<p>La stella di Kleene è una funzione <span class="arithmatex">\((_)^*: \mathcal P(A^*) \rightarrow \mathcal P(A^*)\)</span> per tutti i linguaggi <span class="arithmatex">\(L \in \mathcal P(A^*)\)</span> definita come: </p>
-<div class="arithmatex">\[
-\bigcup _{n \in \mathbb N} L^n
-\]</div>
-</div>
-<h2 id="automi">Automi<a class="headerlink" href="#automi" title="Permanent link">&para;</a></h2>
-<p>Gli automi sono chiamati anche macchine a stati, e vengono descritti attraverso transizioni di stato, letture in input e produzioni in output.<br />
-Gli automi sono alberi i cui nodi rappresentano gli stati e gli archi i simboli la cui lettura è necessarie per innescare la transizione.  </p>
-<div class="admonition abstract">
-<p class="admonition-title">Automa</p>
-<p>Un automa sull'alfabeto A è una tripla <span class="arithmatex">\(A=(S,T,F)\)</span>, dove:</p>
-<ul>
-<li>S è un insieme, detto insieme degli stati</li>
-<li><span class="arithmatex">\(T \subseteq (A \times S) \times S\)</span> è una relazione in <span class="arithmatex">\(Rel(A \times S,S)\)</span> detta relazione di transizione, che associa ad ogni lettera dell'alfabeto <span class="arithmatex">\(a \in A\)</span> ad ogni stato di partenza <span class="arithmatex">\(x \in S\)</span> zero o più stati di destinazione</li>
-<li><span class="arithmatex">\(F \subseteq S\)</span> è l'insieme degli stati finali (o stati di accettazione)</li>
+</li>
+<li>Semplicità<ul>
+<li>Comprensibilità e mantenibilità</li>
 </ul>
-<p>L'automa <span class="arithmatex">\(\mathcal A\)</span> si dice a stati finiti se l'insieme degli stati S è finito</p>
+</li>
+</ul>
+<p>Nello specifico, il tempo di esecuzione può dipendere (e può essere influenzato) da tanti fattori<br />
+Per questo motivo, quando valutiamo un algoritmo dobbiamo definire un modello  </p>
+<h2 id="la-macchina-astratta">La macchina astratta<a class="headerlink" href="#la-macchina-astratta" title="Permanent link">&para;</a></h2>
+<p>La macchina astratta è un <strong>modello di calcolo</strong> su cui è possibile fare i conti per astrarre dei dettagli implementativi dell'hardware.<br />
+Un esempio può essere la macchina di Von-Neumann</p>
+<h3 id="modello-ram-von-neumann">Modello RAM - Von-Neumann<a class="headerlink" href="#modello-ram-von-neumann" title="Permanent link">&para;</a></h3>
+<p>Il modello RAM si basa sul cercare di creare un modello che possa essere condiviso tra tutti i tipi di computer moderni, evitando tuttavia ogni tipo di ottimizzazione trasparente e non diffusa.<br />
+Il computer è suddiviso in due componenti astratti: memoria e processore.  </p>
+<h4 id="memoria-astratta">Memoria astratta<a class="headerlink" href="#memoria-astratta" title="Permanent link">&para;</a></h4>
+<p>La memoria astratta è un insieme finito di celle contigue di memoria, ciascuna con un indirizzo (locazione) univoco ed un contenuto (valore della cella).<br />
+Questa struttura permette operazioni di scrittura e lettura.<br />
+Possiamo rappresentare quindi le operazioni matematicamente, prendendo ad esempio l'operazione di lettura:<br />
+<span class="arithmatex">\(\text{memoria } \sigma: \underbrace{Loc}_{\text{Locazione di memoria}} \to \underbrace{Val}_{\text{Valore della cella}}\)</span>  </p>
+<p>Una delle operazioni più importante è l'assegnamento, che consiste nell'assegnamento.<br />
+L'assegnamento si preoccupa di scrivere valori all'interno della locazione di memoria<br />
+Valuta l'espressione a destra dell'operatore (che spesso è il simbolo di uguaglianza, <code>=</code>) nella locazione di memoria rappresentata dalla variabile (o identificatore) a sinistra</p>
+<p><img alt="" src="../assets/lrvalues.png" /></p>
+<h4 id="processore-astratto">Processore astratto<a class="headerlink" href="#processore-astratto" title="Permanent link">&para;</a></h4>
+<p>Il processore astratto permette di fare calcoli e si occupa (virtualmente) di eseguire le operazioni che andiamo a rappresentare poi con le regole di inferenza.<br />
+Si assume che le operazioni di letture es esecuzione id una computazione o scrittura impieghino una stessa unità di tempo costante.  </p>
+<h3 id="identificatori-ed-ambiente">Identificatori ed ambiente<a class="headerlink" href="#identificatori-ed-ambiente" title="Permanent link">&para;</a></h3>
+<p>Abbiamo parlato poco fa di identificatori, cerchiamo quindi di dare una spiegazione più formale:  </p>
+<div class="admonition definition">
+<p class="admonition-title">Definizione di Identificatore</p>
+<p>Un'identificatore è una sequenza di caratteri (è una stringa) e permette di dare nomi alle locazioni (~il loader traduce i nomi in indirizzi fisici~) all'interno di un ambiente.  </p>
 </div>
-<div class="admonition abstract">
-<p class="admonition-title">Raggiungibilità negli automi</p>
-<p>Sia A = (S,T,F) un automa sull'alfabeto A, per ogni <span class="arithmatex">\(a \in A\)</span> si definisce la relazione <span class="arithmatex">\(T_a \in Rel(S,S)\)</span> come <span class="arithmatex">\(T_a = \{ (x,y) | ((a,x),y) \in T \}\)</span></p>
-<p>Per ogni stringa in <span class="arithmatex">\(\omega \in A^*\)</span>, defianio per induzione <span class="arithmatex">\(T_w \in Rel(S,S)\)</span> come:</p>
-<ol>
-<li><span class="arithmatex">\(T_\omega = id_S\)</span></li>
-<li><span class="arithmatex">\(T_{aw} = T_a;T_w\)</span></li>
-</ol>
+<div class="admonition definition">
+<p class="admonition-title">Definizione di Ambiente</p>
+<p>Un'ambiente è una funzione che associa nomi mnemonici alle locazioni<br />
+Come per la memoria, possiamo rappresentare l'ambiente con una funzione:<br />
+<span class="arithmatex">\(\text{ambiente } \rho: \underbrace{Id}_{\text{Identificatore}} \to Loc\)</span></p>
 </div>
-<p>Lo stato y <span class="arithmatex">\((x,y) \in T_\omega\)</span> si dice raggiungibile da x con la stringa <span class="arithmatex">\(\omega\)</span>  </p>
-<div class="admonition abstract">
-<p class="admonition-title">Linguaggio accettato</p>
-<p>Sia A = (S,T,F) un automa a stati finiti, la funzione <span class="arithmatex">\(\langle \langle \cdot \rangle \rangle: S \rightarrow \mathcal P(A)\)</span> è definita per ogni stato <span class="arithmatex">\(x \in S\)</span> come </p>
-<div class="arithmatex">\[
-\langle \langle x \rangle \rangle = \{ \omega \in A^* | \text{ esiste } y \in F \text{ tale che } (x,y) \in T_\omega \}
-\]</div>
-</div>
-<p>Il linguaggio <span class="arithmatex">\(\langle \langle x \rangle \rangle\)</span> è detto il linguaggio accettato da x.<br />
-Se <span class="arithmatex">\(\omega \in \langle \langle x \rangle \rangle\)</span> si dice che la stringa <span class="arithmatex">\(\omega\)</span> è accettata dallo stato x</p>
-<h3 id="automi-deterministici-e-non">Automi deterministici e non<a class="headerlink" href="#automi-deterministici-e-non" title="Permanent link">&para;</a></h3>
-<div class="admonition abstract">
-<p class="admonition-title">Automa deterministico</p>
-<p>Un automa <span class="arithmatex">\(A=(S,T,F)\)</span> si dice deterministico se l'operazione di transizione <span class="arithmatex">\(T \in Rel(A \times S, S)\)</span> è una funzione</p>
-</div>
-<h3 id="costruzione-dei-sottoinsiemi">Costruzione dei sottoinsiemi<a class="headerlink" href="#costruzione-dei-sottoinsiemi" title="Permanent link">&para;</a></h3>
-<h3 id="grammatiche-libere-da-contesto">Grammatiche libere da contesto<a class="headerlink" href="#grammatiche-libere-da-contesto" title="Permanent link">&para;</a></h3>
+<h3 id="variabili">Variabili<a class="headerlink" href="#variabili" title="Permanent link">&para;</a></h3>
+<p>Identificano le locazioni di memoria, il cui contenuto può essere variato durante l'esecuzione<br />
+L'istruzione <code>a=b</code> si traduce in <span class="arithmatex">\(\sigma(\underbrace{\rho(a)}_{\text{Indirizzo}}) = \underbrace{\sigma(\rho(b))}_{\text{Valore}}\)</span> (siamo sicuri non sia <span class="arithmatex">\(\rho(a) = \sigma(\rho(b))\)</span>?)</p>
+<h3 id="costanti">Costanti<a class="headerlink" href="#costanti" title="Permanent link">&para;</a></h3>
+<p>Le costanti sono identificatori che individuano variabili che non cambiano durante l'esecuzione. Nell'ambiente quindi, invece di avere un mapping ad una locazione di memoria, abbiamo direttamente il valore contenuto:<br />
+<span class="arithmatex">\(\rho: Id \to Loc \cup Var\)</span> (che significa che dall'ambiente possiamo ottenere sia un valore (nel caso di una variabile) che una locazione di memoria (nel caso di una costante)).  </p>
+<details class="example">
+<summary>Esempio</summary>
+<p>Per valutare l'espressione <code>a = b + pi</code> dove <code>b</code> è una variabile e <code>pi</code> è una costante, l'espressione risultante sarà <span class="arithmatex">\(\theta(\rho(a)) = \theta(\rho(b)) + \rho(pi)\)</span></p>
+</details>
+<h2 id="categorie-sintattiche">Categorie sintattiche<a class="headerlink" href="#categorie-sintattiche" title="Permanent link">&para;</a></h2>
+<h3 id="dichiarazioni">Dichiarazioni<a class="headerlink" href="#dichiarazioni" title="Permanent link">&para;</a></h3>
+<p>Definiscono gli identificatori quando sono introdotti per la prima volta.<br />
+Associano gli identificatori ad uan locazione di memoria libera, scrivendo il valore iniziale.<br />
+Si <strong>elaborano</strong> per costruire l'ambiente.  </p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mf">4</span><span class="p">;</span>
+</code></pre></div>
+Che si traduce in:<br />
+<span class="arithmatex">\(\theta(\text{new } \rho(x)) = 4\)</span><br />
+Che viene dall'elaborazione della dichiarazione, che estende l'ambiente <span class="arithmatex">\(\Delta\)</span> in <span class="arithmatex">\(\Delta^I\)</span>:<br />
+<span class="arithmatex">\(\Delta \vdash_d D: \Delta^I\)</span> (che significa che dato un ambiente statico <span class="arithmatex">\(\Delta\)</span>, elaborando la dichiarazione D, l'ambiente viene esteso, trasformando l'ambiente statico <span class="arithmatex">\(\Delta\)</span> in <span class="arithmatex">\(\Delta^I\)</span>)</p>
+<h3 id="comandi">Comandi<a class="headerlink" href="#comandi" title="Permanent link">&para;</a></h3>
+<p>I comandi descrivono il cambiamento di stato e modificano la memoria o lo stato delle periferiche.<br />
+I comandi si <strong>ESEGUONO</strong>  </p>
+<p><div class="highlight"><pre><span></span><code><span class="nx">x</span> <span class="o">=</span> <span class="nx">y</span> <span class="o">+</span> <span class="nx">x</span><span class="p">;</span>
+</code></pre></div>
+Si traduce in<br />
+<span class="arithmatex">\(\sigma(\rho(x)) = \sigma(\rho(y)) + \sigma(\rho(x))\)</span>, elaborato dalla regola<br />
+<span class="arithmatex">\(C: \Delta \vdash_c C\)</span><br />
+Dato un ambiente <span class="arithmatex">\(\Delta\)</span>, <strong>eseguendo</strong> il comando con i tipi definiti in <span class="arithmatex">\(\Delta\)</span> è tutto corretto</p>
+<h3 id="espressioni">Espressioni<a class="headerlink" href="#espressioni" title="Permanent link">&para;</a></h3>
+<p>Le espressioni rappresentano i valori su cui si opera <strong>NON</strong> modificano la memoria.<br />
+Le espressioni si valutano  </p>
+<p><div class="highlight"><pre><span></span><code><span class="mf">2</span><span class="o">*</span><span class="p">(</span><span class="nx">x</span><span class="o">+</span><span class="nx">y</span><span class="p">)</span>
+</code></pre></div>
+Che si traduce in:<br />
+<span class="arithmatex">\(E: \Delta \vdash_e: \tau\)</span><br />
+Dato un ambiente <span class="arithmatex">\(\Delta\)</span>, l'espressione è ben formata ed è di tipo <span class="arithmatex">\(\tau\)</span></p>
+<h2 id="classi-di-complessita">Classi di complessità<a class="headerlink" href="#classi-di-complessita" title="Permanent link">&para;</a></h2>
+<p>Le classi di complessità ci permettono di categorizzare gli algoritmi in funzione della grandezza dell'input.<br />
+Il tipo di comparazione che viene fatta è molto <em>spannometrica</em>, nel senso che spesso si tende a definire l'ordine di grandezza con cui l'algoritmo cresce, oppure il massimo (o minimo) tempo garantito che l'algoritmo impiegherà a fornire una risposta in funzione della grandezza dell'input. Il tutto approssimando il risultato a monomi (quindi ad esempio <span class="arithmatex">\(log(n)\)</span>,<span class="arithmatex">\(n\)</span>,<span class="arithmatex">\(n^2\)</span>, <span class="arithmatex">\(n!\)</span>, <span class="arithmatex">\(n^n\)</span>, etc...)<br />
+Questo tipo di valutazione ci consente di categorizzare gli algoritmi e poterli comparare in semplicità.  </p>
+<p>I tipi di categorizzazione più usati sono spesso limite superiore e limite inferiore.<br />
+Come si può intuire dal nome, questi limiti ci permettono di definire un tempo di esecuzione che sicuramente l'algoritmo (rispettivamente) non supererà o non migliorerà.  </p>
+<p>Per questo motivo il limite superiore (conosciuto come Big O notation, o semplicemente O) è usato per individuare il costo delle soluzioni.<br />
+Allo stesso modo, il limite inferiore (conosciuto come <span class="arithmatex">\(\Omega\)</span>, o big omega) ci permette di individuare la complessità del problema che stiamo risolvendo.  </p>
+<p>Quindi, per riassumere:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Simbolo</th>
+<th align="center">Lettura</th>
+<th align="center">Tipo di limite</th>
+<th align="center">Significato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">O</td>
+<td align="center">O-grande</td>
+<td align="center">Limite superiore asintotico</td>
+<td align="center">Peggior situazione possibile</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\Omega\)</span></td>
+<td align="center">Omega Grande</td>
+<td align="center">Limite inferiore asintotico</td>
+<td align="center">Migliore situazione possibile</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\Theta\)</span></td>
+<td align="center">Theta</td>
+<td align="center">Limite asintotico stretto</td>
+<td align="center">Complessità della soluzione</td>
+</tr>
+</tbody>
+</table>
+<p>(asisntotico si può leggere come "<em>per valori che tendono a <span class="arithmatex">\(\pin\)</span></em>")</p>
+<h3 id="big-o">Big-O<a class="headerlink" href="#big-o" title="Permanent link">&para;</a></h3>
+<h3 id="big-omega">Big Omega<a class="headerlink" href="#big-omega" title="Permanent link">&para;</a></h3>
+<h3 id="theta">Theta<a class="headerlink" href="#theta" title="Permanent link">&para;</a></h3>
+<h3 id="relazioni-di-ricorrenza">Relazioni di ricorrenza<a class="headerlink" href="#relazioni-di-ricorrenza" title="Permanent link">&para;</a></h3>
+<h4 id="master-theorem">Master Theorem<a class="headerlink" href="#master-theorem" title="Permanent link">&para;</a></h4>
 
               
             </article>
@@ -1042,7 +1271,7 @@ Se <span class="arithmatex">\(\omega \in \langle \langle x \rangle \rangle\)</sp
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../induzioneRicorsione/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Induzione Strutturale e Ricorsione" rel="prev">
+        <a href="../semantica/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Semantica" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1051,20 +1280,20 @@ Se <span class="arithmatex">\(\omega \in \langle \langle x \rangle \rangle\)</sp
               <span class="md-footer__direction">
                 Previous
               </span>
-              Induzione Strutturale e Ricorsione
+              Semantica
             </div>
           </div>
         </a>
       
       
         
-        <a href="../logica/" class="md-footer__link md-footer__link--next" aria-label="Next: Logica Matematica" rel="next">
+        <a href="../l/" class="md-footer__link md-footer__link--next" aria-label="Next: Linguaggio L" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Logica Matematica
+              Linguaggio L
             </div>
           </div>
           <div class="md-footer__button md-icon">

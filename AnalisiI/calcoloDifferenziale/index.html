@@ -187,7 +187,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../ProAlgo/relazioniRicorrenza/" class="md-tabs__link">
+      <a href="../../ProAlgo/introduzione/" class="md-tabs__link">
         Programmazione e Algoritmica
       </a>
     </li>
@@ -304,6 +304,16 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_1">
@@ -324,8 +334,78 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/relazioniRicorrenza/" class="md-nav__link">
-        Relazioni di ricorrenza
+      <a href="../../ProAlgo/introduzione/" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProAlgo/grammatiche/" class="md-nav__link">
+        Grammatiche e Linguaggi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProAlgo/sintassi/" class="md-nav__link">
+        Sintassi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProAlgo/semantica/" class="md-nav__link">
+        Semantica
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProAlgo/valutazione/" class="md-nav__link">
+        Valutazione di un algoritmo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProAlgo/l/" class="md-nav__link">
+        Linguaggio L
       </a>
     </li>
   
@@ -835,6 +915,19 @@
     Teorema di Weierstrass
   </a>
   
+    <nav class="md-nav" aria-label="Teorema di Weierstrass">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teorema-di-weierstrass-generalizzato" class="md-nav__link">
+    Teorema di Weierstrass generalizzato
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1135,6 +1228,19 @@
   <a href="#teorema-di-weierstrass" class="md-nav__link">
     Teorema di Weierstrass
   </a>
+  
+    <nav class="md-nav" aria-label="Teorema di Weierstrass">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teorema-di-weierstrass-generalizzato" class="md-nav__link">
+    Teorema di Weierstrass generalizzato
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1575,19 +1681,37 @@ Allora <span class="arithmatex">\(f(I)\)</span> (l'immagine di f) è un interval
 <h3 id="teorema-di-weierstrass">Teorema di Weierstrass<a class="headerlink" href="#teorema-di-weierstrass" title="Permanent link">&para;</a></h3>
 <div class="admonition theorem">
 <p class="admonition-title">Teorema di Weierstrass</p>
-<p>Definita <span class="arithmatex">\(f: [a,b] \rightarrow \mathbb R\)</span> continua, allora f ha massimo e minimo.</p>
+<p>Definita <span class="arithmatex">\(f: [a,b] \rightarrow \reals\)</span> continua, allora f ha massimo e minimo.</p>
 </div>
-<p>Quindi dati <span class="arithmatex">\(a,b \in \mathbb R\)</span> (quindi <span class="arithmatex">\(a,b \ne \pm \infty\)</span>).<br />
+<p>Quindi dati <span class="arithmatex">\(a,b \in \reals\)</span> (quindi <span class="arithmatex">\(a,b \ne \pm \infty\)</span>).<br />
 L'intervallo [a,b] è un intervallo definito <strong>limitato</strong> (gli estremi non sono più e meno infinito) e <strong>chiuso</strong> (ha entrambi gli estremi).  </p>
 <details class="example">
 <summary>Perché <span class="arithmatex">\([a,b]\)</span> deve essere limitato e chiuso?</summary>
-<p>In una funzione come <span class="arithmatex">\(f: (0,1] \rightarrow \mathbb R, f(x) = \frac 1 x\)</span>, f è continua ma non ha massimo (inoltre <span class="arithmatex">\(\sup (f) = + \infty\)</span>).<br />
+<p>In una funzione come <span class="arithmatex">\(f: (0,1] \rightarrow \reals, f(x) = \frac 1 x\)</span>, f è continua ma non ha massimo (inoltre <span class="arithmatex">\(\sup (f) = + \infty\)</span>).<br />
 Inoltre l'intervallo non è chiuso.  </p>
 <hr />
-<p>Prendendo <span class="arithmatex">\(f: \mathbb R \rightarrrow \mathbb R, f(x) = arctg(x)\)</span><br />
+<p>Prendendo <span class="arithmatex">\(f: \reals \rightarrrow \reals, f(x) = arctg(x)\)</span><br />
 La funzione è continua ed è sempre compresa tra <span class="arithmatex">\(\pm \frac \pi 2\)</span>, ma non ha né massimo né minimo.<br />
 Quindi <span class="arithmatex">\(sup(f) = \frac \pi 2\)</span> e <span class="arithmatex">\(inf(f) = \frac \pi 2\)</span>, ma non sono né massimo né minimo</p>
 </details>
+<h4 id="teorema-di-weierstrass-generalizzato">Teorema di Weierstrass generalizzato<a class="headerlink" href="#teorema-di-weierstrass-generalizzato" title="Permanent link">&para;</a></h4>
+<div class="admonition theorem">
+<p class="admonition-title">Teorema di Weierstrass generalizzato</p>
+<p>Siano <span class="arithmatex">\(a,b \in \bar \reals\)</span> e <span class="arithmatex">\(f: (a,b) \to \reals\)</span> continua, tale che <span class="arithmatex">\(\exists \limit a f(x) = L_1 e \limit b f(x) = L_2\)</span><br />
+In tal caso:  </p>
+<ol>
+<li>f è limitata inferiormente <span class="arithmatex">\(\Leftrightarrow L_1 \ne \min \land L_2 \ne \min\)</span></li>
+<li>f è limitata superiormente <span class="arithmatex">\(\Leftrightarrow L_1 \ne \pin \land L_2 \ne \pin\)</span></li>
+<li>f è limitata <span class="arithmatex">\(\Leftrightarrow L_1 \in \reals \land L_2 \in \reals\)</span></li>
+<li>f ha minimo <span class="arithmatex">\(\Leftrightarrow \exists x_0 \in (a,b) . f(x_0) \le min\{L_1, L_2 \}\)</span></li>
+<li>f ha massimo <span class="arithmatex">\(\Leftrightarrow \exists x_1 \in (a,b) . f(x_1) \ge max\{L_1, L_2 \}\)</span></li>
+</ol>
+</div>
+<div class="admonition observation">
+<p class="admonition-title">Il teorema vale anche per funzioni da semirette</p>
+<p>I risultati precedenti valgono anche nel caso <span class="arithmatex">\(a \in \reals\)</span> e <span class="arithmatex">\([a,b) \to \reals\)</span> oppure <span class="arithmatex">\(b \in \reals\)</span> e <span class="arithmatex">\(f:(a,b] \to \reals\)</span><br />
+(Ovviamente avendo la funzione f continua)</p>
+</div>
 <h2 id="gli-intorni">Gli intorni<a class="headerlink" href="#gli-intorni" title="Permanent link">&para;</a></h2>
 <div class="admonition definition">
 <p class="admonition-title">Intorno</p>

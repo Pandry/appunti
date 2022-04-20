@@ -13,7 +13,7 @@
     
     
       
-        <title>Cheatsheet - Appunti universitari</title>
+        <title>Introduzione - Appunti universitari</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#definizione-di-algoritmo" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -94,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cheatsheet
+              Introduzione
             
           </span>
         </div>
@@ -176,13 +181,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../ProAlgo/introduzione/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Programmazione e Algoritmica
       </a>
     </li>
@@ -192,15 +199,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../insiemi/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../FdI/insiemi/" class="md-tabs__link">
         Fondamenti di Informatica
       </a>
     </li>
@@ -285,12 +290,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
       
       
@@ -327,11 +334,77 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ProAlgo/introduzione/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduzione
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Introduzione
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definizione-di-algoritmo" class="md-nav__link">
+    Definizione di Algoritmo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definizione-di-programma" class="md-nav__link">
+    Definizione di Programma
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architettura-di-von-neumann" class="md-nav__link">
+    Architettura di von-Neumann
+  </a>
+  
+    <nav class="md-nav" aria-label="Architettura di von-Neumann">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-fetch-execute" class="md-nav__link">
+    Ciclo fetch-execute
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -343,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/grammatiche/" class="md-nav__link">
+      <a href="../grammatiche/" class="md-nav__link">
         Grammatiche e Linguaggi
       </a>
     </li>
@@ -357,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/sintassi/" class="md-nav__link">
+      <a href="../sintassi/" class="md-nav__link">
         Sintassi
       </a>
     </li>
@@ -371,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/semantica/" class="md-nav__link">
+      <a href="../semantica/" class="md-nav__link">
         Semantica
       </a>
     </li>
@@ -385,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/valutazione/" class="md-nav__link">
+      <a href="../valutazione/" class="md-nav__link">
         Valutazione di un algoritmo
       </a>
     </li>
@@ -399,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/l/" class="md-nav__link">
+      <a href="../l/" class="md-nav__link">
         Linguaggio L
       </a>
     </li>
@@ -413,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProAlgo/programmazioneDinamica/" class="md-nav__link">
+      <a href="../programmazioneDinamica/" class="md-nav__link">
         Programmazione dinamica
       </a>
     </li>
@@ -433,14 +506,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -485,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../insiemi/" class="md-nav__link">
+      <a href="../../FdI/insiemi/" class="md-nav__link">
         Insiemi
       </a>
     </li>
@@ -499,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../relazioni/" class="md-nav__link">
+      <a href="../../FdI/relazioni/" class="md-nav__link">
         Relazioni
       </a>
     </li>
@@ -513,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../induzione/" class="md-nav__link">
+      <a href="../../FdI/induzione/" class="md-nav__link">
         Induzione Matematica
       </a>
     </li>
@@ -527,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../relazioniInsiemi/" class="md-nav__link">
+      <a href="../../FdI/relazioniInsiemi/" class="md-nav__link">
         Relazioni su insiemi
       </a>
     </li>
@@ -541,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../grafi/" class="md-nav__link">
+      <a href="../../FdI/grafi/" class="md-nav__link">
         Grafi
       </a>
     </li>
@@ -555,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../calcoloCombinatorio/" class="md-nav__link">
+      <a href="../../FdI/calcoloCombinatorio/" class="md-nav__link">
         Calcolo Combinatorio
       </a>
     </li>
@@ -569,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../induzioneRicorsione/" class="md-nav__link">
+      <a href="../../FdI/induzioneRicorsione/" class="md-nav__link">
         Induzione Strutturale e Ricorsione
       </a>
     </li>
@@ -583,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linguaggi/" class="md-nav__link">
+      <a href="../../FdI/linguaggi/" class="md-nav__link">
         Linguaggi Formali
       </a>
     </li>
@@ -597,7 +668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logica/" class="md-nav__link">
+      <a href="../../FdI/logica/" class="md-nav__link">
         Logica Matematica
       </a>
     </li>
@@ -609,19 +680,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../FdI/cheatsheet/" class="md-nav__link">
         Cheatsheet
       </a>
-      
     </li>
   
 
@@ -754,152 +817,165 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definizione-di-algoritmo" class="md-nav__link">
+    Definizione di Algoritmo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definizione-di-programma" class="md-nav__link">
+    Definizione di Programma
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architettura-di-von-neumann" class="md-nav__link">
+    Architettura di von-Neumann
+  </a>
+  
+    <nav class="md-nav" aria-label="Architettura di von-Neumann">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-fetch-execute" class="md-nav__link">
+    Ciclo fetch-execute
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
 
-  <h1>Cheatsheet</h1>
+  <h1>Introduzione</h1>
 
-<table>
-<thead>
-<tr>
-<th>Relazione</th>
-<th>Descrizione</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Totale</td>
-<td>Per ogni elemento in A, c'è una connessione con almeno un elemento in B</td>
-</tr>
-<tr>
-<td>Univalente</td>
-<td>Per ogni elemento in A, c'è al massimo una connessione (0 o 1) con un elemento in B</td>
-</tr>
-<tr>
-<td>Surgettiva</td>
-<td>Per ogni elemento in B, c'è una connessione con almeno un elemento in A</td>
-</tr>
-<tr>
-<td>Iniettiva</td>
-<td>Per ogni elemento in B, c'è al massimo una connessione (0 o 1) con un elemento in A</td>
-</tr>
-<tr>
-<td>Biietiva</td>
-<td>Tutte le precedenti</td>
-</tr>
-<tr>
-<td>Riflessiva</td>
-<td>Ogni elemento è in relazione con sé stesso (ha un cappio)<br/>(l'identità è contenuta nella relazione)</td>
-</tr>
-<tr>
-<td>Transitiva</td>
-<td>Se esiste una relazione (a,b), e (b,c), esiste anche una relazione (a,c)<br/>Include anche la relazione vuota</td>
-</tr>
-<tr>
-<td>Antisimmetrica</td>
-<td>Non c'è <strong>mai</strong> una relazione che va da <code>a</code> a <code>b</code> e <strong>contemporaneamente</strong> da <code>b</code> ad <code>a</code><br/>(Non ci sono mai frecce opposte)<br/>È tollerato lo stesso elemento (cappio)</td>
-</tr>
-<tr>
-<td>Simmetrica</td>
-<td><strong>Per ogni</strong> relazione <code>(a,b)</code>, esiste una relazione <code>(b,a)</code><br/>Per ogni elemento, ci sono 2 archi, uno da ed uno verso un altro elemento</td>
-</tr>
-<tr>
-<td>Composizione</td>
-<td>2 relazioni sono composte quando l'elemento di arrivo per la prima diventa l'elemento di partenza per la seconda<br/>Avendo (a,b) e (b,c) in R, R composto R (<code>R;R</code>) è <code>((a,b),c)</code>, ovvero <code>(a,c)</code></td>
-</tr>
-<tr>
-<td>R*, chiusura di Kleene</td>
-<td>La composizione di una relazione con sé stessa infinite volte (zero incluso)<br/>È riflessiva e transitiva<br/>Contiene l'identità (R0)</td>
-</tr>
-<tr>
-<td>R+, chiusura positiva</td>
-<td>R* ma senza 0 incluso</td>
-</tr>
-<tr>
-<td>Chiusura riflessiva</td>
-<td>Data una relazione R ed un insieme A, è l'unione dell'identità di A con la relazione R</td>
-</tr>
-<tr>
-<td>Chiusura simmetrica</td>
-<td>Data una relazione R, è l'unione di R ed R opposto</td>
-</tr>
-<tr>
-<td>Chiusura transitiva</td>
-<td>Data una relazione R, si unisce a questa la chiusura positiva fino a far diventare la funzione transitiva</td>
-</tr>
-<tr>
-<td>Ordinamento parziale</td>
-<td>Una relazione Riflessiva, Transitiva ed Antisimmetrica</td>
-</tr>
-<tr>
-<td>Ordinamento totale</td>
-<td>Ordinamento parziale + ogni (a, b) appartenente al prodotto cartesiano; (a,b) o (b,a) appartiene ad R<br/>Ogni coppia di elementi appartiene alla relazione R: ogni elemento è in relazione con ogni altro elemento; C'è una freccia per ogni elemento su ogni elemento<br/>Se è totale, non è parziale</td>
-</tr>
-</tbody>
-</table>
-<p>Grafo</p>
-<table>
-<thead>
-<tr>
-<th>Relazione</th>
-<th>Descrizione</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Walk/Cammino</td>
-<td>Un collegamento da un nodo di partenza ad uno di arrivo</td>
-</tr>
-<tr>
-<td>Trail</td>
-<td>Un collegamento da un nodo di partenza ad uno di arrivo MA senza passare 2 volte per lo stesso arco (o collegamento)</td>
-</tr>
-<tr>
-<td>Path</td>
-<td>Un collegamento da un nodo di partenza ad uno di arrivo MA senza passare 2 volte per lo stesso NODO (o pallino/elemento)<br/>Non si deve passare 2 volte per lo stesso elemento</td>
-</tr>
-<tr>
-<td>Walk chiuso</td>
-<td>Un walk che permette di partire da un nodo e ritornare allo stesso ed ha lunghezza maggiore di 0</td>
-</tr>
-<tr>
-<td>Circuito</td>
-<td>È un <strong>walk</strong> chiuso che è anche un <strong>trail</strong> (non si passa per lo stesso <strong>arco</strong> 2 volte)</td>
-</tr>
-<tr>
-<td>Ciclo</td>
-<td>È un <strong>circuito</strong> che è anche un <strong>path</strong> (non si passa per lo stesso <strong>nodo</strong> 2 volte)</td>
-</tr>
-<tr>
-<td>Aciclico</td>
-<td>Quando il grafo <strong>NON</strong> presenta un ciclo</td>
-</tr>
-<tr>
-<td>Connesso</td>
-<td>Quando ogni nodo è "raggiunto" da almeno un arco (se è orientato: sia in uscita che in entrata)</td>
-</tr>
-<tr>
-<td>Fortemente connesso</td>
-<td>Da ogni nodo, esiste un walk verso ogni altro nodo</td>
-</tr>
-<tr>
-<td>Componenti fortemente connesse</td>
-<td>Sottografi fortemente connessi (notare che ogni nodo può arrivare a sé stesso, quindi ogni nodo preso singolarmente è una componente fortemente connessa)</td>
-</tr>
-<tr>
-<td>Universale</td>
-<td>Quando un <strong>nodo</strong> è vicino a tutti gli altri</td>
-</tr>
-<tr>
-<td>DAG</td>
-<td>Grafo Aciclico Orientato</td>
-</tr>
-</tbody>
-</table>
-<p>Induzione (pecché non bastava prima)</p>
+<h2 id="definizione-di-algoritmo">Definizione di Algoritmo<a class="headerlink" href="#definizione-di-algoritmo" title="Permanent link">&para;</a></h2>
+<p>Questo corso tratta principalmente di algoritmi, quindi è bene iniziare con una definizione formale di Algoritmo:  </p>
+<div class="admonition definition">
+<p class="admonition-title">Definizione di Algoritmo</p>
+<p>Un algoritmo è una <strong>descrizione formale</strong> di una <strong>sequenza finita</strong> di azioni** elementari** e <strong>non ambigue</strong>, che prendono dei dati in input, vengono eseguite e producono dei dati in output.<br />
+Gli algoritmi <strong>risolvono una classe di problemi</strong>.</p>
+</div>
+<p>I dati in input determinano un'istanza della classe di problemi che si andrà a risolvere.  </p>
+<p>Basandoci su questa definizione, possiamo ora definire cosa significa programmare:  </p>
+<div class="admonition definition">
+<p class="admonition-title">Programmare</p>
+<p>Programmare è l'atto di scrivere un documento che risolve un problema reale e che può essere compreso ed eseguito da un computer.<br />
+Idealmente il documento deve essere scritto usando la soluzione più efficiente possibile.  </p>
+</div>
+<p>E quindi ora possiamo dire cos'è un programma:  </p>
+<h2 id="definizione-di-programma">Definizione di Programma<a class="headerlink" href="#definizione-di-programma" title="Permanent link">&para;</a></h2>
+<div class="admonition definition">
+<p class="admonition-title">Definizione di Programma</p>
+<p>Scrittura di un algoritmo in un linguaggio di programmazione</p>
+</div>
+<p>Il linguaggio di programmazione è quindi il linguaggio in cui si codifica l'algorimo per renderlo poi interpretabile dal computer.  </p>
+<p>Un linguaggio è composto in 2 parti: <strong>sintassi</strong> e <strong>sematica</strong>.<br />
+I due temi sono importantissimi e verranno trattati con maggiore dettaglio nella pagine successive.<br />
+Brevemente, possiamo pensare alla sintassi come l'equivalente della correttezza grammaticale in un linguaggio naturale (come l'italiano).<br />
+La semantica indica invece quali operazioni sono legali in un linguaggio: ad esempio non dovrbbe essere possibile associare ad un numero intero il valore "stringa" (che è una <em>parola</em> e non un <em>numero</em>).<br />
+<img alt="" src="../assets/Linguaggi_sintassi.png" /></p>
+<p>Il linguaggio si divide poi in due categorie: esistono linguaggi statici e linguaggi dinamici.<br />
+A seconda del tipo, esistono diversi pasaggi a cui il codice sorgente deve essere soggetto prima di poter essere compreso da un computer.<br />
+I passaggi sono spesso composti da una semplificazione relativamente semplice (almeno in termini di concetto), che semplifica o tratta il codice "abbassando" il suo livello di complessità.  </p>
+<p><img alt="" src="../assets/Linguaggi_compilatore.png" /></p>
+<p>Ad esempio in un linguaggio statico, abbiamo diversi passaggi:  </p>
+<ul>
+<li>
+<p><strong>Analizzatore lessicale/lexer/scanner</strong><br />
+    Questo primo passaggio serve a scomporre il linguaggio in <em>token</em> o <em>lexems</em>.<br />
+    Quindi ad esempio il seguente codice:  </p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">){</span>
+    <span class="nx">a</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Verranno individuati i token <code>if</code>, <code>(</code>, <code>true</code>, <code>)</code>, <code>{</code> <code>a</code>, <code>=</code>, <code>1</code>, <code>;</code>, <code>}</code><br />
+Questo insieme di token viene poi passato all'analizzatore sintattico</p>
+</li>
+<li>
+<p><strong>Analizzatore sintattico/parser</strong><br />
+    L'analizzatore sintattico si occupa di assicurarsi che ogni token sia grammaticamente corretto (ad esempio <code>if</code> è corretto, mentre <code>fi</code> no)<br />
+    Si occupa inoltre di assicurarsi che la "frase" abbia senso da un punto di vista grammaticale.<br />
+    L'esempio appena visto è corretto, mentre uno snippet di codice come il seguente non lo è: 
+    <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="k">if</span> <span class="p">(</span><span class="kc">true</span> <span class="p">{</span>
+</code></pre></div>
+    Se tutto è corretto, l'analizzatore sintatico restituirà un <strong>albero di sintassi astratto</strong>, che rappresenterà la "frase" del linguaggio struttato<br />
+    Continuando con l'esempio precedente, quello che segue è l'equivalente dell'albero di sintassi astratto (E sta per espressione):<br />
+<img alt="" src="../assets/AST.png" /></p>
+</li>
+<li>
+<p><strong>Analizzatore semantico/type checker</strong><br />
+    L'analizzatore sematico si occupa di simulare l'esecuzione del programma per assicurarsi che non si presentino molteplici errori, come:  </p>
+<ul>
+<li>Trovare nomi non dichiarati o dichiarazioni di nomi già dichiarati</li>
+<li>Uso di operatori con tipi non compatibili (come ad esempio la somma tra "a" e 2), ed assicurarsi che l'uso dei tipi sia usato con coerenza</li>
+<li>Funzioni chamate con numero e/o tipo sbagliato di argomenti o che ritornano un tipo non adatto</li>
+</ul>
+<p>Ed altre funzioni poi in base al linguaggio (come variabili non inizializzate o non usate, use after free e use before assignment, blocchi di codice non raggiungibili, funzioni mai invocate o senza effetti)</p>
+<p>Se è tutto ok, quello che viene restituito è quello che viene detto three-address code, un linguaggio intermediario che usa fino a tre indirizzi per rappresentare ogni istruzione.</p>
+</li>
+<li>
+<p><strong>Eventuale passaggio di ottimizzazione del codice</strong><br />
+    Esiste un eventuale passaggio di ottimizzazione che alcuni toolchain possono effettuare per migliorare le performances, restituendo una versione più efficiente (sempre in three-address code)</p>
+</li>
+<li>
+<p><strong>Generatore del codice oggetto</strong><br />
+    Il generatore del codice oggetto si occupa di prendere three-address code ed avviare un primo stato di compilazione in codice oggetto (molto simile a codice macchina).<br />
+    Questo codice non è ancora eseguibile, e non è neppure necessariamente un singolo file.</p>
+</li>
+<li>
+<p><strong>Linker</strong><br />
+    Il linker è l'ultimo passaaggio della compilazione, e si occupa di prendere il risultato del generatore del codice oggetto (codice oggetto) e "collegarlo" con le librerie di cui il programma fa uso (ed inserire un loader).<br />
+    Il risultato del linker sarà quindi un programma esegubile dal computer.  </p>
+</li>
+</ul>
+<details class="tip">
+<summary>Pannello storico</summary>
+<p>Nel '50 Hopper ha scritto il primo compilatore sperimentale<br />
+Nel '57 Backus ha scritto il primo compilatore  </p>
+</details>
+<h2 id="architettura-di-von-neumann">Architettura di von-Neumann<a class="headerlink" href="#architettura-di-von-neumann" title="Permanent link">&para;</a></h2>
+<p>Un programma viene eseguito in un computer, quindi ha senso parlare di cosa intendiamo per computer, per poter avere una buona astrazione sulla quale basarci poi.<br />
+L'astrazione più conosciuta di computer, è il modello di Von Neumann ed è composto da un bus (un canale di comunicazione), che connette memoria, processore, input ed output.  </p>
+<p><img alt="" src="../assets/VonNeumann-details-fetch-execute.png" /></p>
+<h3 id="ciclo-fetch-execute">Ciclo fetch-execute<a class="headerlink" href="#ciclo-fetch-execute" title="Permanent link">&para;</a></h3>
+<p>Il ciclo fetch-execute è un paradigma su cui i processori si basano, ed è composto da un ciclo in cui il processore prende costantemente delle istruzioni da eseguire dalla memoria principale, le decodifica e le esegue, per poi ripetere il ciclo nuovamente.  </p>
 
               
             </article>
@@ -917,30 +993,15 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        
-        <a href="../logica/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Logica Matematica" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Logica Matematica
-            </div>
-          </div>
-        </a>
-      
       
         
-        <a href="../../LabI/" class="md-footer__link md-footer__link--next" aria-label="Next: Laboratorio I" rel="next">
+        <a href="../grammatiche/" class="md-footer__link md-footer__link--next" aria-label="Next: Grammatiche e Linguaggi" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Laboratorio I
+              Grammatiche e Linguaggi
             </div>
           </div>
           <div class="md-footer__button md-icon">
