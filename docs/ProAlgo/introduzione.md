@@ -21,16 +21,18 @@ E quindi ora possiamo dire cos'è un programma:
 !!! definition "Definizione di Programma"
     Scrittura di un algoritmo in un linguaggio di programmazione
 
-Il linguaggio di programmazione è quindi il linguaggio in cui si codifica l'algorimo per renderlo poi interpretabile dal computer.  
+Il linguaggio di programmazione è quindi il linguaggio in cui si codifica l'algoritmo per renderlo poi interpretabile dal computer.  
+
+Vale la pena notare che un linguaggio è un insieme di regole finito che permette di modellare un dominio infinito di programmi scritti in maniera legale (seguendo le regole).  
 
 Un linguaggio è composto in 2 parti: **sintassi** e **sematica**.  
 I due temi sono importantissimi e verranno trattati con maggiore dettaglio nella pagine successive.  
 Brevemente, possiamo pensare alla sintassi come l'equivalente della correttezza grammaticale in un linguaggio naturale (come l'italiano).  
-La semantica indica invece quali operazioni sono legali in un linguaggio: ad esempio non dovrbbe essere possibile associare ad un numero intero il valore "stringa" (che è una _parola_ e non un _numero_).  
+La semantica indica invece quali operazioni sono legali in un linguaggio: ad esempio non dovrebbe essere possibile associare ad un numero intero il valore "stringa" (che è una _parola_ e non un _numero_).  
 ![](assets/Linguaggi_sintassi.png)
 
 Il linguaggio si divide poi in due categorie: esistono linguaggi statici e linguaggi dinamici.  
-A seconda del tipo, esistono diversi pasaggi a cui il codice sorgente deve essere soggetto prima di poter essere compreso da un computer.  
+A seconda del tipo, esistono diversi passaggi a cui il codice sorgente deve essere soggetto prima di poter essere compreso da un computer.  
 I passaggi sono spesso composti da una semplificazione relativamente semplice (almeno in termini di concetto), che semplifica o tratta il codice "abbassando" il suo livello di complessità.  
 
 ![](assets/Linguaggi_compilatore.png)
@@ -57,16 +59,16 @@ Ad esempio in un linguaggio statico, abbiamo diversi passaggi:
     ```javascript
     if if (true {
     ```
-    Se tutto è corretto, l'analizzatore sintatico restituirà un **albero di sintassi astratto**, che rappresenterà la "frase" del linguaggio struttato  
+    Se tutto è corretto, l'analizzatore sintattico restituirà un **albero di sintassi astratto**, che rappresenterà la "frase" del linguaggio strutturato  
     Continuando con l'esempio precedente, quello che segue è l'equivalente dell'albero di sintassi astratto (E sta per espressione):  
     ![](assets/AST.png)
 
 - **Analizzatore semantico/type checker**  
-    L'analizzatore sematico si occupa di simulare l'esecuzione del programma per assicurarsi che non si presentino molteplici errori, come:  
+    L'analizzatore semantico si occupa di simulare l'esecuzione del programma per assicurarsi che non si presentino molteplici errori, come:  
 
     - Trovare nomi non dichiarati o dichiarazioni di nomi già dichiarati
     - Uso di operatori con tipi non compatibili (come ad esempio la somma tra "a" e 2), ed assicurarsi che l'uso dei tipi sia usato con coerenza
-    - Funzioni chamate con numero e/o tipo sbagliato di argomenti o che ritornano un tipo non adatto
+    - Funzioni chiamate con numero e/o tipo sbagliato di argomenti o che ritornano un tipo non adatto
     
     Ed altre funzioni poi in base al linguaggio (come variabili non inizializzate o non usate, use after free e use before assignment, blocchi di codice non raggiungibili, funzioni mai invocate o senza effetti)
 
@@ -80,8 +82,8 @@ Ad esempio in un linguaggio statico, abbiamo diversi passaggi:
     Questo codice non è ancora eseguibile, e non è neppure necessariamente un singolo file.
     
 - **Linker**  
-    Il linker è l'ultimo passaaggio della compilazione, e si occupa di prendere il risultato del generatore del codice oggetto (codice oggetto) e "collegarlo" con le librerie di cui il programma fa uso (ed inserire un loader).  
-    Il risultato del linker sarà quindi un programma esegubile dal computer.  
+    Il linker è l'ultimo passaggio della compilazione, e si occupa di prendere il risultato del generatore del codice oggetto (codice oggetto) e "collegarlo" con le librerie di cui il programma fa uso (ed inserire un loader).  
+    Il risultato del linker sarà quindi un programma eseguibile dal computer.  
 
 ??? tip "Pannello storico"
     Nel '50 Hopper ha scritto il primo compilatore sperimentale  

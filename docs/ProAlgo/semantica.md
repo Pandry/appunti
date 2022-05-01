@@ -1,4 +1,6 @@
 # Semantica
+La semantica è una funzione che permette di associare (attraverso un'_interpretazione semantica_) ad un programma (dato il suo dominio sintattico) un corrispondente significato, dato dall'interpretazione (dominio semantico).  
+
 Si divide in  
 
 - Statica (denotazionale)  
@@ -55,6 +57,8 @@ Si basa su tre principi:
     I nodi intermedi sono costruiti applicando le regole semantiche (regole di inferenza)
 
 ### Principio della composizionalità
+Una definizione semantica deve poter essere composizionale: il suo significato deve essere fornito in termini di significato base dei suoi componenti elementari (finiti).  
+
 
 - Componenti elementari  
     Produzioni della grammatica associate a regole semantiche
@@ -96,9 +100,12 @@ Un identificatore definito in un blocco annidato interno, nasconde/oscura la vis
 
 ### Scoping Statico
 
-Posso vedere la vita dell'identificatore a tempo di compilazione attraverso l'albero sintattico
+Lo scoping statico ci permettere di vedere tutti gli identificatori a cui è possibile accedere nell'ambiente in un dato momento.  
+È anche ciò che ci permette di avere information hiding.  
 
-Lo scoping permette di decidere se un identificatore è legato e, nel caso, da quale occorrenza di legame dell'albero di sintassi
+Lo scoping statico permette inoltre di vedere la vita dell'identificatore a tempo di compilazione attraverso l'albero sintattico e permette di decidere se un identificatore è legato e, nel caso, da quale occorrenza di legame dell'albero di sintassi  
+
+È utile aggiungere inoltre che lo scoping statico si riferisce alla catena statica (si sta parlando dello stack di esecuzione/stack frame, ed è visibile come un array) dove rientrano i parametri formali
 
 ### Scoping Dinamico
 

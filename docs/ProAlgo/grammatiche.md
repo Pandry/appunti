@@ -1,4 +1,4 @@
-# Linguaggi e Grammatiche
+# Grammatiche
 Una grammatica è una notazione concisa per descrivere la sintassi (una frase ben formata) di un linguaggio.  
 Sono costituite da produzioni  
 
@@ -90,3 +90,110 @@ $E ::= E+E | E-E | E * E | ...| I | V$
 Dove il primo carattere E rappresenta il simbolo iniziale (o categoria sintattica) e le produzioni sono separate dal trattino verticale  
 A destra troviamo infatti sia simboli terminali (come +, - e *) che non terminali (come E, I e V, che saranno poi scritte in altre produzioni)  
 Il "corpo" della produzione è quindi l'insieme dei simboli che compaiono a destra dell'uguaglianza
+
+## Principio di corrispondenza
+La dichiarazione di corrispondenza è il riuso della sintassi per cose svolgono lo stesso compito
+
+# Linguaggi
+
+## Identificatori
+Gli identificatori servono per identificare delle zone di memoria.  
+Vengono 
+
+Possono essere liberi o legati. La differenza è che un identificatore legato risulta in un ambiente, e quindi ha un corrispettivo valore o punta ad una locazione di memoria.  
+Un identificatore libero, è un identificatore che viene usato all'interno del codice, tuttavia non risultando nell'ambiente non è possibile correlarlo ad un valore, rendendo la sua valutazione impossibile. Avere identificatori liberi nel codice di un programma è quindi un errore, che tendenzialmente porta il programma a non poter essere eseguito correttamente.
+
+Si collocano in un ambiente, ovvero una funzione che ci permette di "mappare" gli identificatori con i rispettivi valori (nel caso di costanti) o locazioni di memoria (nel caso di variabili e funzioni)
+
+Un identificatore si dice essere in posizione (o occorrenza) di legame quando abbiamo una definizione, e quindi _leghiamo_ l'identificatore (il nome) ad una locazione di memoria.  
+
+
+## Principio di Astrazione
+Il principio di astrazione permette di ridurre la duplicazione di informazione nei programmi (quindi scrivere meno codice codice) usando (e riusando) sia funzioni definite dal programmatore che rese disponibili dal linguaggio (per non _reinventare la ruota_)  
+È un principio che quindi ci invita a generalizzare il codice per evitare di copiarlo e incollarlo  
+Il sottoproblema dovrebbe poi essere decomposto in sotto funzioni (ove necessario), riapplicando il principio  
+Scrivere funzioni permette di aumentare la correttezza, in quanto una volta scritta e verificata, quella parte di codice è corretta  
+Ovviamente il linguaggio deve permettere di **definirle** e usarle
+
+### Funzioni
+Quasi tutti i linguaggi moderni fanno uso delle funzioni.  
+Una funzione in un linguaggio di programmazione prende il concetto da una funzione matematica: permette di mappare uno o più parametri (che chiameremo formali) in un valore.  
+
+Le funzioni ci permettono di non ripetere codice, ma di renderlo invece modulare, permettendoci di creare sottoprogrammi che svolgono un compito specifico, garantendoci una miglior mantenibilità.  
+Grazie a questo aspetto, le funzioni ci permettono inoltre di avere una maggior confidenza nel codice, data dall'aumento della correttezza del codice: una volta che una funzione è garantita essere corretta, si può presumere che quella parte di codice non dovrà essere esaminata ulteriormente.  
+
+Il tipo della funzione è il tipo del valore che la funzione ritornerà (il suo codominio).  
+Una funzione ritorna spesso un valore (spesso proprio mediante la keyword `return`, seguita da un'espressione, che sarà dello stesso tipo della funzione)  
+
+Un'altra cosa univoca delle funzioni è la signatura: la signatura può essere vista come una tripla, che include l'identificatore della funzione (il suo nome), i suoi parametri formali (i valori che prende in ingresso) ed infine il tipo che ritornerà.  
+
+Da un punto di vista sintattico, le funzioni vengono definite attraverso una dichiarazione.  
+Possiamo aspettarci quindi che in un linguaggio (come [L]([../l])) la funzione si trovi insieme alle dichiarazioni:  
+`D::= nil | const id[:T]=E | var id[:T]=E | D;D | function Id(form) -> T {C}`  
+(In questo caso `Id` è l'identificatore della funzione, il suo nome, `form` è l'elenco dei formali, `T` è il tipo e `C` il corpo della funzione)
+
+Quando invece sono utilizzate, si dice che vengono invocate, e la loro invocazione rientra nei tipi delle espressioni.  
+
+Una funzione avrà quindi la seguente forma:  
+```js
+function nome(formali...) tipo 
+```
+
+e sarà invocata con una forma simile a questa:  
+```js
+nome(attuali...)
+```
+considerando gli attuali come una lista di espressioni.  
+
+Sotto il punto di vista dell'invocazione, si può pensare che una chiamata ad una funzione sospenda l'esecuzione del chiamate (da un punto di vista formale), in attesa che la funzione termini e restituisca il valore rispetto ai parametri attuali forniti (gli argomenti con cui la funzione è stata chiamata).  
+Formali ed attuali dovranno essere due liste di variabili con lo stesso numero di elementi e di tipi concordi.  
+
+I controlli che verranno effettuati durante la compilazione saranno i seguenti:  
+
+- Assicurarsi che il numero di argomenti attuali (quelli forniti alla funzione) sia uguale al numero di argomenti attuali
+- Assicurarsi che i nomi dei parametri formali siano distinti (altrimenti due parametri potrebbero avere lo stesso nome, generando confusione ed ambiguità)
+- Assicurarsi che i tipi dei parametri attuali e formali per la stessa posizione siano uguali (non ha senso dire che il valore "ciao" è un numero)
+- Assicurarsi che non ci siano variabili libere nel corpo della funzione 
+- Assicurarsi che la funzione abbia un `return` ed il tipo ritornato sia lo stesso dichiarato nella signatura 
+
+Dato che una funzione è una dichiarazione, l'ambiente viene esteso in seguito ad una dichiarazione. Ciò significa che è possibile usare una funzione nel suo stesso corpo. Questa tecnica è detta ricorsione e ci permette di lavorare con strutture iterative come i grafi con estrema facilità, rispetto ad un approccio più tradizionale (iterativo), che è più difficile in fase di ragionamento e quindi più soggetto ad errori (e più lungo da scrivere ed ideare).  
+Ovviamente questa tecnica non è efficiente da un punto di vista della memoria, tuttavia è un tradeoff che spesso vale la pena adottare.  
+
+#### Segnatura di una funzione
+nome, parametri formali, e tipo di ritorno  
+La dichiarazione richiede anche un corpo, in cui si ritorna anche il tipo  
+
+#### Il record di attivazione
+Ogni volta che si invoca una funzione, viene generato un corrispettivo record di attivazione (o stack frame)  
+Un record di attivazione è una struttura dati che ci permette di tenere traccia dei dati necessari all'esecuzione delle funzioni.  
+
+Un record di attivazione è composto da 7 valori fondamentali:  
+
+- **Puntatore alla catena dinamica**  
+    La catena dinamica tiene traccia del record di attivazione della funzione chiamante. Quindi quando una funzione ne chiama una seconda, la seconda avrà come puntatore nella catena dinamica il record di attivazione del chiamante
+- **Puntatore alla catena statica**  
+    La catena statica punta al record di attivazione della funzione chiamante.  
+    Permette quindi di effettuare la risoluzione degli identificatori non presenti nel blocco corrente (con scoping statico)  
+    La catena statica è visibile come un array di "chiamate" (e ci rientrano i parametri formali con cui sono state invocate le funzioni precedenti)  
+    Permette di vedere tutto ciò che è accessibile dall'ambiente in uno specifico momento  
+    Permette inoltre di effettuare information hiding: (dato come esempio un programma in cui la funzione A chiama la funzione B, che chiama a sua volta la funzione C) se un parametro formale della funzione B ha lo stesso nome di un parametro della funzione A, il parametro della funzione B prende precedenza e quindi non è possibile accedere al parametro della funzione A. Vince l'ultima cosa dichiarata.  
+- **Indirizzo di ritorno**  
+    L'istruzione da eseguire al ritorno della funzione corrente
+- **Indirizzo del risultato**  
+    L'indirizzo della locazione dove salvare il risultato che la funzione restituirà
+- **Parametri (attuali e formali)**  
+    Associazione dei parametri formali ed attuali
+- **Variabili locali**  
+    L'ambiente dove risiederanno le variabili locali della funzione
+- **Risultati temporanei**  
+    Uno spazio di memoria dove risiederanno le variabili temporanee generate dal compilatore
+
+Catena dinamica (call chain)  
+    La catena dinamica è una sequenza di chiamate e serve per garantire l'ordine di esecuzione.  
+    È una struttura dati di tipo LIFO (Last In, Fist Out), una pila
+
+catena statica (da rivedere)  
+    La catena statica si occupa di implementare lo scoping statico, ovvero individuare gli identificatori necessari in base alla visibilità  
+    È quindi un ambiente derivato dalla dichiarazione di variabili e costanti  
+    Garantisce che i nomi siano referenziati rispetto alla visibilità di variabili e funzione
+
