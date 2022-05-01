@@ -446,11 +446,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#chiusira-di-kleene" class="md-nav__link">
-    Chiusira di Kleene *
+  <a href="#chiusura-di-kleene" class="md-nav__link">
+    Chiusura di Kleene *
   </a>
   
-    <nav class="md-nav" aria-label="Chiusira di Kleene *">
+    <nav class="md-nav" aria-label="Chiusura di Kleene *">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -533,11 +533,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#albero-di-sintassi" class="md-nav__link">
-    Albero di sintassi
+  <a href="#albero-di-sintassi-astratta" class="md-nav__link">
+    Albero di sintassi astratta
   </a>
   
-    <nav class="md-nav" aria-label="Albero di sintassi">
+    <nav class="md-nav" aria-label="Albero di sintassi astratta">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1056,11 +1056,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#chiusira-di-kleene" class="md-nav__link">
-    Chiusira di Kleene *
+  <a href="#chiusura-di-kleene" class="md-nav__link">
+    Chiusura di Kleene *
   </a>
   
-    <nav class="md-nav" aria-label="Chiusira di Kleene *">
+    <nav class="md-nav" aria-label="Chiusura di Kleene *">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1143,11 +1143,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#albero-di-sintassi" class="md-nav__link">
-    Albero di sintassi
+  <a href="#albero-di-sintassi-astratta" class="md-nav__link">
+    Albero di sintassi astratta
   </a>
   
-    <nav class="md-nav" aria-label="Albero di sintassi">
+    <nav class="md-nav" aria-label="Albero di sintassi astratta">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1248,7 +1248,7 @@ Le parole saranno poi utilizzate per formare <em>frasi</em> esprimibili in quel 
 </div>
 <div class="admonition definition">
 <p class="admonition-title">Definizione di parola legale</p>
-<p>Le parole legali sonon un sottoinsieme di tutte le parole che si possono costruire.<br />
+<p>Le parole legali sono un sottoinsieme di tutte le parole che si possono costruire.<br />
 Una parola legale sarà quindi una parola appartenente a questo sottoinsieme </p>
 </div>
 <div class="admonition definition">
@@ -1272,42 +1272,46 @@ Una parola legale sarà quindi una parola appartenente a questo sottoinsieme </p
 <h3 id="sottostringa">Sottostringa<a class="headerlink" href="#sottostringa" title="Permanent link">&para;</a></h3>
 <p>Stringa senza prefisso e suffisso (prefisso e suffisso risultano cancellati)</p>
 <h3 id="lunghezza-di-una-stringa">Lunghezza di una stringa<a class="headerlink" href="#lunghezza-di-una-stringa" title="Permanent link">&para;</a></h3>
-<p>Si indica con i trattini verticali (che richiamano alla cardinatlià) ed indicano il numero di elementi dell'alfabeto nella stringa:<br />
+<p>Si indica con i trattini verticali (che richiamano alla cardinalità) ed indicano il numero di elementi dell'alfabeto nella stringa:<br />
 <span class="arithmatex">\(|ciao| = 4\)</span></p>
-<h3 id="chiusira-di-kleene">Chiusira di Kleene *<a class="headerlink" href="#chiusira-di-kleene" title="Permanent link">&para;</a></h3>
-<p>Insieme di simbioli contentente tutte le stringhe di tutte le lunghezze (0(<span class="arithmatex">\(\epsilon\)</span>),1,2,3,...) formabili concatenando un alfabeto</p>
+<h3 id="chiusura-di-kleene">Chiusura di Kleene *<a class="headerlink" href="#chiusura-di-kleene" title="Permanent link">&para;</a></h3>
+<p>Insieme di simboli contenente tutte le stringhe di tutte le lunghezze (0(<span class="arithmatex">\(\epsilon\)</span>),1,2,3,...) formabili concatenando un alfabeto</p>
 <h4 id="chiusura-positiva">Chiusura positiva +<a class="headerlink" href="#chiusura-positiva" title="Permanent link">&para;</a></h4>
-<p>Chiusira di Kleene con lunghezza &gt; 0</p>
+<p>Una chiusura positiva è una chiusura di Kleene con lunghezza &gt; 0<br />
+Ci permette di identificare un insieme non vuoto di tutte le stringhe possibili ottenibili concatenando un alfabeto.  </p>
 <h2 id="linguaggi">Linguaggi<a class="headerlink" href="#linguaggi" title="Permanent link">&para;</a></h2>
 <h3 id="linguaggio-infinito">Linguaggio infinito<a class="headerlink" href="#linguaggio-infinito" title="Permanent link">&para;</a></h3>
 <p>Definibile attraverso 3 metodi ed è definibile enumerando tutti i suoi elementi (ove non infiniti)  </p>
-<div class="highlight"><pre><span></span><code>Un linguaggio L su un alfabeto A è un sottoinsieme della chiura di Kleene (considerando insiemi non vuoti e non banali)
+<div class="highlight"><pre><span></span><code>Un linguaggio L su un alfabeto A è un sottoinsieme della chiusura di Kleene (considerando insiemi non vuoti e non banali)
 Un linguaggio di programmazione classico può essere pensato come un sottoinsieme di ASCII*
 </code></pre></div>
 <h4 id="generativo">Generativo<a class="headerlink" href="#generativo" title="Permanent link">&para;</a></h4>
 <p>Insieme delle stringhe generate (che seguono le regole) da una grammatica</p>
 <h4 id="riconoscitivo">Riconoscitivo<a class="headerlink" href="#riconoscitivo" title="Permanent link">&para;</a></h4>
+<p>Insieme delle stringhe riconosciute ad un automa</p>
 <h4 id="algebrico">Algebrico<a class="headerlink" href="#algebrico" title="Permanent link">&para;</a></h4>
+<p>Insieme delle stringhe soluzione di un sistema di equazioni algebriche</p>
 <h2 id="albero-di-derivazione">Albero di derivazione<a class="headerlink" href="#albero-di-derivazione" title="Permanent link">&para;</a></h2>
-<p>L'albero di devivazione è un albero radicato non vuoto.<br />
-In un albero:  </p>
+<p>L'albero di derivazione è un albero radicato non vuoto in cui:  </p>
 <ul>
-<li>Un nodo singolo è detto radice</li>
-<li>La radice è connessa ad un insieme di albero. Ogni albero è connesso tramite un solo arco alla radice (questa definizione è ricorsiva)</li>
+<li>La radice è etichettata con il simbolo iniziale</li>
+<li>Ogni nodo interno è etichettato con un simbolo non terminale e rappresenta l'applicazione di una produzione</li>
+<li>Ogni foglia è etichettata con un simbolo terminale</li>
 </ul>
-<p>La stringa da cui si genera l'albero si è la frontiera, e si ottiene prendnedo le foglie da destra a sinistra</p>
-<p>Ogni sottoalbero risulta essere l'applicazione di una produzione<br />
+<p>La stringa corrispondente ad un albero (di derivazione) si ottiene dalla frontiera, concatenando le etichette delle foglie da sinistra a destra</p>
+<p>Ogni sotto albero risulta essere l'applicazione di una produzione<br />
 Ad ogni albero sono associate più derivazioni, a seconda dell'ordine in cui vengono applicate le derivazioni.  </p>
-<p>Esiste una corrispondenza biunivoca tra alberi di derivazione e derivazioni canonice: se derivo sempre da destra (o sinistra), ottengo sempre lo stesso albero.<br />
+<p>Esiste una corrispondenza biunivoca tra alberi di derivazione e derivazioni canoniche: se derivo sempre da destra (o sinistra), ottengo sempre lo stesso albero.<br />
 Ciò significa che se derivo sempre da destra (o sinistra) ottengo sempre lo stesso albero.  </p>
 <h3 id="grammatica-ambigua">Grammatica ambigua<a class="headerlink" href="#grammatica-ambigua" title="Permanent link">&para;</a></h3>
-<p>Lo stesso linguaggio si può ottere con 2 algeri diversi (ovvero, ci può essere indecusione su quale può essere l'albero da usare). 
-La produzione non riesce a determinare una precedenza con gli operatori. 
-Ciò porta il parser a decidere arbitrariamente l'ordine prima di passare all'organizzatore sematico</p>
-<p>La soluzione a questo problema è data dall'aggiunta di operatori per non permettere alla scelta di poter esistere.<br />
-Questo perché l'analizzatore sintattico (parser) usa grammatiche non ambigue per determinare la precedenza tra operatori. Se così non fosse, potrebbero verificarsi "underfined behaviour"  </p>
-<h3 id="albero-di-sintassi">Albero di sintassi<a class="headerlink" href="#albero-di-sintassi" title="Permanent link">&para;</a></h3>
-<p>Un albero di sintassi risulta essere una versione compatta dell'albero di derivazione</p>
+<p>Lo stesso linguaggio si può ottenere con 2 alberi diversi (ovvero, ci può essere indecisione su quale può essere l'albero da usare). 
+La produzione non riesce a determinare una precedenza con gli operatori (questo perché dal punto di vista della sintassi tutti i simboli hanno uguale precedenza, non abbiamo ancora inserito una semantica che ci permette di attribuire un significato degli operatori (come addizione e moltiplicazione) e quindi una precedenza).<br />
+Ciò porta il parser a decidere arbitrariamente l'ordine degli operatori, prima di passare all'organizzatore semantico (che poi è in grado di assegnare un significato ai simboli)  </p>
+<p>La soluzione a questo problema (<strong>disambiguazione</strong>) è data dall'aggiunta di operatori per non permettere alla scelta di poter esistere in primo luogo.<br />
+Questo perché l'analizzatore sintattico (parser) usa grammatiche non ambigue per determinare la precedenza tra operatori. Se così non fosse, potrebbero verificarsi "undefined behavior"  </p>
+<h3 id="albero-di-sintassi-astratta">Albero di sintassi astratta<a class="headerlink" href="#albero-di-sintassi-astratta" title="Permanent link">&para;</a></h3>
+<p>Un albero di sintassi risulta essere una versione compatta dell'albero di derivazione, perché imporre la precedenza aumenta il numero di produzioni.<br />
+Per ottimizzare quindi si mantiene la non ambiguità, rimuovendo però tutti i nodi interni non terminali che non sono direttamente collegati a foglie.</p>
 <details class="example">
 <summary>Esempio di albero di sintassi</summary>
 <p>prendendo come regole scritte in BNF le seguenti produzioni:<br />
@@ -1317,7 +1321,8 @@ Questo perché l'analizzatore sintattico (parser) usa grammatiche non ambigue pe
 <p>Possiamo prendere la stringa <span class="arithmatex">\(a \star (b + c)\)</span> ed effettuare una trasformazione delle produzioni partendo da E come simbolo iniziale:<br />
 <span class="arithmatex">\(E \to T \to T \star F \to T \star (E) \to T \star (E+T) \to T \star (E+F) \to T \star (E+c) \to\)</span><br />
 <span class="arithmatex">\(\to T \star (T+c) \to T \star (F+c) \to T \star (b+c) \to F \star (b+c) \to a \star (b+c)\)</span>  </p>
-<p><img alt="Albero di sintassi" loading="lazy" src="../assets/alberoDiSintassi.png" /></p>
+<p><img alt="Albero di sintassi" loading="lazy" src="../assets/alberoDiSintassi.png" />  </p>
+<p>In questo esempio la frontiera sono i nodi <code>a</code>, <code>*</code>, <code>b</code>, <code>+</code>, <code>c</code></p>
 </details>
 <hr />
 <h5 id="categorie-sintattiche">Categorie sintattiche<a class="headerlink" href="#categorie-sintattiche" title="Permanent link">&para;</a></h5>

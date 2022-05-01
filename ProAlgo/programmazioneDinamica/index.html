@@ -429,9 +429,69 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Programmazione dinamica
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Programmazione dinamica
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#esempi" class="md-nav__link">
+    Esempi
+  </a>
+  
+    <nav class="md-nav" aria-label="Esempi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#longest-common-subsequence" class="md-nav__link">
+    Longest Common Subsequence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-distance" class="md-nav__link">
+    Edit distance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zaino" class="md-nav__link">
+    Zaino
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -776,6 +836,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#esempi" class="md-nav__link">
+    Esempi
+  </a>
+  
+    <nav class="md-nav" aria-label="Esempi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#longest-common-subsequence" class="md-nav__link">
+    Longest Common Subsequence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-distance" class="md-nav__link">
+    Edit distance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zaino" class="md-nav__link">
+    Zaino
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -788,30 +890,35 @@
                 
 
 <h1 id="programmazione-dinamica">Programmazione dinamica<a class="headerlink" href="#programmazione-dinamica" title="Permanent link">&para;</a></h1>
-<p>Un problema risolvibile in programmazione dinamica è simile ad un algoritmo di recursione, in cui però si presentano pochi sottoproblemi diversi che si presentano più volte.<br />
-È quindi un problema di ottimizzazione.  </p>
+<p>Un problema risolvibile in programmazione dinamica è simile ad un algoritmo di ricorsione, in cui però si presentano pochi sottoproblemi diversi che si presentano più volte.<br />
+È quindi un problema di ottimizzazione.<br />
+La soluzione ai problemi che si ripresentano più volte viene quindi salvata per quando servirà nuovamente il risultato.<br />
+Questo ci permettere di risolvere ogni sottoproblema una ed una sola volta.  </p>
 <p>I problemi risolvibili attraverso la programmazione dinamica:</p>
 <ul>
 <li>
-<p>Devono avere sottostruttura ottima
+<p>Devono avere sotto struttura ottima
     La soluzione ottima del problema deriva dalle soluzioni ottime dei sottoproblemi</p>
 </li>
 <li>
-<p>I problemi deovono essere sovrapponibili (si ripetono)
-    Il problema deve presentare pochi stottoproblemi riptetuti più volte.<br />
+<p>I problemi devono essere sovrapponibili (si ripetono)
+    Il problema deve presentare pochi sottoproblemi ripetuti più volte.<br />
     La soluzione deve essere polinomiale nella dimensione dell'input</p>
 </li>
 </ul>
 <p>La struttura di una soluzione scritta in programmazione dinamica è divisa in 4 fasi:</p>
 <ol>
-<li>Definizine dei sottoprobemi e dimensionamento della tabelle</li>
+<li>Definizione dei sotto problemi e dimensionamento della tabelle</li>
 <li>Soluzione dei sottoproblemi e memorizzazione della soluzione nella tabella</li>
-<li>Definizione delle regole di riempimento della tabella (?) 
+<li>Definizione delle regole di riempimento della tabella (in che modo mettiamo i valori nella tabella) 
     Regole di ricorsione per ottenere la soluzione di un sottoproblema a partire dalle soluzioni dei sottoproblemi già risolti</li>
 <li>Restituzione del risultato relativo al problema originale</li>
 </ol>
-<p>Longest Common Subsequence
-Date 2 stringhe di caratteri, trovare la sottosequenza comune più lunga</p>
+<h2 id="esempi">Esempi<a class="headerlink" href="#esempi" title="Permanent link">&para;</a></h2>
+<h3 id="longest-common-subsequence">Longest Common Subsequence<a class="headerlink" href="#longest-common-subsequence" title="Permanent link">&para;</a></h3>
+<p>Date 2 stringhe di caratteri, trovare la sotto sequenza comune più lunga</p>
+<h3 id="edit-distance">Edit distance<a class="headerlink" href="#edit-distance" title="Permanent link">&para;</a></h3>
+<h3 id="zaino">Zaino<a class="headerlink" href="#zaino" title="Permanent link">&para;</a></h3>
 
               
             </article>

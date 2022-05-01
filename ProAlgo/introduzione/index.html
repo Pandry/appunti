@@ -905,14 +905,15 @@ Idealmente il documento deve essere scritto usando la soluzione più efficiente 
 <p class="admonition-title">Definizione di Programma</p>
 <p>Scrittura di un algoritmo in un linguaggio di programmazione</p>
 </div>
-<p>Il linguaggio di programmazione è quindi il linguaggio in cui si codifica l'algorimo per renderlo poi interpretabile dal computer.  </p>
+<p>Il linguaggio di programmazione è quindi il linguaggio in cui si codifica l'algoritmo per renderlo poi interpretabile dal computer.  </p>
+<p>Vale la pena notare che un linguaggio è un insieme di regole finito che permette di modellare un dominio infinito di programmi scritti in maniera legale (seguendo le regole).  </p>
 <p>Un linguaggio è composto in 2 parti: <strong>sintassi</strong> e <strong>sematica</strong>.<br />
 I due temi sono importantissimi e verranno trattati con maggiore dettaglio nella pagine successive.<br />
 Brevemente, possiamo pensare alla sintassi come l'equivalente della correttezza grammaticale in un linguaggio naturale (come l'italiano).<br />
-La semantica indica invece quali operazioni sono legali in un linguaggio: ad esempio non dovrbbe essere possibile associare ad un numero intero il valore "stringa" (che è una <em>parola</em> e non un <em>numero</em>).<br />
+La semantica indica invece quali operazioni sono legali in un linguaggio: ad esempio non dovrebbe essere possibile associare ad un numero intero il valore "stringa" (che è una <em>parola</em> e non un <em>numero</em>).<br />
 <img alt="" src="../assets/Linguaggi_sintassi.png" /></p>
 <p>Il linguaggio si divide poi in due categorie: esistono linguaggi statici e linguaggi dinamici.<br />
-A seconda del tipo, esistono diversi pasaggi a cui il codice sorgente deve essere soggetto prima di poter essere compreso da un computer.<br />
+A seconda del tipo, esistono diversi passaggi a cui il codice sorgente deve essere soggetto prima di poter essere compreso da un computer.<br />
 I passaggi sono spesso composti da una semplificazione relativamente semplice (almeno in termini di concetto), che semplifica o tratta il codice "abbassando" il suo livello di complessità.  </p>
 <p><img alt="" src="../assets/Linguaggi_compilatore.png" /></p>
 <p>Ad esempio in un linguaggio statico, abbiamo diversi passaggi:  </p>
@@ -935,17 +936,17 @@ Questo insieme di token viene poi passato all'analizzatore sintattico</p>
     L'esempio appena visto è corretto, mentre uno snippet di codice come il seguente non lo è: 
     <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="k">if</span> <span class="p">(</span><span class="kc">true</span> <span class="p">{</span>
 </code></pre></div>
-    Se tutto è corretto, l'analizzatore sintatico restituirà un <strong>albero di sintassi astratto</strong>, che rappresenterà la "frase" del linguaggio struttato<br />
+    Se tutto è corretto, l'analizzatore sintattico restituirà un <strong>albero di sintassi astratto</strong>, che rappresenterà la "frase" del linguaggio strutturato<br />
     Continuando con l'esempio precedente, quello che segue è l'equivalente dell'albero di sintassi astratto (E sta per espressione):<br />
 <img alt="" src="../assets/AST.png" /></p>
 </li>
 <li>
 <p><strong>Analizzatore semantico/type checker</strong><br />
-    L'analizzatore sematico si occupa di simulare l'esecuzione del programma per assicurarsi che non si presentino molteplici errori, come:  </p>
+    L'analizzatore semantico si occupa di simulare l'esecuzione del programma per assicurarsi che non si presentino molteplici errori, come:  </p>
 <ul>
 <li>Trovare nomi non dichiarati o dichiarazioni di nomi già dichiarati</li>
 <li>Uso di operatori con tipi non compatibili (come ad esempio la somma tra "a" e 2), ed assicurarsi che l'uso dei tipi sia usato con coerenza</li>
-<li>Funzioni chamate con numero e/o tipo sbagliato di argomenti o che ritornano un tipo non adatto</li>
+<li>Funzioni chiamate con numero e/o tipo sbagliato di argomenti o che ritornano un tipo non adatto</li>
 </ul>
 <p>Ed altre funzioni poi in base al linguaggio (come variabili non inizializzate o non usate, use after free e use before assignment, blocchi di codice non raggiungibili, funzioni mai invocate o senza effetti)</p>
 <p>Se è tutto ok, quello che viene restituito è quello che viene detto three-address code, un linguaggio intermediario che usa fino a tre indirizzi per rappresentare ogni istruzione.</p>
@@ -961,8 +962,8 @@ Questo insieme di token viene poi passato all'analizzatore sintattico</p>
 </li>
 <li>
 <p><strong>Linker</strong><br />
-    Il linker è l'ultimo passaaggio della compilazione, e si occupa di prendere il risultato del generatore del codice oggetto (codice oggetto) e "collegarlo" con le librerie di cui il programma fa uso (ed inserire un loader).<br />
-    Il risultato del linker sarà quindi un programma esegubile dal computer.  </p>
+    Il linker è l'ultimo passaggio della compilazione, e si occupa di prendere il risultato del generatore del codice oggetto (codice oggetto) e "collegarlo" con le librerie di cui il programma fa uso (ed inserire un loader).<br />
+    Il risultato del linker sarà quindi un programma eseguibile dal computer.  </p>
 </li>
 </ul>
 <details class="tip">

@@ -428,6 +428,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#la-correttezza" class="md-nav__link">
+    La correttezza
+  </a>
+  
+    <nav class="md-nav" aria-label="La correttezza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invariante-di-ciclo" class="md-nav__link">
+    Invariante di ciclo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#la-macchina-astratta" class="md-nav__link">
     La macchina astratta
   </a>
@@ -556,18 +576,59 @@
     Relazioni di ricorrenza
   </a>
   
-    <nav class="md-nav" aria-label="Relazioni di ricorrenza">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complessita-della-ricorsione" class="md-nav__link">
+    Complessità della ricorsione
+  </a>
+  
+    <nav class="md-nav" aria-label="Complessità della ricorsione">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#master-theorem" class="md-nav__link">
-    Master Theorem
+  <a href="#lapproccio-divide-and-conquer" class="md-nav__link">
+    L'approccio Divide-and-conquer
+  </a>
+  
+    <nav class="md-nav" aria-label="L'approccio Divide-and-conquer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analisi-degli-algoritmi-divide-and-conquer" class="md-nav__link">
+    Analisi degli algoritmi divide-and-conquer
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-di-sostituzione" class="md-nav__link">
+    Metodo di sostituzione
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#albero-di-ricorrenza" class="md-nav__link">
+    Albero di ricorrenza
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-master-theorem" class="md-nav__link">
+    Il master theorem
+  </a>
   
 </li>
         
@@ -958,6 +1019,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#la-correttezza" class="md-nav__link">
+    La correttezza
+  </a>
+  
+    <nav class="md-nav" aria-label="La correttezza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invariante-di-ciclo" class="md-nav__link">
+    Invariante di ciclo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#la-macchina-astratta" class="md-nav__link">
     La macchina astratta
   </a>
@@ -1086,18 +1167,59 @@
     Relazioni di ricorrenza
   </a>
   
-    <nav class="md-nav" aria-label="Relazioni di ricorrenza">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complessita-della-ricorsione" class="md-nav__link">
+    Complessità della ricorsione
+  </a>
+  
+    <nav class="md-nav" aria-label="Complessità della ricorsione">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#master-theorem" class="md-nav__link">
-    Master Theorem
+  <a href="#lapproccio-divide-and-conquer" class="md-nav__link">
+    L'approccio Divide-and-conquer
+  </a>
+  
+    <nav class="md-nav" aria-label="L'approccio Divide-and-conquer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analisi-degli-algoritmi-divide-and-conquer" class="md-nav__link">
+    Analisi degli algoritmi divide-and-conquer
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-di-sostituzione" class="md-nav__link">
+    Metodo di sostituzione
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#albero-di-ricorrenza" class="md-nav__link">
+    Albero di ricorrenza
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-master-theorem" class="md-nav__link">
+    Il master theorem
+  </a>
   
 </li>
         
@@ -1120,10 +1242,19 @@
                 
 
 <h1 id="valutazione-di-un-algoritmo">Valutazione di un algoritmo<a class="headerlink" href="#valutazione-di-un-algoritmo" title="Permanent link">&para;</a></h1>
+<p>Analizzare un algoritmo significa predire le risorse che l'algoritmo richiederà.<br />
+Si possono predire risorse come la memoria, la larghezza di banda per la comunicazione o qualche altra risorsa prima, ma tendenzialmente si tende a calcolare il tempo di computazione.<br />
+Per farlo è necessario fare uso di un modello che rappresenta l'implementazione che andremo ad usare (e quindi un modello per le risorse che andremo ad utilizzare).  </p>
+<p>Il tempo di esecuzione di un algoritmo su un dato input è il numero di operazioni primitive (o passi) eseguiti.<br />
+È conveniente definire la nozione di passo per essere il più astratta e distaccata dalla macchina possibile.  </p>
+<p>Il caso peggiore del tempo di esecuzione di un algoritmo ci fornisce il numero massimo di tempo che l'algoritmo impiegherà per un dato input. Ciò fornisce la garanzia che l'algoritmo non impiegherà mai più tempo del caso peggiore.  </p>
+<p>Nei casi particolari nei quali si è interessati ai casi medi, è necessario ricorrere a tecniche di analisi probabilistica: potrebbe infatti non essere scontato cosa costituisce l'input di un problema medio.  </p>
+<p>È possibile poi applicare uno strato di astrazione: l'ordine di crescita (o rapporto di crescita): da un polinomio, prendiamo solo il monomio di grado superiore, ignorando i restati monomi di ordine inferiore. Oltre questo, ignoriamo anche il coefficiente del monomio che prendiamo in considerazione, che non risulta essere troppo influente sulla rapporto di crescita per grandi input.  </p>
+<p>Possiamo quindi comparare 2 algoritmi sulla base della loro efficienza.  </p>
 <p>Un algoritmo può essere valutato sulla base di diversi fattori:  </p>
 <ul>
 <li>Correttezza<ul>
-<li>Dimostrazion eformale (matematica)</li>
+<li>Dimostrazione formale (matematica)</li>
 <li>Ispezione informale</li>
 </ul>
 </li>
@@ -1138,8 +1269,23 @@
 </ul>
 </li>
 </ul>
-<p>Nello specifico, il tempo di esecuzione può dipendere (e può essere influenzato) da tanti fattori<br />
+<p>Nello specifico, il tempo di esecuzione può dipendere (e può essere influenzato) da tanti fattori, e a noi interessa un algoritmo più efficiente, in quanto ci permette di compiere un lavoro in meno tempo<br />
 Per questo motivo, quando valutiamo un algoritmo dobbiamo definire un modello  </p>
+<h2 id="la-correttezza">La correttezza<a class="headerlink" href="#la-correttezza" title="Permanent link">&para;</a></h2>
+<p>Un algoritmo si dice corretto (rispetto ad una specifica) quando rispetta le specifiche date.<br />
+Il tipo di specifica più usata è quella <em>funzionale</em>, che tratta l'algoritmo come una funzione e definisce la correttezza se, dati all'algoritmo i valori necessari (e facenti parte del dominio), i valori restituiti rispetteranno la specifica  </p>
+<h3 id="invariante-di-ciclo">Invariante di ciclo<a class="headerlink" href="#invariante-di-ciclo" title="Permanent link">&para;</a></h3>
+<p>Un modo in cui possiamo dimostrare la correttezza (di una porzione di un algoritmo) è mediante l'invariante di ciclo (questo quando si ha a che fare con cicli).<br />
+Si compone di 3 blocchi, rappresentati la pre-iterazione di un ciclo, l'esecuzione del ciclo e la post-esecuzione.<br />
+L'invariante di ciclo è composta da 3 passaggi:  </p>
+<ol>
+<li>Inizializzazione<br />
+    È uno statement che deve essere verificato prima di entrare in un ciclo</li>
+<li>Mantenimento<br />
+    La condizione di mantenimento si riferisce ad uno statement che deve essere vero alla fine di una singola iterazione del ciclo</li>
+<li>Terminazione<br />
+    La terminazione è una condizione che deve essere vera alla fine del ciclo</li>
+</ol>
 <h2 id="la-macchina-astratta">La macchina astratta<a class="headerlink" href="#la-macchina-astratta" title="Permanent link">&para;</a></h2>
 <p>La macchina astratta è un <strong>modello di calcolo</strong> su cui è possibile fare i conti per astrarre dei dettagli implementativi dell'hardware.<br />
 Un esempio può essere la macchina di Von-Neumann</p>
@@ -1172,7 +1318,7 @@ Come per la memoria, possiamo rappresentare l'ambiente con una funzione:<br />
 </div>
 <h3 id="variabili">Variabili<a class="headerlink" href="#variabili" title="Permanent link">&para;</a></h3>
 <p>Identificano le locazioni di memoria, il cui contenuto può essere variato durante l'esecuzione<br />
-L'istruzione <code>a=b</code> si traduce in <span class="arithmatex">\(\sigma(\underbrace{\rho(a)}_{\text{Indirizzo}}) = \underbrace{\sigma(\rho(b))}_{\text{Valore}}\)</span> (siamo sicuri non sia <span class="arithmatex">\(\rho(a) = \sigma(\rho(b))\)</span>?)</p>
+L'istruzione <code>a=b</code> si traduce in <span class="arithmatex">\(\sigma(\underbrace{\rho(a)}_{\text{Indirizzo}}) = \underbrace{\sigma(\rho(b))}_{\text{Valore}}\)</span>  </p>
 <h3 id="costanti">Costanti<a class="headerlink" href="#costanti" title="Permanent link">&para;</a></h3>
 <p>Le costanti sono identificatori che individuano variabili che non cambiano durante l'esecuzione. Nell'ambiente quindi, invece di avere un mapping ad una locazione di memoria, abbiamo direttamente il valore contenuto:<br />
 <span class="arithmatex">\(\rho: Id \to Loc \cup Var\)</span> (che significa che dall'ambiente possiamo ottenere sia un valore (nel caso di una variabile) che una locazione di memoria (nel caso di una costante)).  </p>
@@ -1248,11 +1394,107 @@ Allo stesso modo, il limite inferiore (conosciuto come <span class="arithmatex">
 </tbody>
 </table>
 <p>(asisntotico si può leggere come "<em>per valori che tendono a <span class="arithmatex">\(\pin\)</span></em>")</p>
+<!-- Le costanti, le basi dei logaritmi etc non contano -->
+
 <h3 id="big-o">Big-O<a class="headerlink" href="#big-o" title="Permanent link">&para;</a></h3>
 <h3 id="big-omega">Big Omega<a class="headerlink" href="#big-omega" title="Permanent link">&para;</a></h3>
 <h3 id="theta">Theta<a class="headerlink" href="#theta" title="Permanent link">&para;</a></h3>
 <h3 id="relazioni-di-ricorrenza">Relazioni di ricorrenza<a class="headerlink" href="#relazioni-di-ricorrenza" title="Permanent link">&para;</a></h3>
-<h4 id="master-theorem">Master Theorem<a class="headerlink" href="#master-theorem" title="Permanent link">&para;</a></h4>
+<h2 id="complessita-della-ricorsione">Complessità della ricorsione<a class="headerlink" href="#complessita-della-ricorsione" title="Permanent link">&para;</a></h2>
+<h3 id="lapproccio-divide-and-conquer">L'approccio Divide-and-conquer<a class="headerlink" href="#lapproccio-divide-and-conquer" title="Permanent link">&para;</a></h3>
+<p>Il divide-et-impera è un paradigma di programmazione ricorsiva.</p>
+<p>Si basa su 3 concetti:</p>
+<ul>
+<li>Divide: dividere il problema in sottoproblemi che sono istanze più piccole del problema base</li>
+<li>Conquer: Risolvere il sottoproblema</li>
+<li>Combine: Combinare le soluzioni dei sottoproblemi in maniera ricorsiva fino a generare una soluzione per il problema originale</li>
+</ul>
+<p>La ricorsione termina quando arriva 'alla fine della corsa' (ovvero non è più possibile dividere il problema in ulteriori sottoproblemi dello stesso tipo dei precedenti).  </p>
+<p>Questo tipo di approccio è spesso utilizzato da algoritmi ricorsivi</p>
+<div class="admonition definition">
+<p class="admonition-title">Definizione di algoritmo ricorsivo</p>
+<p>Si dice algoritmo ricorsivo quell'algoritmo che come parte della sua soluzione, chiama sé stesso ricorsivamente una o più volte per risolvere un sottoproblema strettamente correlato. </p>
+</div>
+<h4 id="analisi-degli-algoritmi-divide-and-conquer">Analisi degli algoritmi divide-and-conquer<a class="headerlink" href="#analisi-degli-algoritmi-divide-and-conquer" title="Permanent link">&para;</a></h4>
+<p>Quando un algoritmo effettua una chiamata ricorsiva a sé stesso, spesso è possibile descrivere il suo tempo di esecuzione facendo uso di una equazione (o relazione) di ricorrenza, che descrive il tempo di esecuzione dell'algoritmo dato un problema di grandezza n.  </p>
+<div class="admonition definition">
+<p class="admonition-title">Ricorrenza</p>
+<p>La ricorrenza è un'equazione o diseguaglianza che descrive una funzione in termini di sé stessa ma su valori più piccoli<br />
+Nell'esempio sotto riportato, abbiamo che T(n) è il tempo di esecuzione del programma.<br />
+La forma dell'equazione di un algoritmo dividi-et-impera è la seguente:  </p>
+<div class="arithmatex">\[
+T(n) = \begin{cases}
+C                                   &amp; \text{ se } n \le k \\
+\underbrace{D(n)}_{\text{Dividi}} + \underbrace{\sum^{h}_{i = 1} T(n_i)}_{\text{impera}} + \underbrace{C(n)}_{\text{combina}} &amp; \text{ se } n &gt; k
+\end{cases}
+\]</div>
+<p>Ovvero, semplificando:  </p>
+<div class="arithmatex">\[
+T(n) = \begin{cases}
+\Theta(1)                   &amp; \text{ se } n \le k \\
+aT(\frac n b) + D(n) + C(n) &amp; \text{ se } n &gt; k
+\end{cases}
+\]</div>
+<p>In questo caso <code>a</code> è il numero di sottoproblemi, <code>b</code> è la dimensione dei sottoproblemi, <code>D(n)</code> è il costo della divisione dei sottoproblemi e <code>C(n)</code> è il costo della combinazione dei sottoproblemi. </p>
+</div>
+<p>Per risolvere un'equazione di ricorrenza (ovvero trovare il <span class="arithmatex">\(\Theta\)</span> asintotico <em>(che tende ad infinito)</em>), ci sono vari metodi:</p>
+<ul>
+<li>Il metodo di sostituzione<br />
+    Il metodo di sostituzione si basa sull'indovinare un limite, per poi fare uso dell'induzione matematica per dimostrarlo </li>
+<li>Con un albero di ricorrenza<br />
+    Un albero di ricorrenza ci permette di convertire il problema in una struttura ad albero, in cui ogni nodo rappresenta il costo che si ha ai vari livelli della ricorsione.<br />
+    Esistono quindi tecniche per sommare i vari limiti e risolvere quindi la relazione</li>
+<li>Il <a href="#il-master-theorem">master theorem</a></li>
+</ul>
+<h3 id="metodo-di-sostituzione">Metodo di sostituzione<a class="headerlink" href="#metodo-di-sostituzione" title="Permanent link">&para;</a></h3>
+<h3 id="albero-di-ricorrenza">Albero di ricorrenza<a class="headerlink" href="#albero-di-ricorrenza" title="Permanent link">&para;</a></h3>
+<h3 id="il-master-theorem">Il master theorem<a class="headerlink" href="#il-master-theorem" title="Permanent link">&para;</a></h3>
+<p>Il master theorem è un procedimento che permette di valutare attraverso una formula un'equazione di ricorrenza, risolvendola molto velocemente, senza necessità di alberi.  </p>
+<p>L'equazione deve essere della forma <span class="arithmatex">\(aT(\frac{n}{b}) + f(n)\)</span> con <span class="arithmatex">\(a \geq 1\)</span> che rappresenta il numero di sottoproblemi e <span class="arithmatex">\(b &gt; 1\)</span>, che descrive la grandeza di ogni sottoproblema (che è maggiore di uno, altrimenti la complessità non diminuisce con le iterazioni) ed infine <span class="arithmatex">\(f(n)\)</span> che descrive il tempo necessario ad effettuare la combinazione dei sottoproblemi  </p>
+<p>L'idea base teorema si basa sul comparare due funzioni e scegliere quella che cresce più velocemente (che tende a vincere):  </p>
+<div class="arithmatex">\[
+n^{log_b(a)}
+\text { vs }
+f(n)
+\]</div>
+<p>Dove <code>a</code>, <code>b</code> ed <code>f(n)</code> sono gli stessi parametri che troviamo nell'equazione di ricorrenza.  </p>
+<p>Ci sono quindi 3 possibili casi, quando si comparano le due funzioni:</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(n^{log_b(a)} &gt; f(n)\)</span> (vince <span class="arithmatex">\(n^{log_b(a)}\)</span>)<br />
+    In questo caso <span class="arithmatex">\(f(n) = O(n^{log_b(a) - \epsilon}) . \epsilon &gt; 0\)</span> (<code>f(n)</code> ha come limite superiore (big O) la funzione <span class="arithmatex">\(n^{log_b(a) - \epsilon}\)</span> per un <span class="arithmatex">\(\epsilon\)</span> maggiore di 0).<br />
+    Questo significa che f(n) cresce polinomialmente<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> più lentamente rispetto a <span class="arithmatex">\(n^{log_b(a)}\)</span> (e quindi elevando f(n) a qualche termine sarebbe possibile "equiparare le velocità")</p>
+<p>La soluzione all'equazione di ricorrenza è quindi <span class="arithmatex">\(T(n) = \Theta(n^{log_b(a)})\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(n^{log_b(a)} &lt; f(n)\)</span> (vince <span class="arithmatex">\(f(n)\)</span>)<br />
+    Questo significa che <span class="arithmatex">\(f(n) = \Omega(n^{log_b (a) + \epsilon}). \epsilon &gt; 0\)</span> (che significa che <span class="arithmatex">\(f(n)\)</span> cresce più velocemente di un fattore <span class="arithmatex">\(n^\epsilon\)</span>).  </p>
+<p>Questa condizione tuttavia richiede una seconda clausola: la <strong>condizione di continuità</strong>.<br />
+<span class="arithmatex">\(a\cdot f(\frac n b) \le c \cdot f(n)\)</span> e <span class="arithmatex">\(c &lt; 1 \land n &gt; n_0. T(n) = O(f(n))\)</span><br />
+Questa condizione serve per assicurarsi che la funzione cresca molto più velocemente anche per una frazione del risultato, rispetto ad una frazione del dominio (il numero in input, per numeri abbastanza grandi).<br />
+Ad esempio, prendendo <span class="arithmatex">\(a=2\)</span>, <span class="arithmatex">\(b=2\)</span>, <span class="arithmatex">\(c=0.5\)</span> e <span class="arithmatex">\(f(n) = n^3\)</span>, per <span class="arithmatex">\(n=6\)</span> avremmo <span class="arithmatex">\(2\cdot f(\frac 6 2) \le \frac {f(6)} {2}\)</span> e quindi <span class="arithmatex">\(2\cdot3^3 \le \frac {6^3} {2} = 54 \le 108\)</span></p>
+<p>In questo caso la soluzione è <span class="arithmatex">\(T(n) = O(f(n))\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(n^{log_b(a)} = f(n)\)</span> (sono uguali)<br />
+    Infine, <span class="arithmatex">\(f(n) = \Theta(n^{log_b(a)} \cdot log^k(n)\)</span> con <span class="arithmatex">\(k \ge 0\)</span><br />
+    Questo significa che <span class="arithmatex">\(f(n)\)</span> e <span class="arithmatex">\(n^{log_b(a)}\)</span> crescono allo stesso modo.  </p>
+<p>Il che significa <span class="arithmatex">\(T(n) = \Theta(n^{log_b(a)} log^{k+1} (n))\)</span></p>
+</li>
+</ol>
+<details class="definition">
+<summary>Dimostrazione del master theorem</summary>
+<p><a href="../assets/DimostrazioneMasterTheorem.pdf">Da fare...</a></p>
+</details>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Una funzione cresce in modo polinomialmente differentemente quando la "velocità di crescita" differisce di un polinomio (o un monomio).<br />
+Un polinomio è un'espressione della forma <span class="arithmatex">\(a_nx^n + a_{n-1}x^{n-1} + ... + a_1x + a_0\)</span>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
               
             </article>

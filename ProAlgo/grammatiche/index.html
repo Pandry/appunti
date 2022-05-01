@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linguaggi-e-grammatiche" class="md-skip">
+        <a href="#grammatiche" class="md-skip">
           Skip to content
         </a>
       
@@ -456,6 +456,13 @@
         <li class="md-nav__item">
   <a href="#backus-naur-form" class="md-nav__link">
     Backus-Naur Form
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principio-di-corrispondenza" class="md-nav__link">
+    Principio di corrispondenza
   </a>
   
 </li>
@@ -958,6 +965,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#principio-di-corrispondenza" class="md-nav__link">
+    Principio di corrispondenza
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -971,7 +985,7 @@
               
                 
 
-<h1 id="linguaggi-e-grammatiche">Linguaggi e Grammatiche<a class="headerlink" href="#linguaggi-e-grammatiche" title="Permanent link">&para;</a></h1>
+<h1 id="grammatiche">Grammatiche<a class="headerlink" href="#grammatiche" title="Permanent link">&para;</a></h1>
 <p>Una grammatica è una notazione concisa per descrivere la sintassi (una frase ben formata) di un linguaggio.<br />
 Sono costituite da produzioni  </p>
 <div class="admonition definition">
@@ -1050,6 +1064,88 @@ Una produzione in questa forma ha questo aspetto:<br />
 <p>Dove il primo carattere E rappresenta il simbolo iniziale (o categoria sintattica) e le produzioni sono separate dal trattino verticale<br />
 A destra troviamo infatti sia simboli terminali (come +, - e *) che non terminali (come E, I e V, che saranno poi scritte in altre produzioni)<br />
 Il "corpo" della produzione è quindi l'insieme dei simboli che compaiono a destra dell'uguaglianza</p>
+<h2 id="principio-di-corrispondenza">Principio di corrispondenza<a class="headerlink" href="#principio-di-corrispondenza" title="Permanent link">&para;</a></h2>
+<p>La dichiarazione di corrispondenza è il riuso della sintassi per cose svolgono lo stesso compito</p>
+<h1 id="linguaggi">Linguaggi<a class="headerlink" href="#linguaggi" title="Permanent link">&para;</a></h1>
+<h2 id="identificatori">Identificatori<a class="headerlink" href="#identificatori" title="Permanent link">&para;</a></h2>
+<p>Gli identificatori servono per identificare delle zone di memoria.<br />
+Vengono </p>
+<p>Possono essere liberi o legati. La differenza è che un identificatore legato risulta in un ambiente, e quindi ha un corrispettivo valore o punta ad una locazione di memoria.<br />
+Un identificatore libero, è un identificatore che viene usato all'interno del codice, tuttavia non risultando nell'ambiente non è possibile correlarlo ad un valore, rendendo la sua valutazione impossibile. Avere identificatori liberi nel codice di un programma è quindi un errore, che tendenzialmente porta il programma a non poter essere eseguito correttamente.</p>
+<p>Si collocano in un ambiente, ovvero una funzione che ci permette di "mappare" gli identificatori con i rispettivi valori (nel caso di costanti) o locazioni di memoria (nel caso di variabili e funzioni)</p>
+<p>Un identificatore si dice essere in posizione (o occorrenza) di legame quando abbiamo una definizione, e quindi <em>leghiamo</em> l'identificatore (il nome) ad una locazione di memoria.  </p>
+<h2 id="principio-di-astrazione">Principio di Astrazione<a class="headerlink" href="#principio-di-astrazione" title="Permanent link">&para;</a></h2>
+<p>Il principio di astrazione permette di ridurre la duplicazione di informazione nei programmi (quindi scrivere meno codice codice) usando (e riusando) sia funzioni definite dal programmatore che rese disponibili dal linguaggio (per non <em>reinventare la ruota</em>)<br />
+È un principio che quindi ci invita a generalizzare il codice per evitare di copiarlo e incollarlo<br />
+Il sottoproblema dovrebbe poi essere decomposto in sotto funzioni (ove necessario), riapplicando il principio<br />
+Scrivere funzioni permette di aumentare la correttezza, in quanto una volta scritta e verificata, quella parte di codice è corretta<br />
+Ovviamente il linguaggio deve permettere di <strong>definirle</strong> e usarle</p>
+<h3 id="funzioni">Funzioni<a class="headerlink" href="#funzioni" title="Permanent link">&para;</a></h3>
+<p>Quasi tutti i linguaggi moderni fanno uso delle funzioni.<br />
+Una funzione in un linguaggio di programmazione prende il concetto da una funzione matematica: permette di mappare uno o più parametri (che chiameremo formali) in un valore.  </p>
+<p>Le funzioni ci permettono di non ripetere codice, ma di renderlo invece modulare, permettendoci di creare sottoprogrammi che svolgono un compito specifico, garantendoci una miglior mantenibilità.<br />
+Grazie a questo aspetto, le funzioni ci permettono inoltre di avere una maggior confidenza nel codice, data dall'aumento della correttezza del codice: una volta che una funzione è garantita essere corretta, si può presumere che quella parte di codice non dovrà essere esaminata ulteriormente.  </p>
+<p>Il tipo della funzione è il tipo del valore che la funzione ritornerà (il suo codominio).<br />
+Una funzione ritorna spesso un valore (spesso proprio mediante la keyword <code>return</code>, seguita da un'espressione, che sarà dello stesso tipo della funzione)  </p>
+<p>Un'altra cosa univoca delle funzioni è la signatura: la signatura può essere vista come una tripla, che include l'identificatore della funzione (il suo nome), i suoi parametri formali (i valori che prende in ingresso) ed infine il tipo che ritornerà.  </p>
+<p>Da un punto di vista sintattico, le funzioni vengono definite attraverso una dichiarazione.<br />
+Possiamo aspettarci quindi che in un linguaggio (come <a href="[../l]">L</a>) la funzione si trovi insieme alle dichiarazioni:<br />
+<code>D::= nil | const id[:T]=E | var id[:T]=E | D;D | function Id(form) -&gt; T {C}</code><br />
+(In questo caso <code>Id</code> è l'identificatore della funzione, il suo nome, <code>form</code> è l'elenco dei formali, <code>T</code> è il tipo e <code>C</code> il corpo della funzione)</p>
+<p>Quando invece sono utilizzate, si dice che vengono invocate, e la loro invocazione rientra nei tipi delle espressioni.  </p>
+<p>Una funzione avrà quindi la seguente forma:<br />
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">nome</span><span class="p">(</span><span class="nx">formali</span><span class="p">...)</span> <span class="nx">tipo</span> 
+</code></pre></div></p>
+<p>e sarà invocata con una forma simile a questa:<br />
+<div class="highlight"><pre><span></span><code><span class="nx">nome</span><span class="p">(</span><span class="nx">attuali</span><span class="p">...)</span>
+</code></pre></div>
+considerando gli attuali come una lista di espressioni.  </p>
+<p>Sotto il punto di vista dell'invocazione, si può pensare che una chiamata ad una funzione sospenda l'esecuzione del chiamate (da un punto di vista formale), in attesa che la funzione termini e restituisca il valore rispetto ai parametri attuali forniti (gli argomenti con cui la funzione è stata chiamata).<br />
+Formali ed attuali dovranno essere due liste di variabili con lo stesso numero di elementi e di tipi concordi.  </p>
+<p>I controlli che verranno effettuati durante la compilazione saranno i seguenti:  </p>
+<ul>
+<li>Assicurarsi che il numero di argomenti attuali (quelli forniti alla funzione) sia uguale al numero di argomenti attuali</li>
+<li>Assicurarsi che i nomi dei parametri formali siano distinti (altrimenti due parametri potrebbero avere lo stesso nome, generando confusione ed ambiguità)</li>
+<li>Assicurarsi che i tipi dei parametri attuali e formali per la stessa posizione siano uguali (non ha senso dire che il valore "ciao" è un numero)</li>
+<li>Assicurarsi che non ci siano variabili libere nel corpo della funzione </li>
+<li>Assicurarsi che la funzione abbia un <code>return</code> ed il tipo ritornato sia lo stesso dichiarato nella signatura </li>
+</ul>
+<p>Dato che una funzione è una dichiarazione, l'ambiente viene esteso in seguito ad una dichiarazione. Ciò significa che è possibile usare una funzione nel suo stesso corpo. Questa tecnica è detta ricorsione e ci permette di lavorare con strutture iterative come i grafi con estrema facilità, rispetto ad un approccio più tradizionale (iterativo), che è più difficile in fase di ragionamento e quindi più soggetto ad errori (e più lungo da scrivere ed ideare).<br />
+Ovviamente questa tecnica non è efficiente da un punto di vista della memoria, tuttavia è un tradeoff che spesso vale la pena adottare.  </p>
+<h4 id="segnatura-di-una-funzione">Segnatura di una funzione<a class="headerlink" href="#segnatura-di-una-funzione" title="Permanent link">&para;</a></h4>
+<p>nome, parametri formali, e tipo di ritorno<br />
+La dichiarazione richiede anche un corpo, in cui si ritorna anche il tipo  </p>
+<h4 id="il-record-di-attivazione">Il record di attivazione<a class="headerlink" href="#il-record-di-attivazione" title="Permanent link">&para;</a></h4>
+<p>Ogni volta che si invoca una funzione, viene generato un corrispettivo record di attivazione (o stack frame)<br />
+Un record di attivazione è una struttura dati che ci permette di tenere traccia dei dati necessari all'esecuzione delle funzioni.  </p>
+<p>Un record di attivazione è composto da 7 valori fondamentali:  </p>
+<ul>
+<li><strong>Puntatore alla catena dinamica</strong><br />
+    La catena dinamica tiene traccia del record di attivazione della funzione chiamante. Quindi quando una funzione ne chiama una seconda, la seconda avrà come puntatore nella catena dinamica il record di attivazione del chiamante</li>
+<li><strong>Puntatore alla catena statica</strong><br />
+    La catena statica punta al record di attivazione della funzione chiamante.<br />
+    Permette quindi di effettuare la risoluzione degli identificatori non presenti nel blocco corrente (con scoping statico)<br />
+    La catena statica è visibile come un array di "chiamate" (e ci rientrano i parametri formali con cui sono state invocate le funzioni precedenti)<br />
+    Permette di vedere tutto ciò che è accessibile dall'ambiente in uno specifico momento<br />
+    Permette inoltre di effettuare information hiding: (dato come esempio un programma in cui la funzione A chiama la funzione B, che chiama a sua volta la funzione C) se un parametro formale della funzione B ha lo stesso nome di un parametro della funzione A, il parametro della funzione B prende precedenza e quindi non è possibile accedere al parametro della funzione A. Vince l'ultima cosa dichiarata.  </li>
+<li><strong>Indirizzo di ritorno</strong><br />
+    L'istruzione da eseguire al ritorno della funzione corrente</li>
+<li><strong>Indirizzo del risultato</strong><br />
+    L'indirizzo della locazione dove salvare il risultato che la funzione restituirà</li>
+<li><strong>Parametri (attuali e formali)</strong><br />
+    Associazione dei parametri formali ed attuali</li>
+<li><strong>Variabili locali</strong><br />
+    L'ambiente dove risiederanno le variabili locali della funzione</li>
+<li><strong>Risultati temporanei</strong><br />
+    Uno spazio di memoria dove risiederanno le variabili temporanee generate dal compilatore</li>
+</ul>
+<p>Catena dinamica (call chain)<br />
+    La catena dinamica è una sequenza di chiamate e serve per garantire l'ordine di esecuzione.<br />
+    È una struttura dati di tipo LIFO (Last In, Fist Out), una pila</p>
+<p>catena statica (da rivedere)<br />
+    La catena statica si occupa di implementare lo scoping statico, ovvero individuare gli identificatori necessari in base alla visibilità<br />
+    È quindi un ambiente derivato dalla dichiarazione di variabili e costanti<br />
+    Garantisce che i nomi siano referenziati rispetto alla visibilità di variabili e funzione</p>
 
               
             </article>

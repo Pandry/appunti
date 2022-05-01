@@ -876,7 +876,7 @@
 
   <h1>Intro</h1>
 
-<p>Quando scriviamo gli algoritmi in pseudocodice, lo facciamo per garantire una maggiore espressività e conicisione. Se necessario possiamo anche scrivere in linguaggio naturale.<br />
+<p>Quando scriviamo gli algoritmi in pseudocodice, lo facciamo per garantire una maggiore espressività e concisione. Se necessario possiamo anche scrivere in linguaggio naturale.<br />
 Di conseguenza, uno pseudocodice non si preoccupa di indirizzare problemi tipici dell'ingegnerizzazione del codice, ma solo di esprimere un algoritmo e quindi garantirne o renderne esplicita la correttezza.<br />
 Dato che la performance della risoluzione di un certo problema dipende in equal modo sia dall'hardware di un calcolatore che dall'algoritmo, dovremmo considerare gli algoritmi come tecnologia. Cosa che già facciamo per l'hardware.  </p>
 <h3 id="loop-invariants">Loop invariants<a class="headerlink" href="#loop-invariants" title="Permanent link">&para;</a></h3>
@@ -889,9 +889,9 @@ Queste proprietà sono dette invarianti di ciclo (loop invariants)e ci richiedon
 </ul>
 <p>È possibile tracciare un parallelismo con l'<a href="../../../FdI/induzione/">induzione matematica</a>, dove per provare una certa proprietà, possiamo provare un caso base ed un passo induttivo.  </p>
 <h2 id="analisi-di-un-algoritmo">Analisi di un algoritmo<a class="headerlink" href="#analisi-di-un-algoritmo" title="Permanent link">&para;</a></h2>
-<p>Analizzare un algoritmo è diventato sinonimo di predirre le risorse che l'algoritmo richiederà.<br />
+<p>Analizzare un algoritmo è diventato sinonimo di predire le risorse che l'algoritmo richiederà.<br />
 Alcune tra queste risorse possono essere memoria, larghezza di banda o risorse fisiche, ma la più calcolata e di maggiore interesse è il tempo computazionale.<br />
-Grazie ad un'analsi, siamo in grado di confrontare delle soluzioni tra di loro, scegliendo la più efficiente tra le due.  </p>
+Grazie ad un'analisi, siamo in grado di confrontare delle soluzioni tra di loro, scegliendo la più efficiente tra le due.  </p>
 <h3 id="modello-di-implementazione">Modello di implementazione<a class="headerlink" href="#modello-di-implementazione" title="Permanent link">&para;</a></h3>
 <p>Prima di analizzare un algoritmo, dobbiamo avere un modello della tecnologia che andremo ad usare, includendo le tecnologie a disposizione ed il costo per l'accesso.<br />
 Durante l'uso del libro, si farà uso del modello RAM (Random-Access Machine), dove ogni istruzione è eseguita ona dopo l'altra senza operazioni concorrenti.<br />
@@ -906,9 +906,9 @@ La nozione di "grandezza" dell'input dipende dal tipo di problema preso in consi
 <p>Un'altra assunzione importante è che ogni istruzione in ogni riga (<span class="arithmatex">\(n\)</span>) di un programma impiega un tempo costante (<span class="arithmatex">\(c_n\)</span>) per essere eseguita.<br />
 Il tempo di esecuzione di un algoritmo è quindi la somma dei tempi di esecuzioni di ogni istruzione eseguita.  </p>
 <h3 id="analisi-del-caso-medio-e-peggiore">Analisi del caso medio e peggiore<a class="headerlink" href="#analisi-del-caso-medio-e-peggiore" title="Permanent link">&para;</a></h3>
-<p>Durante l'analisi di un algoritmo, ci si tende a concentrare sull'analsi del caso peggiore, che fornisce il <em>limite superiore</em> (il massimo tempo che l'algoritmo può impiegare) per ogni input. Ci viene quindi garantito che l'algoritmo non impiegherà mai, più tempo del limite superiore, senza doverci far compiere stime.<br />
+<p>Durante l'analisi di un algoritmo, ci si tende a concentrare sull'analisi del caso peggiore, che fornisce il <em>limite superiore</em> (il massimo tempo che l'algoritmo può impiegare) per ogni input. Ci viene quindi garantito che l'algoritmo non impiegherà mai, più tempo del limite superiore, senza doverci far compiere stime.<br />
 Per alcuni algoritmi il caso peggiore si verifica quasi sempre (ad esempio nel caso di una ricerca).<br />
-Il tempo medio invece è spesso pessimo quanto il caso peggiore; Inoltre definire il caso medio è cimplicato in quanto ricihede tecniche di analisi probabilistica. Potrebbe inoltre non sempre essere ovvio cosa costituisce un caso medio per un dato problema. Potrebbe essere possibile fare delle assunzioni, come che tutte le possibili grandezze siano equamente probabili, ma spesso questa assunzione è violata.  </p>
+Il tempo medio invece è spesso pessimo quanto il caso peggiore; Inoltre definire il caso medio è complicato in quanto richiede tecniche di analisi probabilistica. Potrebbe inoltre non sempre essere ovvio cosa costituisce un caso medio per un dato problema. Potrebbe essere possibile fare delle assunzioni, come che tutte le possibili grandezze siano equamente probabili, ma spesso questa assunzione è violata.  </p>
 <h3 id="ordine-di-grandezza">Ordine di grandezza<a class="headerlink" href="#ordine-di-grandezza" title="Permanent link">&para;</a></h3>
 <p>Quando si analizza un algoritmo, si tende a considerare ogni istruzione dello stesso tipo come costante, ma spesso questo approccio ci fornisce più dettagli di quanti veramente richiesti. Un'astrazione di livello ancora più alto può essere quella basata sul <em>tasso di crescita</em> o <em>ordine di grandezza</em>: 
 Questo ci permette di considerare solo il termine di grado maggiore in un'equazione (ad esempio solo il termine <span class="arithmatex">\(an^2\)</span> nell'equazione <span class="arithmatex">\(an^2+bn+c\)</span>). Questa considerazione viene dal fatto che per valori molto grandi, i valori di grado inferiore sono spesso insignificanti.<br />
@@ -916,41 +916,41 @@ Diciamo quindi che un algoritmo ha un caso peggiore di <span class="arithmatex">
 <p>Consideriamo quindi un algoritmo più efficiente di un altro quando questo ha un ordine di grandezza del caso peggiore inferiore.</p>
 <h2 id="design-di-un-algoritmo">Design di un algoritmo<a class="headerlink" href="#design-di-un-algoritmo" title="Permanent link">&para;</a></h2>
 <h3 id="dividi-et-impera">Dividi et impera<a class="headerlink" href="#dividi-et-impera" title="Permanent link">&para;</a></h3>
-<p>Molti algoritmi utili sono recurisvi in natura: per risolvere un problema, chiamano sé stessi più volte in maniera recursiva, in modo da avere a che fare con problemi strettamente correlati.<br />
+<p>Molti algoritmi utili sono ricorsivi in natura: per risolvere un problema, chiamano sé stessi più volte in maniera ricorsiva, in modo da avere a che fare con problemi strettamente correlati.<br />
 Tipicamente questi algoritmi seguono un approccio dividi et impera (o divide-and-conquer):<br />
-Dividono un problema in sottoproblemi simili al problema originale ma più piccoli in grandezza</p>
+Dividono un problema in sotto problemi simili al problema originale ma più piccoli in grandezza</p>
 <p><img alt="" src="../assets/dividi-et-impera-cells.png" /></p>
 <p>L'approccio dividi et impera è composto da 3 fasi:  </p>
 <ul>
 <li>Divide: Divide il problema in un numero di sottoproblemi più piccoli</li>
-<li>Conquer: '<em>Conquista</em>' il sottoproblema, risolvendolo risorsivamente. Quando la grandezza del sottoproblema diventa abbastanza piccola, risolve banalmente il sottoproblema</li>
+<li>Conquer: '<em>Conquista</em>' il sottoproblema, risolvendolo ricorsivamente. Quando la grandezza del sottoproblema diventa abbastanza piccola, risolve banalmente il sottoproblema</li>
 <li>Combine: Combina le soluzioni di 2 sottoproblemi in una soluzione per il problema originale.</li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Merging with the merge sort</p>
-<p>L'algoritmo merge sort è un algoritmo recursivo che serve per ordinare dei numeri.<br />
+<p>L'algoritmo merge sort è un algoritmo ricorsivo che serve per ordinare dei numeri.<br />
 L'operazione chiave dell'algoritmo è l'unione (passo combine) di due sequenze ordinate in una unica.<br />
 Nel caso del merge sort, effettuiamo l'unione (il merge) chiamando la procedura <code>Merge(A,p,q,r)</code>, dove A è l'array di elementi che vogliamo ordinare, e <code>p</code>, <code>q</code> ed <code>r</code> sono indici che puntano all'array e tali che <span class="arithmatex">\(p \leq q &lt; r\)</span>.<br />
 Questi sono i tre step che l'algoritmo compie (per un array con numero pari di elementi, per semplicità di spiegazione):</p>
 <ol>
-<li>Dividi: L'array è diviso a metà e la funzione è chiamata recursivamente. Al termine della chiamata si avranno 2 metà dell'array che corrisponderanno a 2 elementi  </li>
+<li>Dividi: L'array è diviso a metà e la funzione è chiamata ricorsivamente. Al termine della chiamata si avranno 2 metà dell'array che corrisponderanno a 2 elementi  </li>
 <li>Conquista: Questo passo ordina i due elementi (quindi si tratta di comparare due numeri e determinare quale sia il più grande) e ritorna la sequenza ordinata</li>
-<li>Combina: In quest'ultimo passo, che parte dalla penultima iterazione, l'algoritmo si trova due array da 2 elementi ogniuno ordinato e deve unirli in un solo array. Per farlo inizia comparando i due elementi dei due array, con un indice per array. L'elemento più piccolo verrà quindi messo in un nuovo array ed il puntatore corrispettivo avanzerà fino a giungere alla fine dell'array. In questo modo si otterrà quindi un array ordinato composto dagli array più piccoli. Il risultato sarà quindi calcolato iterativamente fino a giungere al primo chiamante della funzione di sort, che si troverà quindi un array ordinato in tempo <span class="arithmatex">\(\Theta(n)\)</span>. </li>
+<li>Combina: In quest'ultimo passo, che parte dalla penultima iterazione, l'algoritmo si trova due array da 2 elementi ognuno ordinato e deve unirli in un solo array. Per farlo inizia comparando i due elementi dei due array, con un indice per array. L'elemento più piccolo verrà quindi messo in un nuovo array ed il puntatore corrispettivo avanzerà fino a giungere alla fine dell'array. In questo modo si otterrà quindi un array ordinato composto dagli array più piccoli. Il risultato sarà quindi calcolato iterativamente fino a giungere al primo chiamante della funzione di sort, che si troverà quindi un array ordinato in tempo <span class="arithmatex">\(\Theta(n)\)</span>. </li>
 </ol>
 <p>(Rivedere; Sono andato praticamente solo a memoria)</p>
 </div>
 <h4 id="analisi-di-un-algoritmo-divide-and-conquer">Analisi di un algoritmo divide-and-conquer<a class="headerlink" href="#analisi-di-un-algoritmo-divide-and-conquer" title="Permanent link">&para;</a></h4>
-<p>Quando un algoritmo contiene una chiamata recursiva a sé stesso, possiamo spesso descrivere il suo tempo di eseguzione con un'equazione di ricorrenza.<br />
-Possiamo quindi usare strumenti matematici per risolvere la ricorrenzae fornire dei limiti alle performances dell'algoritmo.<br />
+<p>Quando un algoritmo contiene una chiamata ricorsiva a sé stesso, possiamo spesso descrivere il suo tempo di esecuzione con un'equazione di ricorrenza.<br />
+Possiamo quindi usare strumenti matematici per risolvere la ricorrenza e fornire dei limiti alle performances dell'algoritmo.<br />
 L'analisi di un algoritmo segue i tre step base del divide and conquer:<br />
 Partiamo definendo come <span class="arithmatex">\(T(n)\)</span> il costo del problema in funzione di un input di grandezza n.<br />
-Se la grandezza del problema è sufficientemente piccola (ovvero <span class="arithmatex">\(n &lt; c\)</span> per qualche costante <span class="arithmatex">\(c\)</span>, si pensi all'ultima iterazione della fase di <em>dividi</em>), la soluzione richede un tempo costante, che scriviamo come <span class="arithmatex">\(\Theta(1)\)</span>.<br />
-Se invece la soluzione del problema richiede <span class="arithmatex">\(a\)</span> sottoproblemi, ogniuno di grandezza <span class="arithmatex">\(\frac{1}{b}\)</span> rispetto al problema originale, allora il sottoproblema richiederà un tempo di <span class="arithmatex">\(T(\frac{1}{b})\)</span> per essere risolto. Di conseguenza il tempo per risolvere <span class="arithmatex">\(a\)</span> sottoproblemi sarà <span class="arithmatex">\(a\cdot T(\frac{1}{b})\)</span>.  </p>
+Se la grandezza del problema è sufficientemente piccola (ovvero <span class="arithmatex">\(n &lt; c\)</span> per qualche costante <span class="arithmatex">\(c\)</span>, si pensi all'ultima iterazione della fase di <em>dividi</em>), la soluzione richiede un tempo costante, che scriviamo come <span class="arithmatex">\(\Theta(1)\)</span>.<br />
+Se invece la soluzione del problema richiede <span class="arithmatex">\(a\)</span> sottoproblemi, ognuno di grandezza <span class="arithmatex">\(\frac{1}{b}\)</span> rispetto al problema originale, allora il sottoproblema richiederà un tempo di <span class="arithmatex">\(T(\frac{1}{b})\)</span> per essere risolto. Di conseguenza il tempo per risolvere <span class="arithmatex">\(a\)</span> sottoproblemi sarà <span class="arithmatex">\(a\cdot T(\frac{1}{b})\)</span>.  </p>
 <h4 id="big-o">Big O<a class="headerlink" href="#big-o" title="Permanent link">&para;</a></h4>
 <h4 id="floor-ceiling-modul">Floor ceiling &amp; modul<a class="headerlink" href="#floor-ceiling-modul" title="Permanent link">&para;</a></h4>
 <p><span class="arithmatex">\(a mod n = a - n \lower{a/n}\)</span>
 <span class="arithmatex">\(a \le a mod n &lt; n\)</span><br />
-<span class="arithmatex">\((a mod n) = (b mod n)\)</span>, then <span class="arithmatex">\(a \eqiv b (mod n)\)</span> (a is equibalente to be modulo n). <span class="arithmatex">\(a \nequiv b\)</span> if that's not the case<br />
+<span class="arithmatex">\((a mod n) = (b mod n)\)</span>, then <span class="arithmatex">\(a \eqiv b (mod n)\)</span> (a is equivalente to be modulo n). <span class="arithmatex">\(a \nequiv b\)</span> if that's not the case<br />
 <span class="arithmatex">\(ln^* n\)</span>  </p>
 
               
