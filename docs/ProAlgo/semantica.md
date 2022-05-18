@@ -194,10 +194,6 @@ $$
 $\{ \anglebr{E, \rho, \theta} \cup V | V \in Val_E, \underbrace{\to_e}_{\text{regola di inferenza}}, \underbrace{Val_E}_{\text{valore finale}}, \underbrace{(Expr)}_{\text{espressione da valutare}} \}$
 
 
-### Regole di inferenza (da trascrivere)
+### Regole di inferenza
 
 Le regole di inferenza sono molto simili a alle regole di inferenza di semantica statica, con l'aggiunta della memoria e l'ambiente invece che mappare su tipi, mappa su locazioni di memoria.  
-
-Non trascritte
-
-Pagine 31,...,37,72,73,74 degli appunti

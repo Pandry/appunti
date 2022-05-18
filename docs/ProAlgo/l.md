@@ -543,3 +543,9 @@ $$
 $$
 
 Anche questa formula riprende dalla precedente e ci permette di estendere i due ambienti derivati dalle due dichiarazioni in sequenza.  
+
+### Semantica dinamica delle funzioni
+
+Non trascritte
+
+Pagine 31,...,37,72,73,74 degli appunti
