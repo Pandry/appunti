@@ -1,0 +1,2055 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+    
+    
+      
+        <title>Strutture di algoritmi - Appunti universitari</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/biggerAdmonitions.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/mathAdmonitions.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="green">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#le-strutture-dati" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Appunti universitari" class="md-header__button md-logo" aria-label="Appunti universitari" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Appunti universitari
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Strutture di algoritmi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../introduzione/" class="md-tabs__link md-tabs__link--active">
+        Programmazione e Algoritmica
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../FdI/insiemi/" class="md-tabs__link">
+        Fondamenti di Informatica
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../LabI/" class="md-tabs__link">
+      Laboratorio I
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../AnalisiI/prerequisiti/" class="md-tabs__link">
+        Analisi I
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../AlgebraLineare/" class="md-tabs__link">
+      Algebra Lineare
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Appunti universitari" class="md-nav__button md-logo" aria-label="Appunti universitari" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Appunti universitari
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Programmazione e Algoritmica
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programmazione e Algoritmica" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Programmazione e Algoritmica
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduzione/" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grammatiche/" class="md-nav__link">
+        Grammatiche e Linguaggi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sintassi/" class="md-nav__link">
+        Sintassi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semantica/" class="md-nav__link">
+        Semantica
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Strutture di algoritmi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Strutture di algoritmi
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    Array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack-pila" class="md-nav__link">
+    Stack (pila)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lista-collegata" class="md-nav__link">
+    Lista collegata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grafi" class="md-nav__link">
+    Grafi
+  </a>
+  
+    <nav class="md-nav" aria-label="Grafi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#algoritmi-di-ricerca" class="md-nav__link">
+    Algoritmi di ricerca
+  </a>
+  
+    <nav class="md-nav" aria-label="Algoritmi di ricerca">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bfs" class="md-nav__link">
+    BFS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfs" class="md-nav__link">
+    DFS
+  </a>
+  
+    <nav class="md-nav" aria-label="DFS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topological-sort-dag-dfs" class="md-nav__link">
+    Topological sort (DAG) DFS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#albero" class="md-nav__link">
+    Albero
+  </a>
+  
+    <nav class="md-nav" aria-label="Albero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#albero-binario" class="md-nav__link">
+    Albero binario
+  </a>
+  
+    <nav class="md-nav" aria-label="Albero binario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inserimento" class="md-nav__link">
+    Inserimento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancellazione" class="md-nav__link">
+    Cancellazione
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-alberi" class="md-nav__link">
+    2-3 alberi
+  </a>
+  
+    <nav class="md-nav" aria-label="2-3 alberi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ricerca" class="md-nav__link">
+    Ricerca
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inserimento_1" class="md-nav__link">
+    Inserimento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminazione" class="md-nav__link">
+    Eliminazione
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heap" class="md-nav__link">
+    Heap
+  </a>
+  
+    <nav class="md-nav" aria-label="Heap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#max-heapify" class="md-nav__link">
+    Max heapify
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-max-heap" class="md-nav__link">
+    Build max-heap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dizionario" class="md-nav__link">
+    Dizionario
+  </a>
+  
+    <nav class="md-nav" aria-label="Dizionario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-fattore-di-carico" class="md-nav__link">
+    Il fattore di carico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-funzione-di-hashing" class="md-nav__link">
+    La funzione di hashing
+  </a>
+  
+    <nav class="md-nav" aria-label="La funzione di hashing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#open-hash" class="md-nav__link">
+    Open hash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closed-hashing" class="md-nav__link">
+    Closed hashing
+  </a>
+  
+    <nav class="md-nav" aria-label="Closed hashing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generazione-sequenza-di-ispezione" class="md-nav__link">
+    Generazione sequenza di ispezione
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dizionari-su-alberi-di-ricerca-abr" class="md-nav__link">
+    Dizionari su alberi di ricerca (ABR)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparazione-delle-applicazioni" class="md-nav__link">
+    Comparazione delle applicazioni
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../valutazione/" class="md-nav__link">
+        Valutazione di un algoritmo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../l/" class="md-nav__link">
+        Linguaggio L
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programmazioneDinamica/" class="md-nav__link">
+        Programmazione dinamica
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pnp/" class="md-nav__link">
+        Problemi computazionali
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Fondamenti di Informatica
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fondamenti di Informatica" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Fondamenti di Informatica
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/insiemi/" class="md-nav__link">
+        Insiemi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/relazioni/" class="md-nav__link">
+        Relazioni
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/induzione/" class="md-nav__link">
+        Induzione Matematica
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/relazioniInsiemi/" class="md-nav__link">
+        Relazioni su insiemi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/grafi/" class="md-nav__link">
+        Grafi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/calcoloCombinatorio/" class="md-nav__link">
+        Calcolo Combinatorio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/induzioneRicorsione/" class="md-nav__link">
+        Induzione Strutturale e Ricorsione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/linguaggi/" class="md-nav__link">
+        Linguaggi Formali
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/logica/" class="md-nav__link">
+        Logica Matematica
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FdI/cheatsheet/" class="md-nav__link">
+        Cheatsheet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LabI/" class="md-nav__link">
+        Laboratorio I
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Analisi I
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Analisi I" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Analisi I
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AnalisiI/prerequisiti/" class="md-nav__link">
+        Funzioni ed introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AnalisiI/calcoloDifferenziale/" class="md-nav__link">
+        Calcolo differenziale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AnalisiI/limiti/" class="md-nav__link">
+        Limiti
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AlgebraLineare/" class="md-nav__link">
+        Algebra Lineare
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    Array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack-pila" class="md-nav__link">
+    Stack (pila)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lista-collegata" class="md-nav__link">
+    Lista collegata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grafi" class="md-nav__link">
+    Grafi
+  </a>
+  
+    <nav class="md-nav" aria-label="Grafi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#algoritmi-di-ricerca" class="md-nav__link">
+    Algoritmi di ricerca
+  </a>
+  
+    <nav class="md-nav" aria-label="Algoritmi di ricerca">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bfs" class="md-nav__link">
+    BFS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfs" class="md-nav__link">
+    DFS
+  </a>
+  
+    <nav class="md-nav" aria-label="DFS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topological-sort-dag-dfs" class="md-nav__link">
+    Topological sort (DAG) DFS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#albero" class="md-nav__link">
+    Albero
+  </a>
+  
+    <nav class="md-nav" aria-label="Albero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#albero-binario" class="md-nav__link">
+    Albero binario
+  </a>
+  
+    <nav class="md-nav" aria-label="Albero binario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inserimento" class="md-nav__link">
+    Inserimento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancellazione" class="md-nav__link">
+    Cancellazione
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-alberi" class="md-nav__link">
+    2-3 alberi
+  </a>
+  
+    <nav class="md-nav" aria-label="2-3 alberi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ricerca" class="md-nav__link">
+    Ricerca
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inserimento_1" class="md-nav__link">
+    Inserimento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminazione" class="md-nav__link">
+    Eliminazione
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heap" class="md-nav__link">
+    Heap
+  </a>
+  
+    <nav class="md-nav" aria-label="Heap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#max-heapify" class="md-nav__link">
+    Max heapify
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-max-heap" class="md-nav__link">
+    Build max-heap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dizionario" class="md-nav__link">
+    Dizionario
+  </a>
+  
+    <nav class="md-nav" aria-label="Dizionario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-fattore-di-carico" class="md-nav__link">
+    Il fattore di carico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-funzione-di-hashing" class="md-nav__link">
+    La funzione di hashing
+  </a>
+  
+    <nav class="md-nav" aria-label="La funzione di hashing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#open-hash" class="md-nav__link">
+    Open hash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closed-hashing" class="md-nav__link">
+    Closed hashing
+  </a>
+  
+    <nav class="md-nav" aria-label="Closed hashing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generazione-sequenza-di-ispezione" class="md-nav__link">
+    Generazione sequenza di ispezione
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dizionari-su-alberi-di-ricerca-abr" class="md-nav__link">
+    Dizionari su alberi di ricerca (ABR)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparazione-delle-applicazioni" class="md-nav__link">
+    Comparazione delle applicazioni
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="le-strutture-dati">Le strutture dati<a class="headerlink" href="#le-strutture-dati" title="Permanent link">&para;</a></h1>
+<p>Le strutture dati sono costrutti usati per organizzare dati o valori da manipolare.<br />
+L'organizzazione dei dati è divisa in due: </p>
+<ul>
+<li>Struttura fisica<br />
+    La struttura fisica dei dati si occupa di rappresentare il modo in cui i dati sono fisicamente immagazzinati all'interno della memoria centrale del computer.<br />
+    Un esempio può essere un array, che rappresenta </li>
+<li>Organizzazione logica<br />
+    Come i dati sono organizzati in maniera logica, ad esempio un grafo.  </li>
+</ul>
+<p>Una struttura dati (ADS, Abstract Data Type) permette di legare la struttura fisica di un computer con un'organizzazione logica  </p>
+<p>Le operazioni che un'ADS deve essere in grado di fare sono:  </p>
+<ul>
+<li>Lettura</li>
+<li>Scrittura/modifica</li>
+<li>Eliminazione/aggiunta</li>
+</ul>
+<p>Alcune strutture di dati possono essere:  </p>
+<ul>
+<li>Array</li>
+<li>Stack (pila)</li>
+<li>Coda</li>
+<li>Lista collegata</li>
+<li>Alberi e grafi</li>
+</ul>
+<h2 id="array">Array<a class="headerlink" href="#array" title="Permanent link">&para;</a></h2>
+<p>Un array ha un'organizzazione logica che corrisponde a quella fisica: i valori sono in posizioni logicamente contigue e (spesso) in indirizzi contigui di memoria (a seconda del linguaggio e della sua implementazione <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>).  </p>
+<p>Permette quindi un accesso diretto ai valori, che permette di avere operazioni di accesso e modifica facili e veloci.<br />
+Rende tuttavia complicate le operazioni di cancellazione ed inserimento, che dipendono poi dall'implementazioni</p>
+<p>Si può quindi riassumere come una collezione ordinata in cui esiste un ordine posizionale </p>
+<h2 id="stack-pila">Stack (pila)<a class="headerlink" href="#stack-pila" title="Permanent link">&para;</a></h2>
+<p>Logicamente i valori sono posizionati in celle logicamente contigue, in una struttura LIFO (Last In First Out), permettendo 3 metodi:  </p>
+<ul>
+<li>Push (aggiunta di un elemento nella pila)</li>
+<li>Pop (rimozione di un elemento dalla pila ed ispezione del suo valore)</li>
+<li>Top (ispezione del prossimo valore senza rimuoverlo dalla struttura)</li>
+</ul>
+<h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
+<p>Anche nelle code gli elementi sono logicamente contigui, mentre la struttura in questo caso è FIFO (First In First Out).  </p>
+<p>Permette operazioni di enqueue (messa in coda) e dequeue (rimozione dalla coda)</p>
+<h2 id="lista-collegata">Lista collegata<a class="headerlink" href="#lista-collegata" title="Permanent link">&para;</a></h2>
+<p>La lista è una struttura in cui gli elementi non sono contigui, quindi è richiesto un modo per accedere al successivo (ed in caso al precedente).  </p>
+<p>Lettura, inserimento, modifica e cancellazioni sono quasi banali e possono essere resi circolari (struttura ad anello. )</p>
+<h2 id="grafi">Grafi<a class="headerlink" href="#grafi" title="Permanent link">&para;</a></h2>
+<!-- L55 -->
+<p>Un grafo è una struttura dati visibile come una coppia di nodi ed archi.  </p>
+<h3 id="algoritmi-di-ricerca">Algoritmi di ricerca<a class="headerlink" href="#algoritmi-di-ricerca" title="Permanent link">&para;</a></h3>
+<p>In un grafo, per effettuare una ricerca, esistono numerose soluzioni.<br />
+Lo scopo può voler essere quello di mappare il grafo o cercare un nodo con un valore specifico.  </p>
+<h4 id="bfs">BFS<a class="headerlink" href="#bfs" title="Permanent link">&para;</a></h4>
+<p>L'algoritmo di Breadth First Search si occupa di ricercare prima i figli</p>
+<h4 id="dfs">DFS<a class="headerlink" href="#dfs" title="Permanent link">&para;</a></h4>
+<p>La DFS (Depth First Search) esamina ogni figlio in profondità ed in maniera ricorsiva, per poi procedere con gli altri.  </p>
+<p>Nel farlo, permette di costruire un "albero" (ovvero un DAG) ed eventuali archi che creano più path per giungere ad un nodo.<br />
+Questi archi sono:  </p>
+<ul>
+<li>Tree<br />
+    Un arco di tipo tree è visto come un "normale" nodo dell'albero.</li>
+<li>Back
+    Un Back edge è un arco che permette di arrivare ad un antenato del nodo, rispetto agli archi di tipo tree</li>
+<li>Forward
+    Un Forward edge è un arco che permette di arrivare ad un discendente attraversando meno archi rispetto a quanto si farebbe utilizzando un tree edge</li>
+<li>Cross
+    Un Cross edge è un arco che permette di attraversare l'albero per arrivare ad un fratello o ai suoi antenati/discendenti</li>
+</ul>
+<h5 id="topological-sort-dag-dfs">Topological sort (DAG) DFS<a class="headerlink" href="#topological-sort-dag-dfs" title="Permanent link">&para;</a></h5>
+<p>Il topological sort è un algoritmo basato su DFS che permette di stabilire un ordine delle dipendenze (ed è infatti usato anche da software come package managers).<br />
+Permette di fare un'ordinamento secondo la tipologia, seguendo l'ordine di scoperta dei nodi fatto dalla DFS</p>
+<!-- minchia se è spiegato di merda -->
+
+<h3 id="albero">Albero<a class="headerlink" href="#albero" title="Permanent link">&para;</a></h3>
+<!-- L27-->
+
+<p>Un albero è una struttura dati che si può immaginare come un albero al contrario: in alto abbiamo la radice e sotto troviamo i figli<br />
+<img alt="" src="../assets/Albero.png" />  </p>
+<p>Ogni nodo (o pallino) può far parte o meno di un albero</p>
+<p>foresta
+Relazione gerarchica (padre, figlio, fratello, progenitore)
+foglie
+proprietà strutturali</p>
+<h4 id="albero-binario">Albero binario<a class="headerlink" href="#albero-binario" title="Permanent link">&para;</a></h4>
+<!--L44-->
+<p>Un albero binario è una struttura definita su un insieme di nodi
+Può non contenere alcun nodo (albero vuoto), può contenere un solo nodo detto radice, e può contenere un sotto albero sinistro o destro della radice.<br />
+<img alt="" src="../assets/AlberoBinario.png" />  </p>
+<p>In memoria è rappresentato con nodo padre, il payload (quindi ad esempio chiave e valore), e puntatori al sotto albero sinistro e destro.  </p>
+<p><img alt="" src="../assets/AlberoBinarioInMemoria.png" />  </p>
+<p>Può essere visitato in 3 diversi modi:</p>
+<ul>
+<li>Visita anticipata<br />
+    Prima viene visitato il nodo, e poi i suoi sotto alberi</li>
+<li>Visita simmetrica<br />
+    Prima viene visitato il figlio sinistro, a seguire il nodo, ed infine il figlio desto</li>
+<li>Visita posticipata<br />
+    Prima viene visitato il figlio sinistro, poi il figlio destro e solo infine il nodo</li>
+</ul>
+<p>Per quanto riguarda le proprietà strutturali, possiamo facilmente individuare questi:  </p>
+<ul>
+<li>Al più <span class="arithmatex">\(2^l\)</span> nodi al livello l</li>
+<li>Profondità la più di <span class="arithmatex">\(2^{d+1}-1\)</span> nodi</li>
+<li>Un albero con n nodi ha profondità <em>almeno</em> <span class="arithmatex">\(\log_2(n+1)-1\)</span></li>
+</ul>
+<p>Ci sono diversi tipi di forme che possono assumere:  </p>
+<!-- L45 -->
+
+<ul>
+<li>Completo<br />
+    Tutte le foglie sono allo stesso livello e tutti i nodi interni hanno grado 2</li>
+<li>Completamente bilanciato:<br />
+    È un albero completo con tutte le foglie alla stessa profondità</li>
+<li>Bilanciato<br />
+    È un albero di dimensione n ed altezza h, se <span class="arithmatex">\(h=O(log(n))\)</span></li>
+<li>Completo a sinistra/Quasi completo<br />
+    È un albero completo tranne per l'ultimo, dove le foglie vanno da sinistra a destra.<br />
+    La prima non-foglia in un array si trova a <span class="arithmatex">\(\lower {\frac n 2}\)</span></li>
+<li>1-bilanciato (bilanciato in altezza):<br />
+    L'altezza dei sotto-alberi destro e sinistro differiscono al più di un'unità</li>
+</ul>
+<p>Il costo di una ricerca è O(h) (in quanto per farlo tracciamo un percorso dalla radice alla nodo scendendo esclusivamente a sinistra o destra).<br />
+Attenzione sul fatto che non essendoci un vincolo che mantiene l'albero bilanciato, h può diventare lineare.  </p>
+<p><span class="arithmatex">\(\forall \text{nodo x nell'albero T}\)</span><br />
+<span class="arithmatex">\(\forall \text{nodo y nel sottoalbero sinistro}\)</span><br />
+<span class="arithmatex">\(y.key &lt; x.key\)</span><br />
+<span class="arithmatex">\(\forall \text{nodo z nel sottoalbero destro}\)</span><br />
+<span class="arithmatex">\(z.key &gt; x.key\)</span>  </p>
+<p>L'operazione di ricerca <span class="arithmatex">\(T(n) = O(h)\)</span>, dove <span class="arithmatex">\(h=O(log(n))\)</span> al caso medio/ottimo e <span class="arithmatex">\(h=(O(n))\)</span> al caso pessimo.  </p>
+<p>Anche le operazioni per trovare il valore minimo e massimo hanno tempo O(h):  </p>
+<ul>
+<li>Minimo: Si ricerca il nodo più profondo a sinistra senza figlio sinistro</li>
+<li>Massimo: Si ricerca il nodo più profondo a destra senza figlio destro</li>
+</ul>
+<p>L'operazione successore (trovare il nodo y con la più piccola chiave maggiore di x) invece è un po' più complicato:  </p>
+<ul>
+<li>Se il nodo ha un sotto albero destro, si trova il minimo tra i nipoti destri</li>
+<li>Altrimenti, si trova l'antenato più vicino ad x, ovvero che contiene x nel suo sottoalbero sinistro</li>
+</ul>
+<p>Anche questo ha come complessità <span class="arithmatex">\(T(n)=O(h)\)</span>  </p>
+<p>Notare che non ci serve comparare le chiavi, in quanto facciamo uso della proprietà strutturale  </p>
+<h5 id="inserimento">Inserimento<a class="headerlink" href="#inserimento" title="Permanent link">&para;</a></h5>
+<p>I nuovi nodi sono aggiunti come foglie. La complessità è quindi <span class="arithmatex">\(T(n)=O(h)\)</span>  </p>
+<h5 id="cancellazione">Cancellazione<a class="headerlink" href="#cancellazione" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Se il nodo è una foglia, è sufficiente eliminare la foglia</li>
+<li>Se il nodo è interno ed ha un figlio, si collegano padre e figlio del nodo</li>
+<li>Se il nodo ha due figli, si sostituisce il successore (la foglia dx) con il nodo, e si elimina il nodo</li>
+</ul>
+<h4 id="2-3-alberi">2-3 alberi<a class="headerlink" href="#2-3-alberi" title="Permanent link">&para;</a></h4>
+<!-- L46 -->
+
+<p>Un albero binario può essere complicato da mantenere bilanciato, e si può formare facilmente una catena, che fa deteriorare le prestazioni.  </p>
+<p>Le proprietà strutturali di un 2-3 albero puntano a mantenere un albero bilanciato:  </p>
+<ul>
+<li>Ogni nodo ha almeno due figli e massimo tre</li>
+<li>Tutti i cammini radice-foglia hanno la stessa lunghezza (quindi <span class="arithmatex">\(\log_2(n) \le n \le log_3(n)\)</span>)</li>
+<li>I dati sono tutti quanti memorizzati nelle foglie (in ordine crescente da sinistra verso destra)</li>
+<li>I noti intermedi contengono il massimo valore raggiungibile andando a sinistra (ed al centro nel caso il nodo abbia tre figli)</li>
+</ul>
+<p>Si usano i 2-3 alberi in quanto hanno prestazioni superiori agli ABR, che risultano essere lineari su h</p>
+<h5 id="ricerca">Ricerca<a class="headerlink" href="#ricerca" title="Permanent link">&para;</a></h5>
+<p>La ricerca ha un tempo di <span class="arithmatex">\(\Theta(log(n))\)</span>, in quanto, grazie alle proprietà strutturali, tutti i percorsi radice-foglia hanno uguale lunghezza.  </p>
+<h5 id="inserimento_1">Inserimento<a class="headerlink" href="#inserimento_1" title="Permanent link">&para;</a></h5>
+<p>L'inserimento di un nuovo valore si basa su alcuni step:  </p>
+<ol>
+<li>Provo a cercare il valore nell'albero, per trovare la posizione più adatta</li>
+<li></li>
+<li>Se il nodo andrebbe in un nodo con due figli, si crea un nuovo figlio e si inserisce il valore del secondo figlio nel padre.</li>
+<li>Se il nodo ha tre figli, si effettua l'operazione di <strong>split</strong>: Viene creato un nuovo nodo con i primi due figli e si aggiunge il valore al nodo appena trovato.<br />
+  Se il genitore ha 4 figli si effettua una chiamata ricorsiva all'operazione di split</li>
+</ol>
+<p>La complessità è <span class="arithmatex">\(O(log(n))\)</span>  </p>
+<h5 id="eliminazione">Eliminazione<a class="headerlink" href="#eliminazione" title="Permanent link">&para;</a></h5>
+<p>Si riceraca il valore da eliminare nell'albero. Una volta trovato, se rimane un solo figlio, si deve ricorrere all'operazione di <strong>merge</strong> (che è l'opposto dell'operazione di split), che consiste nell'unire due fratelli</p>
+<h4 id="heap">Heap<a class="headerlink" href="#heap" title="Permanent link">&para;</a></h4>
+<!-- Lxx -->
+
+<p>Albero binario quasi completo e in cui ogni nodo interno ha un valore maggiore uguale o minore uguale rispetto ai suoi due figli (in caso di heap di massimo o di minimo).<br />
+Le chiavi di ogni nodo devono chiaramente essere confrontabili.  </p>
+<p>L'operazione di heapsort è un'operazione ricorsiva che permette di ordinare in un heap un array non ordinato, partendo dall'assunzione che i sotto-alberi siano heap.</p>
+<p>Operazioni (ogni operazione aspira ad essere <span class="arithmatex">\(log(n)\)</span>):  </p>
+<ul>
+<li>Deletion
+    di una foglia: Si cancella la foglia<br />
+    di un nodo interno: si fa il replace dell'ultima foglia con il nodo, si elimina il nodo e si fa un reheap</li>
+<li>Insertion
+    si aggiunge il valore come foglia e si sostituisce il padre con la foglia finché l'albero non è bilanciato (swap-reheapification)</li>
+<li>Edit
+    Si modifica il valore della foglia e si controlla che l'albero sia bilanciato<br />
+    Deletion ed insertion insieme</li>
+</ul>
+<p>Implementabile come array:<br />
+Le celle sono ordinate a partire dal primo livello, da sinistra verso destra<br />
+Il genitore di un nodo i si trova attraverso la formula <span class="arithmatex">\(\lower {\frac {i-1}{2}}\)</span><br />
+I figli di un nodo i sono i nodi <span class="arithmatex">\(2i+1\)</span> e <span class="arithmatex">\(2i+2\)</span>  </p>
+<p>Ecco un esempio di operazioni che è possibile fare su un heap di massimo ed il loro costo</p>
+<table>
+<thead>
+<tr>
+<th align="center">Operazione</th>
+<th align="center">Costo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Max heapify</td>
+<td align="center">O(log n)</td>
+</tr>
+<tr>
+<td align="center">Build max heap</td>
+<td align="center">O(n)</td>
+</tr>
+<tr>
+<td align="center">Heapsort</td>
+<td align="center">O(n log n)</td>
+</tr>
+<tr>
+<td align="center">Max-heap insert</td>
+<td align="center">O(log n)</td>
+</tr>
+<tr>
+<td align="center">Heap extract max</td>
+<td align="center">O(log n)</td>
+</tr>
+<tr>
+<td align="center">Heap increase key</td>
+<td align="center">O(log n)</td>
+</tr>
+<tr>
+<td align="center">Heap maximum</td>
+<td align="center">O(1)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="max-heapify">Max heapify<a class="headerlink" href="#max-heapify" title="Permanent link">&para;</a></h5>
+<p>La max-heapify è un'operazione di ordinamento ricorsiva, che partendo dalle foglie risale l'albero ordinando l'array in un max heap (heap di massimo)  </p>
+<p>Il costo è <span class="arithmatex">\(O(h)\)</span> (dove h è l'altezza)  </p>
+<!-- L28 -->
+<h5 id="build-max-heap">Build max-heap<a class="headerlink" href="#build-max-heap" title="Permanent link">&para;</a></h5>
+<p>L'algoritmo chiamato build max-heap ci permette di creare un heap a partire da da un array non ordinato<br />
+Il costo dell'algoritmo è pari al costo dell'heapify moltiplicato per il numero di nodi nel livello:<br />
+<img alt="" src="../assets/buildMaxHeap.png" />  </p>
+<p>Partendo da un array, tolgo la radice posizionandola come primo elemento nell'array, sposto l'ultima foglia alla radice e bilancio l'albero, quindi ripeto l'operazione.<br />
+Al termine, avrò un array che rappresenta un heap.<br />
+L'algoritmo ha un costo <span class="arithmatex">\(O(n)\)</span>  </p>
+<p><img alt="Esempio di max heap" src="../assets/buildMaxHeapExample.png" /></p>
+<h2 id="dizionario">Dizionario<a class="headerlink" href="#dizionario" title="Permanent link">&para;</a></h2>
+<!-- L39 -->
+<p>Un dizionario è una struttura che permette di memorizzare un insieme dinamico nel tempo.<br />
+Si basa sul concetto di "mapping" chiave-valore (visibile anche come una funzione che dato una certa chiave, che identifica in modo univoco e permette di accedere ad un certo elemento), in maniera simile ad un vocabolario.  </p>
+<div class="admonition definition">
+<p class="admonition-title">L'universo delle chiavi è chiamato u</p>
+</div>
+<p>Le operazioni che permette di effettuare normalmente sono ricerca, inserimento e cancellazione:</p>
+<div class="arithmatex">\[
+\displaylines{
+Ricerca (\underbrace{S}_{\text{dizionario}}, \underbrace{K}_{\text{chiave}}) = \begin{cases}
+x &amp; \text{t.c. } x.key=k \\
+NIL &amp; \text{se S non contiene elementi di chiave k}
+\end{cases} \\
+Insert(S,x) \qquad S \from S \cup\{x\} \\
+Delete(S,x) \qquad S \from S \backslash \{x\}
+}
+\]</div>
+<p>(Nel caso di aggiunta ed eliminazione, x è il riferimento da rimuovere)  </p>
+<p>Grande punto di forza di questa struttura dati è il tempo richiedo per effettuare le operazioni, che è in media <strong>costante</strong>.  </p>
+<p>La cardinalità di un dizionario (<span class="arithmatex">\(|S|\)</span>) è il numero di elementi che S contiene. Questo serve quindi ad individuare la complessità in funzione di n.  </p>
+<p>Se universo di chiavi u è totalmente ordinato, è possibile effettuare query aggiuntive, come <code>Min(S)</code> (per trovare l'elemento di chiave minima in S), <code>Max(S)</code> (per trovare l'element do chiave massima in S) e <code>Successore(S,x)</code> (per trovare l'elemento con la più piccola chiave maggiore di x.key)</p>
+<p>I dati in un dizionario sono disposti in un vettore (o una tabella), la cui dimensione cerca di essere proporzionale con il numero di elementi nell'insieme S (ad esempio avendo il vettore il doppio più grande della cardinalità di elementi in S <span class="arithmatex">\(2 \cdot |S|\)</span>).<br />
+Per usare la struttura dati, calcoleremo quindi la posizione di ogni elemento di S nel vettore T.<br />
+Questo calcolo è chiamato hashing e ci permette di "mappare" l'universo delle chiavi ad una posizione del vettore.  </p>
+<p><span class="arithmatex">\(dim ~ T = m \qquad \underbrace{T[0...m-1]}_{\text{Vettore da 0 a m}}\)</span><br />
+<span class="arithmatex">\(\underbrace{h}_{\text{funzione di hashing}}: U \to [0,m-1]\)</span>  </p>
+<p>Possiamo quindi dire che <span class="arithmatex">\(h(k) \in [0,m-1]\)</span>  </p>
+<p>Dato un valore x, questo viene memorizzato in <span class="arithmatex">\(T[h(x.key)]=x\)</span>  </p>
+<p>Proprietà della funzione di hashing:  </p>
+<ul>
+<li>Non può essere iniettiva (<span class="arithmatex">\(|U| &gt;&gt; m\)</span>)<br />
+    Questo implica che può accadere che si verifichino collisioni.<br />
+    Una collisione si verifica quando chiavi diverse risolvono alla stessa posizione.  </li>
+<li>Deve essere suriettiva (tutto il codominio deve essere coperto)  </li>
+<li>Deve essere facile da calcolare (<span class="arithmatex">\(O(1)\)</span>)</li>
+<li>Deve avere una distribuzione uniforme: <span class="arithmatex">\(\forall k \in U.h(k) \in [0,m-1]\)</span> con probabilità <span class="arithmatex">\(\frac 1 m\)</span>  </li>
+<li>Deve essere deterministica (<code>h(k)</code> produce sempre lo stesso valore)</li>
+</ul>
+<details class="example" open="open">
+<summary>Esempio di funzione di hashing</summary>
+<p>Un esempio di funzione di hashing può essere quello usato dal metodo della divisione.<br />
+Questo metodo fa uso della funzione di modulo per calcolare la cella sulla quale posizionare un elemento.  </p>
+<p><span class="arithmatex">\(\forall k \in U\)</span> <span class="arithmatex">\(h(k) = k ~ mod ~ \underbrace{n}_\text{numero primo}\)</span></p>
+<p>Usiamo un numero primo per distribuire in modo omogeneo le chiavi nelle celle  </p>
+</details>
+<h4 id="il-fattore-di-carico">Il fattore di carico<a class="headerlink" href="#il-fattore-di-carico" title="Permanent link">&para;</a></h4>
+<p>Il fattore di carico rappresenta il rapporto tra gli elementi inseriti all'interno del dizionario e lo spazio della tabella.  </p>
+<p><span class="arithmatex">\(\alpha = \frac n m = \frac {|S|} {dim ~ T} = \frac {\text{Dimensione dizionario (record)}} {\text{Dimensione tabella}}\)</span>  </p>
+<p>In media si cerca di avere un fattore <span class="arithmatex">\(\alpha = \frac 1 2\)</span>, che consente di avere una cella vuota per ogni cella occupata da una lista</p>
+<h4 id="la-funzione-di-hashing">La funzione di hashing<a class="headerlink" href="#la-funzione-di-hashing" title="Permanent link">&para;</a></h4>
+<p>Ci sono due modi in cui la funzione di hashing (e quindi l'organizzazione dei dati) può essere fatta (e i nomi con i quali possono essere conosciuti sono molti):</p>
+<ul>
+<li>Indirizzamento chiuso/hashing perfetto</li>
+<li>Indirizzamento aperto/open hash/liste di trabocco/concatenamento</li>
+</ul>
+<p>A seconda del tipo di indirizzamento che si sceglie, cambiano i dettagli della struttura.<br />
+La differenza giace nel come le collisioni vengono gestite e risolte.  </p>
+<p>Esistono diversi tipi di funzione di hashing, tra cui:  </p>
+<p><strong>Hash Uniforme Semplice</strong> (HUS):<br />
+L'HUS (Hash Uniforme Semplice) è la funzione di hashing più semplice, e consiste nella formula che abbiamo visto prima: <span class="arithmatex">\(\forall k \in U\)</span> <span class="arithmatex">\(h(k) = k ~ mod ~ \underbrace{n}_\text{numero primo}\)</span>  </p>
+<h5 id="open-hash">Open hash<a class="headerlink" href="#open-hash" title="Permanent link">&para;</a></h5>
+<p>L'open hash è la gestione delle collisioni con concatenamento: questo significa il vettore T è un array di liste doppie.<br />
+Il funzionamento si basa sul calcolare con una funzione di hash l'indice a cui posizionare l'elemento, per poi aggiungere ad una lista (eventualmente vuota) l'elemento in testa.  </p>
+<p><strong>Search</strong>  </p>
+<div class="arithmatex">\[
+T[j] = \begin{cases}
+NIL &amp; \forall x \in S . h(x.key) \ne j \\
+\text{indice alla lista doppia contenente tutti gli elementi } x \in S.h(x.key) = j
+\end{cases}
+\]</div>
+<div class="arithmatex">\[
+T(n) = \begin{cases}
+O(1) &amp; \text{caso ottimo} \\
+O(1) &amp; \text{caso medio} \\
+O(n) &amp; \text{caso pessimo} \\
+\end{cases}
+\]</div>
+<p>Il caso pessimo fa riferimento al caso in cui tutte le chiavi producono lo stesso hash  </p>
+<p><strong>Insert</strong><br />
+Inserisce l'elemento x in testa alla lista <code>T[h(x.key)]</code> <span class="arithmatex">\(T(n) = O(1)\)</span></p>
+<p><strong>Delete</strong><br />
+Rimuove l'elemento x dalla lista <code>T[h(x.key)]</code></p>
+<p>--</p>
+<p>Dato che in genere (per via del fattore di carico <span class="arithmatex">\(\alpha = \frac 1 2\)</span>) <span class="arithmatex">\(|T| \cong 2 \cdot |S|\)</span>, che permetterebbe di avere una cella vuota per ogni cella occupata</p>
+<!-- L40 -->
+<p><strong>Analisi del tempo del dizionario usando HUS</strong> (Hash Uniforme Semplice):  </p>
+<blockquote>
+<p>Ricerca senza successo</p>
+</blockquote>
+<p>In un dizionario con HUS e concatenamento, la ricerca senza successo impiega <span class="arithmatex">\(\Theta(1+\alpha)\)</span> al caso medio:  </p>
+<p><span class="arithmatex">\(T_{\text{medio}}(n,m) = \Theta(1+\frac n m) = \Theta(1+\alpha)\)</span>  </p>
+<details class="demonstration">
+<summary>Dimostrazione</summary>
+<ul>
+<li>Data la chiave k, accedere alla cella costa O(1). È quindi poi necessario effettuare una scansione della lista per cercare l'elemento. La scansione costa quindi O(m) (con m il numero di elementi della lista).  </li>
+<li>Dato HUS, possiamo assumere che gli elementi sono distribuiti uniformemente, quindi ci saranno <span class="arithmatex">\(\alpha\)</span> elementi</li>
+<li>Il numero di ispezioni alla lista è <span class="arithmatex">\(\alpha\)</span></li>
+</ul>
+</details>
+<blockquote>
+<p>Ricerca con successo</p>
+</blockquote>
+<p>La ricerca richiede al caso medio <span class="arithmatex">\(1+\frac \alpha 2 - \frac {\alpha} {2n}\)</span> ispezioni, ovvero <span class="arithmatex">\(T_{\text{medio}}(n,m) = \Theta(1+\alpha)\)</span>  </p>
+<details class="demonstration">
+<summary>Dimostrazione</summary>
+<p>Calcolata la cella (costante), il numero di ispezioni dipende dal numero di elementi che precedono quello che sto cercando.<br />
+Dato che ispeziono <span class="arithmatex">\(\frac {n-i}{m}\)</span> elementi, ho n elementi su m celle.<br />
+Il numero di ispezioni al caso medio è quindi:
+<span class="arithmatex">\(\frac 1 n \sum^n_{i=1}(1+\frac{n-i}{m})\)</span><br />
+<span class="arithmatex">\(\frac 1 n \sum^n_{i=1}(1)+\sum^n_{i=1}(+\frac{n-i}{m})\)</span> (dividiamo la sommatoria)<br />
+<span class="arithmatex">\(\frac 1 n \cdot n+\sum^n_{i=1}(+\frac{n-i}{m})\)</span> (semplifichiamo la prima sommatoria)<br />
+<span class="arithmatex">\(1+\frac{1}{m\cdot n}\sum^n_{i=1}(n-i)\)</span> (semplifichiamo la sommatoria)<br />
+<span class="arithmatex">\(1+\frac{1}{m\cdot n}\frac{n(n-1)}{2}\)</span> (semplifichiamo la sommatoria ai primi n-1 naturali)<br />
+<span class="arithmatex">\(1+\frac{1}{m}\frac{n-1}{2}\)</span> (semplifichiamo le n)<br />
+<span class="arithmatex">\(1+\frac{n-1}{2m}\)</span> (ricordiamo che <span class="arithmatex">\(m=\frac n \alpha\)</span>)<br />
+<span class="arithmatex">\(1+\frac{n}{2m} - \frac{1}{2m}\)</span> (dividiamo la frazione)<br />
+<span class="arithmatex">\(1+\frac{\alpha}{2} - \frac{1}{2\cdot \frac n \alpha}\)</span> (Sostituiamo m ed <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\((m=\frac n \alpha)\)</span>)<br />
+<span class="arithmatex">\(1+\frac{\alpha}{2} - \frac{1}{2\cdot \frac n \alpha}\)</span></p>
+</details>
+<p><strong>Pro e Contro dell'hashing con indirizzamento aperto</strong>  </p>
+<p>Pro:</p>
+<ul>
+<li>Preferibile in strutture che ricevono molte writes</li>
+</ul>
+<p>Contro:</p>
+<ul>
+<li>Spazio non costante</li>
+<li>Ricerca degli elementi (che diventa <span class="arithmatex">\(O(m)\)</span>, con m gli elementi nella lista)</li>
+</ul>
+<h5 id="closed-hashing">Closed hashing<a class="headerlink" href="#closed-hashing" title="Permanent link">&para;</a></h5>
+<p>Il closed hashing si preoccupa di memorizzare il valore non su una lista ma direttamente nella cella del vettore.<br />
+Le collisioni sono gestite modificando la sequenza di ispezione, che quando una cella è occupata, permette di scegliere una posizione "successiva".<br />
+In questo caso il fattore di carico <span class="arithmatex">\(\frac {\text{elementi}}{\text{celle}} = \frac n m = \alpha \le 1\)</span>, che significa che ci sono sempre più celle disponibili che elementi memorizzati.  </p>
+<p>La funzione di hashing sarà quindi diversa: <span class="arithmatex">\(h:\mathcal U \times [0,m-1] \to [0, m-1]\)</span><br />
+Come vediamo, c'è il prodotto cartesiano tra l'universo delle chiavi e un intero minore uguale al numero di celle nell'array (che è possibile vedere come tutti i possibili tentativi di mettere una chiave nell'universo nell'array).<br />
+Notare come la funzione non ritorna un numero, ma una <strong>sequenza</strong>.  </p>
+<p>h associa una sequenza di ispezione, ovvero un ordine che deve essere seguito nell'esaminare le celle per una certa chiave k.<br />
+La sequenza avrà quindi un aspetto del genere per una stessa chiave k:<br />
+<span class="arithmatex">\(\anglebr{h(k,0), h(k,1), ..., h(k, m-1)}\)</span>  </p>
+<p>La sequenza di ispezione deve essere una permutazione dei primi n interi  </p>
+<p><strong>Insert</strong><br />
+<span class="arithmatex">\(T_{\text{ottimo}}=\Theta(1)\)</span><br />
+<span class="arithmatex">\(T_{\text{pessimo}}=\Theta(n)=\Theta(m)\)</span><br />
+<span class="arithmatex">\(T_{\text{medio}}=O(\frac{1}{1-\alpha}\)</span> (con <span class="arithmatex">\(\alpha \le 1\)</span>)  </p>
+<p>Lo pseudocodice per un inserimento può assomigliare a qualcosa del genere:  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tentativi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">for</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nx">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">h</span><span class="p">(</span><span class="nx">k</span><span class="p">,</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">T</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">nil</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nx">T</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span><span class="o">=</span><span class="nx">k</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">j</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">++</span><span class="nx">i</span><span class="o">+</span><span class="mf">1</span><span class="o">&gt;</span><span class="nx">n</span><span class="p">)</span><span class="o">:</span><span class="w"></span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;Overflow&quot;</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Search</strong>
+Segue la stessa sequenza per l'inserimento<br />
+Se una cella è vuota, k non è presente  </p>
+<p><span class="arithmatex">\(T_{\text{ottimo}}=\Theta(1)\)</span><br />
+<span class="arithmatex">\(T_{\text{pessimo}}=\Theta(n)\)</span><br />
+<span class="arithmatex">\(T_{\text{medio}}=\begin{cases}
+O(\frac{1}{1-n}) \\
+O(\frac 1 \alpha \ln(\frac{1}{1-\alpha}))
+\end{cases}\)</span>  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">for</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nx">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">h</span><span class="p">(</span><span class="nx">k</span><span class="p">,</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">T</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">nil</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">nil</span><span class="w"></span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">T</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">k</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">k</span><span class="w"></span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">++</span><span class="nx">i</span><span class="o">+</span><span class="mf">1</span><span class="o">&gt;=</span><span class="nx">n</span><span class="p">)</span><span class="o">:</span><span class="w"></span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;Overflow&quot;</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Delete</strong><br />
+L'eliminazione deve essere logica o virtuale, perché altrimenti la ricerca, trovando una cella vuota, andrebbe in halt<br />
+La deletion rende quindi la cella libera per l'inserimento ma occupata per la ricerca.<br />
+Questo rende necessaria una modifica all'algoritmo di inserimento, che deve controllare se la cella è stata eliminata ed eventualmente sovrascrivere il valore.  </p>
+<p><strong>Analisi del tempo del dizionario</strong>:  </p>
+<p>Assunzioni:  </p>
+<ol>
+<li><span class="arithmatex">\(\alpha = \frac n m &lt; 1\)</span> (esiste almeno una cella libera)</li>
+<li>Non ci sono state cancellazioni</li>
+<li>Facciamo uso di hashing uniforme (la sequenza di ispezione di ogni chiave è una permutazione delle celle di pari probabilità)</li>
+</ol>
+<p>Conteremo inoltre il numero di ispezioni, non il tempo</p>
+<blockquote>
+<p>Ricerca senza successo
+Il numero di accessi in una ricerca senza successo è <span class="arithmatex">\(\le \frac {1}{1-\alpha}\)</span>  </p>
+</blockquote>
+<details class="demonstration">
+<summary>Dimostrazione</summary>
+<p>Prendendo x come il numero di accessi alla tabella, il valore medio (o atteso) di x è la somma dei valori che x può assumere, moltiplicato per la probabilità di assumere quel valore.  </p>
+<p>Probabilità di fare esattamente gli accessi: <span class="arithmatex">\(\sum^{\pin}_{i=1} (i \cdot Prob[x=1])\)</span><br />
+Probabilità di fare almeno gli accessi: <span class="arithmatex">\(\sum_i(Prob[x \ge 1])\)</span>  </p>
+<p>Possiamo quindi esaminare la probabilità di avere le prime i-1 celle occupate:<br />
+<span class="arithmatex">\(i=1 \qquad Pr[x \ge 1] = 1\)</span> (è sicuro che almeno un accesso lo facciamo)<br />
+<span class="arithmatex">\(i=2 \qquad Pr[x \ge 2] = \alpha\)</span> (cIl secondo accesso viene effettuato solo se la prima cella è occupata da un'altra chiave)<br />
+<span class="arithmatex">\(i=3 \qquad Pr[x \ge 3] = \underbrace{\frac n m}_{\text{prima cella occupata}} \cdot \underbrace {\frac {n-1}{m-1}}_{\text{seconda cella occupata}} &lt; \alpha^2\)</span> (Che diventa maggiorabile con <span class="arithmatex">\(\alpha^{i-1}\)</span>)  </p>
+<p>Il valore medio del numero di accessi è quindi:<br />
+<span class="arithmatex">\(\sum^m_{i=1}Pr[x \ge 1]\)</span><br />
+<span class="arithmatex">\(\sum^m_{i=1}2^{i-1}\)</span><br />
+<span class="arithmatex">\(\sum^{m-1}_{i=0}\alpha^i \le \sum_{i=0}\alpha^i = \frac {1}{1-\alpha}\)</span>  </p>
+</details>
+<blockquote>
+<p>Inserimento al caso medio</p>
+</blockquote>
+<p>Il numero di accessi in caso di inserimento al caso medio è <span class="arithmatex">\(\le \frac{1}{1-\alpha}\)</span><br />
+Si controllano le stesse cella della ricerca senza successo, fermandosi alla prima vuota.  </p>
+<p>|<span class="arithmatex">\(\alpha\)</span>|Occupazione array| numero accessi ricerca senza successo|
+|<span class="arithmatex">\(\frac{1}{2}\)</span>|50%|<span class="arithmatex">\(\frac{1}{1-\frac 1 2} \to 2\)</span>|
+|<span class="arithmatex">\(\frac{1}{10}\)</span>|10%|<span class="arithmatex">\(\frac{1}{1-\frac{1}{10}} \to 1.11\)</span>|
+|<span class="arithmatex">\(\frac{9}{10}\)</span>|90%|<span class="arithmatex">\(\frac{1}{1-\frac{9}{10}} \to 10\)</span>|</p>
+<blockquote>
+<p>Ricerca con successo</p>
+</blockquote>
+<p>Il numero di accessi al caso medio è <span class="arithmatex">\(\le \frac {1}{\alpha} ln \frac{1}{1-\alpha}\)</span>  </p>
+<h6 id="generazione-sequenza-di-ispezione">Generazione sequenza di ispezione<a class="headerlink" href="#generazione-sequenza-di-ispezione" title="Permanent link">&para;</a></h6>
+<!-- L41 -->
+
+<p>Ci sono tre tecniche che vediamo per la generazione di una sequenza di ispezione</p>
+<ol>
+<li>
+<p>Scansione lineare</p>
+<details class="tip">
+<summary>Descrizione</summary>
+<p>La scansione lineare dopo aver individuato una cella, basa la permutazione delle celle andando alla cella contigua successiva.<br />
+<span class="arithmatex">\(h': \mathcal U \to [0,1,...,m-1]\)</span> (idealmente con m numero primo)<br />
+<span class="arithmatex">\(h(k,i)=(h'(k)+i) mod ~ m\)</span> con <span class="arithmatex">\(0 \le i \le m\)</span>  </p>
+<p>Pro:  </p>
+<ul>
+<li>Cicliamo la tabella da un punto casuale</li>
+</ul>
+<p>Contro:  </p>
+<ul>
+<li>Il passo è costante (1)</li>
+<li>Il passo non dipende né da i, né dalla chiave<br />
+    Questo significa che dopo un certo numero di inserimenti, saranno prodotti agglomerati o (cluster primari).<br />
+    Questi cluster sono lunghi tratti di celle adiacenti occupate<br />
+    Quando si colpisce uno di questi cluster, in primo luogo è necessario scansionare l'intero cluster. In aggiunta, si "appende" l'elemento al cluster, facendolo crescere</li>
+<li>Una collisione genera cluster secondari<br />
+    Un cluster secondario si verifica quando chiavi diverse producono sequenze di ispezioni identiche</li>
+<li>Esistono <span class="arithmatex">\(n\)</span> possibili sequenze, contro <span class="arithmatex">\(n!\)</span> permutazioni ideali</li>
+</ul>
+</details>
+</li>
+<li>
+<p>Scansione quadratica</p>
+<details class="tip">
+<summary>Descrizione</summary>
+<p>La scansione quadratica vuole risolvere il problema del cluster primario che presenta la scansione lineare.<br />
+Questo problema viene risolto avendo un passo diverso da uno ogni volta.<br />
+Continuiamo ad usare la funzione vista per la scansione lineare.<br />
+Con m numero primo, <span class="arithmatex">\(C_1, C_2\)</span>  <span class="arithmatex">\(C_2 \ne 0\)</span>  <span class="arithmatex">\(h(k,i)=(h'(k)+C_1 \cdot i + C_2 \cdot i^2) mod ~ m\)</span><br />
+Abbiamo quindi che il punto di partenza è casuale ed il passo dipende da i.<br />
+Il numero di sequenza è n (il passo rimane lo stesso per tutte le sequenze), e non abbiamo ancora risolto il problema dei cluster secondari, dato che la sequenza dipende ancora solamente dal punto iniziale  </p>
+</details>
+</li>
+<li>
+<p>Doppio hashing</p>
+<details class="tip">
+<summary>Descrizione</summary>
+<p>Il doppio hash mira a risolvere anche il problema del cluster secondario.<br />
+Il problema viene risolto adottando due funzioni hash:<br />
+<span class="arithmatex">\(h_1(k) = k ~ mod ~ m\)</span><br />
+<span class="arithmatex">\(h_2(k) = k ~ mod ~ n &lt; m\)</span><br />
+<span class="arithmatex">\(h(k,i) = (h_1(k) + i \cdot h_2(k)) ~ mod ~ m\)</span><br />
+Abbiamo quindi che il punto di partenza dipende solo dalla chiave, ed anche il passo di scansione dipende dalla chiave.  </p>
+<p>m è un numero primo, <span class="arithmatex">\(h_2(k)\)</span> è un coprimo, quindi il massimo comune mulitplo tra i due, essendo <span class="arithmatex">\(h_2(k) &lt; m\)</span> è uno, quindi si effettua una permutazione di tutti gli elementi</p>
+<p>Pro:  </p>
+<ul>
+<li>Non abbiamo cluster primari</li>
+<li>Non abbiamo cluster secondari (i passi hanno distanza <span class="arithmatex">\(h_2(k)\)</span>)</li>
+<li>Prestazioni simili alla teoria (quasi ideali)</li>
+</ul>
+<p>Contro:  </p>
+<ul>
+<li>Le permutazioni non sono <span class="arithmatex">\(n!\)</span> ma <span class="arithmatex">\(n^2\)</span>, che è comunque meglio delle opzioni viste fin'ora.  </li>
+</ul>
+</details>
+</li>
+</ol>
+<h3 id="dizionari-su-alberi-di-ricerca-abr">Dizionari su alberi di ricerca (ABR)<a class="headerlink" href="#dizionari-su-alberi-di-ricerca-abr" title="Permanent link">&para;</a></h3>
+<!-- L44 -->
+<p>È possibile implementare i dizionari anche su un albero binario.<br />
+Le chiavi sono disposte per rispettare la proprietà di ricerca.<br />
+Tutti i nodi minori chiave k sono a sx e tutti i maggiori a destra.  </p>
+<p>Questa proprietà permette di avere una sequenza ordinata delle chiavi attraverso una visita simmetrica dell'albero.  </p>
+<h3 id="comparazione-delle-applicazioni">Comparazione delle applicazioni<a class="headerlink" href="#comparazione-delle-applicazioni" title="Permanent link">&para;</a></h3>
+<!-- L41 -->
+<table>
+<thead>
+<tr>
+<th align="center">Operazione/Struttura</th>
+<th align="center">Ricerca senza successo</th>
+<th align="center">Inserimento</th>
+<th align="center">cancellazione</th>
+<th align="center">Minimo</th>
+<th align="center">Build</th>
+<th align="center">Spazio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Hash con concatenamento</td>
+<td align="center"><span class="arithmatex">\(O(n)\)</span><br/><span class="arithmatex">\(\Theta(1+\alpha)\)</span></td>
+<td align="center">O(1)</td>
+<td align="center"><span class="arithmatex">\(\Theta(1)\)</span></td>
+<td align="center"><span class="arithmatex">\(\Theta(max(n,m))\)</span></td>
+<td align="center"><span class="arithmatex">\(\Theta(n)\)</span></td>
+<td align="center"><span class="arithmatex">\(\Theta(max(n,m))\)</span></td>
+</tr>
+<tr>
+<td align="center">Hash aperto</td>
+<td align="center"><span class="arithmatex">\(O(n)\)</span><br/><span class="arithmatex">\(O(\frac{1}{1-\alpha})\)</span></td>
+<td align="center"><span class="arithmatex">\(O(n)\)</span><br/><span class="arithmatex">\(O(\frac{1}{1-\alpha})\)</span></td>
+<td align="center"><span class="arithmatex">\(\Theta(1)\)</span></td>
+<td align="center"><span class="arithmatex">\(\Theta(m)\)</span></td>
+<td align="center"><span class="arithmatex">\(\Theta(n^2)\)</span><br/><span class="arithmatex">\(\Theta(\frac{n}{1-\alpha^2})\)</span></td>
+<td align="center"><span class="arithmatex">\(\Theta(m)\)</span></td>
+</tr>
+<tr>
+<td align="center">ABR</td>
+<td align="center">O(h)</td>
+<td align="center">O(h)</td>
+<td align="center">O(h)</td>
+<td align="center">O(h)</td>
+<td align="center">O(n log(n))</td>
+<td align="center"><span class="arithmatex">\(\Theta(n)\)</span></td>
+</tr>
+<tr>
+<td align="center">ABR Bilanciato</td>
+<td align="center">O(h)</td>
+<td align="center">O(h)</td>
+<td align="center">O(h)</td>
+<td align="center">O(h)</td>
+<td align="center">O(n log(n))</td>
+<td align="center"><span class="arithmatex">\(\Theta(n)\)</span></td>
+</tr>
+<tr>
+<td align="center">Heap</td>
+<td align="center">O(h)</td>
+<td align="center">O(log(n))=O(h)</td>
+<td align="center">O(log n)</td>
+<td align="center"><span class="arithmatex">\(\Theta(1)\)</span><br/><span class="arithmatex">\(\Theta(n)\)</span></td>
+<td align="center"><span class="arithmatex">\(\Theta(n)\)</span></td>
+<td align="center"><span class="arithmatex">\(\Theta(n)\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Looking at you, <a href="https://it.javascript.info/array#internamente">javascript</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../semantica/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Semantica" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Semantica
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../valutazione/" class="md-footer__link md-footer__link--next" aria-label="Next: Valutazione di un algoritmo" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Valutazione di un algoritmo
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.instant", "navitation.sections", "navigation.indexes", "search.highlight", "content.tabs.link", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
