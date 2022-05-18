@@ -65,11 +65,13 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
+  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
@@ -98,9 +100,11 @@ nav:
     - Grammatiche e Linguaggi: ProAlgo/grammatiche.md 
     - Sintassi: ProAlgo/sintassi.md
     - Semantica: ProAlgo/semantica.md
+    - Strutture di algoritmi: ProAlgo/strutture.md
     - Valutazione di un algoritmo: ProAlgo/valutazione.md
     - Linguaggio L: ProAlgo/l.md
     - Programmazione dinamica: ProAlgo/programmazioneDinamica.md
+    - Problemi computazionali: ProAlgo/pnp.md
   - Fondamenti di Informatica:
     #- Introduzione: FdI/index.md
     - Insiemi: FdI/insiemi.md

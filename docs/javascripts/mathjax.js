@@ -1,5 +1,10 @@
 window.MathJax = {
+  //https://docs.mathjax.org/en/latest/input/tex/extensions/upgreek.html
+  loader: {load: ['[tex]/upgreek']},
   tex: {
+    packages: {
+      '[+]': ['upgreek']
+    },
     macros: {
       anglebr: [ "{ ~ \\langle #1 \\rangle ~ }", 1 ], // parentesi angolare
       llbracket: "[\\![", // parentesi quadra doppia aperta [[
@@ -13,6 +18,9 @@ window.MathJax = {
       min: "- \\infty",
       So: "\\Rightarrow",
       then: "\\Rightarrow",
+      Tau: "{\\large \\uptau}",
+      from: "\\leftarrow",
+      lower: ["\\lfloor #1 \\rfloor", 1]
       // Graffa sotto con testo: $\underbrace{\hbox{Text}}_{\hbox{text below}}$
       // testo stacked: $\stackrel{\hbox{Text above}}{\hbox{Text below}}$
     },

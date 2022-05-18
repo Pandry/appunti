@@ -92,7 +92,10 @@ A destra troviamo infatti sia simboli terminali (come +, - e *) che non terminal
 Il "corpo" della produzione è quindi l'insieme dei simboli che compaiono a destra dell'uguaglianza
 
 ## Principio di corrispondenza
-La dichiarazione di corrispondenza è il riuso della sintassi per cose svolgono lo stesso compito
+La dichiarazione di corrispondenza è il riuso della sintassi per cose svolgono lo stesso compito.  
+Questo permette di avere una maggiore facilità di apprendimento ed interpretazione, anche tra vari linguaggi.  
+
+L'idea è che se per un array in un linguaggio, accendiamo alle celle indicando l'indice tra parentesi quadre, probabilmente non vogliamo progettare un linguaggio in cui dobbiamo inserire un indice tra due punti e virgola.  
 
 # Linguaggi
 
@@ -116,6 +119,7 @@ Scrivere funzioni permette di aumentare la correttezza, in quanto una volta scri
 Ovviamente il linguaggio deve permettere di **definirle** e usarle
 
 ### Funzioni
+<!-- L16 -->
 Quasi tutti i linguaggi moderni fanno uso delle funzioni.  
 Una funzione in un linguaggio di programmazione prende il concetto da una funzione matematica: permette di mappare uno o più parametri (che chiameremo formali) in un valore.  
 
@@ -154,7 +158,9 @@ I controlli che verranno effettuati durante la compilazione saranno i seguenti:
 - Assicurarsi che i nomi dei parametri formali siano distinti (altrimenti due parametri potrebbero avere lo stesso nome, generando confusione ed ambiguità)
 - Assicurarsi che i tipi dei parametri attuali e formali per la stessa posizione siano uguali (non ha senso dire che il valore "ciao" è un numero)
 - Assicurarsi che non ci siano variabili libere nel corpo della funzione 
-- Assicurarsi che la funzione abbia un `return` ed il tipo ritornato sia lo stesso dichiarato nella signatura 
+- Assicurarsi che la funzione abbia un `return`
+    - ed il tipo ritornato sia lo stesso dichiarato nella signatura 
+
 
 Dato che una funzione è una dichiarazione, l'ambiente viene esteso in seguito ad una dichiarazione. Ciò significa che è possibile usare una funzione nel suo stesso corpo. Questa tecnica è detta ricorsione e ci permette di lavorare con strutture iterative come i grafi con estrema facilità, rispetto ad un approccio più tradizionale (iterativo), che è più difficile in fase di ragionamento e quindi più soggetto ad errori (e più lungo da scrivere ed ideare).  
 Ovviamente questa tecnica non è efficiente da un punto di vista della memoria, tuttavia è un tradeoff che spesso vale la pena adottare.  
@@ -164,6 +170,7 @@ nome, parametri formali, e tipo di ritorno
 La dichiarazione richiede anche un corpo, in cui si ritorna anche il tipo  
 
 #### Il record di attivazione
+<!-- L17 -->
 Ogni volta che si invoca una funzione, viene generato un corrispettivo record di attivazione (o stack frame)  
 Un record di attivazione è una struttura dati che ci permette di tenere traccia dei dati necessari all'esecuzione delle funzioni.  
 

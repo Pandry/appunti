@@ -30,3 +30,9 @@ il numero di chiamate ricorsive è il numero di figli di ogni nodo
 ## Tipologia di linguaggi
 ### Linguaggio interpretato
 ### Linugaggio compilato
+
+
+### Numeri pseudocasuali
+<!-- L30 -->
+La generazione di numeri pseudocasuali riguarda un algoritmo in grado di generare ogni numero nel codominio della funzione equiprobabilmente.  
+Da un seed si genera in maniera deterministica un numero.  

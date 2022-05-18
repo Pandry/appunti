@@ -34,6 +34,7 @@ Un algoritmo si dice corretto (rispetto ad una specifica) quando rispetta le spe
 Il tipo di specifica più usata è quella _funzionale_, che tratta l'algoritmo come una funzione e definisce la correttezza se, dati all'algoritmo i valori necessari (e facenti parte del dominio), i valori restituiti rispetteranno la specifica  
 
 ### Invariante di ciclo
+<!-- L19 -->
 Un modo in cui possiamo dimostrare la correttezza (di una porzione di un algoritmo) è mediante l'invariante di ciclo (questo quando si ha a che fare con cicli).  
 Si compone di 3 blocchi, rappresentati la pre-iterazione di un ciclo, l'esecuzione del ciclo e la post-esecuzione.  
 L'invariante di ciclo è composta da 3 passaggi:  
@@ -153,13 +154,20 @@ Quindi, per riassumere:
 | $\Omega$|Omega Grande |Limite inferiore asintotico    | Migliore situazione possibile  |
 | $\Theta$|Theta        | Limite asintotico stretto     | Complessità della soluzione    |
 
-(asisntotico si può leggere come "_per valori che tendono a $\pin$_")
+(asintotico si può leggere come "_per valori che tendono a $\pin$_")
 
 <!-- Le costanti, le basi dei logaritmi etc non contano -->
 
 ### Big-O
 
 ### Big Omega
+<!-- L25 -->
+$\Omega$ il lower bound, la classe di complessità minima per risolvere il problema, che significa che non è possibile risolvere un problema in meno passi.  
+Ad esempio, nel caso di un ordinamento per confronti (ovvero quando si ordinano elementi confrontabili tra di loro), come minimo devo vedere tutti gli n elementi, ma ciò non può bastare, perché devo anche confrontarli tra di loro.  
+
+Dimostrare che una soluzione è "ottima" equivale a dimostrare un lower bound.  
+Ciò significa che qualunque soluzione S corretta non può impiegare meno tempo del lower bound.  
+
 
 ### Theta
 
@@ -267,4 +275,58 @@ Ci sono quindi 3 possibili casi, quando si comparano le due funzioni:
     Il che significa $T(n) = \Theta(n^{log_b(a)} log^{k+1} (n))$
 
 ??? definition "Dimostrazione del master theorem"
-    [Da fare...](../assets/DimostrazioneMasterTheorem.pdf)
+    [Da fare...](assets/DimostrazioneMasterTheorem.pdf)
+
+
+## Esempi
+### Algoritmi
+#### Il quicksort
+<!-- L26 -->
+<!-- (Spiegazione di merda, rivedere) -->  
+Il quicksort è un algoritmo ricorsivo di ordinamento di complessità $O(n \log n)$ che basa il suo funzionamento sul concetto di pivot.  
+L'idea su cui si basa è quella di dividere in due l'array, mettendo a sinistra tutti gli elementi più piccoli del pivot e a destra quelli più grandi
+
+1. Si sceglie il così detto "pivot" (ad esempio l'ultimo elemento dell'array)
+2. Si cicla l'array, tenendo in mente due puntatori, uno che rappresenta l'iteratore del ciclo e l'altro che serve per tenere a mente dove l'array si "divide" tra i valori più piccoli e più grandi del pivot
+3. Ad ogni iterazione, si controlla se l'elemento dell'array è più piccolo o più grande del pivot. Se è più grande, non succede nulla.  
+    Se invece l'elemento è più piccolo, viene incrementato il puntatore che "divide" i valori dell'array, indicando che il che il nuovo elemento è più piccolo del pivot.  
+    Si scambiano poi i **valori** corrispondenti ai due puntatori (quello che dice a che valore punta il ciclo e quello che rappresenta la metà dell'array inferiore).  
+    In questo modo, viene sostituito il valore più piccolo del pivot, mantenendo la metà dell'array più piccola del pivot.  
+4. A fine iterazione, si avrà che una parte dell'array sarà più grande del pivot, e l'altra sarà più piccola. A questo punto si sostituisce la cella successiva all'ultimo valore più piccolo dell'array con il pivot e si riesegue l'algoritmo sulle due metà dell'array.
+
+Un "avversario" potrebbe "rovinare" l'algoritmo mettendo come ultimo elemento (che usiamo come pivot) l'elemento più grande o più piccolo dell'array.  
+Possiamo sopperire a questo problema sostituendo una cella a caso dell'array con l'ultima, randomizzando il pivot.   
+
+![Quicksort](assets/quicksort.png)
+
+
+#### Il sorting lineare
+<!-- L24 -->
+Come detto, dimostrare che una soluzione è ottima equivale a dimostrare un lower bound.  
+Nel caso del sorting lineare, abbiamo un lower bound pari a $O(n)$ (con N il numero degli elementi nell'array).  
+Questo perché se ci fossero meno di n elementi, sarebbe possibile inserire l'elemento che si sta ricercando per fare il sorting nella cella che non verrebbe controllata.  
+
+In genere, quando si ha un'operazione di sorting, è impossibile averla in tempo lineare.  
+Questo perché l'albero dei confronti ha n! foglie, ed è necessario confrontare gli elementi per poter ordinare, che ci fa scegliere le diverse branches dell'**albero dei confronti**.  
+
+È possibile tuttavia ordinare **senza fare confronti**, basandosi sulle proprietà degli oggetti da ordinare.  
+
+??? example "Esempio"
+    Dato un array di n interi senza ripetizioni ed il suo massimo, rende possibile ricreare l'array.  
+
+    ---
+
+    Dato un array di n interi (ma con ripetizioni), è possibile scansionare una volta l'array e poi inserire le ripetizioni in un secondo array (sempre dato il suo massimo).  
+    Questo algoritmo si chiama counting sort, che ha complessità O(n+k) (dove n è il numero di elementi dell'array e k è il valore massimo).  
+
+    Senza avere questi constraints, è necessario ricorrere alle comparazioni
+
+!!! definition "Ordinamento stabile"
+    Un algoritmo di ordinamento è detto stabile quando preserva l'ordine iniziale tra due elementi con la stessa chiave  
+
+Ad esempio [Heapsort](../strutture#heap) e [Quicksort](#il-quicksort) **non** sono stabili in quanto "mescolano" l'ordine.  
+
+Il radix sort è un algoritmo di ordinamento basato su MSB (Most Significant Bit, bit con importanza maggiore) ed un algoritmo di ordinamento stabile  
+Viene usato per ordinare e parte dal bit meno significativo, per poi salire (dal meno significativo al più significativo).  
+Si può quindi assumere per induzione che ad ogni passo (diverso dal passo base) tutte le cifre di "indice" minore sono ordinate. Se due cifre sono uguali, si ignorano, altrimenti si calcola l'ordine attraverso un algoritmo stabile (con una performance di O(n)).  
+

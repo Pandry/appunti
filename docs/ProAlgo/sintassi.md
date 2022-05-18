@@ -1,4 +1,3 @@
-
 La sintassi si occupa di controllare se una stringa è legale (ovvero rispetta le regole della grammatica)
 
 Ogni elemento (o carattere) del codice di un programma è un simbolo e fa parte della sintassi.  
@@ -66,11 +65,16 @@ Ci permette di identificare un insieme non vuoto di tutte le stringhe possibili 
 
 ## Linguaggi
 
+!!! definition "Linguaggio"  
+    Un linguaggio è un sottoinsieme della chiusura positiva dell'alfabeto  
+    È l'insieme delle stringhe ammissibili (chiamati programmi)  
+
+
 ### Linguaggio infinito
 Definibile attraverso 3 metodi ed è definibile enumerando tutti i suoi elementi (ove non infiniti)  
 
-    Un linguaggio L su un alfabeto A è un sottoinsieme della chiusura di Kleene (considerando insiemi non vuoti e non banali)
-    Un linguaggio di programmazione classico può essere pensato come un sottoinsieme di ASCII*
+Un linguaggio L su un alfabeto A è un sottoinsieme della chiusura di Kleene (considerando insiemi non vuoti e non banali)
+Un linguaggio di programmazione classico può essere pensato come un sottoinsieme di ASCII*
 
 #### Generativo
 Insieme delle stringhe generate (che seguono le regole) da una grammatica
